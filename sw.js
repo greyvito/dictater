@@ -1,4 +1,4 @@
-const CACHE_NAME = 'dictater-v1';
+const CACHE_NAME = 'dictater-v2';
 const ASSETS_TO_CACHE = [
   './index.html',
   './index.css',
@@ -39,7 +39,7 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-// Fetch Event — Offline capabilities (Cache-first approach)
+// Fetch Event — Offline capabilities (Network-First approach for robustness)
 self.addEventListener('fetch', (event) => {
   // Only handle standard GET requests for our local app domain (ignore puter API calls or external fonts)
   if (event.request.method !== 'GET' || !event.request.url.startsWith(self.location.origin)) {
@@ -47,12 +47,9 @@ self.addEventListener('fetch', (event) => {
   }
 
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        return cachedResponse;
-      }
-      return fetch(event.request).then((response) => {
-        // Cache new static requests on the fly
+    fetch(event.request)
+      .then((response) => {
+        // If valid network response, update the cache and return it
         if (response.status === 200 && response.type === 'basic') {
           const responseToCache = response.clone();
           caches.open(CACHE_NAME).then((cache) => {
@@ -60,7 +57,10 @@ self.addEventListener('fetch', (event) => {
           });
         }
         return response;
-      });
-    })
+      })
+      .catch(() => {
+        // If network request fails (e.g. offline), fallback to cache
+        return caches.match(event.request);
+      })
   );
 });

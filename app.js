@@ -32,11 +32,22 @@ let currentWordIndex = 0;
 let spellingHistory = [];
 
 // Custom Lessons Data
-let customLessons = JSON.parse(localStorage.getItem('DICTATER_CUSTOM_LESSONS')) || [];
+let customLessons = [];
+try {
+  customLessons = JSON.parse(localStorage.getItem('DICTATER_CUSTOM_LESSONS')) || [];
+} catch (e) {
+  console.error("Error parsing custom lessons from localStorage:", e);
+}
 
 // Student Stats & Progress Data
-let studentStats = JSON.parse(localStorage.getItem('DICTATER_STATS')) || [];
-let studentBadges = JSON.parse(localStorage.getItem('DICTATER_BADGES')) || {
+let studentStats = [];
+try {
+  studentStats = JSON.parse(localStorage.getItem('DICTATER_STATS')) || [];
+} catch (e) {
+  console.error("Error parsing stats from localStorage:", e);
+}
+
+let studentBadges = {
   firstSteps: false,
   accuracyExpert: false,
   spellingHero: false,
@@ -44,6 +55,14 @@ let studentBadges = JSON.parse(localStorage.getItem('DICTATER_BADGES')) || {
   superWriter: false,
   customScholar: false
 };
+try {
+  const storedBadges = localStorage.getItem('DICTATER_BADGES');
+  if (storedBadges) {
+    studentBadges = { ...studentBadges, ...JSON.parse(storedBadges) };
+  }
+} catch (e) {
+  console.error("Error parsing badges from localStorage:", e);
+}
 
 // --- DOM Element References ---
 const btnModeCurriculum = document.getElementById('btn-mode-curriculum');
@@ -891,13 +910,13 @@ function updateVoiceSelectDropdown() {
     let filteredVoices = [];
     if (selectedAccent === 'US') {
       filteredVoices = availableSpeechSynthesisVoices.filter(v => {
-        const lang = v.lang.toLowerCase().replace('_', '-');
+        const lang = (v.lang || '').toLowerCase().replace('_', '-');
         return lang.startsWith('en-us');
       });
     } else {
       // Commonwealth Accents: en-gb, en-au, en-ie, en-ca
       filteredVoices = availableSpeechSynthesisVoices.filter(v => {
-        const lang = v.lang.toLowerCase().replace('_', '-');
+        const lang = (v.lang || '').toLowerCase().replace('_', '-');
         return lang.startsWith('en-gb') || 
                lang.startsWith('en-au') || 
                lang.startsWith('en-ie') || 
@@ -908,7 +927,7 @@ function updateVoiceSelectDropdown() {
     // If no accented voices, fallback to any English
     if (filteredVoices.length === 0) {
       filteredVoices = availableSpeechSynthesisVoices.filter(v => {
-        const lang = v.lang.toLowerCase().replace('_', '-');
+        const lang = (v.lang || '').toLowerCase().replace('_', '-');
         return lang.startsWith('en');
       });
     }
@@ -926,20 +945,22 @@ function updateVoiceSelectDropdown() {
 
     displayList.forEach(v => {
       const option = document.createElement('option');
-      option.value = v.name;
-      option.textContent = `${v.name} (${v.lang})`;
+      const vName = v.name || 'Unknown Voice';
+      const vLang = v.lang || 'unknown';
+      option.value = vName;
+      option.textContent = `${vName} (${vLang})`;
       
       // Auto-select natural-sounding voices
-      if (v.name.includes('Natural') || v.name.includes('Aria') || v.name.includes('Google US')) {
+      if (vName.includes('Natural') || vName.includes('Aria') || vName.includes('Google US')) {
         option.selected = true;
-        selectedVoiceName = v.name;
+        selectedVoiceName = vName;
       }
       
       voiceSelect.appendChild(option);
     });
     
     if (!selectedVoiceName && displayList.length > 0) {
-      selectedVoiceName = displayList[0].name;
+      selectedVoiceName = displayList[0].name || '';
     }
   } else {
     voiceSelectionRow.classList.add('hidden');
