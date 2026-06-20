@@ -1,0 +1,12 @@
+{
+  "name": "dictater",
+  "version": "1.0.0",
+  "description": "English listening and dictation practice web application for primary school students",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx -y serve ./",
+    "dev": "npx -y serve ./"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}

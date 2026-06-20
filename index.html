@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dictater — English Listening & Dictation Practice</title>
+  <link rel="stylesheet" href="index.css">
+  <!-- Puter.js SDK for advanced high quality AI voices -->
+  <script src="https://js.puter.com/v2/"></script>
+</head>
+<body>
+  
+  <header>
+    <div class="logo-container">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.4z"/>
+        </svg>
+      </div>
+      <h1>Dictater</h1>
+    </div>
+    <p>Improve your English listening. Listen to passages, write down what you hear, and check your accuracy instantly!</p>
+  </header>
+
+  <main>
+    <!-- Left Sidebar: Selection & Settings -->
+    <section class="glass-card">
+      <div>
+        <h3 class="section-title">Mode</h3>
+        <div class="pill-group" style="margin-top: 0.5rem;">
+          <button id="btn-mode-curriculum" class="pill-btn active">Curriculum</button>
+          <button id="btn-mode-custom" class="pill-btn">Custom Text</button>
+        </div>
+      </div>
+
+      <!-- Format Selection (Only visible when Curriculum mode is active) -->
+      <div id="format-selection-container">
+        <h3 class="section-title">Type</h3>
+        <div class="pill-group" style="margin-top: 0.5rem;">
+          <button id="btn-format-passage" class="pill-btn active">Passages</button>
+          <button id="btn-format-words" class="pill-btn">Word Lists</button>
+        </div>
+      </div>
+
+      <!-- Curriculum Filters -->
+      <div id="curriculum-filters">
+        <div style="margin-bottom: 1rem;">
+          <h4 class="input-label" style="margin-bottom: 0.5rem;">Level / Grade</h4>
+          <div class="pill-group">
+            <button class="pill-btn grade-filter active" data-grade="3">Grade 3</button>
+            <button class="pill-btn grade-filter" data-grade="4">Grade 4</button>
+            <button class="pill-btn grade-filter" data-grade="5">Grade 5</button>
+            <button class="pill-btn grade-filter" data-grade="6">Grade 6</button>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="input-label" style="margin-bottom: 0.5rem;">Exercises</h4>
+          <div id="exercise-list" class="exercise-list">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Custom Text Panel (Hidden initially) -->
+      <div id="custom-text-panel" class="custom-panel hidden">
+        <h4 class="input-label">Paste Your Own Text</h4>
+        <textarea id="custom-dictation-text" class="dictation-input" style="min-height: 120px;" placeholder="Type or paste any English text, words, or paragraph here..."></textarea>
+        <button id="btn-load-custom" class="btn-primary text-center">Load Custom Passage</button>
+      </div>
+
+      <!-- Voice configuration and settings -->
+      <div style="margin-top: auto; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 1rem;">
+        <button id="btn-settings-toggle" class="settings-toggle">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+          Speech & Voice Settings
+        </button>
+      </div>
+    </section>
+
+    <!-- Right Workspace: Interactive Exercise -->
+    <section class="glass-card" style="gap: 1.5rem;">
+      <div class="workout-header">
+        <div>
+          <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+            <h2 id="current-title">Curriculum loading...</h2>
+            <button id="btn-title-speaker" class="btn-secondary-circle" style="width: 32px; height: 32px; display: inline-flex; padding: 0; align-items: center; justify-content: center;" title="Play / Pause">
+              <svg id="title-speaker-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+              </svg>
+            </button>
+          </div>
+          <p id="current-meta">Intermediate Primary English</p>
+        </div>
+        <div style="display: flex; gap: 0.5rem; align-items: center;">
+          <button id="btn-show-text-global" class="btn-secondary" style="padding: 0.4rem 0.8rem; font-size: 0.8rem; border-radius: 20px; display: inline-flex; align-items: center; gap: 0.25rem;">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            Show Text
+          </button>
+          <div id="level-badge-container">
+            <!-- Dynamically populated -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Collapsible original text display (optional read-along) -->
+      <div id="global-text-peek" class="original-peek hidden" style="margin-top: -0.75rem; margin-bottom: -0.25rem; font-size: 1.05rem; line-height: 1.7; background: rgba(99, 102, 241, 0.05); border-left: 3px solid var(--primary);">
+        <!-- Active passage text goes here -->
+      </div>
+
+      <!-- Playback Control Center -->
+      <div class="control-hub">
+        <div class="play-row">
+          <button id="btn-replay" class="btn-secondary-circle" title="Replay from start">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
+            </svg>
+          </button>
+          
+          <button id="btn-play-pause" class="btn-circle" title="Play / Pause">
+            <svg id="play-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+            <svg id="pause-icon" class="hidden" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+              <rect x="6" y="4" width="4" height="16"></rect>
+              <rect x="14" y="4" width="4" height="16"></rect>
+            </svg>
+          </button>
+
+          <div class="waveform" id="visualizer">
+            <div class="waveform-bar"></div>
+            <div class="waveform-bar"></div>
+            <div class="waveform-bar"></div>
+            <div class="waveform-bar"></div>
+            <div class="waveform-bar"></div>
+            <div class="waveform-bar"></div>
+            <div class="waveform-bar"></div>
+            <div class="waveform-bar"></div>
+          </div>
+        </div>
+
+        <div class="speed-picker">
+          <span>Speed:</span>
+          <button class="speed-btn" data-speed="0.5">0.5x</button>
+          <button class="speed-btn" data-speed="0.75">0.75x</button>
+          <button class="speed-btn active" data-speed="1.0">1.0x</button>
+        </div>
+      </div>
+
+      <!-- Phrase-by-Phrase Navigation (Only visible in Passage Mode) -->
+      <div id="phrase-navigation-container" style="display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1rem; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: var(--radius-md); margin-top: -0.5rem;">
+        <div style="display: flex; gap: 0.5rem;">
+          <button id="btn-phrase-prev" class="pill-btn" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">&larr; Prev Phrase</button>
+          <button id="btn-phrase-play" class="btn-primary" style="padding: 0.35rem 0.75rem; font-size: 0.8rem; box-shadow: none;">Play Phrase</button>
+          <button id="btn-phrase-next" class="pill-btn" style="padding: 0.35rem 0.75rem; font-size: 0.8rem;">Next Phrase &rarr;</button>
+        </div>
+        <span id="phrase-progress-indicator" style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;">Phrase 1 of 4</span>
+      </div>
+
+      <!-- 1. Passage Workspace (Transcription & checking) -->
+      <div id="passage-workspace-container" style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <!-- Transcription Area -->
+        <div class="input-section">
+          <div class="workout-header">
+            <h4 class="input-label">Your Writing Area</h4>
+            <p id="word-count" style="font-size: 0.8rem;">Words: 0</p>
+          </div>
+          <textarea id="student-writing" class="dictation-input" placeholder="Listen to the audio, then write here exactly what you hear..."></textarea>
+        </div>
+
+        <!-- Buttons for Verification -->
+        <div class="actions-row">
+          <button id="btn-clear" class="btn-secondary">Clear Text</button>
+          <button id="btn-check-dictation" class="btn-accent">Check My Answer</button>
+        </div>
+      </div>
+
+      <!-- 2. Word Spelling Workspace (Hidden initially) -->
+      <div id="word-workspace-container" class="hidden" style="display: flex; flex-direction: column; gap: 1.25rem;">
+        <div class="input-section" style="text-align: center;">
+          <h4 class="input-label" style="margin-bottom: 0.5rem;">Spell the Word You Hear</h4>
+          <input type="text" id="word-spelling-input" class="dictation-input" autocomplete="off" spellcheck="false" placeholder="Type the word here..." style="font-size: 1.5rem; text-align: center; min-height: auto; padding: 0.75rem 1rem;">
+        </div>
+
+        <!-- Navigation and Actions for Spelling test -->
+        <div class="actions-row">
+          <div style="font-size: 0.9rem; color: var(--text-secondary); font-weight: 500;">
+            Progress: <span id="word-spelling-progress" style="color: var(--text-primary);">Word 1 of 10</span>
+          </div>
+          <div style="display: flex; gap: 0.5rem;">
+            <button id="btn-word-skip" class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Skip</button>
+            <button id="btn-word-submit" class="btn-accent" style="padding: 0.5rem 1.25rem; font-size: 0.85rem;">Submit Word</button>
+          </div>
+        </div>
+
+        <!-- Word Spelling Summary Report (Visible at the end) -->
+        <div id="word-results-report" class="result-card feedback hidden">
+          <div class="result-header">
+            <h3 class="section-title" style="border: none; padding: 0;">Spelling Test Summary</h3>
+            <div id="word-evaluation-score" class="result-score">0 / 0 Correct</div>
+          </div>
+          <div id="word-spelling-diff" class="diff-container" style="line-height: 2;">
+            <!-- Word evaluation list of tags -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Score & Comparison Panel (Hidden initially) -->
+      <div id="results-panel" class="result-card feedback hidden">
+        <div class="result-header">
+          <h3 class="section-title" style="border: none; padding: 0;">Evaluation Results</h3>
+          <div id="evaluation-score" class="result-score">0% Accuracy</div>
+        </div>
+        
+        <p class="input-label">Word Comparison:</p>
+        <div id="diff-results" class="diff-container">
+          <!-- Diff outputs go here -->
+        </div>
+
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+          <button id="btn-toggle-peek" class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Show Original Passage</button>
+        </div>
+
+        <div id="original-text-peek" class="original-peek hidden">
+          <!-- Original text goes here -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Settings Dialog Overlay -->
+  <div id="settings-dropdown" class="settings-dropdown hidden">
+    <div class="result-header" style="margin-bottom: 0.5rem;">
+      <h4 class="input-label" style="color: var(--text-primary);">Speech Configuration</h4>
+      <button id="btn-settings-close" style="background:none; border:none; color:var(--text-muted); cursor:pointer; font-weight:bold;">&times;</button>
+    </div>
+    
+    <div class="settings-row">
+      <label class="input-label" for="voice-engine">TTS Engine</label>
+      <select id="voice-engine" class="settings-select">
+        <option value="webspeech">Native Web Speech API (Local & Free)</option>
+        <option value="puter">Puter AI Voices (Natural Cloud TTS)</option>
+      </select>
+    </div>
+
+    <div class="settings-row" id="voice-selection-row">
+      <label class="input-label" for="voice-select">Voice Model</label>
+      <select id="voice-select" class="settings-select">
+        <!-- Dynamically populated -->
+      </select>
+    </div>
+
+    <p style="font-size: 0.75rem; color: var(--text-muted); line-height: 1.4;">
+      <strong>Note:</strong> Microsoft Edge, Google Chrome, and Apple Safari offer highly natural native voices for English (like "Google US English" or "Microsoft Aria"). Feel free to toggle between local and cloud AI engines.
+    </p>
+  </div>
+
+  <footer>
+    <p>Dictater &copy; 2026. Designed for Intermediate Primary School English Dictation (Cambridge American Standard).</p>
+  </footer>
+
+  <script>window.DICTATER_CURRICULUM = {};</script>
+  <script src="curriculum/grade3.js"></script>
+  <script src="curriculum/grade4.js"></script>
+  <script src="curriculum/grade5.js"></script>
+  <script src="curriculum/grade6.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
