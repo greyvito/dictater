@@ -1541,5 +1541,9 @@ function updateDashboardStats() {
   });
 }
 
-// Run app init on load
-window.addEventListener('DOMContentLoaded', init);
+// Run app init on load or immediately if DOM is already parsed
+if (document.readyState === 'loading') {
+  window.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
