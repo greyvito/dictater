@@ -335,6 +335,9 @@ function switchFormat(format) {
     
     // Setup empty workspace message
     currentExercise = null;
+    btnShowTextGlobal.classList.add('hidden');
+    globalTextPeek.classList.add('hidden');
+    globalTextPeek.innerHTML = '';
     currentTitle.textContent = 'Custom Lesson Workspace';
     currentMeta.textContent = 'Select a saved lesson below or click "Create Custom Lesson"';
     levelBadgeContainer.innerHTML = '<span class="exercise-badge badge-grade-5">Custom</span>';
@@ -388,7 +391,11 @@ function loadExercise(index, isCustomSaved = false, customObj = null) {
     currentExercise = list[index];
   }
   
-  if (!currentExercise) return;
+  if (!currentExercise) {
+    btnShowTextGlobal.classList.add('hidden');
+    return;
+  }
+  btnShowTextGlobal.classList.remove('hidden');
   
   currentTitle.textContent = currentExercise.title;
   const gradeText = isCustomSaved ? 'Custom' : `Grade ${currentGrade}`;
@@ -478,6 +485,7 @@ function loadCustomText() {
     hint: 'Custom text inputted by user.'
   };
   
+  btnShowTextGlobal.classList.remove('hidden');
   currentTitle.textContent = currentExercise.title;
   currentMeta.textContent = 'Custom User Passage • Listening Practice';
   levelBadgeContainer.innerHTML = '<span class="exercise-badge badge-grade-6">Custom</span>';
@@ -1317,14 +1325,19 @@ function toggleOriginalPeek() {
 }
 
 function toggleGlobalTextPeek() {
-  if (globalTextPeek.classList.contains('hidden')) {
+  const isHidden = globalTextPeek.classList.contains('hidden');
+  const isWords = (currentFormat === 'words');
+  const labelHide = isWords ? 'Hide Words' : 'Hide Text';
+  const labelShow = isWords ? 'Show Words' : 'Show Text';
+
+  if (isHidden) {
     globalTextPeek.classList.remove('hidden');
     btnShowTextGlobal.innerHTML = `
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
         <line x1="1" y1="1" x2="23" y2="23"></line>
       </svg>
-      Hide Text
+      ${labelHide}
     `;
   } else {
     globalTextPeek.classList.add('hidden');
@@ -1333,7 +1346,7 @@ function toggleGlobalTextPeek() {
         <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
         <circle cx="12" cy="12" r="3"></circle>
       </svg>
-      Show Text
+      ${labelShow}
     `;
   }
 }
