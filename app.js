@@ -65,99 +65,174 @@ try {
 }
 
 // --- DOM Element References ---
-const btnModeCurriculum = document.getElementById('btn-mode-curriculum');
-const btnModeCustom = document.getElementById('btn-mode-custom');
-const formatSelectionContainer = document.getElementById('format-selection-container');
-const btnFormatPassage = document.getElementById('btn-format-passage');
-const btnFormatWords = document.getElementById('btn-format-words');
-const curriculumFilters = document.getElementById('curriculum-filters');
-const customTextPanel = document.getElementById('custom-text-panel');
-const customDictationText = document.getElementById('custom-dictation-text');
-const btnLoadCustom = document.getElementById('btn-load-custom');
-const exerciseList = document.getElementById('exercise-list');
+let btnModeCurriculum;
+let btnModeCustom;
+let formatSelectionContainer;
+let btnFormatPassage;
+let btnFormatWords;
+let curriculumFilters;
+let customTextPanel;
+let customDictationText;
+let btnLoadCustom;
+let exerciseList;
 
 // Custom Lesson Manager elements
-const btnOpenLessonCreator = document.getElementById('btn-open-lesson-creator');
-const lessonCreatorModal = document.getElementById('lesson-creator-modal');
-const btnCreatorClose = document.getElementById('btn-creator-close');
-const creatorTitle = document.getElementById('creator-title');
-const creatorType = document.getElementById('creator-type');
-const creatorContent = document.getElementById('creator-content');
-const creatorHint = document.getElementById('creator-hint');
-const btnCreatorSave = document.getElementById('btn-creator-save');
-const customSavedList = document.getElementById('custom-saved-list');
+let btnOpenLessonCreator;
+let lessonCreatorModal;
+let btnCreatorClose;
+let creatorTitle;
+let creatorType;
+let creatorContent;
+let creatorHint;
+let btnCreatorSave;
+let customSavedList;
 
 // Student Dashboard elements
-const btnOpenDashboard = document.getElementById('btn-open-dashboard');
-const dashboardModal = document.getElementById('dashboard-modal');
-const btnDashboardClose = document.getElementById('btn-dashboard-close');
-const statCompleted = document.getElementById('stat-completed');
-const statAccuracy = document.getElementById('stat-accuracy');
-const statStreak = document.getElementById('stat-streak');
-const badgesGrid = document.getElementById('badges-grid');
-const dashboardActivityLog = document.getElementById('dashboard-activity-log');
+let btnOpenDashboard;
+let dashboardModal;
+let btnDashboardClose;
+let statCompleted;
+let statAccuracy;
+let statStreak;
+let badgesGrid;
+let dashboardActivityLog;
 
 // Main Workspace elements
-const currentTitle = document.getElementById('current-title');
-const currentMeta = document.getElementById('current-meta');
-const levelBadgeContainer = document.getElementById('level-badge-container');
-const btnPlayPause = document.getElementById('btn-play-pause');
-const btnTitleSpeaker = document.getElementById('btn-title-speaker');
-const playIcon = document.getElementById('play-icon');
-const pauseIcon = document.getElementById('pause-icon');
-const btnReplay = document.getElementById('btn-replay');
-const visualizer = document.getElementById('visualizer');
-const speedButtons = document.querySelectorAll('.speed-btn');
+let currentTitle;
+let currentMeta;
+let levelBadgeContainer;
+let btnPlayPause;
+let btnTitleSpeaker;
+let playIcon;
+let pauseIcon;
+let btnReplay;
+let visualizer;
+let speedButtons;
 
 // Phrase Controls
-const phraseNavigationContainer = document.getElementById('phrase-navigation-container');
-const btnPhrasePrev = document.getElementById('btn-phrase-prev');
-const btnPhrasePlay = document.getElementById('btn-phrase-play');
-const btnPhraseNext = document.getElementById('btn-phrase-next');
-const phraseProgressIndicator = document.getElementById('phrase-progress-indicator');
+let phraseNavigationContainer;
+let btnPhrasePrev;
+let btnPhrasePlay;
+let btnPhraseNext;
+let phraseProgressIndicator;
 
 // Workspaces
-const passageWorkspaceContainer = document.getElementById('passage-workspace-container');
-const wordWorkspaceContainer = document.getElementById('word-workspace-container');
+let passageWorkspaceContainer;
+let wordWorkspaceContainer;
 
 // Passage Workspace elements
-const studentWriting = document.getElementById('student-writing');
-const wordCount = document.getElementById('word-count');
-const btnClear = document.getElementById('btn-clear');
-const btnCheckDictation = document.getElementById('btn-check-dictation');
-const resultsPanel = document.getElementById('results-panel');
-const evaluationScore = document.getElementById('evaluation-score');
-const diffResults = document.getElementById('diff-results');
-const btnTogglePeek = document.getElementById('btn-toggle-peek');
-const originalTextPeek = document.getElementById('original-text-peek');
+let studentWriting;
+let wordCount;
+let btnClear;
+let btnCheckDictation;
+let resultsPanel;
+let evaluationScore;
+let diffResults;
+let btnTogglePeek;
+let originalTextPeek;
 
 // Word Workspace elements
-const wordSpellingInput = document.getElementById('word-spelling-input');
-const btnWordSkip = document.getElementById('btn-word-skip');
-const btnWordSubmit = document.getElementById('btn-word-submit');
-const wordSpellingProgress = document.getElementById('word-spelling-progress');
-const wordResultsReport = document.getElementById('word-results-report');
-const wordEvaluationScore = document.getElementById('word-evaluation-score');
-const wordSpellingDiff = document.getElementById('word-spelling-diff');
+let wordSpellingInput;
+let btnWordSkip;
+let btnWordSubmit;
+let wordSpellingProgress;
+let wordResultsReport;
+let wordEvaluationScore;
+let wordSpellingDiff;
 
 // Global Show Text elements
-const btnShowTextGlobal = document.getElementById('btn-show-text-global');
-const globalTextPeek = document.getElementById('global-text-peek');
+let btnShowTextGlobal;
+let globalTextPeek;
 
 // Settings elements
-const btnSettingsToggle = document.getElementById('btn-settings-toggle');
-const btnSettingsClose = document.getElementById('btn-settings-close');
-const settingsDropdown = document.getElementById('settings-dropdown');
-const voiceEngine = document.getElementById('voice-engine');
-const voiceAccent = document.getElementById('voice-accent');
-const voiceSelect = document.getElementById('voice-select');
-const voiceSelectionRow = document.getElementById('voice-selection-row');
+let btnSettingsToggle;
+let btnSettingsClose;
+let settingsDropdown;
+let voiceEngine;
+let voiceAccent;
+let voiceSelect;
+let voiceSelectionRow;
 
 // Modal Background Mask Element
 let modalMask = null;
 
 // --- Initialization ---
+
+// --- Initialize DOM Element References lazily ---
+function initDOMElements() {
+  btnModeCurriculum = document.getElementById('btn-mode-curriculum');
+  btnModeCustom = document.getElementById('btn-mode-custom');
+  formatSelectionContainer = document.getElementById('format-selection-container');
+  btnFormatPassage = document.getElementById('btn-format-passage');
+  btnFormatWords = document.getElementById('btn-format-words');
+  curriculumFilters = document.getElementById('curriculum-filters');
+  customTextPanel = document.getElementById('custom-text-panel');
+  customDictationText = document.getElementById('custom-dictation-text');
+  btnLoadCustom = document.getElementById('btn-load-custom');
+  exerciseList = document.getElementById('exercise-list');
+  btnOpenLessonCreator = document.getElementById('btn-open-lesson-creator');
+  lessonCreatorModal = document.getElementById('lesson-creator-modal');
+  btnCreatorClose = document.getElementById('btn-creator-close');
+  creatorTitle = document.getElementById('creator-title');
+  creatorType = document.getElementById('creator-type');
+  creatorContent = document.getElementById('creator-content');
+  creatorHint = document.getElementById('creator-hint');
+  btnCreatorSave = document.getElementById('btn-creator-save');
+  customSavedList = document.getElementById('custom-saved-list');
+  btnOpenDashboard = document.getElementById('btn-open-dashboard');
+  dashboardModal = document.getElementById('dashboard-modal');
+  btnDashboardClose = document.getElementById('btn-dashboard-close');
+  statCompleted = document.getElementById('stat-completed');
+  statAccuracy = document.getElementById('stat-accuracy');
+  statStreak = document.getElementById('stat-streak');
+  badgesGrid = document.getElementById('badges-grid');
+  dashboardActivityLog = document.getElementById('dashboard-activity-log');
+  currentTitle = document.getElementById('current-title');
+  currentMeta = document.getElementById('current-meta');
+  levelBadgeContainer = document.getElementById('level-badge-container');
+  btnPlayPause = document.getElementById('btn-play-pause');
+  btnTitleSpeaker = document.getElementById('btn-title-speaker');
+  playIcon = document.getElementById('play-icon');
+  pauseIcon = document.getElementById('pause-icon');
+  btnReplay = document.getElementById('btn-replay');
+  visualizer = document.getElementById('visualizer');
+  speedButtons = document.querySelectorAll('.speed-btn');
+  phraseNavigationContainer = document.getElementById('phrase-navigation-container');
+  btnPhrasePrev = document.getElementById('btn-phrase-prev');
+  btnPhrasePlay = document.getElementById('btn-phrase-play');
+  btnPhraseNext = document.getElementById('btn-phrase-next');
+  phraseProgressIndicator = document.getElementById('phrase-progress-indicator');
+  passageWorkspaceContainer = document.getElementById('passage-workspace-container');
+  wordWorkspaceContainer = document.getElementById('word-workspace-container');
+  studentWriting = document.getElementById('student-writing');
+  wordCount = document.getElementById('word-count');
+  btnClear = document.getElementById('btn-clear');
+  btnCheckDictation = document.getElementById('btn-check-dictation');
+  resultsPanel = document.getElementById('results-panel');
+  evaluationScore = document.getElementById('evaluation-score');
+  diffResults = document.getElementById('diff-results');
+  btnTogglePeek = document.getElementById('btn-toggle-peek');
+  originalTextPeek = document.getElementById('original-text-peek');
+  wordSpellingInput = document.getElementById('word-spelling-input');
+  btnWordSkip = document.getElementById('btn-word-skip');
+  btnWordSubmit = document.getElementById('btn-word-submit');
+  wordSpellingProgress = document.getElementById('word-spelling-progress');
+  wordResultsReport = document.getElementById('word-results-report');
+  wordEvaluationScore = document.getElementById('word-evaluation-score');
+  wordSpellingDiff = document.getElementById('word-spelling-diff');
+  btnShowTextGlobal = document.getElementById('btn-show-text-global');
+  globalTextPeek = document.getElementById('global-text-peek');
+  btnSettingsToggle = document.getElementById('btn-settings-toggle');
+  btnSettingsClose = document.getElementById('btn-settings-close');
+  settingsDropdown = document.getElementById('settings-dropdown');
+  voiceEngine = document.getElementById('voice-engine');
+  voiceAccent = document.getElementById('voice-accent');
+  voiceSelect = document.getElementById('voice-select');
+  voiceSelectionRow = document.getElementById('voice-selection-row');
+}
+
 function init() {
+  initDOMElements();
   setupEventListeners();
   loadVoices();
   
