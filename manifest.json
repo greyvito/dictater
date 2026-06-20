@@ -1,0 +1,18 @@
+{
+  "name": "Dictater — English Listening & Dictation",
+  "short_name": "Dictater",
+  "description": "Improve your English listening. Listen to passages, write down what you hear, and check your spelling accuracy.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#1e1b4b",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "images/icon.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

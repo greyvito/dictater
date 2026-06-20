@@ -15,6 +15,7 @@ let currentSpeechUtterance = null;
 let puterAudioObj = null;
 let selectedEngine = 'webspeech';
 let selectedVoiceName = '';
+let selectedAccent = 'US'; // 'US' or 'UK'
 
 // Pause/Resume Memory Coordinates
 let currentlyPlayingText = "";
@@ -30,6 +31,20 @@ let spellingWords = [];
 let currentWordIndex = 0;
 let spellingHistory = [];
 
+// Custom Lessons Data
+let customLessons = JSON.parse(localStorage.getItem('DICTATER_CUSTOM_LESSONS')) || [];
+
+// Student Stats & Progress Data
+let studentStats = JSON.parse(localStorage.getItem('DICTATER_STATS')) || [];
+let studentBadges = JSON.parse(localStorage.getItem('DICTATER_BADGES')) || {
+  firstSteps: false,
+  accuracyExpert: false,
+  spellingHero: false,
+  streakExplorer: false,
+  superWriter: false,
+  customScholar: false
+};
+
 // --- DOM Element References ---
 const btnModeCurriculum = document.getElementById('btn-mode-curriculum');
 const btnModeCustom = document.getElementById('btn-mode-custom');
@@ -41,6 +56,27 @@ const customTextPanel = document.getElementById('custom-text-panel');
 const customDictationText = document.getElementById('custom-dictation-text');
 const btnLoadCustom = document.getElementById('btn-load-custom');
 const exerciseList = document.getElementById('exercise-list');
+
+// Custom Lesson Manager elements
+const btnOpenLessonCreator = document.getElementById('btn-open-lesson-creator');
+const lessonCreatorModal = document.getElementById('lesson-creator-modal');
+const btnCreatorClose = document.getElementById('btn-creator-close');
+const creatorTitle = document.getElementById('creator-title');
+const creatorType = document.getElementById('creator-type');
+const creatorContent = document.getElementById('creator-content');
+const creatorHint = document.getElementById('creator-hint');
+const btnCreatorSave = document.getElementById('btn-creator-save');
+const customSavedList = document.getElementById('custom-saved-list');
+
+// Student Dashboard elements
+const btnOpenDashboard = document.getElementById('btn-open-dashboard');
+const dashboardModal = document.getElementById('dashboard-modal');
+const btnDashboardClose = document.getElementById('btn-dashboard-close');
+const statCompleted = document.getElementById('stat-completed');
+const statAccuracy = document.getElementById('stat-accuracy');
+const statStreak = document.getElementById('stat-streak');
+const badgesGrid = document.getElementById('badges-grid');
+const dashboardActivityLog = document.getElementById('dashboard-activity-log');
 
 // Main Workspace elements
 const currentTitle = document.getElementById('current-title');
@@ -94,8 +130,12 @@ const btnSettingsToggle = document.getElementById('btn-settings-toggle');
 const btnSettingsClose = document.getElementById('btn-settings-close');
 const settingsDropdown = document.getElementById('settings-dropdown');
 const voiceEngine = document.getElementById('voice-engine');
+const voiceAccent = document.getElementById('voice-accent');
 const voiceSelect = document.getElementById('voice-select');
 const voiceSelectionRow = document.getElementById('voice-selection-row');
+
+// Modal Background Mask Element
+let modalMask = null;
 
 // --- Initialization ---
 function init() {
@@ -111,6 +151,7 @@ function init() {
   switchFormat('passage');
   filterExercises();
   loadExercise(0);
+  renderCustomSavedLessons();
 }
 
 // --- Event Listeners Setup ---
@@ -149,7 +190,6 @@ function setupEventListeners() {
       
       // If playing webspeech, restart with new speed
       if (isPlaying && selectedEngine === 'webspeech' && currentSpeechUtterance) {
-        // Find remaining text to keep the play position
         const remainingText = currentlyPlayingText.slice(currentPlayCharIndex);
         speechTextOffset = currentPlayCharIndex;
         stopSpeech();
@@ -188,6 +228,18 @@ function setupEventListeners() {
   btnTogglePeek.addEventListener('click', toggleOriginalPeek);
   btnShowTextGlobal.addEventListener('click', toggleGlobalTextPeek);
 
+  // Custom Lesson Creator
+  btnOpenLessonCreator.addEventListener('click', () => openModal(lessonCreatorModal));
+  btnCreatorClose.addEventListener('click', () => closeModal(lessonCreatorModal));
+  btnCreatorSave.addEventListener('click', saveCustomLesson);
+
+  // Student Dashboard
+  btnOpenDashboard.addEventListener('click', () => {
+    updateDashboardStats();
+    openModal(dashboardModal);
+  });
+  btnDashboardClose.addEventListener('click', () => closeModal(dashboardModal));
+
   // Settings
   btnSettingsToggle.addEventListener('click', () => settingsDropdown.classList.toggle('hidden'));
   btnSettingsClose.addEventListener('click', () => settingsDropdown.classList.add('hidden'));
@@ -195,7 +247,10 @@ function setupEventListeners() {
     selectedEngine = e.target.value;
     updateVoiceSelectDropdown();
   });
-  
+  voiceAccent.addEventListener('change', (e) => {
+    selectedAccent = e.target.value;
+    updateVoiceSelectDropdown();
+  });
   voiceSelect.addEventListener('change', (e) => {
     selectedVoiceName = e.target.value;
   });
@@ -206,6 +261,24 @@ function setupEventListeners() {
       settingsDropdown.classList.add('hidden');
     }
   });
+}
+
+// --- Modal Utilities ---
+function openModal(modal) {
+  // Create mask overlay if not exists
+  if (!modalMask) {
+    modalMask = document.createElement('div');
+    modalMask.className = 'modal-open-mask';
+    document.body.appendChild(modalMask);
+  }
+  modalMask.classList.remove('hidden');
+  modal.classList.remove('hidden');
+}
+
+// Close modal helper
+function closeModal(modal) {
+  modal.classList.add('hidden');
+  if (modalMask) modalMask.classList.add('hidden');
 }
 
 // --- View State Switches ---
@@ -224,21 +297,12 @@ function switchMode(mode) {
   } else {
     btnModeCurriculum.classList.remove('active');
     btnModeCustom.classList.add('active');
-    formatSelectionContainer.classList.add('hidden');
+    formatSelectionContainer.classList.remove('hidden'); // Format stays visible in custom mode to filter saved lists!
     curriculumFilters.classList.add('hidden');
     customTextPanel.classList.remove('hidden');
     
-    // Custom is always passage mode
-    switchFormat('passage');
-    
-    currentExercise = null;
-    currentTitle.textContent = 'Custom Practice Mode';
-    currentMeta.textContent = 'Write or paste text in the left panel to begin';
-    levelBadgeContainer.innerHTML = '<span class="exercise-badge badge-grade-5">Custom</span>';
-    studentWriting.value = '';
-    updateWordCount();
-    resultsPanel.classList.add('hidden');
-    phraseNavigationContainer.classList.add('hidden');
+    // Default in custom mode to whatever exercise format was selected last
+    switchFormat(currentFormat);
   }
 }
 
@@ -265,6 +329,21 @@ function switchFormat(format) {
   if (currentMode === 'curriculum') {
     filterExercises();
     loadExercise(0);
+  } else {
+    // If Custom Mode, reload saved custom lessons sidebar list
+    renderCustomSavedLessons();
+    
+    // Setup empty workspace message
+    currentExercise = null;
+    currentTitle.textContent = 'Custom Lesson Workspace';
+    currentMeta.textContent = 'Select a saved lesson below or click "Create Custom Lesson"';
+    levelBadgeContainer.innerHTML = '<span class="exercise-badge badge-grade-5">Custom</span>';
+    studentWriting.value = '';
+    wordSpellingInput.value = '';
+    updateWordCount();
+    resultsPanel.classList.add('hidden');
+    wordResultsReport.classList.add('hidden');
+    phraseNavigationContainer.style.display = 'none';
   }
 }
 
@@ -295,23 +374,35 @@ function filterExercises() {
   });
 }
 
-function loadExercise(index) {
+function loadExercise(index, isCustomSaved = false, customObj = null) {
   stopSpeech();
-  currentExerciseIndex = index;
   
-  const gradeData = DICTATER_CURRICULUM[currentGrade];
-  if (!gradeData) return;
-  
-  const list = currentFormat === 'passage' ? gradeData.passages : gradeData.words;
-  currentExercise = list[index];
+  if (isCustomSaved && customObj) {
+    currentExercise = customObj;
+    currentExerciseIndex = -1;
+  } else {
+    currentExerciseIndex = index;
+    const gradeData = DICTATER_CURRICULUM[currentGrade];
+    if (!gradeData) return;
+    const list = currentFormat === 'passage' ? gradeData.passages : gradeData.words;
+    currentExercise = list[index];
+  }
   
   if (!currentExercise) return;
   
   currentTitle.textContent = currentExercise.title;
+  const gradeText = isCustomSaved ? 'Custom' : `Grade ${currentGrade}`;
   
-  if (currentFormat === 'passage') {
-    currentMeta.textContent = `Grade ${currentGrade} Passage • Template Exercise`;
-    levelBadgeContainer.innerHTML = `<span class="exercise-badge badge-grade-${currentGrade}">Grade ${currentGrade}</span>`;
+  if (currentExercise.text) {
+    // PASSAGE MODE
+    currentFormat = 'passage';
+    btnFormatPassage.classList.add('active');
+    btnFormatWords.classList.remove('active');
+    passageWorkspaceContainer.classList.remove('hidden');
+    wordWorkspaceContainer.classList.add('hidden');
+    
+    currentMeta.textContent = `${gradeText} Passage • Dictation Exercise`;
+    levelBadgeContainer.innerHTML = `<span class="exercise-badge badge-grade-6">${gradeText}</span>`;
     
     // Clear user typing
     studentWriting.value = '';
@@ -335,10 +426,16 @@ function loadExercise(index) {
     `;
     
     phraseNavigationContainer.style.display = 'flex';
-  } else {
-    // Word List Mode
-    currentMeta.textContent = `Grade ${currentGrade} Word List • Spelling Practice`;
-    levelBadgeContainer.innerHTML = `<span class="exercise-badge badge-grade-${currentGrade}">Grade ${currentGrade} Words</span>`;
+  } else if (currentExercise.words) {
+    // WORD LIST MODE
+    currentFormat = 'words';
+    btnFormatPassage.classList.remove('active');
+    btnFormatWords.classList.add('active');
+    passageWorkspaceContainer.classList.add('hidden');
+    wordWorkspaceContainer.classList.remove('hidden');
+    
+    currentMeta.textContent = `${gradeText} Word List • Spelling Practice`;
+    levelBadgeContainer.innerHTML = `<span class="exercise-badge badge-grade-5">${gradeText} Words</span>`;
     
     // Initialize Spelling Test
     spellingWords = currentExercise.words;
@@ -376,7 +473,7 @@ function loadCustomText() {
   currentExercise = {
     id: 'custom-active',
     grade: 'Custom',
-    title: 'Custom Dictation Exercise',
+    title: 'Quick Custom Exercise',
     text: text,
     hint: 'Custom text inputted by user.'
   };
@@ -407,10 +504,108 @@ function loadCustomText() {
   phraseNavigationContainer.style.display = 'flex';
 }
 
-function updateWordCount() {
-  const text = studentWriting.value.trim();
-  const count = text ? text.split(/\s+/).length : 0;
-  wordCount.textContent = `Words: ${count}`;
+// --- Custom Lesson Manager Logics ---
+function saveCustomLesson() {
+  const title = creatorTitle.value.trim();
+  const type = creatorType.value;
+  const content = creatorContent.value.trim();
+  const hint = creatorHint.value.trim() || 'Custom created exercise.';
+  
+  if (!title || !content) {
+    alert('Please enter both a title and some content.');
+    return;
+  }
+  
+  const lessonObj = {
+    id: 'custom-' + Date.now(),
+    grade: 'Custom',
+    title: title,
+    hint: hint
+  };
+  
+  if (type === 'passage') {
+    lessonObj.text = content;
+  } else {
+    // Split by commas, filter out empty elements, and trim
+    lessonObj.words = content.split(',').map(w => w.trim()).filter(w => w.length > 0);
+    if (lessonObj.words.length === 0) {
+      alert('Please enter at least one word (separated by commas).');
+      return;
+    }
+  }
+  
+  customLessons.push(lessonObj);
+  localStorage.setItem('DICTATER_CUSTOM_LESSONS', JSON.stringify(customLessons));
+  
+  // Reset Form and close
+  creatorTitle.value = '';
+  creatorContent.value = '';
+  creatorHint.value = '';
+  closeModal(lessonCreatorModal);
+  
+  // Re-render
+  renderCustomSavedLessons();
+}
+
+function renderCustomSavedLessons() {
+  if (!customSavedList) return;
+  customSavedList.innerHTML = '';
+  
+  // Filter saved custom lessons based on currently active formats
+  const filtered = customLessons.filter(l => {
+    if (currentFormat === 'passage') return l.text !== undefined;
+    return l.words !== undefined;
+  });
+  
+  if (filtered.length === 0) {
+    customSavedList.innerHTML = '<div style="color: var(--text-muted); font-size: 0.8rem; text-align: center; padding: 1rem;">No saved lessons yet.</div>';
+    return;
+  }
+  
+  filtered.forEach(lesson => {
+    const div = document.createElement('div');
+    div.className = `custom-lesson-item ${currentExercise && currentExercise.id === lesson.id ? 'active' : ''}`;
+    
+    const label = currentFormat === 'passage' ? 'Passage' : 'Words';
+    div.innerHTML = `
+      <div style="display: flex; flex-direction: column; gap: 0.15rem; max-width: 80%;">
+        <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${lesson.title}</span>
+        <span style="font-size: 0.7rem; color: var(--text-muted);">${label} • ${lesson.words ? lesson.words.length + ' words' : '1 passage'}</span>
+      </div>
+      <button class="btn-delete-lesson" title="Delete custom lesson" data-id="${lesson.id}">&times;</button>
+    `;
+    
+    // Load click
+    div.addEventListener('click', (e) => {
+      // Don't trigger load if clicking delete button
+      if (e.target.classList.contains('btn-delete-lesson')) return;
+      
+      document.querySelectorAll('.custom-lesson-item').forEach(item => item.classList.remove('active'));
+      div.classList.add('active');
+      loadExercise(-1, true, lesson);
+    });
+    
+    // Delete click
+    const btnDel = div.querySelector('.btn-delete-lesson');
+    btnDel.addEventListener('click', () => {
+      if (confirm(`Are you sure you want to delete "${lesson.title}"?`)) {
+        deleteCustomLesson(lesson.id);
+      }
+    });
+    
+    customSavedList.appendChild(div);
+  });
+}
+
+function deleteCustomLesson(id) {
+  customLessons = customLessons.filter(l => l.id !== id);
+  localStorage.setItem('DICTATER_CUSTOM_LESSONS', JSON.stringify(customLessons));
+  
+  if (currentExercise && currentExercise.id === id) {
+    currentExercise = null;
+  }
+  
+  renderCustomSavedLessons();
 }
 
 // --- Phrase Replay Logics ---
@@ -431,11 +626,7 @@ function navigatePhrase(direction) {
   if (newIndex >= 0 && newIndex < phrases.length) {
     currentPhraseIndex = newIndex;
     updatePhraseProgress();
-    
-    // Highlight active phrase in read-along peek if open
     highlightActivePhraseSpan();
-    
-    // Play phrase immediately when stepping
     playActivePhrase();
   }
 }
@@ -454,23 +645,6 @@ function playActivePhrase() {
     speakWebSpeech(phraseText);
   } else {
     speakPuterSpeech(phraseText);
-  }
-}
-
-function playTitleSpeech() {
-  if (!currentExercise || !currentExercise.title) return;
-  const titleText = currentExercise.title.trim();
-  
-  stopSpeech();
-  
-  currentlyPlayingText = titleText;
-  speechTextOffset = 0;
-  currentPlayCharIndex = 0;
-  
-  if (selectedEngine === 'webspeech') {
-    speakWebSpeech(titleText);
-  } else {
-    speakPuterSpeech(titleText);
   }
 }
 
@@ -526,7 +700,6 @@ function highlightActivePhraseSpan() {
 function updateSpellingProgress() {
   if (spellingWords.length === 0) return;
   
-  // Calculate running correct score
   const correctCount = spellingHistory.filter(h => h.correct).length;
   
   if (currentWordIndex < spellingWords.length) {
@@ -565,7 +738,6 @@ function submitSpelledWord() {
   const correctValue = spellingWords[currentWordIndex];
   const isCorrect = typedValue.toLowerCase() === correctValue.toLowerCase();
   
-  // Save history
   spellingHistory.push({
     word: correctValue,
     typed: typedValue,
@@ -581,7 +753,6 @@ function submitSpelledWord() {
     wordSpellingInput.style.boxShadow = '0 0 15px rgba(239, 68, 68, 0.4)';
   }
   
-  // Advance after short delay for feedback display
   setTimeout(() => {
     wordSpellingInput.value = '';
     wordSpellingInput.style.borderColor = 'rgba(255, 255, 255, 0.1)';
@@ -626,8 +797,6 @@ function finishSpellingTest() {
   const correct = spellingHistory.filter(h => h.correct).length;
   
   wordEvaluationScore.textContent = `${correct} / ${total} Correct`;
-  
-  // Render spelling word-by-word reports
   wordSpellingDiff.innerHTML = '';
   spellingHistory.forEach(item => {
     const div = document.createElement('div');
@@ -652,6 +821,10 @@ function finishSpellingTest() {
   
   wordResultsReport.classList.remove('hidden');
   wordResultsReport.scrollIntoView({ behavior: 'smooth' });
+  
+  // Log score to dashboard statistics
+  const scorePct = Math.round((correct / total) * 100);
+  saveScoreToStats(currentExercise.id, currentExercise.title, 'words', scorePct);
 }
 
 function renderInteractiveWords(wordList) {
@@ -705,10 +878,34 @@ function updateVoiceSelectDropdown() {
   
   if (selectedEngine === 'webspeech') {
     voiceSelectionRow.classList.remove('hidden');
-    const usEnglishVoices = availableSpeechSynthesisVoices.filter(v => v.lang.startsWith('en-US'));
-    const filteredVoices = usEnglishVoices.length > 0 
-      ? usEnglishVoices 
-      : availableSpeechSynthesisVoices.filter(v => v.lang.startsWith('en'));
+    
+    // Filter voices based on Accent Preference
+    let filteredVoices = [];
+    if (selectedAccent === 'US') {
+      filteredVoices = availableSpeechSynthesisVoices.filter(v => {
+        const lang = v.lang.toLowerCase().replace('_', '-');
+        return lang.startsWith('en-us');
+      });
+    } else {
+      // Commonwealth Accents: en-gb, en-au, en-ie, en-ca
+      filteredVoices = availableSpeechSynthesisVoices.filter(v => {
+        const lang = v.lang.toLowerCase().replace('_', '-');
+        return lang.startsWith('en-gb') || 
+               lang.startsWith('en-au') || 
+               lang.startsWith('en-ie') || 
+               lang.startsWith('en-ca');
+      });
+    }
+    
+    // If no accented voices, fallback to any English
+    if (filteredVoices.length === 0) {
+      filteredVoices = availableSpeechSynthesisVoices.filter(v => {
+        const lang = v.lang.toLowerCase().replace('_', '-');
+        return lang.startsWith('en');
+      });
+    }
+    
+    // If absolutely nothing, display all
     const displayList = filteredVoices.length > 0 ? filteredVoices : availableSpeechSynthesisVoices;
 
     if (displayList.length === 0) {
@@ -724,6 +921,7 @@ function updateVoiceSelectDropdown() {
       option.value = v.name;
       option.textContent = `${v.name} (${v.lang})`;
       
+      // Auto-select natural-sounding voices
       if (v.name.includes('Natural') || v.name.includes('Aria') || v.name.includes('Google US')) {
         option.selected = true;
         selectedVoiceName = v.name;
@@ -758,7 +956,6 @@ function resumeSpeech() {
   if (isPlaying) return;
 
   if (isPausedState && currentlyPlayingText) {
-    // We are resuming a paused track
     isPlaying = true;
     updatePlaybackUI(true);
     isPausedState = false;
@@ -773,7 +970,6 @@ function resumeSpeech() {
       }
     }
   } else {
-    // Start playback fresh
     playSpeech();
   }
 }
@@ -782,10 +978,8 @@ function playSpeech() {
   if (isPlaying) return;
   
   if (currentFormat === 'passage') {
-    // In passage mode, play the active phrase
     playActivePhrase();
   } else {
-    // Word list mode plays current spelling word
     playActiveWord();
   }
 }
@@ -806,6 +1000,7 @@ function pauseSpeech() {
   }
 }
 
+// Stop speech helper
 function stopSpeech() {
   isPlaying = false;
   isPausedState = false;
@@ -840,7 +1035,6 @@ function speakWebSpeech(text, isResume = false) {
     return;
   }
 
-  // When starting fresh, record coordinates
   if (!isResume) {
     currentlyPlayingText = text;
     speechTextOffset = 0;
@@ -869,7 +1063,6 @@ function speakWebSpeech(text, isResume = false) {
   };
   
   currentSpeechUtterance.onend = () => {
-    // Only reset if we didn't pause/cancel mid-way (cancel triggers onend too)
     if (!isPausedState) {
       isPlaying = false;
       isPausedState = false;
@@ -881,7 +1074,6 @@ function speakWebSpeech(text, isResume = false) {
   };
   
   currentSpeechUtterance.onerror = (e) => {
-    // Ignore errors triggered by intentional cancels
     if (isPausedState) return;
     console.error('SpeechSynthesis error:', e);
     isPlaying = false;
@@ -947,7 +1139,23 @@ async function speakPuterSpeech(text) {
   }
 }
 
-// --- UI Synchronizer ---
+function playTitleSpeech() {
+  if (!currentExercise || !currentExercise.title) return;
+  const titleText = currentExercise.title.trim();
+  
+  stopSpeech();
+  
+  currentlyPlayingText = titleText;
+  speechTextOffset = 0;
+  currentPlayCharIndex = 0;
+  
+  if (selectedEngine === 'webspeech') {
+    speakWebSpeech(titleText);
+  } else {
+    speakPuterSpeech(titleText);
+  }
+}
+
 function updatePlaybackUI(speaking) {
   if (speaking) {
     playIcon.classList.add('hidden');
@@ -1014,6 +1222,9 @@ function checkDictation() {
   originalTextPeek.textContent = originalText;
   resultsPanel.classList.remove('hidden');
   resultsPanel.scrollIntoView({ behavior: 'smooth' });
+  
+  // Save to Dashboard statistics
+  saveScoreToStats(currentExercise.id, currentExercise.title, 'passage', score);
 }
 
 function splitIntoWords(text) {
@@ -1125,6 +1336,175 @@ function toggleGlobalTextPeek() {
       Show Text
     `;
   }
+}
+
+// --- Student Dashboard & Score Logging ---
+function saveScoreToStats(exerciseId, title, type, score) {
+  const statsRecord = {
+    id: 'rec-' + Date.now(),
+    exerciseId: exerciseId,
+    title: title,
+    type: type,
+    score: score,
+    date: new Date().toISOString().split('T')[0] // YYYY-MM-DD
+  };
+  
+  studentStats.push(statsRecord);
+  localStorage.setItem('DICTATER_STATS', JSON.stringify(studentStats));
+  
+  // Evaluate and award achievements / badges
+  evaluateBadges(statsRecord);
+}
+
+function calculateCurrentStreak() {
+  if (studentStats.length === 0) return 0;
+  
+  // Get all unique dates on which student completed exercises, sorted descending
+  const dates = [...new Set(studentStats.map(r => r.date))].sort().reverse();
+  
+  const today = new Date().toISOString().split('T')[0];
+  const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
+  
+  // If the last activity wasn't today or yesterday, streak is broken
+  if (dates[0] !== today && dates[0] !== yesterday) {
+    return 0;
+  }
+  
+  let streak = 1;
+  for (let i = 0; i < dates.length - 1; i++) {
+    const current = new Date(dates[i]);
+    const prev = new Date(dates[i+1]);
+    const diffTime = Math.abs(current - prev);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    
+    if (diffDays === 1) {
+      streak++;
+    } else if (diffDays > 1) {
+      break;
+    }
+  }
+  return streak;
+}
+
+function evaluateBadges(newRecord) {
+  let updated = false;
+
+  // 1. First Steps: Complete first dictation
+  if (!studentBadges.firstSteps && studentStats.length >= 1) {
+    studentBadges.firstSteps = true;
+    updated = true;
+  }
+  
+  // 2. Accuracy Expert: Score 90%+ on any passage
+  if (!studentBadges.accuracyExpert && newRecord.type === 'passage' && newRecord.score >= 90) {
+    studentBadges.accuracyExpert = true;
+    updated = true;
+  }
+  
+  // 3. Spelling Hero: Get a perfect score (100%) on any word list
+  if (!studentBadges.spellingHero && newRecord.type === 'words' && newRecord.score === 100) {
+    studentBadges.spellingHero = true;
+    updated = true;
+  }
+  
+  // 4. Streak Explorer: Reach 3-day streak
+  const streak = calculateCurrentStreak();
+  if (!studentBadges.streakExplorer && streak >= 3) {
+    studentBadges.streakExplorer = true;
+    updated = true;
+  }
+  
+  // 5. Super Writer: Transcribe 5 passages
+  const passageCount = studentStats.filter(r => r.type === 'passage').length;
+  if (!studentBadges.superWriter && passageCount >= 5) {
+    studentBadges.superWriter = true;
+    updated = true;
+  }
+  
+  // 6. Custom Scholar: Complete a custom saved lesson
+  if (!studentBadges.customScholar && newRecord.exerciseId.startsWith('custom-')) {
+    studentBadges.customScholar = true;
+    updated = true;
+  }
+  
+  if (updated) {
+    localStorage.setItem('DICTATER_BADGES', JSON.stringify(studentBadges));
+    // Pop a small notification banner
+    setTimeout(() => {
+      alert('🏆 Achievement Unlocked! Check your Student Dashboard to view your new badge.');
+    }, 800);
+  }
+}
+
+function updateDashboardStats() {
+  const total = studentStats.length;
+  statCompleted.textContent = total;
+  
+  // Calculate average accuracy
+  if (total > 0) {
+    const sum = studentStats.reduce((acc, r) => acc + r.score, 0);
+    statAccuracy.textContent = Math.round(sum / total) + '%';
+  } else {
+    statAccuracy.textContent = '0%';
+  }
+  
+  // Calculate daily streak
+  const streak = calculateCurrentStreak();
+  statStreak.textContent = streak === 1 ? '1 Day' : streak + ' Days';
+  
+  // Render Badges grid
+  badgesGrid.innerHTML = '';
+  const badgesDef = [
+    { key: 'firstSteps', icon: '🎈', title: 'First Steps', desc: 'Complete your first dictation' },
+    { key: 'accuracyExpert', icon: '🎯', title: 'Accuracy Expert', desc: '90%+ on any passage' },
+    { key: 'spellingHero', icon: '🏆', title: 'Spelling Hero', desc: 'Perfect 100% on a word list' },
+    { key: 'streakExplorer', icon: '🔥', title: 'Streak Explorer', desc: '3-day practice streak' },
+    { key: 'superWriter', icon: '✍️', title: 'Super Writer', desc: 'Complete 5 passages' },
+    { key: 'customScholar', icon: '🛠️', title: 'Custom Scholar', desc: 'Finish a custom saved lesson' }
+  ];
+  
+  badgesDef.forEach(badge => {
+    const isUnlocked = studentBadges[badge.key];
+    const card = document.createElement('div');
+    card.className = `badge-card ${isUnlocked ? '' : 'locked'}`;
+    card.innerHTML = `
+      <span class="badge-icon">${badge.icon}</span>
+      <span class="badge-title">${badge.title}</span>
+      <span class="badge-desc">${badge.desc}</span>
+    `;
+    badgesGrid.appendChild(card);
+  });
+  
+  // Render Recent Activity Logs
+  if (total === 0) {
+    dashboardActivityLog.innerHTML = '<p style="color: var(--text-muted); text-align: center;">No activity recorded yet. Start practicing to log scores!</p>';
+    return;
+  }
+  
+  dashboardActivityLog.innerHTML = '';
+  // Show last 10 entries descending
+  const logs = [...studentStats].reverse().slice(0, 10);
+  logs.forEach(log => {
+    const logDiv = document.createElement('div');
+    logDiv.style.display = 'flex';
+    logDiv.style.justify = 'space-between';
+    logDiv.style.alignItems = 'center';
+    logDiv.style.borderBottom = '1px solid rgba(255, 255, 255, 0.05)';
+    logDiv.style.padding = '0.35rem 0';
+    
+    const typeLabel = log.type === 'passage' ? '📝' : '🔤';
+    logDiv.innerHTML = `
+      <div style="display: flex; gap: 0.4rem; align-items: center; max-width: 70%;">
+        <span>${typeLabel}</span>
+        <span style="font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${log.title}</span>
+      </div>
+      <div style="display: flex; gap: 0.75rem; align-items: center; font-size: 0.8rem;">
+        <span style="color: var(--text-muted);">${log.date}</span>
+        <span style="font-weight: 700; color: ${log.score >= 90 ? 'var(--success)' : log.score >= 70 ? 'var(--warning)' : 'var(--error)'}">${log.score}%</span>
+      </div>
+    `;
+    dashboardActivityLog.appendChild(logDiv);
+  });
 }
 
 // Run app init on load
