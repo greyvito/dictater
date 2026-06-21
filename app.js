@@ -156,6 +156,22 @@ let voiceSelectionRow;
 // Modal Background Mask Element
 let modalMask = null;
 
+// --- Toast Notification System ---
+function showToast(message, type = 'info', duration = 3000) {
+  const container = document.getElementById('toast-container');
+  if (!container) return;
+
+  const toast = document.createElement('div');
+  toast.className = `toast ${type !== 'info' ? 'toast-' + type : ''}`;
+  toast.textContent = message;
+  container.appendChild(toast);
+
+  setTimeout(() => {
+    toast.classList.add('toast-exit');
+    toast.addEventListener('animationend', () => toast.remove());
+  }, duration);
+}
+
 // --- Initialization ---
 
 // --- Initialize DOM Element References lazily ---
@@ -232,20 +248,25 @@ function initDOMElements() {
 }
 
 function init() {
-  initDOMElements();
-  setupEventListeners();
-  loadVoices();
-  
-  if (window.speechSynthesis) {
-    window.speechSynthesis.onvoiceschanged = loadVoices;
+  try {
+    initDOMElements();
+    setupEventListeners();
+    loadVoices();
+    
+    if (window.speechSynthesis) {
+      window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+    
+    // Set default state
+    switchMode('curriculum');
+    switchFormat('passage');
+    filterExercises();
+    loadExercise(0);
+    renderCustomSavedLessons();
+    console.log('[Dictater] App initialized successfully.');
+  } catch (e) {
+    console.error('[Dictater] Init error:', e);
   }
-  
-  // Set default state
-  switchMode('curriculum');
-  switchFormat('passage');
-  filterExercises();
-  loadExercise(0);
-  renderCustomSavedLessons();
 }
 
 // --- Event Listeners Setup ---
@@ -319,6 +340,13 @@ function setupEventListeners() {
   });
   
   btnCheckDictation.addEventListener('click', checkDictation);
+  document.getElementById('btn-try-again').addEventListener('click', () => {
+    studentWriting.value = '';
+    updateWordCount();
+    resultsPanel.classList.add('hidden');
+    studentWriting.focus();
+    replaySpeech();
+  });
   btnTogglePeek.addEventListener('click', toggleOriginalPeek);
   btnShowTextGlobal.addEventListener('click', toggleGlobalTextPeek);
 
@@ -353,6 +381,65 @@ function setupEventListeners() {
   document.addEventListener('click', (e) => {
     if (!settingsDropdown.contains(e.target) && e.target !== btnSettingsToggle && !btnSettingsToggle.contains(e.target)) {
       settingsDropdown.classList.add('hidden');
+    }
+  });
+
+  // Close modals on backdrop mask click
+  document.addEventListener('click', (e) => {
+    if (modalMask && e.target === modalMask) {
+      // Close whichever modal is open
+      if (!lessonCreatorModal.classList.contains('hidden')) closeModal(lessonCreatorModal);
+      if (!dashboardModal.classList.contains('hidden')) closeModal(dashboardModal);
+    }
+  });
+
+  // Global Keyboard Shortcuts
+  document.addEventListener('keydown', (e) => {
+    const tag = (e.target.tagName || '').toLowerCase();
+    const isTyping = (tag === 'input' || tag === 'textarea' || tag === 'select');
+
+    // Escape — close any open modal or settings
+    if (e.key === 'Escape') {
+      if (!settingsDropdown.classList.contains('hidden')) {
+        settingsDropdown.classList.add('hidden');
+        return;
+      }
+      if (!lessonCreatorModal.classList.contains('hidden')) {
+        closeModal(lessonCreatorModal);
+        return;
+      }
+      if (!dashboardModal.classList.contains('hidden')) {
+        closeModal(dashboardModal);
+        return;
+      }
+    }
+
+    // Skip shortcuts when user is typing in an input field
+    if (isTyping) {
+      // Ctrl/Cmd+Enter in writing area — check dictation
+      if ((e.ctrlKey || e.metaKey) && e.key === 'Enter' && e.target === studentWriting) {
+        e.preventDefault();
+        checkDictation();
+      }
+      return;
+    }
+
+    // Space — Play/Pause
+    if (e.key === ' ' || e.code === 'Space') {
+      e.preventDefault();
+      togglePlayback();
+    }
+
+    // ArrowLeft — Previous Phrase
+    if (e.key === 'ArrowLeft' && currentFormat === 'passage') {
+      e.preventDefault();
+      navigatePhrase(-1);
+    }
+
+    // ArrowRight — Next Phrase
+    if (e.key === 'ArrowRight' && currentFormat === 'passage') {
+      e.preventDefault();
+      navigatePhrase(1);
     }
   });
 }
@@ -565,7 +652,7 @@ function loadExercise(index, isCustomSaved = false, customObj = null) {
 function loadCustomText() {
   const text = customDictationText.value.trim();
   if (!text) {
-    alert('Please enter some text or words to dictate.');
+    showToast('Please enter some text or words to dictate.', 'warning');
     return;
   }
   
@@ -614,7 +701,7 @@ function saveCustomLesson() {
   const hint = creatorHint.value.trim() || 'Custom created exercise.';
   
   if (!title || !content) {
-    alert('Please enter both a title and some content.');
+    showToast('Please enter both a title and some content.', 'warning');
     return;
   }
   
@@ -631,7 +718,7 @@ function saveCustomLesson() {
     // Split by commas, filter out empty elements, and trim
     lessonObj.words = content.split(',').map(w => w.trim()).filter(w => w.length > 0);
     if (lessonObj.words.length === 0) {
-      alert('Please enter at least one word (separated by commas).');
+      showToast('Please enter at least one word (separated by commas).', 'warning');
       return;
     }
   }
@@ -690,7 +777,7 @@ function renderCustomSavedLessons() {
     // Delete click
     const btnDel = div.querySelector('.btn-delete-lesson');
     btnDel.addEventListener('click', () => {
-      if (confirm(`Are you sure you want to delete "${lesson.title}"?`)) {
+      if (confirm(`Delete "${lesson.title}"?`)) {
         deleteCustomLesson(lesson.id);
       }
     });
@@ -833,7 +920,7 @@ function submitSpelledWord() {
   
   const typedValue = wordSpellingInput.value.trim();
   if (!typedValue) {
-    alert('Please type the word first!');
+    showToast('Please type the word first!', 'warning');
     return;
   }
   
@@ -1045,7 +1132,7 @@ function updateVoiceSelectDropdown() {
 // --- Audio Playback Controls ---
 function togglePlayback() {
   if (!currentExercise) {
-    alert('Please select an exercise or load custom text first!');
+    showToast('Please select an exercise or load custom text first!', 'warning');
     return;
   }
 
@@ -1135,7 +1222,7 @@ function replaySpeech() {
 
 function speakWebSpeech(text, isResume = false) {
   if (!window.speechSynthesis) {
-    alert('Web Speech API is not supported on this browser.');
+    showToast('Web Speech API is not supported on this browser.', 'error');
     return;
   }
 
@@ -1190,6 +1277,16 @@ function speakWebSpeech(text, isResume = false) {
 }
 
 async function speakPuterSpeech(text) {
+  // Check if Puter SDK is available
+  if (typeof puter === 'undefined' || window.puterLoadFailed) {
+    showToast('Cloud voices unavailable — using local engine.', 'warning');
+    selectedEngine = 'webspeech';
+    voiceEngine.value = 'webspeech';
+    updateVoiceSelectDropdown();
+    speakWebSpeech(text);
+    return;
+  }
+
   if (puterAudioObj && puterAudioObj.dataset.text === text) {
     puterAudioObj.playbackRate = currentSpeed;
     puterAudioObj.play();
@@ -1226,7 +1323,7 @@ async function speakPuterSpeech(text) {
     };
     
     puterAudioObj.onerror = () => {
-      alert('Failed to load Puter AI voice. Falling back.');
+      showToast('Failed to load Puter AI voice. Falling back to local engine.', 'error');
       isPlaying = false;
       isPausedState = false;
       updatePlaybackUI(false);
@@ -1286,16 +1383,24 @@ function updatePlaybackUI(speaking) {
   }
 }
 
+// --- Word Count Utility ---
+function updateWordCount() {
+  if (!studentWriting || !wordCount) return;
+  const text = studentWriting.value.trim();
+  const count = text.length === 0 ? 0 : text.split(/\s+/).length;
+  wordCount.textContent = `Words: ${count}`;
+}
+
 // --- Dictation Scoring & Alignment (Word-by-word) ---
 function checkDictation() {
   if (!currentExercise || !currentExercise.text) {
-    alert('No exercise text selected.');
+    showToast('No exercise text selected.', 'warning');
     return;
   }
 
   const typedText = studentWriting.value.trim();
   if (!typedText) {
-    alert('Please write something before checking your accuracy!');
+    showToast('Please write something before checking your accuracy!', 'warning');
     return;
   }
 
@@ -1332,7 +1437,8 @@ function checkDictation() {
 }
 
 function splitIntoWords(text) {
-  return text.match(/\b[\w'-]+\b|[.,!?;()]/g) || [];
+  // Match words (including contractions/apostrophes) only, strip standalone punctuation
+  return (text.match(/[\w'-]+/g) || []).filter(w => w.replace(/['-]/g, '').length > 0);
 }
 
 function normalizeWord(word) {
@@ -1540,7 +1646,7 @@ function evaluateBadges(newRecord) {
     localStorage.setItem('DICTATER_BADGES', JSON.stringify(studentBadges));
     // Pop a small notification banner
     setTimeout(() => {
-      alert('🏆 Achievement Unlocked! Check your Student Dashboard to view your new badge.');
+      showToast('🏆 Achievement Unlocked! Check your Dashboard for your new badge.', 'achievement', 4000);
     }, 800);
   }
 }
@@ -1596,7 +1702,7 @@ function updateDashboardStats() {
   logs.forEach(log => {
     const logDiv = document.createElement('div');
     logDiv.style.display = 'flex';
-    logDiv.style.justify = 'space-between';
+    logDiv.style.justifyContent = 'space-between';
     logDiv.style.alignItems = 'center';
     logDiv.style.borderBottom = '1px solid rgba(255, 255, 255, 0.05)';
     logDiv.style.padding = '0.35rem 0';

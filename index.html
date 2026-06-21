@@ -4,13 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dictater — English Listening & Dictation Practice</title>
+  <meta name="description" content="Dictater helps primary school students master English spelling, listening comprehension, and dictation through interactive exercises with speech synthesis.">
   <link rel="stylesheet" href="index.css">
   <!-- PWA & Mobile Web Support -->
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#1e1b4b">
   <link rel="apple-touch-icon" href="images/icon.svg">
   <!-- Puter.js SDK for advanced high quality AI voices -->
-  <script src="https://js.puter.com/v2/"></script>
+  <script src="https://js.puter.com/v2/" async defer onerror="window.puterLoadFailed=true; console.warn('[Dictater] Puter.js failed to load — cloud voices disabled.');"></script>
 </head>
 <body>
   
@@ -108,7 +109,7 @@
         <div>
           <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
             <h2 id="current-title">Curriculum loading...</h2>
-            <button id="btn-title-speaker" class="btn-secondary-circle" style="width: 32px; height: 32px; display: inline-flex; padding: 0; align-items: center; justify-content: center;" title="Play / Pause">
+            <button id="btn-title-speaker" class="btn-secondary-circle" style="width: 32px; height: 32px; display: inline-flex; padding: 0; align-items: center; justify-content: center;" title="Play title aloud" aria-label="Play title aloud">
               <svg id="title-speaker-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
                 <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
@@ -139,13 +140,13 @@
       <!-- Playback Control Center -->
       <div class="control-hub">
         <div class="play-row">
-          <button id="btn-replay" class="btn-secondary-circle" title="Replay from start">
+          <button id="btn-replay" class="btn-secondary-circle" title="Replay from start" aria-label="Replay from start">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
             </svg>
           </button>
           
-          <button id="btn-play-pause" class="btn-circle" title="Play / Pause">
+          <button id="btn-play-pause" class="btn-circle" title="Play / Pause" aria-label="Play or Pause audio">
             <svg id="play-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
               <polygon points="5 3 19 12 5 21 5 3"></polygon>
             </svg>
@@ -204,7 +205,7 @@
       </div>
 
       <!-- 2. Word Spelling Workspace (Hidden initially) -->
-      <div id="word-workspace-container" class="hidden" style="display: flex; flex-direction: column; gap: 1.25rem;">
+      <div id="word-workspace-container" class="hidden" style="flex-direction: column; gap: 1.25rem;">
         <div class="input-section" style="text-align: center;">
           <h4 class="input-label" style="margin-bottom: 0.5rem;">Spell the Word You Hear</h4>
           <input type="text" id="word-spelling-input" class="dictation-input" autocomplete="off" spellcheck="false" placeholder="Type the word here..." style="font-size: 1.5rem; text-align: center; min-height: auto; padding: 0.75rem 1rem;">
@@ -247,6 +248,7 @@
 
         <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
           <button id="btn-toggle-peek" class="btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Show Original Passage</button>
+          <button id="btn-try-again" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.85rem;">Try Again</button>
         </div>
 
         <div id="original-text-peek" class="original-peek hidden">
@@ -257,7 +259,7 @@
   </main>
 
   <!-- Settings Dialog Overlay -->
-  <div id="settings-dropdown" class="settings-dropdown hidden">
+  <div id="settings-dropdown" class="settings-dropdown hidden" role="dialog" aria-label="Speech Configuration">
     <div class="result-header" style="margin-bottom: 0.5rem;">
       <h4 class="input-label" style="color: var(--text-primary);">Speech Configuration</h4>
       <button id="btn-settings-close" style="background:none; border:none; color:var(--text-muted); cursor:pointer; font-weight:bold;">&times;</button>
@@ -292,7 +294,7 @@
   </div>
 
   <!-- Lesson Creator Modal -->
-  <div id="lesson-creator-modal" class="settings-dropdown hidden" style="max-width: 480px; bottom: auto; top: 10%; left: 50%; transform: translateX(-50%); position: fixed; right: auto; z-index: 1001; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+  <div id="lesson-creator-modal" class="settings-dropdown hidden" role="dialog" aria-label="Create Custom Lesson" style="max-width: 480px; bottom: auto; top: 10%; left: 50%; transform: translateX(-50%); position: fixed; right: auto; z-index: 1001; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
     <div class="result-header" style="margin-bottom: 0.5rem;">
       <h4 class="input-label" style="color: var(--text-primary);">Create Custom Lesson</h4>
       <button id="btn-creator-close" style="background:none; border:none; color:var(--text-muted); cursor:pointer; font-weight:bold; font-size: 1.25rem;">&times;</button>
@@ -325,7 +327,7 @@
   </div>
 
   <!-- Student Dashboard Modal -->
-  <div id="dashboard-modal" class="settings-dropdown hidden" style="max-width: 600px; width: 90%; bottom: auto; top: 8%; left: 50%; transform: translateX(-50%); position: fixed; right: auto; max-height: 84vh; overflow-y: auto; z-index: 1001; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
+  <div id="dashboard-modal" class="settings-dropdown hidden" role="dialog" aria-label="Student Progress Dashboard" style="max-width: 600px; width: 90%; bottom: auto; top: 8%; left: 50%; transform: translateX(-50%); position: fixed; right: auto; max-height: 84vh; overflow-y: auto; z-index: 1001; box-shadow: 0 20px 50px rgba(0,0,0,0.5);">
     <div class="result-header" style="margin-bottom: 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.5rem;">
       <h3 class="section-title" style="border: none; padding: 0; color: var(--text-primary); text-transform: none; font-size: 1.4rem;">📊 Student Progress Dashboard</h3>
       <button id="btn-dashboard-close" style="background:none; border:none; color:var(--text-muted); cursor:pointer; font-weight:bold; font-size: 1.5rem;">&times;</button>
@@ -363,6 +365,9 @@
       </div>
     </div>
   </div>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" aria-live="polite" aria-atomic="true" style="position: fixed; bottom: 1.5rem; left: 50%; transform: translateX(-50%); z-index: 2000; display: flex; flex-direction: column; align-items: center; gap: 0.5rem; pointer-events: none;"></div>
 
   <footer>
     <p>Dictater &copy; 2026. Designed for Intermediate Primary School English Dictation (Cambridge American Standard).</p>
