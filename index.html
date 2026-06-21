@@ -49,13 +49,31 @@
 
       <!-- Curriculum Filters -->
       <div id="curriculum-filters">
-        <div style="margin-bottom: 1rem;">
-          <h4 class="input-label" style="margin-bottom: 0.5rem;">Level / Grade</h4>
-          <div class="pill-group">
+        <div style="margin-bottom: 1rem; display: flex; flex-direction: column; gap: 0.5rem;">
+          <h4 class="input-label" style="margin-bottom: 0.25rem;">Level / Grade</h4>
+          <!-- Early Primary -->
+          <div class="pill-group" style="gap: 0.4rem; flex-wrap: wrap;">
+            <button class="pill-btn grade-filter" data-grade="K">Kinder</button>
+            <button class="pill-btn grade-filter" data-grade="1">Grade 1</button>
+            <button class="pill-btn grade-filter" data-grade="2">Grade 2</button>
+          </div>
+          <!-- Upper Primary -->
+          <div class="pill-group" style="gap: 0.4rem; flex-wrap: wrap;">
             <button class="pill-btn grade-filter active" data-grade="3">Grade 3</button>
             <button class="pill-btn grade-filter" data-grade="4">Grade 4</button>
             <button class="pill-btn grade-filter" data-grade="5">Grade 5</button>
             <button class="pill-btn grade-filter" data-grade="6">Grade 6</button>
+          </div>
+        </div>
+
+        <!-- Difficulty selection (hidden for Grades 3-6) -->
+        <div id="difficulty-filter-container" class="hidden" style="margin-bottom: 1rem;">
+          <h4 class="input-label" style="margin-bottom: 0.5rem;">Difficulty</h4>
+          <div class="pill-group" style="gap: 0.4rem; flex-wrap: wrap;">
+            <button class="pill-btn difficulty-filter active" data-difficulty="all">All</button>
+            <button class="pill-btn difficulty-filter" data-difficulty="beginner">Beginner</button>
+            <button class="pill-btn difficulty-filter" data-difficulty="intermediate">Intermediate</button>
+            <button class="pill-btn difficulty-filter" data-difficulty="advanced">Advanced</button>
           </div>
         </div>
 
@@ -374,6 +392,9 @@
   </footer>
 
   <script>window.DICTATER_CURRICULUM = {};</script>
+  <script src="curriculum/gradeK.js"></script>
+  <script src="curriculum/grade1.js"></script>
+  <script src="curriculum/grade2.js"></script>
   <script src="curriculum/grade3.js"></script>
   <script src="curriculum/grade4.js"></script>
   <script src="curriculum/grade5.js"></script>

@@ -1,10 +1,13 @@
-const CACHE_NAME = 'dictater-v3';
+const CACHE_NAME = 'dictater-v4';
 const ASSETS_TO_CACHE = [
   './index.html',
   './index.css',
   './app.js',
   './manifest.json',
   './images/icon.svg',
+  './curriculum/gradeK.js',
+  './curriculum/grade1.js',
+  './curriculum/grade2.js',
   './curriculum/grade3.js',
   './curriculum/grade4.js',
   './curriculum/grade5.js',

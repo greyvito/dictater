@@ -2,6 +2,7 @@
 
 // --- App State ---
 let currentGrade = '3';
+let currentDifficulty = 'all';    // 'all', 'beginner', 'intermediate', or 'advanced'
 let currentMode = 'curriculum';  // 'curriculum' or 'custom'
 let currentFormat = 'passage';    // 'passage' or 'words'
 let currentExerciseIndex = 0;
@@ -153,6 +154,10 @@ let voiceAccent;
 let voiceSelect;
 let voiceSelectionRow;
 
+// Difficulty Filter elements
+let difficultyFilterContainer;
+let difficultyButtons;
+
 // Modal Background Mask Element
 let modalMask = null;
 
@@ -245,6 +250,8 @@ function initDOMElements() {
   voiceAccent = document.getElementById('voice-accent');
   voiceSelect = document.getElementById('voice-select');
   voiceSelectionRow = document.getElementById('voice-selection-row');
+  difficultyFilterContainer = document.getElementById('difficulty-filter-container');
+  difficultyButtons = document.querySelectorAll('.difficulty-filter');
 }
 
 function init() {
@@ -285,7 +292,25 @@ function setupEventListeners() {
       document.querySelectorAll('.grade-filter').forEach(b => b.classList.remove('active'));
       e.target.classList.add('active');
       currentGrade = e.target.dataset.grade;
-      filterExercises();
+      
+      const isK2 = ['K', '1', '2'].includes(currentGrade);
+      if (isK2) {
+        difficultyFilterContainer.classList.remove('hidden');
+      } else {
+        difficultyFilterContainer.classList.add('hidden');
+      }
+      
+      filterExercises(true);
+    });
+  });
+
+  // Difficulty Filters
+  difficultyButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      difficultyButtons.forEach(b => b.classList.remove('active'));
+      e.target.classList.add('active');
+      currentDifficulty = e.target.dataset.difficulty;
+      filterExercises(true);
     });
   });
 
@@ -474,7 +499,7 @@ function switchMode(mode) {
     curriculumFilters.classList.remove('hidden');
     customTextPanel.classList.add('hidden');
     
-    filterExercises();
+    filterExercises(true);
   } else {
     btnModeCurriculum.classList.remove('active');
     btnModeCustom.classList.add('active');
@@ -508,8 +533,7 @@ function switchFormat(format) {
   }
   
   if (currentMode === 'curriculum') {
-    filterExercises();
-    loadExercise(0);
+    filterExercises(true);
   } else {
     // If Custom Mode, reload saved custom lessons sidebar list
     renderCustomSavedLessons();
@@ -531,31 +555,55 @@ function switchFormat(format) {
   }
 }
 
-function filterExercises() {
+function filterExercises(autoLoadFirst = false) {
   const gradeData = DICTATER_CURRICULUM[currentGrade];
   if (!gradeData) return;
   
   const list = currentFormat === 'passage' ? gradeData.passages : gradeData.words;
   exerciseList.innerHTML = '';
   
+  const isK2 = ['K', '1', '2'].includes(currentGrade);
+  
+  const filteredList = [];
   list.forEach((ex, idx) => {
+    if (!isK2 || currentDifficulty === 'all' || ex.difficulty === currentDifficulty) {
+      filteredList.push({ ex, originalIdx: idx });
+    }
+  });
+  
+  filteredList.forEach((item) => {
     const div = document.createElement('div');
-    div.className = `exercise-item ${idx === currentExerciseIndex ? 'active' : ''}`;
-    div.dataset.index = idx;
+    div.className = `exercise-item ${item.originalIdx === currentExerciseIndex ? 'active' : ''}`;
+    div.dataset.index = item.originalIdx;
+    
+    const badgeText = isK2 ? (item.ex.difficulty ? item.ex.difficulty.toUpperCase() : `G${currentGrade}`) : `G${currentGrade}`;
+    const badgeClass = isK2 ? `badge-diff-${item.ex.difficulty || 'beginner'}` : `badge-grade-${currentGrade}`;
     
     div.innerHTML = `
-      <div class="exercise-title-text">${ex.title}</div>
-      <span class="exercise-badge badge-grade-${currentGrade}">G${currentGrade}</span>
+      <div class="exercise-title-text">${item.ex.title}</div>
+      <span class="exercise-badge ${badgeClass}">${badgeText}</span>
     `;
     
     div.addEventListener('click', () => {
       document.querySelectorAll('.exercise-item').forEach(item => item.classList.remove('active'));
       div.classList.add('active');
-      loadExercise(idx);
+      loadExercise(item.originalIdx);
     });
     
     exerciseList.appendChild(div);
   });
+
+  if (filteredList.length > 0) {
+    const isCurrentStillVisible = filteredList.some(item => item.originalIdx === currentExerciseIndex);
+    if (autoLoadFirst || !isCurrentStillVisible) {
+      loadExercise(filteredList[0].originalIdx);
+    }
+  } else {
+    currentExercise = null;
+    currentExerciseIndex = -1;
+    btnShowTextGlobal.classList.add('hidden');
+    globalTextPeek.classList.add('hidden');
+  }
 }
 
 function loadExercise(index, isCustomSaved = false, customObj = null) {
@@ -579,7 +627,11 @@ function loadExercise(index, isCustomSaved = false, customObj = null) {
   btnShowTextGlobal.classList.remove('hidden');
   
   currentTitle.textContent = currentExercise.title;
-  const gradeText = isCustomSaved ? 'Custom' : `Grade ${currentGrade}`;
+  
+  const isK2 = ['K', '1', '2'].includes(currentGrade);
+  const gradeLabel = currentGrade === 'K' ? 'Kindergarten' : `Grade ${currentGrade}`;
+  const gradeText = isCustomSaved ? 'Custom' : gradeLabel;
+  const gradeClass = isCustomSaved ? 'badge-grade-6' : `badge-grade-${currentGrade}`;
   
   if (currentExercise.text) {
     // PASSAGE MODE
@@ -589,8 +641,16 @@ function loadExercise(index, isCustomSaved = false, customObj = null) {
     passageWorkspaceContainer.classList.remove('hidden');
     wordWorkspaceContainer.classList.add('hidden');
     
-    currentMeta.textContent = `${gradeText} Passage • Dictation Exercise`;
-    levelBadgeContainer.innerHTML = `<span class="exercise-badge badge-grade-6">${gradeText}</span>`;
+    const diffStr = (!isCustomSaved && isK2 && currentExercise.difficulty) ? ` • ${currentExercise.difficulty.charAt(0).toUpperCase() + currentExercise.difficulty.slice(1)}` : '';
+    currentMeta.textContent = `${gradeText}${diffStr} Passage • Dictation Exercise`;
+    
+    let badgesHTML = `<span class="exercise-badge ${gradeClass}">${gradeText}</span>`;
+    if (!isCustomSaved && isK2 && currentExercise.difficulty) {
+      const diffClass = `badge-diff-${currentExercise.difficulty}`;
+      const diffLabel = currentExercise.difficulty.charAt(0).toUpperCase() + currentExercise.difficulty.slice(1);
+      badgesHTML += ` <span class="exercise-badge ${diffClass}">${diffLabel}</span>`;
+    }
+    levelBadgeContainer.innerHTML = badgesHTML;
     
     // Clear user typing
     studentWriting.value = '';
@@ -622,8 +682,16 @@ function loadExercise(index, isCustomSaved = false, customObj = null) {
     passageWorkspaceContainer.classList.add('hidden');
     wordWorkspaceContainer.classList.remove('hidden');
     
-    currentMeta.textContent = `${gradeText} Word List • Spelling Practice`;
-    levelBadgeContainer.innerHTML = `<span class="exercise-badge badge-grade-5">${gradeText} Words</span>`;
+    const diffStr = (!isCustomSaved && isK2 && currentExercise.difficulty) ? ` • ${currentExercise.difficulty.charAt(0).toUpperCase() + currentExercise.difficulty.slice(1)}` : '';
+    currentMeta.textContent = `${gradeText}${diffStr} Word List • Spelling Practice`;
+    
+    let badgesHTML = `<span class="exercise-badge ${gradeClass}">${gradeText} Words</span>`;
+    if (!isCustomSaved && isK2 && currentExercise.difficulty) {
+      const diffClass = `badge-diff-${currentExercise.difficulty}`;
+      const diffLabel = currentExercise.difficulty.charAt(0).toUpperCase() + currentExercise.difficulty.slice(1);
+      badgesHTML += ` <span class="exercise-badge ${diffClass}">${diffLabel}</span>`;
+    }
+    levelBadgeContainer.innerHTML = badgesHTML;
     
     // Initialize Spelling Test
     spellingWords = currentExercise.words;

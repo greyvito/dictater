@@ -1,6 +1,6 @@
 # Dictater 🎧📝
 
-Dictater is a modern, premium web application designed to help primary school students (Grades 3–6, intermediate level) master English spelling, listening comprehension, and dictation. 
+Dictater is a modern, premium web application designed to help primary school students (Grades K–6) master English spelling, listening comprehension, and dictation. 
 
 Built using pure HTML, Vanilla CSS, and JavaScript, it offers a visual, interactive single-page layout that runs entirely client-side. Dictater aligns with the **Cambridge American English** standards.
 
@@ -43,6 +43,9 @@ dictater/
 ├── app.js              # State manager, speech synthesizer wrapper, LCS word-diff, spelling engines
 ├── package.json        # Serve dependencies and startup script
 └── curriculum/         # Curriculum database split by grades
+    ├── gradeK.js       # Grade K passages (1-15) and word lists (1-12)
+    ├── grade1.js       # Grade 1 passages (1-15) and word lists (1-12)
+    ├── grade2.js       # Grade 2 passages (1-15) and word lists (1-12)
     ├── grade3.js       # Grade 3 passages (1-15) and word lists (1-12)
     ├── grade4.js       # Grade 4 passages (1-15) and word lists (1-12)
     ├── grade5.js       # Grade 5 passages (1-15) and word lists (1-12)
@@ -69,10 +72,13 @@ Since the project does not require compilation, you can double-click **`index.ht
 
 ## 📚 Curriculum Design
 
-The built-in curriculum features **60 passages** and **48 spelling word lists** (over 480 target words). 
+The built-in curriculum features **141 passages** and **120 spelling word lists** (over 1,100 target words). Grades K–2 also feature three difficulty tiers (Beginner, Intermediate, Advanced) for personalized learning.
 
 | Grade | CEFR Level | Key Focus | Spelling Focus |
 | :--- | :--- | :--- | :--- |
+| **Grade K** | Pre-A1 | CVC families, sight words, body parts, colors, basic blends, simple past tense | CVC short vowels, sight words, blends, body parts, farm, digraphs, long vowels, past verbs |
+| **Grade 1** | Pre-A1 / A1 | Family/food/school, past tense sequences, contractions, silent-e, vowel teams, plurals | Sight words, family, food, double consonants, plurals, contractions, silent-e, vowel teams |
+| **Grade 2** | A1 | Prepositions, adverbs, time words, simple narrative, compound words, suffixes, prefixes, dialogue | Action verbs, prepositions, time words, suffixes, compound words, homophones, prefixes |
 | **Grade 3** | Pre-A1 / A1 | Daily routines, stories, past tenses | Action verbs, classroom nouns, homophones, silent letters |
 | **Grade 4** | A1 / A2 | compound sentences, safety instructions | Astronomy terms, healthy living, double consonants, sound-alikes |
 | **Grade 5** | A2 | Science reports, passive voice, history of civilization | Ecosystem biology, suffixes (-ment, -tion), homophones, spelling traps |
