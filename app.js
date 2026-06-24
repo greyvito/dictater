@@ -1,5 +1,27 @@
 // Dictater — Application Logic
 
+// --- Constants ---
+const MAX_STATS_RECORDS = 500;
+
+// --- Utility: HTML Escaping ---
+function escapeHTML(str) {
+  const div = document.createElement('div');
+  div.textContent = str;
+  return div.innerHTML;
+}
+
+// --- SVG Icon Templates ---
+const ICONS = {
+  eyeOpen: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+    <circle cx="12" cy="12" r="3"></circle>
+  </svg>`,
+  eyeClosed: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
+    <line x1="1" y1="1" x2="23" y2="23"></line>
+  </svg>`
+};
+
 // --- App State ---
 let currentGrade = '3';
 let currentDifficulty = 'all';    // 'all', 'beginner', 'intermediate', or 'advanced'
@@ -40,10 +62,15 @@ try {
   console.error("Error parsing custom lessons from localStorage:", e);
 }
 
-// Student Stats & Progress Data
+// Student Stats & Progress Data (capped at MAX_STATS_RECORDS)
 let studentStats = [];
 try {
   studentStats = JSON.parse(localStorage.getItem('DICTATER_STATS')) || [];
+  // Cap on load to prevent unbounded growth
+  if (studentStats.length > MAX_STATS_RECORDS) {
+    studentStats = studentStats.slice(-MAX_STATS_RECORDS);
+    localStorage.setItem('DICTATER_STATS', JSON.stringify(studentStats));
+  }
 } catch (e) {
   console.error("Error parsing stats from localStorage:", e);
 }
@@ -324,8 +351,12 @@ function setupEventListeners() {
   
   speedButtons.forEach(btn => {
     btn.addEventListener('click', (e) => {
-      speedButtons.forEach(b => b.classList.remove('active'));
+      speedButtons.forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-checked', 'false');
+      });
       e.target.classList.add('active');
+      e.target.setAttribute('aria-checked', 'true');
       currentSpeed = parseFloat(e.target.dataset.speed);
       
       // If playing webspeech, restart with new speed
@@ -370,7 +401,6 @@ function setupEventListeners() {
     updateWordCount();
     resultsPanel.classList.add('hidden');
     studentWriting.focus();
-    replaySpeech();
   });
   btnTogglePeek.addEventListener('click', toggleOriginalPeek);
   btnShowTextGlobal.addEventListener('click', toggleGlobalTextPeek);
@@ -574,15 +604,23 @@ function filterExercises(autoLoadFirst = false) {
   filteredList.forEach((item) => {
     const div = document.createElement('div');
     div.className = `exercise-item ${item.originalIdx === currentExerciseIndex ? 'active' : ''}`;
+    div.setAttribute('role', 'option');
     div.dataset.index = item.originalIdx;
     
     const badgeText = isK2 ? (item.ex.difficulty ? item.ex.difficulty.toUpperCase() : `G${currentGrade}`) : `G${currentGrade}`;
     const badgeClass = isK2 ? `badge-diff-${item.ex.difficulty || 'beginner'}` : `badge-grade-${currentGrade}`;
     
-    div.innerHTML = `
-      <div class="exercise-title-text">${item.ex.title}</div>
-      <span class="exercise-badge ${badgeClass}">${badgeText}</span>
-    `;
+    // Build DOM safely (no innerHTML with user data)
+    const titleDiv = document.createElement('div');
+    titleDiv.className = 'exercise-title-text';
+    titleDiv.textContent = item.ex.title;
+    
+    const badgeSpan = document.createElement('span');
+    badgeSpan.className = `exercise-badge ${badgeClass}`;
+    badgeSpan.textContent = badgeText;
+    
+    div.appendChild(titleDiv);
+    div.appendChild(badgeSpan);
     
     div.addEventListener('click', () => {
       document.querySelectorAll('.exercise-item').forEach(item => item.classList.remove('active'));
@@ -665,13 +703,7 @@ function loadExercise(index, isCustomSaved = false, customObj = null) {
     // Show Text element update
     renderInteractivePhrases(phrases);
     globalTextPeek.classList.add('hidden');
-    btnShowTextGlobal.innerHTML = `
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-        <circle cx="12" cy="12" r="3"></circle>
-      </svg>
-      Show Text
-    `;
+    btnShowTextGlobal.innerHTML = `${ICONS.eyeOpen} Show Text`;
     
     phraseNavigationContainer.style.display = 'flex';
   } else if (currentExercise.words) {
@@ -705,13 +737,7 @@ function loadExercise(index, isCustomSaved = false, customObj = null) {
     // Show Text element update (list words)
     renderInteractiveWords(spellingWords);
     globalTextPeek.classList.add('hidden');
-    btnShowTextGlobal.innerHTML = `
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-        <circle cx="12" cy="12" r="3"></circle>
-      </svg>
-      Show Words
-    `;
+    btnShowTextGlobal.innerHTML = `${ICONS.eyeOpen} Show Words`;
     
     phraseNavigationContainer.style.display = 'none';
   }
@@ -750,13 +776,7 @@ function loadCustomText() {
   
   renderInteractivePhrases(phrases);
   globalTextPeek.classList.add('hidden');
-  btnShowTextGlobal.innerHTML = `
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-      <circle cx="12" cy="12" r="3"></circle>
-    </svg>
-    Show Text
-  `;
+  btnShowTextGlobal.innerHTML = `${ICONS.eyeOpen} Show Text`;
   
   phraseNavigationContainer.style.display = 'flex';
 }
@@ -824,13 +844,30 @@ function renderCustomSavedLessons() {
     div.className = `custom-lesson-item ${currentExercise && currentExercise.id === lesson.id ? 'active' : ''}`;
     
     const label = currentFormat === 'passage' ? 'Passage' : 'Words';
-    div.innerHTML = `
-      <div style="display: flex; flex-direction: column; gap: 0.15rem; max-width: 80%;">
-        <span style="font-size: 0.85rem; font-weight: 600; color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${lesson.title}</span>
-        <span style="font-size: 0.7rem; color: var(--text-muted);">${label} • ${lesson.words ? lesson.words.length + ' words' : '1 passage'}</span>
-      </div>
-      <button class="btn-delete-lesson" title="Delete custom lesson" data-id="${lesson.id}">&times;</button>
-    `;
+    const metaText = lesson.words ? lesson.words.length + ' words' : '1 passage';
+    
+    // Build DOM safely (no innerHTML with user data)
+    const infoDiv = document.createElement('div');
+    infoDiv.className = 'custom-lesson-info';
+    
+    const titleSpan = document.createElement('span');
+    titleSpan.className = 'custom-lesson-title';
+    titleSpan.textContent = lesson.title;
+    
+    const metaSpan = document.createElement('span');
+    metaSpan.className = 'custom-lesson-meta';
+    metaSpan.textContent = `${label} • ${metaText}`;
+    
+    infoDiv.appendChild(titleSpan);
+    infoDiv.appendChild(metaSpan);
+    
+    const btnDel = document.createElement('button');
+    btnDel.className = 'btn-delete-lesson';
+    btnDel.title = 'Delete custom lesson';
+    btnDel.textContent = '\u00d7';
+    
+    div.appendChild(infoDiv);
+    div.appendChild(btnDel);
     
     // Load click
     div.addEventListener('click', (e) => {
@@ -842,12 +879,11 @@ function renderCustomSavedLessons() {
       loadExercise(-1, true, lesson);
     });
     
-    // Delete click
-    const btnDel = div.querySelector('.btn-delete-lesson');
+    // Delete click — use custom confirmation dialog
     btnDel.addEventListener('click', () => {
-      if (confirm(`Delete "${lesson.title}"?`)) {
+      showConfirmDialog(`Delete "${lesson.title}"?`, () => {
         deleteCustomLesson(lesson.id);
-      }
+      });
     });
     
     customSavedList.appendChild(div);
@@ -863,6 +899,68 @@ function deleteCustomLesson(id) {
   }
   
   renderCustomSavedLessons();
+}
+
+// --- Custom Confirmation Dialog (replaces native confirm()) ---
+function showConfirmDialog(message, onConfirm) {
+  // Create overlay
+  const overlay = document.createElement('div');
+  overlay.className = 'modal-open-mask';
+  overlay.style.zIndex = '2000';
+  
+  // Create dialog card
+  const dialog = document.createElement('div');
+  dialog.className = 'settings-dropdown confirm-dialog';
+  dialog.setAttribute('role', 'alertdialog');
+  dialog.setAttribute('aria-label', 'Confirmation');
+  
+  const msgP = document.createElement('p');
+  msgP.style.cssText = 'color: var(--text-primary); font-size: 1rem; line-height: 1.5; margin-bottom: 1rem;';
+  msgP.textContent = message;
+  
+  const btnRow = document.createElement('div');
+  btnRow.style.cssText = 'display: flex; gap: 0.75rem; justify-content: flex-end;';
+  
+  const btnCancel = document.createElement('button');
+  btnCancel.className = 'btn-secondary';
+  btnCancel.textContent = 'Cancel';
+  btnCancel.style.cssText = 'padding: 0.5rem 1rem; font-size: 0.85rem;';
+  
+  const btnOk = document.createElement('button');
+  btnOk.className = 'btn-accent';
+  btnOk.textContent = 'Delete';
+  btnOk.style.cssText = 'padding: 0.5rem 1rem; font-size: 0.85rem;';
+  
+  btnRow.appendChild(btnCancel);
+  btnRow.appendChild(btnOk);
+  dialog.appendChild(msgP);
+  dialog.appendChild(btnRow);
+  
+  document.body.appendChild(overlay);
+  document.body.appendChild(dialog);
+  
+  btnOk.focus();
+  
+  function cleanup() {
+    overlay.remove();
+    dialog.remove();
+  }
+  
+  btnCancel.addEventListener('click', cleanup);
+  overlay.addEventListener('click', cleanup);
+  btnOk.addEventListener('click', () => {
+    cleanup();
+    onConfirm();
+  });
+  
+  // Escape to cancel
+  function onKey(e) {
+    if (e.key === 'Escape') {
+      cleanup();
+      document.removeEventListener('keydown', onKey);
+    }
+  }
+  document.addEventListener('keydown', onKey);
 }
 
 // --- Phrase Replay Logics ---
@@ -912,18 +1010,6 @@ function renderInteractivePhrases(phraseList) {
     span.className = 'interactive-phrase';
     span.textContent = s;
     span.dataset.index = idx;
-    span.style.cursor = 'pointer';
-    span.style.transition = 'background var(--transition-fast)';
-    span.style.borderRadius = '4px';
-    span.style.padding = '0.1rem 0.25rem';
-    
-    // Hover highlight styling
-    span.addEventListener('mouseenter', () => {
-      if (currentPhraseIndex !== idx) span.style.background = 'rgba(255,255,255,0.05)';
-    });
-    span.addEventListener('mouseleave', () => {
-      if (currentPhraseIndex !== idx) span.style.background = 'transparent';
-    });
     
     span.addEventListener('click', () => {
       currentPhraseIndex = idx;
@@ -942,13 +1028,9 @@ function highlightActivePhraseSpan() {
   spans.forEach(span => {
     const idx = parseInt(span.dataset.index);
     if (idx === currentPhraseIndex) {
-      span.style.background = 'rgba(99, 102, 241, 0.2)';
-      span.style.borderBottom = '2px solid var(--primary)';
-      span.style.color = '#fff';
+      span.classList.add('phrase-active');
     } else {
-      span.style.background = 'transparent';
-      span.style.borderBottom = 'none';
-      span.style.color = 'inherit';
+      span.classList.remove('phrase-active');
     }
   });
 }
@@ -1433,9 +1515,7 @@ function updatePlaybackUI(speaking) {
     visualizer.classList.add('active');
     
     if (btnTitleSpeaker) {
-      btnTitleSpeaker.style.background = 'rgba(99, 102, 241, 0.15)';
-      btnTitleSpeaker.style.borderColor = 'var(--primary)';
-      btnTitleSpeaker.style.color = 'var(--primary)';
+      btnTitleSpeaker.classList.add('speaker-playing');
     }
   } else {
     playIcon.classList.remove('hidden');
@@ -1444,9 +1524,7 @@ function updatePlaybackUI(speaking) {
     visualizer.classList.remove('active');
     
     if (btnTitleSpeaker) {
-      btnTitleSpeaker.style.background = 'rgba(255, 255, 255, 0.03)';
-      btnTitleSpeaker.style.borderColor = 'rgba(255, 255, 255, 0.1)';
-      btnTitleSpeaker.style.color = 'var(--text-primary)';
+      btnTitleSpeaker.classList.remove('speaker-playing');
     }
   }
 }
@@ -1602,22 +1680,10 @@ function toggleGlobalTextPeek() {
 
   if (isHidden) {
     globalTextPeek.classList.remove('hidden');
-    btnShowTextGlobal.innerHTML = `
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"></path>
-        <line x1="1" y1="1" x2="23" y2="23"></line>
-      </svg>
-      ${labelHide}
-    `;
+    btnShowTextGlobal.innerHTML = `${ICONS.eyeClosed} ${labelHide}`;
   } else {
     globalTextPeek.classList.add('hidden');
-    btnShowTextGlobal.innerHTML = `
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-        <circle cx="12" cy="12" r="3"></circle>
-      </svg>
-      ${labelShow}
-    `;
+    btnShowTextGlobal.innerHTML = `${ICONS.eyeOpen} ${labelShow}`;
   }
 }
 
@@ -1633,6 +1699,12 @@ function saveScoreToStats(exerciseId, title, type, score) {
   };
   
   studentStats.push(statsRecord);
+  
+  // Cap stats to prevent unbounded localStorage growth
+  if (studentStats.length > MAX_STATS_RECORDS) {
+    studentStats = studentStats.slice(-MAX_STATS_RECORDS);
+  }
+  
   localStorage.setItem('DICTATER_STATS', JSON.stringify(studentStats));
   
   // Evaluate and award achievements / badges
@@ -1769,23 +1841,41 @@ function updateDashboardStats() {
   const logs = [...studentStats].reverse().slice(0, 10);
   logs.forEach(log => {
     const logDiv = document.createElement('div');
-    logDiv.style.display = 'flex';
-    logDiv.style.justifyContent = 'space-between';
-    logDiv.style.alignItems = 'center';
-    logDiv.style.borderBottom = '1px solid rgba(255, 255, 255, 0.05)';
-    logDiv.style.padding = '0.35rem 0';
+    logDiv.className = 'activity-log-entry';
     
     const typeLabel = log.type === 'passage' ? '📝' : '🔤';
-    logDiv.innerHTML = `
-      <div style="display: flex; gap: 0.4rem; align-items: center; max-width: 70%;">
-        <span>${typeLabel}</span>
-        <span style="font-weight: 500; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">${log.title}</span>
-      </div>
-      <div style="display: flex; gap: 0.75rem; align-items: center; font-size: 0.8rem;">
-        <span style="color: var(--text-muted);">${log.date}</span>
-        <span style="font-weight: 700; color: ${log.score >= 90 ? 'var(--success)' : log.score >= 70 ? 'var(--warning)' : 'var(--error)'}">${log.score}%</span>
-      </div>
-    `;
+    const scoreClass = log.score >= 90 ? 'score-high' : log.score >= 70 ? 'score-medium' : 'score-low';
+    
+    // Build DOM safely (no innerHTML with user data for log.title)
+    const leftDiv = document.createElement('div');
+    leftDiv.className = 'activity-log-left';
+    
+    const typeSpan = document.createElement('span');
+    typeSpan.textContent = typeLabel;
+    
+    const titleSpan = document.createElement('span');
+    titleSpan.className = 'activity-log-title';
+    titleSpan.textContent = log.title;
+    
+    leftDiv.appendChild(typeSpan);
+    leftDiv.appendChild(titleSpan);
+    
+    const rightDiv = document.createElement('div');
+    rightDiv.className = 'activity-log-right';
+    
+    const dateSpan = document.createElement('span');
+    dateSpan.className = 'activity-log-date';
+    dateSpan.textContent = log.date;
+    
+    const scoreSpan = document.createElement('span');
+    scoreSpan.className = `activity-log-score ${scoreClass}`;
+    scoreSpan.textContent = `${log.score}%`;
+    
+    rightDiv.appendChild(dateSpan);
+    rightDiv.appendChild(scoreSpan);
+    
+    logDiv.appendChild(leftDiv);
+    logDiv.appendChild(rightDiv);
     dashboardActivityLog.appendChild(logDiv);
   });
 }

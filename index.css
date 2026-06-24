@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
 
 :root {
   --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -19,7 +19,7 @@
   
   --text-primary: #f8fafc;
   --text-secondary: #94a3b8;
-  --text-muted: #64748b;
+  --text-muted: #7c8da4;
   
   --success: #10b981;
   --success-bg: rgba(16, 185, 129, 0.1);
@@ -39,6 +39,8 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  scrollbar-color: rgba(99, 102, 241, 0.3) rgba(15, 23, 42, 0.5);
+  scrollbar-width: thin;
 }
 
 body {
@@ -680,9 +682,49 @@ footer {
   border-color: var(--primary);
 }
 
+/* Focus-visible indicators for accessibility */
+.pill-btn:focus-visible,
+.btn-primary:focus-visible,
+.btn-accent:focus-visible,
+.btn-secondary:focus-visible,
+.btn-circle:focus-visible,
+.btn-secondary-circle:focus-visible,
+.speed-btn:focus-visible,
+.exercise-item:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.dictation-input:focus-visible {
+  outline: none; /* Already has custom focus styles via border-color */
+}
+
+.settings-select:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 1px;
+}
+
 /* Utilities */
 .hidden {
-  display: none !important;
+  display: none;
+}
+
+/* Ensure hidden works on elements with explicit display values */
+#word-workspace-container.hidden,
+#phrase-navigation-container.hidden,
+#results-panel.hidden,
+#word-results-report.hidden,
+#global-text-peek.hidden,
+#custom-text-panel.hidden,
+#curriculum-filters.hidden,
+#format-selection-container.hidden,
+#difficulty-filter-container.hidden,
+#settings-dropdown.hidden,
+#lesson-creator-modal.hidden,
+#dashboard-modal.hidden,
+#original-text-peek.hidden,
+.modal-open-mask.hidden {
+  display: none;
 }
 
 .text-center { text-align: center; }
@@ -703,6 +745,16 @@ footer {
   border-radius: 4px;
   cursor: pointer;
   transition: all var(--transition-fast);
+}
+
+.interactive-phrase.phrase-active {
+  background: rgba(99, 102, 241, 0.2);
+  border-bottom: 2px solid var(--primary);
+  color: #fff;
+}
+
+.interactive-phrase:not(.phrase-active):hover {
+  background: rgba(255, 255, 255, 0.05);
 }
 
 /* Custom Saved Lesson Items in Sidebar */
@@ -737,6 +789,79 @@ footer {
 }
 .btn-delete-lesson:hover {
   transform: scale(1.2);
+}
+
+/* Custom lesson info layout (replaces inline styles) */
+.custom-lesson-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  max-width: 80%;
+}
+.custom-lesson-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.custom-lesson-meta {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+/* Speaker button playing state (replaces JS inline styles) */
+.btn-secondary-circle.speaker-playing {
+  background: rgba(99, 102, 241, 0.15);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Activity log entry styles (replaces JS inline styles) */
+.activity-log-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 0.35rem 0;
+}
+.activity-log-left {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+  max-width: 70%;
+}
+.activity-log-title {
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.activity-log-right {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.activity-log-date {
+  color: var(--text-muted);
+}
+.activity-log-score {
+  font-weight: 700;
+}
+
+/* Confirm dialog positioning */
+.confirm-dialog {
+  max-width: 380px;
+  bottom: auto;
+  top: 35%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  right: auto;
+  z-index: 2001;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 /* Badge card styling */

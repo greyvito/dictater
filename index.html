@@ -5,10 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dictater — English Listening & Dictation Practice</title>
   <meta name="description" content="Dictater helps primary school students master English spelling, listening comprehension, and dictation through interactive exercises with speech synthesis.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap">
   <link rel="stylesheet" href="index.css">
   <!-- PWA & Mobile Web Support -->
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#1e1b4b">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="apple-touch-icon" href="images/icon.svg">
   <!-- Puter.js SDK for advanced high quality AI voices -->
   <script src="https://js.puter.com/v2/" async defer onerror="window.puterLoadFailed=true; console.warn('[Dictater] Puter.js failed to load — cloud voices disabled.');"></script>
@@ -79,7 +84,7 @@
 
         <div>
           <h4 class="input-label" style="margin-bottom: 0.5rem;">Exercises</h4>
-          <div id="exercise-list" class="exercise-list">
+          <div id="exercise-list" class="exercise-list" role="listbox" aria-label="Available exercises">
             <!-- Dynamically populated -->
           </div>
         </div>
@@ -88,7 +93,7 @@
       <!-- Custom Text Panel (Hidden initially) -->
       <div id="custom-text-panel" class="custom-panel hidden" style="display: flex; flex-direction: column; gap: 1rem;">
         <h4 class="input-label">Quick Practice</h4>
-        <textarea id="custom-dictation-text" class="dictation-input" style="min-height: 80px; min-height: 80px;" placeholder="Type or paste any English text, words, or paragraph here..."></textarea>
+        <textarea id="custom-dictation-text" class="dictation-input" style="min-height: 80px;" placeholder="Type or paste any English text, words, or paragraph here..."></textarea>
         <button id="btn-load-custom" class="btn-primary text-center">Load Quick Text</button>
 
         <div style="border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 0.75rem; display: flex; flex-direction: column; gap: 0.5rem;">
@@ -174,7 +179,7 @@
             </svg>
           </button>
 
-          <div class="waveform" id="visualizer">
+          <div class="waveform" id="visualizer" role="status" aria-label="Audio playback indicator">
             <div class="waveform-bar"></div>
             <div class="waveform-bar"></div>
             <div class="waveform-bar"></div>
@@ -186,11 +191,11 @@
           </div>
         </div>
 
-        <div class="speed-picker">
+        <div class="speed-picker" role="radiogroup" aria-label="Playback speed">
           <span>Speed:</span>
-          <button class="speed-btn" data-speed="0.5">0.5x</button>
-          <button class="speed-btn" data-speed="0.75">0.75x</button>
-          <button class="speed-btn active" data-speed="1.0">1.0x</button>
+          <button class="speed-btn" data-speed="0.5" role="radio" aria-checked="false">0.5x</button>
+          <button class="speed-btn" data-speed="0.75" role="radio" aria-checked="false">0.75x</button>
+          <button class="speed-btn active" data-speed="1.0" role="radio" aria-checked="true">1.0x</button>
         </div>
       </div>
 
