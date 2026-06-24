@@ -320,12 +320,8 @@ function setupEventListeners() {
       e.target.classList.add('active');
       currentGrade = e.target.dataset.grade;
       
-      const isK2 = ['K', '1', '2'].includes(currentGrade);
-      if (isK2) {
-        difficultyFilterContainer.classList.remove('hidden');
-      } else {
-        difficultyFilterContainer.classList.add('hidden');
-      }
+      // All grades (K-6) now support difficulty filtering
+      difficultyFilterContainer.classList.remove('hidden');
       
       filterExercises(true);
     });
@@ -592,11 +588,9 @@ function filterExercises(autoLoadFirst = false) {
   const list = currentFormat === 'passage' ? gradeData.passages : gradeData.words;
   exerciseList.innerHTML = '';
   
-  const isK2 = ['K', '1', '2'].includes(currentGrade);
-  
   const filteredList = [];
   list.forEach((ex, idx) => {
-    if (!isK2 || currentDifficulty === 'all' || ex.difficulty === currentDifficulty) {
+    if (currentDifficulty === 'all' || ex.difficulty === currentDifficulty) {
       filteredList.push({ ex, originalIdx: idx });
     }
   });
@@ -607,8 +601,8 @@ function filterExercises(autoLoadFirst = false) {
     div.setAttribute('role', 'option');
     div.dataset.index = item.originalIdx;
     
-    const badgeText = isK2 ? (item.ex.difficulty ? item.ex.difficulty.toUpperCase() : `G${currentGrade}`) : `G${currentGrade}`;
-    const badgeClass = isK2 ? `badge-diff-${item.ex.difficulty || 'beginner'}` : `badge-grade-${currentGrade}`;
+    const badgeText = item.ex.difficulty ? item.ex.difficulty.toUpperCase() : `G${currentGrade}`;
+    const badgeClass = item.ex.difficulty ? `badge-diff-${item.ex.difficulty}` : `badge-grade-${currentGrade}`;
     
     // Build DOM safely (no innerHTML with user data)
     const titleDiv = document.createElement('div');
@@ -666,7 +660,6 @@ function loadExercise(index, isCustomSaved = false, customObj = null) {
   
   currentTitle.textContent = currentExercise.title;
   
-  const isK2 = ['K', '1', '2'].includes(currentGrade);
   const gradeLabel = currentGrade === 'K' ? 'Kindergarten' : `Grade ${currentGrade}`;
   const gradeText = isCustomSaved ? 'Custom' : gradeLabel;
   const gradeClass = isCustomSaved ? 'badge-grade-6' : `badge-grade-${currentGrade}`;
@@ -679,11 +672,11 @@ function loadExercise(index, isCustomSaved = false, customObj = null) {
     passageWorkspaceContainer.classList.remove('hidden');
     wordWorkspaceContainer.classList.add('hidden');
     
-    const diffStr = (!isCustomSaved && isK2 && currentExercise.difficulty) ? ` • ${currentExercise.difficulty.charAt(0).toUpperCase() + currentExercise.difficulty.slice(1)}` : '';
+    const diffStr = (!isCustomSaved && currentExercise.difficulty) ? ` • ${currentExercise.difficulty.charAt(0).toUpperCase() + currentExercise.difficulty.slice(1)}` : '';
     currentMeta.textContent = `${gradeText}${diffStr} Passage • Dictation Exercise`;
     
     let badgesHTML = `<span class="exercise-badge ${gradeClass}">${gradeText}</span>`;
-    if (!isCustomSaved && isK2 && currentExercise.difficulty) {
+    if (!isCustomSaved && currentExercise.difficulty) {
       const diffClass = `badge-diff-${currentExercise.difficulty}`;
       const diffLabel = currentExercise.difficulty.charAt(0).toUpperCase() + currentExercise.difficulty.slice(1);
       badgesHTML += ` <span class="exercise-badge ${diffClass}">${diffLabel}</span>`;
@@ -714,11 +707,11 @@ function loadExercise(index, isCustomSaved = false, customObj = null) {
     passageWorkspaceContainer.classList.add('hidden');
     wordWorkspaceContainer.classList.remove('hidden');
     
-    const diffStr = (!isCustomSaved && isK2 && currentExercise.difficulty) ? ` • ${currentExercise.difficulty.charAt(0).toUpperCase() + currentExercise.difficulty.slice(1)}` : '';
+    const diffStr = (!isCustomSaved && currentExercise.difficulty) ? ` • ${currentExercise.difficulty.charAt(0).toUpperCase() + currentExercise.difficulty.slice(1)}` : '';
     currentMeta.textContent = `${gradeText}${diffStr} Word List • Spelling Practice`;
     
     let badgesHTML = `<span class="exercise-badge ${gradeClass}">${gradeText} Words</span>`;
-    if (!isCustomSaved && isK2 && currentExercise.difficulty) {
+    if (!isCustomSaved && currentExercise.difficulty) {
       const diffClass = `badge-diff-${currentExercise.difficulty}`;
       const diffLabel = currentExercise.difficulty.charAt(0).toUpperCase() + currentExercise.difficulty.slice(1);
       badgesHTML += ` <span class="exercise-badge ${diffClass}">${diffLabel}</span>`;

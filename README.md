@@ -72,7 +72,7 @@ Since the project does not require compilation, you can double-click **`index.ht
 
 ## 📚 Curriculum Design
 
-The built-in curriculum features **141 passages** and **120 spelling word lists** (over 1,100 target words). Grades K–2 also feature three difficulty tiers (Beginner, Intermediate, Advanced) for personalized learning.
+The built-in curriculum features **141 passages** and **120 spelling word lists** (over 1,100 target words). All grades (Grades K–6) feature three difficulty tiers (Beginner, Intermediate, Advanced) for personalized learning.
 
 | Grade | CEFR Level | Key Focus | Spelling Focus |
 | :--- | :--- | :--- | :--- |
