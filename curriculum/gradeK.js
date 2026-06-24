@@ -201,6 +201,69 @@ window.DICTATER_CURRICULUM['K'] = {
       difficulty: 'advanced',
       words: ['went', 'saw', 'had', 'ran', 'sat', 'got', 'was', 'were'],
       hint: 'Action words for things that already happened.'
+    },
+    {
+      id: 'gK-w13',
+      title: 'High-Frequency Sight Words B',
+      difficulty: 'beginner',
+      words: ['to', 'he', 'she', 'me', 'we', 'my', 'go', 'no'],
+      hint: 'More common words you see very often.'
+    },
+    {
+      id: 'gK-w14',
+      title: 'In the Forest',
+      difficulty: 'intermediate',
+      words: ['tree', 'leaf', 'bird', 'bug', 'fox', 'bear', 'deer', 'owl'],
+      hint: 'Names of things you can see in the forest.'
+    },
+    {
+      id: 'gK-w15',
+      title: 'Silent E Magic',
+      difficulty: 'advanced',
+      words: ['make', 'take', 'game', 'fine', 'ride', 'hope', 'rope', 'tube'],
+      hint: 'Silent e at the end makes the vowel say its name.'
+    },
+    {
+      id: 'gK-w16',
+      title: 'Tricky Letter Sounds',
+      difficulty: 'beginner',
+      words: ['fun', 'van', 'sun', 'zip', 'thin', 'fin', 'ship', 'chip'],
+      hint: 'Be careful with letters that sound similar like f/v, s/z, or th/f.'
+    },
+    {
+      id: 'gK-w17',
+      title: 'Short Vowel Mix-ups',
+      difficulty: 'intermediate',
+      words: ['pen', 'pin', 'ten', 'tin', 'bat', 'bet', 'bag', 'beg'],
+      hint: 'Listen closely to the differences between short vowels.'
+    },
+    {
+      id: 'gK-w18',
+      title: 'Silent E Confusions',
+      difficulty: 'advanced',
+      words: ['bit', 'bite', 'hop', 'hope', 'cut', 'cute', 'tap', 'tape'],
+      hint: 'Adding silent e changes both the sound and spelling of the word.'
+    },
+    {
+      id: 'gK-w19',
+      title: 'Fry First 100: Set A',
+      difficulty: 'beginner',
+      words: ['the', 'of', 'and', 'a', 'to', 'in', 'is', 'you'],
+      hint: 'The most common high-frequency words in written English.'
+    },
+    {
+      id: 'gK-w20',
+      title: 'Fry First 100: Set B',
+      difficulty: 'intermediate',
+      words: ['that', 'it', 'he', 'was', 'for', 'on', 'are', 'as'],
+      hint: 'High-frequency core words to master.'
+    },
+    {
+      id: 'gK-w21',
+      title: 'Fry First 100: Set C',
+      difficulty: 'advanced',
+      words: ['with', 'his', 'they', 'I', 'at', 'be', 'this', 'have'],
+      hint: 'Core words frequently used in simple sentences.'
     }
   ]
 };

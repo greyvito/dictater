@@ -201,6 +201,69 @@ window.DICTATER_CURRICULUM['1'] = {
       difficulty: 'advanced',
       words: ['men', 'women', 'children', 'mice', 'feet', 'teeth', 'sheep', 'fish'],
       hint: 'Plural words that change spelling instead of just adding s.'
+    },
+    {
+      id: 'g1-w13',
+      title: 'Feelings & Emotions',
+      difficulty: 'beginner',
+      words: ['happy', 'sad', 'glad', 'mad', 'kind', 'warm', 'cold', 'safe'],
+      hint: 'Words that describe how we feel inside.'
+    },
+    {
+      id: 'g1-w14',
+      title: 'R-Controlled Vowels',
+      difficulty: 'intermediate',
+      words: ['star', 'park', 'herd', 'bird', 'girl', 'horn', 'turn', 'fur'],
+      hint: 'Vowels followed by r make a special sound.'
+    },
+    {
+      id: 'g1-w15',
+      title: 'Diphthongs: OU, OW, OI, OY',
+      difficulty: 'advanced',
+      words: ['house', 'mouse', 'town', 'brown', 'oil', 'soil', 'boy', 'toy'],
+      hint: 'Two vowels that glide together to make a new sound.'
+    },
+    {
+      id: 'g1-w16',
+      title: 'Sounds Alike A',
+      difficulty: 'beginner',
+      words: ['than', 'then', 'bat', 'bet', 'bad', 'bed', 'man', 'men'],
+      hint: 'Be careful! These words sound very similar but have different vowels and meanings.'
+    },
+    {
+      id: 'g1-w17',
+      title: 'Silent Letters K & W',
+      difficulty: 'intermediate',
+      words: ['know', 'knee', 'knot', 'write', 'wrong', 'wrist', 'wrap', 'who'],
+      hint: 'The starting letters k and w are silent and not pronounced.'
+    },
+    {
+      id: 'g1-w18',
+      title: 'Tricky Short Words',
+      difficulty: 'advanced',
+      words: ['its', 'it\'s', 'lets', 'let\'s', 'your', 'you\'re', 'there', 'they\'re'],
+      hint: 'Pay close attention to contractions with apostrophes vs pronouns.'
+    },
+    {
+      id: 'g1-w19',
+      title: 'Fry First 100: Set D',
+      difficulty: 'beginner',
+      words: ['from', 'or', 'one', 'had', 'by', 'words', 'but', 'not'],
+      hint: 'Core words frequently appearing in early grade textbooks.'
+    },
+    {
+      id: 'g1-w20',
+      title: 'Fry First 100: Set E',
+      difficulty: 'intermediate',
+      words: ['what', 'all', 'were', 'we', 'when', 'your', 'can', 'said'],
+      hint: 'Important sight words that are frequently used in conversation.'
+    },
+    {
+      id: 'g1-w21',
+      title: 'Fry First 100: Set F',
+      difficulty: 'advanced',
+      words: ['there', 'use', 'an', 'each', 'which', 'she', 'do', 'how'],
+      hint: 'Key pronouns and verbs essential for first grade mastery.'
     }
   ]
 };

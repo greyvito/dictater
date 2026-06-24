@@ -958,8 +958,8 @@ function showConfirmDialog(message, onConfirm) {
 
 // --- Phrase Replay Logics ---
 function splitIntoPhrases(text) {
-  // Splits on punctuation: , ; : . ! ? and retains it at the end of the phrase.
-  return text.match(/[^,;:.!?]+[,;:.!?]+(?:\s+|$)/g) || [text];
+  // Splits on punctuation: , ; : . ! ? and retains it (along with any trailing quotes/brackets) at the end of the phrase.
+  return text.match(/[^,;:.!?]+[,;:.!?]+['"’”‘“\])]*(?:\s+|$)/g) || [text];
 }
 
 function updatePhraseProgress() {
@@ -1248,6 +1248,40 @@ function updateVoiceSelectDropdown() {
       return;
     }
 
+    // Determine the best default voice if not set or if the current one is not in the display list
+    const isSelectedVoiceInList = displayList.some(v => v.name === selectedVoiceName);
+    if (!selectedVoiceName || !isSelectedVoiceInList) {
+      let bestVoice = displayList[0];
+      let highestScore = -1;
+      
+      displayList.forEach(v => {
+        const name = v.name || '';
+        let score = 0;
+        
+        // Prioritize Edge Online Natural or Siri voices
+        if (name.includes('Online (Natural)') || name.includes('Siri') || name.includes('Natural')) {
+          score = 100;
+        } else if (name.includes('Premium') || name.includes('Enhanced')) {
+          score = 80;
+        } else if (name.includes('Aria') || name.includes('Jenny') || name.includes('Guy') || name.includes('Sonia')) {
+          score = 60;
+        } else if (name.includes('Google US English') || name.includes('Google UK English')) {
+          score = 20;
+        } else if (v.lang && v.lang.toLowerCase().startsWith('en')) {
+          score = 10;
+        } else {
+          score = 1;
+        }
+        
+        if (score > highestScore) {
+          highestScore = score;
+          bestVoice = v;
+        }
+      });
+      
+      selectedVoiceName = bestVoice ? (bestVoice.name || '') : '';
+    }
+
     displayList.forEach(v => {
       const option = document.createElement('option');
       const vName = v.name || 'Unknown Voice';
@@ -1255,18 +1289,12 @@ function updateVoiceSelectDropdown() {
       option.value = vName;
       option.textContent = `${vName} (${vLang})`;
       
-      // Auto-select natural-sounding voices
-      if (vName.includes('Natural') || vName.includes('Aria') || vName.includes('Google US')) {
+      if (vName === selectedVoiceName) {
         option.selected = true;
-        selectedVoiceName = vName;
       }
       
       voiceSelect.appendChild(option);
     });
-    
-    if (!selectedVoiceName && displayList.length > 0) {
-      selectedVoiceName = displayList[0].name || '';
-    }
   } else {
     voiceSelectionRow.classList.add('hidden');
   }

@@ -3,111 +3,111 @@
 
 window.DICTATER_CURRICULUM = window.DICTATER_CURRICULUM || {};
 
-window.DICTATER_CURRICULUM[3] = {
+window.DICTATER_CURRICULUM['3'] = {
   passages: [
     {
       id: 'g3-p1',
       title: 'A Sunny Day at the Zoo',
       difficulty: 'beginner',
-      text: 'Yesterday, our excited school class took a long bus ride to the local zoo. The afternoon weather was exceptionally warm and sunny. We observed a family of tall, elegant giraffes munching on fresh green leaves from the high treetops. My favorite animal was definitely a playful baby monkey that swung happily between the wooden branches.',
+      text: 'Yesterday, our excited school class took a long bus ride to the local zoo. The afternoon weather was exceptionally warm and sunny. We observed a family of tall, elegant giraffes munching on fresh green leaves from the high treetops. My favorite animal was definitely a playful baby monkey that swung happily between the wooden branches while eating a yellow banana.',
       hint: 'Focus on past tense verbs like took, observed, and swung, plus descriptive adjectives like elegant and playful.'
     },
     {
       id: 'g3-p2',
       title: 'The Lost Puppy',
       difficulty: 'beginner',
-      text: 'On a rainy Tuesday afternoon, Tim heard a very soft, sweet bark near the wooden garden gate. He quickly walked outside and discovered a tiny, shivering brown puppy with enormous wet eyes. The poor animal seemed extremely lost and hungry, so Tim carefully carried it inside to drink some warm, delicious milk by the cozy fireplace.',
+      text: 'On a rainy Tuesday afternoon, Tim heard a very soft, sweet bark near the wooden garden gate. He quickly walked outside and discovered a tiny, shivering brown puppy with enormous wet eyes. The poor animal seemed extremely lost and hungry, so Tim carefully carried it inside to drink some warm, delicious milk by the cozy fireplace while drying its wet fur.',
       hint: 'Check spelling for Tuesday, puppy, hungry, and cozy.'
     },
     {
       id: 'g3-p3',
       title: 'Baking Chocolate Cookies',
       difficulty: 'beginner',
-      text: '\"This is going to be so much fun!\" shouted Sarah as we started baking cookies. First, we mix sweet butter, white sugar, and soft flour in a large bowl. Next, we add delicious chocolate chips. Then, we place small spoonfuls of dough on a clean baking sheet and carefully slide them into the hot oven.',
+      text: '"This is going to be so much fun!" shouted Sarah as we started baking cookies. First, we mix sweet butter, white sugar, and soft flour in a large bowl. Next, we add delicious chocolate chips to the mixture. Then, we place small spoonfuls of sweet dough on a clean baking sheet and carefully slide them into the hot oven.',
       hint: 'Identify sequence words like first, next, and then, and practice spelling chocolate and delicious.'
     },
     {
       id: 'g3-p4',
       title: 'A Rainy Saturday',
       difficulty: 'beginner',
-      text: 'It had been raining heavily all morning without stopping. Sarah and her younger brother decided to build an enormous fort in the cozy living room using soft pillows and heavy blankets from the bed. They happily played exciting board games inside their secret fort for hours until the bright sun finally came out behind the dark clouds.',
+      text: 'It had been raining heavily all morning without stopping. Sarah and her younger brother decided to build an enormous fort in the cozy living room using soft pillows and heavy blankets from the bed. They happily played exciting board games inside their secret fort for hours until the bright sun finally came out behind the dark clouds and they ran outside to play.',
       hint: 'Pay attention to the spelling of decided, heavy, blankets, and exciting.'
     },
     {
       id: 'g3-p5',
       title: 'My Green Garden',
       difficulty: 'beginner',
-      text: '\"I love this garden,\" whispered Leo as he worked. Every spring, my kind grandfather plants sweet tomatoes and crunchy carrots in his backyard garden. I always help him dig small holes in the rich brown soil and drop the tiny seeds inside. Together, we water the green plants every evening after eating a delicious dinner.',
+      text: '"I love this garden," whispered Leo as he worked. Every spring, my kind grandfather plants sweet tomatoes, red strawberries, and crunchy carrots in his backyard garden. I always help him dig small holes in the rich brown soil and drop the tiny seeds inside. Together, we water the green plants every evening after eating a delicious dinner.',
       hint: 'Practice writing dialogue correctly, and focus on ELA spelling words like grandfather, tomatoes, and dinner.'
     },
     {
       id: 'g3-p6',
       title: 'The Great Apple Farm',
       difficulty: 'intermediate',
-      text: 'During a cool week in late autumn, our happy family visited a beautiful apple orchard. The bright red apples hung low on the heavy branches of the old trees. My mother carefully picked three large baskets of apples to bake a fresh, sweet pie for our wonderful weekend picnic. We could not wait to eat it!',
+      text: 'During a cool week in late autumn, our happy family visited a beautiful apple orchard. The bright red apples hung low on the heavy branches of the old trees. My mother carefully picked three large baskets of sweet apples to bake a fresh, warm pie for our wonderful weekend picnic. We could not wait to eat a delicious slice!',
       hint: 'Note spelling of orchard, branches, baskets, and picnic.'
     },
     {
       id: 'g3-p7',
       title: 'A Trip to the Beach',
       difficulty: 'intermediate',
-      text: '\"Let\'s build a giant fortress!\" shouted my excited sister. We love constructing tall, detailed sandcastles at the crowded beach. She always collects shiny, colorful seashells along the sandy shore while the cool ocean waves splash against our bare feet. We must always wear thick sunscreen and wide hats to protect ourselves from the bright sun.',
+      text: '"Let\'s build a giant fortress!" shouted my excited sister. We love constructing tall, detailed sandcastles at the crowded beach. She always collects shiny, colorful seashells along the sandy shore while the cool ocean waves splash against our bare feet. We must always wear thick sunscreen and wide hats to protect ourselves from the bright afternoon sun.',
       hint: 'Note spelling of sandcastles, seashells, shore, sunscreen, and the escaped apostrophe in dialogue.'
     },
     {
       id: 'g3-p8',
       title: 'Feeding the Ducks',
       difficulty: 'intermediate',
-      text: 'There is a beautiful, small pond in the central park where many colorful ducks live. Every sunny Sunday morning, excited families bring fresh bread crumbs to feed them. The hungry ducks swim quickly across the cool water and make loud sounds when they are happy to receive their favorite treats from the children.',
+      text: 'There is a beautiful, small pond in the central park where many colorful ducks and white swans live. Every sunny Sunday morning, excited families bring fresh bread crumbs to feed them. The hungry ducks swim quickly across the cool water and make loud sounds when they are happy to receive their favorite treats from the children.',
       hint: 'Listen for adverbs and adjectives like central, colorful, quickly, and hungry, and spelling of receive.'
     },
     {
       id: 'g3-p9',
       title: 'The Library Visit',
       difficulty: 'intermediate',
-      text: 'Our spacious school library is a very quiet place containing thousands of exciting books. The friendly librarian always helps us choose amazing stories about brave knights and flying dragons. I borrow two new books every week to read in my cozy bedroom before falling asleep under my soft, warm blanket.',
+      text: 'Our spacious school library is a very quiet place containing thousands of exciting books. The friendly librarian always helps us choose amazing stories about brave knights and flying dragons. I borrow two new books every week to read in my cozy bedroom before falling asleep under my soft, warm blanket at night.',
       hint: 'Check the spelling of library, librarian, exciting, borrow, and the silent letter k in knights.'
     },
     {
       id: 'g3-p10',
       title: 'My First Bicycle Ride',
       difficulty: 'intermediate',
-      text: 'Learning to ride a new bicycle takes lots of daily practice. At first, my helpful father held the back of my seat to keep me balanced and safe. Soon, I was pedaling fast all by myself down our quiet street, feeling incredibly proud of this wonderful achievement. I waved to my neighbors as I passed them.',
+      text: 'Learning to ride a new bicycle takes lots of daily practice. At first, my helpful father held the back of my seat to keep me balanced and safe. Soon, I was pedaling fast all by myself down our quiet street, feeling incredibly proud of this wonderful achievement. I waved happily to my neighbors as I passed them.',
       hint: 'Key spelling words: bicycle, practice, balanced, pedaling, and proud.'
     },
     {
       id: 'g3-p11',
       title: 'The Helpful Hamster',
       difficulty: 'advanced',
-      text: 'My little sister received a fluffy hamster for her eighth birthday. We built a tall wooden cage with a plastic wheel inside. Every quiet evening, the hamster runs quickly on the squeaky wheel, making us laugh. We feed it fresh green lettuce, sunflower seeds, and clean water to keep it healthy.',
+      text: 'My little sister received a fluffy hamster for her eighth birthday. We built a tall wooden cage with a plastic wheel inside. Every quiet evening, the hamster runs quickly on the squeaky wheel, making us laugh. We feed it fresh green lettuce, crunchy sunflower seeds, and clean water to keep it healthy and strong.',
       hint: 'Practice spelling eighth, hamster, wooden, squeaky, and lettuce.'
     },
     {
       id: 'g3-p12',
       title: 'Visiting the Farm',
       difficulty: 'advanced',
-      text: 'Last Sunday, my friendly uncle invited us to visit his busy dairy farm. We woke up very early in the morning to watch him milk the cows. Afterward, we fed the hungry young lambs and watched a clever sheepdog run quickly across the green fields to gather the sheep into the wooden barn.',
+      text: 'Last Sunday, my friendly uncle invited us to visit his busy dairy farm. We woke up very early in the morning to watch him milk the cows. Afterward, we fed the hungry young lambs and watched a clever sheepdog run quickly across the green fields to gather all the sheep into the wooden barn.',
       hint: 'Check spellings for dairy, afterward, sheepdog, gather, and the silent b in lambs.'
     },
     {
       id: 'g3-p13',
       title: 'The Lost Keys',
       difficulty: 'advanced',
-      text: 'My worried mother could not find her shiny car keys this morning. We searched everywhere around the house, including under the brown couch and inside the kitchen cabinets. Finally, my little brother found them hiding behind a jar of sweet honey in the dark pantry. \"I found them!\" he shouted joyfully.',
+      text: 'My worried mother could not find her shiny car keys this morning. We searched everywhere around the house, including under the brown couch and inside the kitchen cabinets. Finally, my little brother found them hiding behind a jar of sweet honey in the dark pantry. "I found them!" he shouted joyfully as he held them up.',
       hint: 'Notice how dialogue is punctuated, and check spellings for cabinets, finally, and pantry.'
     },
     {
       id: 'g3-p14',
       title: 'A Day at the Park',
       difficulty: 'advanced',
-      text: 'The new central playground was completely full of laughing children playing outside. Some active kids were sliding down the tall blue slide, while others swung high into the warm afternoon air. Later, we sat together under a shady oak tree and ate delicious ham sandwiches that our mother made for us.',
+      text: 'The new central playground was completely full of laughing children playing outside. Some active kids were sliding down the tall blue slide, while others swung high into the warm afternoon air. Later, we sat together under a shady oak tree and ate delicious ham sandwiches that our mother made for us in the morning.',
       hint: 'Check spellings for playground, slide, shady, and delicious.'
     },
     {
       id: 'g3-p15',
       title: 'A Birthday Party',
       difficulty: 'advanced',
-      text: 'Today is my best friend\'s exciting birthday party. The entire living room is decorated with bright yellow streamers and shiny balloons. We played musical chairs for a long time and then ate a large slice of sweet strawberry cake before finally walking home with our parents. \"Happy birthday!\" we shouted when she blew out the candles.',
+      text: 'Today is my best friend\'s exciting birthday party. The entire living room is decorated with bright yellow streamers and shiny balloons. We played musical chairs for a long time and then ate a large slice of sweet strawberry cake before finally walking home with our parents. "Happy birthday!" we shouted when she blew out the candles and smiled.',
       hint: 'Notice spelling: decorated, streamers, musical, strawberry, and the escaped apostrophe in friend\'s.'
     }
   ],
@@ -195,6 +195,69 @@ window.DICTATER_CURRICULUM[3] = {
       difficulty: 'advanced',
       words: ['their', 'there', 'they\'re', 'too', 'two', 'here', 'hear', 'wear', 'where', 'great'],
       hint: 'Words that sound alike but have different spellings and meanings.'
+    },
+    {
+      id: 'g3-w13',
+      title: 'Clothing & Fashion',
+      difficulty: 'beginner',
+      words: ['shirt', 'pants', 'dress', 'jacket', 'shoes', 'socks', 'hat', 'coat'],
+      hint: 'Names of clothes we wear every day.'
+    },
+    {
+      id: 'g3-w14',
+      title: 'Suffixes: -er & -est',
+      difficulty: 'intermediate',
+      words: ['taller', 'tallest', 'faster', 'fastest', 'bigger', 'biggest', 'older', 'oldest'],
+      hint: 'Suffixes used to compare objects or people.'
+    },
+    {
+      id: 'g3-w15',
+      title: 'Irregular Past Tense',
+      difficulty: 'advanced',
+      words: ['bought', 'caught', 'taught', 'brought', 'thought', 'wrote', 'spoke', 'chose'],
+      hint: 'Past tense action words that change spelling instead of ending in -ed.'
+    },
+    {
+      id: 'g3-w16',
+      title: 'Homophones: Meet & Meat',
+      difficulty: 'beginner',
+      words: ['meet', 'meat', 'main', 'mane', 'sail', 'sale', 'road', 'rode'],
+      hint: 'Be careful! These words sound identical but have different definitions.'
+    },
+    {
+      id: 'g3-w17',
+      title: 'Silent Letters d, g, h',
+      difficulty: 'intermediate',
+      words: ['Wednesday', 'sandwich', 'handsome', 'sign', 'high', 'ghost', 'honest', 'hour'],
+      hint: 'Certain letters in these words are silent and must not be forgotten when writing.'
+    },
+    {
+      id: 'g3-w18',
+      title: 'Tricky Suffix Adjectives',
+      difficulty: 'advanced',
+      words: ['excited', 'tired', 'scared', 'beautiful', 'friendly', 'family', 'heavy', 'easy'],
+      hint: 'Common adjectives that students often misspell due to suffix additions.'
+    },
+    {
+      id: 'g3-w19',
+      title: 'Fry Third 100: Set A',
+      difficulty: 'beginner',
+      words: ['write', 'go', 'see', 'number', 'no', 'way', 'could', 'people'],
+      hint: 'High-frequency nouns and verbs for Grade 3 mastery.'
+    },
+    {
+      id: 'g3-w20',
+      title: 'Fry Third 100: Set B',
+      difficulty: 'intermediate',
+      words: ['my', 'than', 'first', 'water', 'been', 'called', 'who', 'am'],
+      hint: 'Important functional words used in daily reading.'
+    },
+    {
+      id: 'g3-w21',
+      title: 'Fry Third 100: Set C',
+      difficulty: 'advanced',
+      words: ['its', 'now', 'find', 'long', 'down', 'day', 'did', 'get'],
+      hint: 'Common high-frequency structural vocabulary.'
     }
   ]
 };

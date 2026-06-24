@@ -3,7 +3,7 @@
 
 window.DICTATER_CURRICULUM = window.DICTATER_CURRICULUM || {};
 
-window.DICTATER_CURRICULUM[5] = {
+window.DICTATER_CURRICULUM['5'] = {
   passages: [
     {
       id: 'g5-p1',
@@ -195,6 +195,69 @@ window.DICTATER_CURRICULUM[5] = {
       difficulty: 'advanced',
       words: ['independent', 'successful', 'calendar', 'scissors', 'temperature', 'restaurant', 'necessary', 'library', 'medicine', 'surprise'],
       hint: 'Pay close attention to double consonants and suffix spelling rules.'
+    },
+    {
+      id: 'g5-w13',
+      title: 'Verbal Idioms',
+      difficulty: 'beginner',
+      words: ['break down', 'clean up', 'give up', 'look after', 'run out', 'put off', 'set up', 'take off', 'turn on', 'call off'],
+      hint: 'Common two-word phrasal verbs used in everyday English.'
+    },
+    {
+      id: 'g5-w14',
+      title: 'Silent Consonants: GN, MB, KN, WR',
+      difficulty: 'intermediate',
+      words: ['gnat', 'sign', 'climb', 'thumb', 'knee', 'knife', 'write', 'wrong', 'wrap', 'wrist'],
+      hint: 'Words featuring silent letter combinations.'
+    },
+    {
+      id: 'g5-w15',
+      title: 'Suffix Spelling Changes',
+      difficulty: 'advanced',
+      words: ['having', 'hoping', 'running', 'stopped', 'studied', 'babies', 'carried', 'sillier', 'prettier', 'happier'],
+      hint: 'Spelling rules when attaching suffixes (drop-e, double consonant, change y to i).'
+    },
+    {
+      id: 'g5-w16',
+      title: 'Homophones: Capital & Capitol',
+      difficulty: 'beginner',
+      words: ['capital', 'capitol', 'stationary', 'stationery', 'principal', 'principle', 'complement', 'compliment'],
+      hint: 'Advanced homophones with identical pronunciation but separate orthographies.'
+    },
+    {
+      id: 'g5-w17',
+      title: 'Silent Letters b, c, s, p',
+      difficulty: 'intermediate',
+      words: ['doubt', 'debt', 'subtle', 'muscle', 'scissors', 'island', 'debris', 'receipt'],
+      hint: 'Silent consonant traps. Make sure to write the silent letters.'
+    },
+    {
+      id: 'g5-w18',
+      title: 'Spelling Demons',
+      difficulty: 'advanced',
+      words: ['definitely', 'separate', 'necessary', 'embarrassed', 'rhythm', 'calendar', 'library', 'restaurant'],
+      hint: 'High-frequency spelling demons containing counter-intuitive spelling patterns.'
+    },
+    {
+      id: 'g5-w19',
+      title: 'Fry Fifth 100: Set A',
+      difficulty: 'beginner',
+      words: ['name', 'good', 'sentence', 'man', 'think', 'say', 'great', 'where'],
+      hint: 'Important structural vocabulary for fifth-grade writing.'
+    },
+    {
+      id: 'g5-w20',
+      title: 'Fry Fifth 100: Set B',
+      difficulty: 'intermediate',
+      words: ['help', 'through', 'much', 'before', 'line', 'right', 'too', 'mean'],
+      hint: 'Words commonly misspelled by intermediate primary students.'
+    },
+    {
+      id: 'g5-w21',
+      title: 'Fry Fifth 100: Set C',
+      difficulty: 'advanced',
+      words: ['old', 'any', 'same', 'tell', 'boy', 'follow', 'came', 'want'],
+      hint: 'Key conceptual words from high-frequency core lists.'
     }
   ]
 };

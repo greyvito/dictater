@@ -3,7 +3,7 @@
 
 window.DICTATER_CURRICULUM = window.DICTATER_CURRICULUM || {};
 
-window.DICTATER_CURRICULUM[4] = {
+window.DICTATER_CURRICULUM['4'] = {
   passages: [
     {
       id: 'g4-p1',
@@ -195,6 +195,69 @@ window.DICTATER_CURRICULUM[4] = {
       difficulty: 'advanced',
       words: ['believe', 'receive', 'crying', 'family', 'finally', 'until', 'chief', 'caught', 'bought', 'brought'],
       hint: 'Watch out for irregular spelling patterns and silent vowels.'
+    },
+    {
+      id: 'g4-w13',
+      title: 'Instruments & Music',
+      difficulty: 'beginner',
+      words: ['guitar', 'piano', 'violin', 'drums', 'flute', 'trumpet', 'singer', 'concert', 'rhythm', 'melody'],
+      hint: 'Musical terms and instrument spelling.'
+    },
+    {
+      id: 'g4-w14',
+      title: 'Homophones & Homographs',
+      difficulty: 'intermediate',
+      words: ['bored', 'board', 'male', 'mail', 'plain', 'plane', 'wind', 'lead', 'close', 'live'],
+      hint: 'Words that sound alike (homophones) or look alike (homographs).'
+    },
+    {
+      id: 'g4-w15',
+      title: 'Suffixes: -able & -ible',
+      difficulty: 'advanced',
+      words: ['readable', 'edible', 'visible', 'flexible', 'valuable', 'sensible', 'suitable', 'terrible', 'horrible', 'possible'],
+      hint: 'Adjective suffixes that mean can be done or able to.'
+    },
+    {
+      id: 'g4-w16',
+      title: 'Homophones: Wood & Would',
+      difficulty: 'beginner',
+      words: ['wood', 'would', 'flour', 'flower', 'peak', 'peek', 'piece', 'peace'],
+      hint: 'Words that sound identical but differ in spelling and definition.'
+    },
+    {
+      id: 'g4-w17',
+      title: 'Silent Letters t, u, w',
+      difficulty: 'intermediate',
+      words: ['listen', 'castle', 'whistle', 'guard', 'guest', 'guide', 'answer', 'sword'],
+      hint: 'Be careful! The letters t, u, and w are silent in these words.'
+    },
+    {
+      id: 'g4-w18',
+      title: 'Confused Pairs',
+      difficulty: 'advanced',
+      words: ['accept', 'except', 'affect', 'effect', 'desert', 'dessert', 'diary', 'dairy'],
+      hint: 'These word pairs have near-identical spelling and sound but different meanings.'
+    },
+    {
+      id: 'g4-w19',
+      title: 'Fry Fourth 100: Set A',
+      difficulty: 'beginner',
+      words: ['come', 'made', 'may', 'part', 'over', 'new', 'sound', 'take'],
+      hint: 'High-frequency primary words essential for reading speed.'
+    },
+    {
+      id: 'g4-w20',
+      title: 'Fry Fourth 100: Set B',
+      difficulty: 'intermediate',
+      words: ['only', 'little', 'work', 'know', 'place', 'year', 'live', 'me'],
+      hint: 'Core words that appear constantly in fourth-grade texts.'
+    },
+    {
+      id: 'g4-w21',
+      title: 'Fry Fourth 100: Set C',
+      difficulty: 'advanced',
+      words: ['back', 'give', 'most', 'very', 'after', 'thing', 'our', 'just'],
+      hint: 'Important structural vocabulary to build spelling fluency.'
     }
   ]
 };

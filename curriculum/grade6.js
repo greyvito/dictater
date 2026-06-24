@@ -3,7 +3,7 @@
 
 window.DICTATER_CURRICULUM = window.DICTATER_CURRICULUM || {};
 
-window.DICTATER_CURRICULUM[6] = {
+window.DICTATER_CURRICULUM['6'] = {
   passages: [
     {
       id: 'g6-p1',
@@ -195,6 +195,69 @@ window.DICTATER_CURRICULUM[6] = {
       difficulty: 'advanced',
       words: ['occurrence', 'embarrassment', 'maneuver', 'definitely', 'receipt', 'queue', 'conscience', 'liaison', 'vacuum', 'maintenance'],
       hint: 'Classic spelling demons with unexpected letter combinations.'
+    },
+    {
+      id: 'g6-w13',
+      title: 'Media & Communication',
+      difficulty: 'beginner',
+      words: ['broadcast', 'internet', 'television', 'journalism', 'article', 'podcast', 'interview', 'digital', 'social', 'network'],
+      hint: 'Spelling words related to news and communications technology.'
+    },
+    {
+      id: 'g6-w14',
+      title: 'Greek & Latin Roots',
+      difficulty: 'intermediate',
+      words: ['geology', 'biology', 'telescope', 'photograph', 'telephone', 'script', 'dictionary', 'transport', 'inspect', 'contradict'],
+      hint: 'Root words that form the base of many English academic terms.'
+    },
+    {
+      id: 'g6-w15',
+      title: 'Assimilated Prefixes',
+      difficulty: 'advanced',
+      words: ['impossible', 'illegal', 'irregular', 'immature', 'illogical', 'irresponsible', 'impatient', 'imperfect', 'invisible', 'indirect'],
+      hint: 'Prefixes that modify their ending letter to match the root consonant.'
+    },
+    {
+      id: 'g6-w16',
+      title: 'Homophones: Assure & Ensure',
+      difficulty: 'beginner',
+      words: ['assure', 'ensure', 'device', 'devise', 'envelope', 'envelop', 'complementary', 'complimentary'],
+      hint: 'High-level homophones and spelling confusables.'
+    },
+    {
+      id: 'g6-w17',
+      title: 'Academic Confusables',
+      difficulty: 'intermediate',
+      words: ['precede', 'proceed', 'conscious', 'conscience', 'illusion', 'allusion', 'emigrate', 'immigrate'],
+      hint: 'Words often misheard and misused in academic discourse.'
+    },
+    {
+      id: 'g6-w18',
+      title: 'Advanced Spelling Demons',
+      difficulty: 'advanced',
+      words: ['accommodate', 'mischievous', 'liaison', 'questionnaire', 'vacuum', 'maintenance', 'occurrence', 'gauge'],
+      hint: 'Toughest spelling demons in middle-school ELA.'
+    },
+    {
+      id: 'g6-w19',
+      title: 'Fry Seventh 100: Set A',
+      difficulty: 'beginner',
+      words: ['show', 'also', 'around', 'form', 'three', 'small', 'set', 'put'],
+      hint: 'High-frequency core words essential for academic reading fluency.'
+    },
+    {
+      id: 'g6-w20',
+      title: 'Fry Seventh 100: Set B',
+      difficulty: 'intermediate',
+      words: ['end', 'does', 'another', 'well', 'large', 'must', 'big', 'even'],
+      hint: 'Common verbs and determiners to check for correct orthography.'
+    },
+    {
+      id: 'g6-w21',
+      title: 'Fry Seventh 100: Set C',
+      difficulty: 'advanced',
+      words: ['such', 'because', 'turn', 'here', 'why', 'ask', 'went', 'men'],
+      hint: 'Frequently appearing words in narrative and informational texts.'
     }
   ]
 };

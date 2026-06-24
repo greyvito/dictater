@@ -201,6 +201,69 @@ window.DICTATER_CURRICULUM['2'] = {
       difficulty: 'advanced',
       words: ['wonderful', 'beautiful', 'playful', 'colorful', 'helpful', 'careless', 'hopeless', 'fearless', 'harmless', 'useless'],
       hint: 'Suffixes -ful (full of) and -less (without).'
+    },
+    {
+      id: 'g2-w13',
+      title: 'Days of the Week',
+      difficulty: 'beginner',
+      words: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      hint: 'Days of the week always start with a capital letter.'
+    },
+    {
+      id: 'g2-w14',
+      title: 'Digraphs: PH, CK, NG, GH',
+      difficulty: 'intermediate',
+      words: ['phone', 'photo', 'duck', 'lock', 'sing', 'song', 'laugh', 'rough'],
+      hint: 'Consonants that work together to make one unique sound.'
+    },
+    {
+      id: 'g2-w15',
+      title: 'Prefixes: DIS- & MIS-',
+      difficulty: 'advanced',
+      words: ['dislike', 'disagree', 'distrust', 'mislead', 'mistake', 'misspell', 'misbehave', 'mismatch'],
+      hint: 'Prefixes dis- (not) and mis- (wrong) added to the front of words.'
+    },
+    {
+      id: 'g2-w16',
+      title: 'Homophones: Sound-Alikes',
+      difficulty: 'beginner',
+      words: ['son', 'sun', 'blue', 'blew', 'deer', 'dear', 'night', 'knight'],
+      hint: 'These pairs sound exactly the same but are spelled differently.'
+    },
+    {
+      id: 'g2-w17',
+      title: 'Frequently Confused Vowels',
+      difficulty: 'intermediate',
+      words: ['quiet', 'quite', 'loose', 'lose', 'chose', 'choose', 'close', 'clothes'],
+      hint: 'Watch the vowels! Small changes in spelling create completely different words.'
+    },
+    {
+      id: 'g2-w18',
+      title: 'Double Letter Traps',
+      difficulty: 'advanced',
+      words: ['happy', 'funny', 'sunny', 'middle', 'yellow', 'butter', 'puppy', 'kitten', 'sudden', 'letter'],
+      hint: 'These words have adjacent twin consonants that must be written.'
+    },
+    {
+      id: 'g2-w19',
+      title: 'Fry Second 100: Set A',
+      difficulty: 'beginner',
+      words: ['their', 'if', 'will', 'up', 'other', 'about', 'out', 'many'],
+      hint: 'Core words that form the foundation of second-grade literacy.'
+    },
+    {
+      id: 'g2-w20',
+      title: 'Fry Second 100: Set B',
+      difficulty: 'intermediate',
+      words: ['then', 'them', 'these', 'so', 'some', 'her', 'would', 'make'],
+      hint: 'High-frequency determiners, pronouns, and verbs.'
+    },
+    {
+      id: 'g2-w21',
+      title: 'Fry Second 100: Set C',
+      difficulty: 'advanced',
+      words: ['like', 'him', 'into', 'time', 'has', 'look', 'two', 'more'],
+      hint: 'Common structural words found in children\'s literature.'
     }
   ]
 };
