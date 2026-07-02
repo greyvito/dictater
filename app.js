@@ -36,6 +36,11 @@ let isPausedState = false;
 // Audio Engines & State
 let currentSpeechUtterance = null;
 let puterAudioObj = null;
+let kokoroAudioObj = null;
+let localAudioObj = null;
+let kokoroTtsInstance = null;
+let isKokoroLoading = false;
+let kokoroLoadingPromise = null;
 let selectedEngine = 'webspeech';
 let selectedVoiceName = '';
 let selectedAccent = 'US'; // 'US' or 'UK'
@@ -363,6 +368,10 @@ function setupEventListeners() {
         speakWebSpeech(remainingText, true);
       } else if (isPlaying && selectedEngine === 'puter' && puterAudioObj) {
         puterAudioObj.playbackRate = currentSpeed;
+      } else if (isPlaying && selectedEngine === 'kokoro' && kokoroAudioObj) {
+        kokoroAudioObj.playbackRate = currentSpeed;
+      } else if (isPlaying && ['kokoro-mlx', 'piper', 'f5-tts', 'chatterbox'].includes(selectedEngine) && localAudioObj) {
+        localAudioObj.playbackRate = currentSpeed;
       }
     });
   });
@@ -419,6 +428,9 @@ function setupEventListeners() {
   voiceEngine.addEventListener('change', (e) => {
     selectedEngine = e.target.value;
     updateVoiceSelectDropdown();
+    if (selectedEngine === 'kokoro') {
+      initKokoro();
+    }
   });
   voiceAccent.addEventListener('change', (e) => {
     selectedAccent = e.target.value;
@@ -995,6 +1007,10 @@ function playActivePhrase() {
   
   if (selectedEngine === 'webspeech') {
     speakWebSpeech(phraseText);
+  } else if (selectedEngine === 'kokoro') {
+    speakKokoroSpeech(phraseText);
+  } else if (['kokoro-mlx', 'piper', 'f5-tts', 'chatterbox'].includes(selectedEngine)) {
+    speakLocalServerTTS(phraseText, selectedEngine);
   } else {
     speakPuterSpeech(phraseText);
   }
@@ -1057,6 +1073,10 @@ function playActiveWord() {
   
   if (selectedEngine === 'webspeech') {
     speakWebSpeech(word);
+  } else if (selectedEngine === 'kokoro') {
+    speakKokoroSpeech(word);
+  } else if (['kokoro-mlx', 'piper', 'f5-tts', 'chatterbox'].includes(selectedEngine)) {
+    speakLocalServerTTS(word, selectedEngine);
   } else {
     speakPuterSpeech(word);
   }
@@ -1190,6 +1210,10 @@ function renderInteractiveWords(wordList) {
       currentPlayCharIndex = 0;
       if (selectedEngine === 'webspeech') {
         speakWebSpeech(w);
+      } else if (selectedEngine === 'kokoro') {
+        speakKokoroSpeech(w);
+      } else if (['kokoro-mlx', 'piper', 'f5-tts', 'chatterbox'].includes(selectedEngine)) {
+        speakLocalServerTTS(w, selectedEngine);
       } else {
         speakPuterSpeech(w);
       }
@@ -1299,6 +1323,112 @@ function updateVoiceSelectDropdown() {
       
       voiceSelect.appendChild(option);
     });
+  } else if (selectedEngine === 'kokoro') {
+    voiceSelectionRow.classList.remove('hidden');
+    
+    let kokoroVoices = [];
+    if (selectedAccent === 'US') {
+      kokoroVoices = [
+        { value: 'af_heart', name: 'Heart (US Female)' },
+        { value: 'af_bella', name: 'Bella (US Female)' },
+        { value: 'af_nicole', name: 'Nicole (US Female)' },
+        { value: 'af_sky', name: 'Sky (US Female)' },
+        { value: 'af_sara', name: 'Sara (US Female)' },
+        { value: 'am_adam', name: 'Adam (US Male)' },
+        { value: 'am_michael', name: 'Michael (US Male)' }
+      ];
+    } else {
+      kokoroVoices = [
+        { value: 'bf_emma', name: 'Emma (UK Female)' },
+        { value: 'bf_isabella', name: 'Isabella (UK Female)' },
+        { value: 'bm_george', name: 'George (UK Male)' },
+        { value: 'bm_lewis', name: 'Lewis (UK Male)' }
+      ];
+    }
+
+    const isSelectedVoiceInKokoro = kokoroVoices.some(v => v.value === selectedVoiceName);
+    if (!selectedVoiceName || !isSelectedVoiceInKokoro) {
+      selectedVoiceName = kokoroVoices[0].value;
+    }
+
+    kokoroVoices.forEach(v => {
+      const option = document.createElement('option');
+      option.value = v.value;
+      option.textContent = v.name;
+      if (v.value === selectedVoiceName) {
+        option.selected = true;
+      }
+      voiceSelect.appendChild(option);
+    });
+  } else if (selectedEngine === 'kokoro-mlx') {
+    voiceSelectionRow.classList.remove('hidden');
+    
+    let mlxVoices = [];
+    if (selectedAccent === 'US') {
+      mlxVoices = [
+        { value: 'af_heart', name: 'Heart (US Female)' },
+        { value: 'af_bella', name: 'Bella (US Female)' },
+        { value: 'af_nicole', name: 'Nicole (US Female)' },
+        { value: 'af_sky', name: 'Sky (US Female)' },
+        { value: 'af_sara', name: 'Sara (US Female)' },
+        { value: 'am_adam', name: 'Adam (US Male)' },
+        { value: 'am_michael', name: 'Michael (US Male)' }
+      ];
+    } else {
+      mlxVoices = [
+        { value: 'bf_emma', name: 'Emma (UK Female)' },
+        { value: 'bf_isabella', name: 'Isabella (UK Female)' },
+        { value: 'bm_george', name: 'George (UK Male)' },
+        { value: 'bm_lewis', name: 'Lewis (UK Male)' }
+      ];
+    }
+
+    const isSelectedVoiceInMlx = mlxVoices.some(v => v.value === selectedVoiceName);
+    if (!selectedVoiceName || !isSelectedVoiceInMlx) {
+      selectedVoiceName = mlxVoices[0].value;
+    }
+
+    mlxVoices.forEach(v => {
+      const option = document.createElement('option');
+      option.value = v.value;
+      option.textContent = v.name;
+      if (v.value === selectedVoiceName) {
+        option.selected = true;
+      }
+      voiceSelect.appendChild(option);
+    });
+  } else if (selectedEngine === 'piper') {
+    voiceSelectionRow.classList.remove('hidden');
+    
+    const piperVoices = [
+      { value: 'en_US-lessac-medium', name: 'Lessac Medium (US Female)' }
+    ];
+    
+    selectedVoiceName = piperVoices[0].value;
+    
+    piperVoices.forEach(v => {
+      const option = document.createElement('option');
+      option.value = v.value;
+      option.textContent = v.name;
+      option.selected = true;
+      voiceSelect.appendChild(option);
+    });
+  } else if (selectedEngine === 'f5-tts' || selectedEngine === 'chatterbox') {
+    voiceSelectionRow.classList.remove('hidden');
+    
+    const refVoices = [
+      { value: 'default_ref', name: 'Default Reference Audio (Official English)' }
+    ];
+    
+    selectedVoiceName = refVoices[0].value;
+    
+    refVoices.forEach(v => {
+      const option = document.createElement('option');
+      option.value = v.value;
+      option.textContent = v.name;
+      option.selected = true;
+      voiceSelect.appendChild(option);
+    });
   } else {
     voiceSelectionRow.classList.add('hidden');
   }
@@ -1330,6 +1460,14 @@ function resumeSpeech() {
       const remainingText = currentlyPlayingText.slice(currentPlayCharIndex);
       speechTextOffset = currentPlayCharIndex;
       speakWebSpeech(remainingText, true);
+    } else if (selectedEngine === 'kokoro') {
+      if (kokoroAudioObj) {
+        kokoroAudioObj.play();
+      }
+    } else if (['kokoro-mlx', 'piper', 'f5-tts', 'chatterbox'].includes(selectedEngine)) {
+      if (localAudioObj) {
+        localAudioObj.play();
+      }
     } else {
       if (puterAudioObj) {
         puterAudioObj.play();
@@ -1359,6 +1497,14 @@ function pauseSpeech() {
     if (window.speechSynthesis) {
       window.speechSynthesis.pause();
     }
+  } else if (selectedEngine === 'kokoro') {
+    if (kokoroAudioObj) {
+      kokoroAudioObj.pause();
+    }
+  } else if (['kokoro-mlx', 'piper', 'f5-tts', 'chatterbox'].includes(selectedEngine)) {
+    if (localAudioObj) {
+      localAudioObj.pause();
+    }
   } else {
     if (puterAudioObj) {
       puterAudioObj.pause();
@@ -1383,6 +1529,16 @@ function stopSpeech() {
   if (puterAudioObj) {
     puterAudioObj.pause();
     puterAudioObj.currentTime = 0;
+  }
+  
+  if (kokoroAudioObj) {
+    kokoroAudioObj.pause();
+    kokoroAudioObj.currentTime = 0;
+  }
+  
+  if (localAudioObj) {
+    localAudioObj.pause();
+    localAudioObj.currentTime = 0;
   }
   
   currentSpeechUtterance = null;
@@ -1515,6 +1671,267 @@ async function speakPuterSpeech(text) {
   }
 }
 
+function initKokoro() {
+  if (kokoroTtsInstance) return Promise.resolve(kokoroTtsInstance);
+  if (kokoroLoadingPromise) return kokoroLoadingPromise;
+
+  kokoroLoadingPromise = (async () => {
+    isKokoroLoading = true;
+    const prevTitle = currentTitle.textContent;
+    currentTitle.textContent = "Loading Kokoro AI...";
+    showToast('Downloading Kokoro AI model (~82MB). Please wait...', 'info');
+
+    try {
+      const { KokoroTTS } = await import("https://esm.sh/kokoro-js");
+      const hasWebGPU = !!navigator.gpu;
+      const device = hasWebGPU ? 'webgpu' : 'wasm';
+      console.log(`[Dictater] Initializing Kokoro TTS using device: ${device}`);
+
+      kokoroTtsInstance = await KokoroTTS.from_pretrained("onnx-community/Kokoro-82M-v1.0-ONNX", {
+        dtype: "q8",
+        device: device,
+        progress_callback: (data) => {
+          if (data.status === 'progress') {
+            const pct = Math.round(data.progress || 0);
+            currentTitle.textContent = `Downloading Kokoro AI: ${pct}%`;
+          } else if (data.status === 'ready') {
+            currentTitle.textContent = "Initializing Kokoro Model...";
+          }
+        }
+      });
+      currentTitle.textContent = prevTitle;
+      showToast('Kokoro AI loaded successfully!', 'success');
+      updateVoiceSelectDropdown();
+      return kokoroTtsInstance;
+    } catch (error) {
+      console.error('Kokoro Load Error:', error);
+      showToast('Failed to load Kokoro AI. Falling back to local engine.', 'error');
+      currentTitle.textContent = prevTitle;
+      selectedEngine = 'webspeech';
+      voiceEngine.value = 'webspeech';
+      updateVoiceSelectDropdown();
+      return null;
+    } finally {
+      isKokoroLoading = false;
+      kokoroLoadingPromise = null;
+    }
+  })();
+
+  return kokoroLoadingPromise;
+}
+
+function bufferToWav(buffer, sampleRate) {
+  const bufferLength = buffer.length;
+  const wavHeader = new ArrayBuffer(44);
+  const view = new DataView(wavHeader);
+
+  // Write WAV header
+  writeString(view, 0, 'RIFF');
+  view.setUint32(4, 36 + bufferLength * 2, true);
+  writeString(view, 8, 'WAVE');
+  writeString(view, 12, 'fmt ');
+  view.setUint32(16, 16, true);
+  view.setUint16(20, 1, true); // Linear PCM
+  view.setUint16(22, 1, true); // Mono
+  view.setUint32(24, sampleRate, true);
+  view.setUint32(28, sampleRate * 2, true); // Byte rate
+  view.setUint16(32, 2, true); // Block align
+  view.setUint16(34, 16, true); // Bits per sample
+  writeString(view, 36, 'data');
+  view.setUint32(40, bufferLength * 2, true);
+
+  // Convert float samples to 16-bit PCM
+  const int16Buffer = new Int16Array(bufferLength);
+  for (let i = 0; i < bufferLength; i++) {
+    const s = Math.max(-1, Math.min(1, buffer[i]));
+    int16Buffer[i] = s < 0 ? s * 0x8000 : s * 0x7FFF;
+  }
+
+  return new Blob([wavHeader, int16Buffer], { type: 'audio/wav' });
+}
+
+function writeString(view, offset, string) {
+  for (let i = 0; i < string.length; i++) {
+    view.setUint8(offset + i, string.charCodeAt(i));
+  }
+}
+
+async function speakKokoroSpeech(text) {
+  // If not loaded, initialize it first
+  if (!kokoroTtsInstance) {
+    const tts = await initKokoro();
+    if (!tts) {
+      speakWebSpeech(text);
+      return;
+    }
+  }
+
+  // If already generated and playing the exact same text, resume/restart playing
+  if (kokoroAudioObj && kokoroAudioObj.dataset.text === text) {
+    kokoroAudioObj.playbackRate = currentSpeed;
+    kokoroAudioObj.play();
+    isPlaying = true;
+    updatePlaybackUI(true);
+    return;
+  }
+
+  stopSpeech();
+  currentlyPlayingText = text;
+
+  try {
+    updatePlaybackUI(true);
+    const prevTitle = currentTitle.textContent;
+    currentTitle.textContent = "Generating Kokoro AI Speech...";
+
+    // Determine voice model
+    const voiceModel = selectedVoiceName || "af_heart";
+
+    const audio = await kokoroTtsInstance.generate(text, {
+      voice: voiceModel,
+    });
+
+    // Convert Float32Array to WAV Blob
+    const wavBlob = bufferToWav(audio.audio, audio.sampling_rate);
+    const wavUrl = URL.createObjectURL(wavBlob);
+
+    // Release old object URL if any
+    if (kokoroAudioObj && kokoroAudioObj.src) {
+      URL.revokeObjectURL(kokoroAudioObj.src);
+    }
+
+    kokoroAudioObj = new Audio(wavUrl);
+    kokoroAudioObj.dataset.text = text;
+    kokoroAudioObj.playbackRate = currentSpeed;
+
+    currentTitle.textContent = prevTitle;
+
+    kokoroAudioObj.onplay = () => {
+      isPlaying = true;
+      updatePlaybackUI(true);
+    };
+
+    kokoroAudioObj.onended = () => {
+      if (!isPausedState) {
+        isPlaying = false;
+        isPausedState = false;
+        updatePlaybackUI(false);
+      }
+    };
+
+    kokoroAudioObj.onerror = (e) => {
+      console.error('Kokoro Audio playback error:', e);
+      showToast('Kokoro Audio playback error. Falling back to local engine.', 'error');
+      selectedEngine = 'webspeech';
+      voiceEngine.value = 'webspeech';
+      updateVoiceSelectDropdown();
+      speakWebSpeech(text);
+    };
+
+    kokoroAudioObj.play();
+  } catch (error) {
+    console.error('Kokoro Generation Error:', error);
+    showToast('Failed to generate Kokoro speech. Falling back to local engine.', 'error');
+    selectedEngine = 'webspeech';
+    voiceEngine.value = 'webspeech';
+    updateVoiceSelectDropdown();
+    currentTitle.textContent = currentExercise ? currentExercise.title : 'Curriculum';
+    speakWebSpeech(text);
+  }
+}
+
+async function speakLocalServerTTS(text, engine) {
+  // If already playing the exact same text, resume
+  if (localAudioObj && localAudioObj.dataset.text === text && localAudioObj.dataset.engine === engine) {
+    localAudioObj.playbackRate = currentSpeed;
+    localAudioObj.play();
+    isPlaying = true;
+    updatePlaybackUI(true);
+    return;
+  }
+
+  stopSpeech();
+  currentlyPlayingText = text;
+
+  const url = `http://localhost:5002/tts?engine=${engine}&voice=${encodeURIComponent(selectedVoiceName)}&speed=${currentSpeed}&text=${encodeURIComponent(text)}`;
+
+  try {
+    updatePlaybackUI(true);
+    const prevTitle = currentTitle.textContent;
+    currentTitle.textContent = "Generating Local AI Speech...";
+
+    const response = await fetch(url);
+    
+    if (response.status === 412) {
+      const errData = await response.json();
+      showToast(`Local engine not installed. Install with: ${errData.install_cmd}`, 'error', 7000);
+      currentTitle.textContent = prevTitle;
+      // Fallback
+      selectedEngine = 'webspeech';
+      voiceEngine.value = 'webspeech';
+      updateVoiceSelectDropdown();
+      speakWebSpeech(text);
+      return;
+    } else if (!response.ok) {
+      const errMsg = await response.text();
+      throw new Error(errMsg || `HTTP error ${response.status}`);
+    }
+
+    const audioBlob = await response.blob();
+    const wavUrl = URL.createObjectURL(audioBlob);
+
+    // Release old object URL if any
+    if (localAudioObj && localAudioObj.src) {
+      URL.revokeObjectURL(localAudioObj.src);
+    }
+
+    localAudioObj = new Audio(wavUrl);
+    localAudioObj.dataset.text = text;
+    localAudioObj.dataset.engine = engine;
+    localAudioObj.playbackRate = currentSpeed;
+
+    currentTitle.textContent = prevTitle;
+
+    localAudioObj.onplay = () => {
+      isPlaying = true;
+      updatePlaybackUI(true);
+    };
+
+    localAudioObj.onended = () => {
+      if (!isPausedState) {
+        isPlaying = false;
+        isPausedState = false;
+        updatePlaybackUI(false);
+      }
+    };
+
+    localAudioObj.onerror = (e) => {
+      console.error('Local TTS playback error:', e);
+      showToast('Local TTS playback error. Falling back to local engine.', 'error');
+      selectedEngine = 'webspeech';
+      voiceEngine.value = 'webspeech';
+      updateVoiceSelectDropdown();
+      speakWebSpeech(text);
+    };
+
+    localAudioObj.play();
+  } catch (error) {
+    console.error('Local TTS Server Error:', error);
+    
+    // Check if network connection failed (server offline)
+    if (error.message.includes('Failed to fetch') || error.name === 'TypeError') {
+      showToast("Local TTS server not running at http://localhost:5002. Please start the server by running 'python tts_server.py' in the terminal.", 'error', 7000);
+    } else {
+      showToast(`Local TTS Error: ${error.message}. Falling back to Web Speech.`, 'error');
+    }
+    
+    selectedEngine = 'webspeech';
+    voiceEngine.value = 'webspeech';
+    updateVoiceSelectDropdown();
+    currentTitle.textContent = currentExercise ? currentExercise.title : 'Curriculum';
+    speakWebSpeech(text);
+  }
+}
+
 function playTitleSpeech() {
   if (!currentExercise || !currentExercise.title) return;
   const titleText = currentExercise.title.trim();
@@ -1527,6 +1944,10 @@ function playTitleSpeech() {
   
   if (selectedEngine === 'webspeech') {
     speakWebSpeech(titleText);
+  } else if (selectedEngine === 'kokoro') {
+    speakKokoroSpeech(titleText);
+  } else if (['kokoro-mlx', 'piper', 'f5-tts', 'chatterbox'].includes(selectedEngine)) {
+    speakLocalServerTTS(titleText, selectedEngine);
   } else {
     speakPuterSpeech(titleText);
   }
@@ -1857,11 +2278,7 @@ function updateDashboardStats() {
   
   // Render Recent Activity Logs
   if (total === 0) {
-    dashboardActivityLog.replaceChildren();
-    const empty = document.createElement('p');
-    empty.className = 'empty-state';
-    empty.textContent = 'No activity recorded yet. Start practicing to log scores.';
-    dashboardActivityLog.appendChild(empty);
+    dashboardActivityLog.innerHTML = '<p class="empty-state">No activity recorded yet. Start practicing to log scores.</p>';
     return;
   }
   
