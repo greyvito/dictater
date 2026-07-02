@@ -828,7 +828,11 @@ function renderCustomSavedLessons() {
   });
   
   if (filtered.length === 0) {
-    customSavedList.innerHTML = '<div style="color: var(--text-muted); font-size: 0.8rem; text-align: center; padding: 1rem;">No saved lessons yet.</div>';
+    customSavedList.replaceChildren();
+    const empty = document.createElement('div');
+    empty.className = 'empty-state';
+    empty.textContent = 'No saved lessons yet.';
+    customSavedList.appendChild(empty);
     return;
   }
   
@@ -1853,7 +1857,11 @@ function updateDashboardStats() {
   
   // Render Recent Activity Logs
   if (total === 0) {
-    dashboardActivityLog.innerHTML = '<p style="color: var(--text-muted); text-align: center;">No activity recorded yet. Start practicing to log scores!</p>';
+    dashboardActivityLog.replaceChildren();
+    const empty = document.createElement('p');
+    empty.className = 'empty-state';
+    empty.textContent = 'No activity recorded yet. Start practicing to log scores.';
+    dashboardActivityLog.appendChild(empty);
     return;
   }
   
