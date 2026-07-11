@@ -1,0 +1,14 @@
+{
+  "$schema": "https://cursor.com/schemas/environment.schema.json",
+  "install": "npm install",
+  "terminals": [
+    {
+      "name": "frontend",
+      "command": "npm run dev"
+    },
+    {
+      "name": "backend",
+      "command": "npm run backend"
+    }
+  ]
+}
