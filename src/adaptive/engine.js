@@ -1,5 +1,5 @@
 import { getLessonsForGrade } from '../curriculum/loader.js';
-import { skillAreaForType } from '../curriculum/schema.js';
+import { skillAreaForType, isEarlyGrade } from '../curriculum/schema.js';
 
 export function buildPlacementTest(grade) {
   const lessons = getLessonsForGrade(grade);
@@ -30,8 +30,14 @@ export function recordSkillResult(skillMastery, lesson, score) {
 }
 
 export function recommendNextLesson(grade, skillMastery, completedIds = new Set()) {
-  const lessons = getLessonsForGrade(grade).filter((l) => !completedIds.has(l.id));
+  let lessons = getLessonsForGrade(grade).filter((l) => !completedIds.has(l.id));
   if (!lessons.length) return null;
+
+  // Early grades (PreK/K): pre-readers, so keep them on vocabulary when possible.
+  if (isEarlyGrade(grade)) {
+    const vocab = lessons.filter((l) => skillAreaForType(l.type) === 'vocabulary');
+    if (vocab.length) lessons = vocab;
+  }
 
   const skillAvgs = Object.entries(skillMastery).sort((a, b) => a[1].avg - b[1].avg);
   if (skillAvgs.length) {

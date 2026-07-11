@@ -32,6 +32,25 @@ export const ACTIVITY_TYPES = [
 
 export const GRADES = ['preK', 'K', '1', '2', '3', '4', '5', '6'];
 
+// Early grades (PreK, K): learners are pre-readers, so the app focuses on
+// spoken/aural skills — vocabulary first — instead of reading/writing.
+export const EARLY_GRADES = ['preK', 'K'];
+
+// Skill areas offered for early grades, in display order (vocabulary first).
+export const EARLY_GRADE_SKILLS = ['vocabulary', 'sounds', 'phonics', 'speaking'];
+
+export function isEarlyGrade(grade) {
+  return EARLY_GRADES.includes(grade);
+}
+
+/** Skill areas to offer for a grade, in display order. */
+export function skillAreasForGrade(grade) {
+  if (isEarlyGrade(grade)) {
+    return EARLY_GRADE_SKILLS.map((id) => SKILL_AREAS.find((s) => s.id === id)).filter(Boolean);
+  }
+  return SKILL_AREAS;
+}
+
 export function gradeLabel(grade) {
   if (grade === 'preK') return 'PreK';
   if (grade === 'K') return 'Kindergarten';

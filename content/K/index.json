@@ -1610,5 +1610,93 @@
       "maxAttempts": 3
     },
     "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "gK-vocab-01",
+    "grade": "K",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Word: apple",
+    "skills": ["oral_vocabulary"],
+    "standards": ["CCSS.ELA-LITERACY.L.K.5"],
+    "content": { "prompt": "apple", "choices": ["apple", "ball", "cup"], "correctIndex": 0 },
+    "hint": "Tap the word for the fruit you eat."
+  },
+  {
+    "id": "gK-vocab-02",
+    "grade": "K",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Word: fish",
+    "skills": ["oral_vocabulary"],
+    "standards": ["CCSS.ELA-LITERACY.L.K.5"],
+    "content": { "prompt": "fish", "choices": ["fish", "shoe", "hat"], "correctIndex": 0 },
+    "hint": "Which word is the animal that swims?"
+  },
+  {
+    "id": "gK-vocab-03",
+    "grade": "K",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Word: yellow",
+    "skills": ["oral_vocabulary"],
+    "standards": ["CCSS.ELA-LITERACY.L.K.5"],
+    "content": { "prompt": "yellow", "choices": ["yellow", "purple", "brown"], "correctIndex": 0 },
+    "hint": "Tap the color of the sun."
+  },
+  {
+    "id": "gK-vocab-04",
+    "grade": "K",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Word: run",
+    "skills": ["oral_vocabulary"],
+    "standards": ["CCSS.ELA-LITERACY.L.K.5.C"],
+    "content": { "prompt": "run", "choices": ["run", "sleep", "eat"], "correctIndex": 0 },
+    "hint": "Which word means to move fast with your legs?"
+  },
+  {
+    "id": "gK-vocab-05",
+    "grade": "K",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Word: big",
+    "skills": ["oral_vocabulary"],
+    "standards": ["CCSS.ELA-LITERACY.L.K.5.B"],
+    "content": { "prompt": "big", "choices": ["big", "small", "wet"], "correctIndex": 0 },
+    "hint": "The opposite of small."
+  },
+  {
+    "id": "gK-vocab-06",
+    "grade": "K",
+    "type": "picture_vocab",
+    "difficulty": "intermediate",
+    "title": "Word: family",
+    "skills": ["oral_vocabulary"],
+    "standards": ["CCSS.ELA-LITERACY.L.K.5"],
+    "content": { "prompt": "family", "choices": ["family", "table", "river"], "correctIndex": 0 },
+    "hint": "The people you live with and love."
+  },
+  {
+    "id": "gK-vocab-07",
+    "grade": "K",
+    "type": "picture_vocab",
+    "difficulty": "intermediate",
+    "title": "Word: cold",
+    "skills": ["oral_vocabulary"],
+    "standards": ["CCSS.ELA-LITERACY.L.K.5.B"],
+    "content": { "prompt": "cold", "choices": ["cold", "hot", "loud"], "correctIndex": 0 },
+    "hint": "How ice feels."
+  },
+  {
+    "id": "gK-vocab-08",
+    "grade": "K",
+    "type": "picture_vocab",
+    "difficulty": "intermediate",
+    "title": "Word: happy",
+    "skills": ["oral_vocabulary"],
+    "standards": ["CCSS.ELA-LITERACY.L.K.5.C"],
+    "content": { "prompt": "happy", "choices": ["happy", "sad", "sleepy"], "correctIndex": 0 },
+    "hint": "How you feel when you smile."
   }
 ]

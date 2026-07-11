@@ -1,6 +1,6 @@
 import './activities/index.js';
 import { buildCurriculumIndex, getLessonsBySkill, getLessonById } from './curriculum/loader.js';
-import { GRADES, SKILL_AREAS, gradeLabel, skillAreaForType } from './curriculum/schema.js';
+import { GRADES, gradeLabel, skillAreaForType, skillAreasForGrade } from './curriculum/schema.js';
 import { renderActivity } from './activities/registry.js';
 import { speakText, loadVoices, setTTSOptions, stopSpeech } from './speech/tts.js';
 import {
@@ -99,9 +99,12 @@ export class DictaterApp {
     });
 
     skillEl.innerHTML = '';
-    const areas = this.grade === 'preK'
-      ? SKILL_AREAS.filter((s) => ['sounds', 'phonics', 'vocabulary', 'speaking'].includes(s.id))
-      : SKILL_AREAS;
+    const areas = skillAreasForGrade(this.grade);
+    // Keep the active skill valid for the selected grade. Early grades
+    // (PreK/K) land on Vocabulary since learners can't read yet.
+    if (!areas.some((s) => s.id === this.skillArea)) {
+      this.skillArea = areas[0].id;
+    }
     areas.forEach((s) => {
       const btn = document.createElement('button');
       btn.type = 'button';
