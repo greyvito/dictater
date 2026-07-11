@@ -1,5 +1,6 @@
 import { renderDiffToContainer } from '../grading/wordDiff.js';
 import { listenOnce, scoreSpeech, isSTTSupported } from '../speech/stt.js';
+import { fetchWhisperStatus } from '../speech/whisper.js';
 import { resolveWordVisual } from '../prek/images.js';
 import { celebrateCorrect, encourageTryAgain, mountMascot } from '../prek/delight.js';
 
@@ -19,7 +20,7 @@ function renderSpeakingSession(ctx, config) {
   } = config;
 
   if (!isSTTSupported()) {
-    container.innerHTML = `<p class="empty-state">Speaking practice needs a browser with speech recognition (Chrome or Edge recommended).</p>`;
+    container.innerHTML = `<p class="empty-state">Speaking needs Chrome/Edge (browser speech) or local Whisper (<code>npm run whisper</code>). See docs/LOCAL.md.</p>`;
     return;
   }
 
@@ -58,6 +59,14 @@ function renderSpeakingSession(ctx, config) {
   const micBtn = container.querySelector('#speak-mic');
 
   if (isPrek) mountMascot(container.querySelector('#prek-mascot-slot'));
+
+  fetchWhisperStatus().then((s) => {
+    if (!s.available) return;
+    const note = document.createElement('p');
+    note.className = 'settings-note';
+    note.textContent = `Using local Whisper (${s.model || 'tiny'}) — better accuracy on laptop`;
+    container.querySelector('.speaking-workspace')?.prepend(note);
+  });
 
   const loadItem = () => {
     attempts = 0;
@@ -104,7 +113,11 @@ function renderSpeakingSession(ctx, config) {
     micBtn.classList.add('speaker-playing');
     heardEl.textContent = 'Listening…';
     try {
-      const transcript = await listenOnce({ continuous: mode !== 'word', expectedHint: expected });
+      const transcript = await listenOnce({
+        continuous: mode !== 'word',
+        mode,
+        expectedHint: expected
+      });
       heardEl.textContent = `You said: "${transcript}"`;
       const result = scoreSpeech(expected, transcript, {
         mode,

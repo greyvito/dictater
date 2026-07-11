@@ -4,12 +4,19 @@ import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { randomUUID } from 'crypto';
+import multer from 'multer';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 const DATA_DIR = path.join(__dirname, 'data');
 const DB_FILE = path.join(DATA_DIR, 'db.json');
 const DIST = path.join(ROOT, 'dist');
+const WHISPER_URL = process.env.WHISPER_URL || 'http://127.0.0.1:3002';
+
+const upload = multer({
+  storage: multer.memoryStorage(),
+  limits: { fileSize: 15 * 1024 * 1024 }
+});
 
 fs.mkdirSync(DATA_DIR, { recursive: true });
 
@@ -149,6 +156,43 @@ app.post('/api/teacher/assignments', (req, res) => {
 app.get('/api/teacher/classes', (req, res) => {
   const db = loadDb();
   res.json(Object.values(db.classes));
+});
+
+app.get('/api/speech/status', async (req, res) => {
+  try {
+    const r = await fetch(`${WHISPER_URL}/health`, { signal: AbortSignal.timeout(2000) });
+    if (!r.ok) throw new Error('Whisper down');
+    res.json(await r.json());
+  } catch {
+    res.json({ available: false, engine: 'browser' });
+  }
+});
+
+app.post('/api/speech/transcribe', upload.single('audio'), async (req, res) => {
+  if (!req.file?.buffer?.length) {
+    return res.status(400).json({ error: 'No audio uploaded' });
+  }
+  try {
+    const form = new FormData();
+    const blob = new Blob([req.file.buffer], { type: req.file.mimetype || 'audio/webm' });
+    form.append('audio', blob, req.file.originalname || 'speech.webm');
+    if (req.body?.prompt) form.append('prompt', req.body.prompt);
+
+    const r = await fetch(`${WHISPER_URL}/transcribe`, {
+      method: 'POST',
+      body: form,
+      signal: AbortSignal.timeout(60000)
+    });
+    if (!r.ok) {
+      const err = await r.json().catch(() => ({}));
+      return res.status(r.status).json({ error: err.detail || 'Whisper transcription failed' });
+    }
+    res.json(await r.json());
+  } catch {
+    res.status(503).json({
+      error: 'Whisper server not running. Start with: npm run whisper (see docs/LOCAL.md)'
+    });
+  }
 });
 
 // Production: serve built frontend

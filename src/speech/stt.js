@@ -1,7 +1,20 @@
 import { splitIntoWords, stripFillerWords, alignWords, scoreAlignment } from '../grading/wordDiff.js';
+import { isRecordingSupported } from './record.js';
+import { isWhisperAvailable, listenWithWhisper } from './whisper.js';
 
 export function isSTTSupported() {
+  return isSTTSupportedSync() || isRecordingSupported();
+}
+
+export function isSTTSupportedSync() {
   return !!(window.SpeechRecognition || window.webkitSpeechRecognition);
+}
+
+/** @returns {Promise<boolean>} */
+export async function isSpeakingSupported() {
+  if (isSTTSupportedSync()) return true;
+  if (isRecordingSupported() && (await isWhisperAvailable())) return true;
+  return false;
 }
 
 export function createRecognizer(lang = 'en-US') {
@@ -38,7 +51,7 @@ function pickBestTranscript(results, expectedHint = '') {
 }
 
 /** @returns {Promise<string>} */
-export function listenOnce(options = {}) {
+function listenOnceBrowser(options = {}) {
   const {
     continuous = false,
     lang = 'en-US',
@@ -87,6 +100,27 @@ export function listenOnce(options = {}) {
 
     rec.start();
   });
+}
+
+/** @returns {Promise<string>} */
+export async function listenOnce(options = {}) {
+  const {
+    continuous = false,
+    mode = 'sentence',
+    expectedHint = '',
+    preferWhisper = true
+  } = options;
+
+  if (preferWhisper && isRecordingSupported() && (await isWhisperAvailable())) {
+    try {
+      return await listenWithWhisper({ expectedHint, mode: continuous ? 'passage' : mode });
+    } catch (err) {
+      if (isSTTSupportedSync()) return listenOnceBrowser(options);
+      throw err;
+    }
+  }
+
+  return listenOnceBrowser(options);
 }
 
 export function scoreSpeech(expectedText, transcript, options = {}) {

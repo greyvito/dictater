@@ -26,6 +26,7 @@ Built with **Vite + vanilla JavaScript modules**, it runs as a static PWA with o
 ```bash
 npm install
 npm run local        # Dev app :5173 + API :3001 (one command)
+npm run local:full   # Above + local Whisper STT :3002 (best speaking)
 ```
 
 Open **http://localhost:5173** in **Chrome** for the full experience including speaking.
