@@ -143,8 +143,7 @@ function renderSpeakingSession(ctx, config) {
           showToast('Great job!', 'success');
           if (isPrek) celebrateCorrect(container.querySelector('.speaking-workspace') || container);
         } else if (attempts >= maxAttempts) {
-          showToast('Here is the model — try again later', 'info');
-          speak(expected).catch(() => {});
+          showToast('Tap Listen to hear the model again', 'info');
           if (isPrek) {
             const vis = resolveWordVisual(expected);
             targetEl.innerHTML = vis.src
@@ -155,9 +154,8 @@ function renderSpeakingSession(ctx, config) {
           }
         }
       } else {
-        showToast('Almost — try again', 'warning');
+        showToast('Almost — try again (tap Listen to replay)', 'warning');
         if (isPrek) encourageTryAgain();
-        speak(expected).catch(() => {});
       }
     } catch (err) {
       heardEl.textContent = err.message || 'Could not hear you';
