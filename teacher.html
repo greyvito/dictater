@@ -4,14 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dictater Teacher Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap">
   <link rel="stylesheet" href="/index.css">
 </head>
 <body>
-  <main class="auth-panel">
-    <h1 class="section-title">Teacher Portal</h1>
-    <p class="settings-note">Create classes, enroll students, assign lessons, and export progress reports.</p>
+  <header class="teacher-header">
+    <div class="teacher-header__brand">
+      <a href="/" class="teacher-back-link">← Student app</a>
+      <h1 class="section-title section-title--plain">Teacher Portal</h1>
+      <p class="settings-note">Create classes, enroll students, assign lessons, and export progress.</p>
+    </div>
+    <p id="teacher-status" class="settings-note teacher-status">Not signed in</p>
+    <div id="teacher-signed-in" class="hidden">
+      <span class="exercise-badge badge-diff-beginner">Teacher</span>
+    </div>
+  </header>
 
-    <section class="stack-md">
+  <main class="teacher-main">
+    <section id="teacher-signin-section" class="glass-card teacher-card">
       <h2 class="input-label">Teacher sign-in</h2>
       <div class="auth-row">
         <input type="email" id="teacher-email" class="settings-select" placeholder="teacher@school.edu">
@@ -19,7 +31,7 @@
       </div>
     </section>
 
-    <section class="stack-md divider-top">
+    <section class="glass-card teacher-card">
       <h2 class="input-label">Create class</h2>
       <div class="auth-row">
         <input type="text" id="class-name" class="settings-select" placeholder="Class name (e.g. Grade 3A)">
@@ -28,7 +40,7 @@
       <div id="class-result" class="result-card feedback hidden"></div>
     </section>
 
-    <section class="stack-md divider-top">
+    <section class="glass-card teacher-card">
       <h2 class="input-label">Enroll student</h2>
       <div class="auth-row">
         <input type="text" id="class-id" class="settings-select" placeholder="Class ID">
@@ -37,93 +49,42 @@
       </div>
     </section>
 
-    <section class="stack-md divider-top">
+    <section class="glass-card teacher-card">
       <h2 class="input-label">Assign lesson</h2>
-      <div class="auth-row">
-        <input type="text" id="assign-class-id" class="settings-select" placeholder="Class ID">
-        <input type="text" id="assign-lesson-id" class="settings-select" placeholder="Lesson ID (e.g. preK-rhyme-01)">
-        <input type="text" id="assign-title" class="settings-select" placeholder="Assignment title">
-        <input type="date" id="assign-due" class="settings-select">
-        <button type="button" id="create-assignment" class="btn-accent btn-compact">Assign</button>
+      <div class="stack-sm">
+        <div class="auth-row">
+          <input type="text" id="assign-class-id" class="settings-select" placeholder="Class ID">
+          <input type="date" id="assign-due" class="settings-select">
+        </div>
+        <div class="auth-row">
+          <select id="assign-lesson-select" class="settings-select">
+            <option value="">Choose a lesson…</option>
+          </select>
+        </div>
+        <div class="auth-row">
+          <input type="text" id="assign-lesson-id" class="settings-select" placeholder="Or enter lesson ID" list="lesson-id-list">
+          <datalist id="lesson-id-list"></datalist>
+        </div>
+        <div class="auth-row">
+          <input type="text" id="assign-title" class="settings-select" placeholder="Assignment title">
+          <button type="button" id="create-assignment" class="btn-primary btn-compact">Assign</button>
+        </div>
       </div>
       <div id="assign-result" class="settings-note"></div>
     </section>
 
-    <section class="stack-md divider-top">
+    <section class="glass-card teacher-card">
       <h2 class="input-label">Class report</h2>
       <div class="auth-row">
         <input type="text" id="report-class-id" class="settings-select" placeholder="Class ID">
         <button type="button" id="view-report" class="btn-secondary btn-compact">View JSON</button>
-        <a id="csv-link" class="btn-primary btn-compact" href="#" download>Export CSV</a>
+        <a id="csv-link" class="btn-secondary btn-compact" href="#" download>Export CSV</a>
       </div>
-      <pre id="report-output" class="original-peek activity-log-scroll"></pre>
+      <pre id="report-output" class="original-peek activity-log-scroll teacher-report"></pre>
     </section>
   </main>
-  <script type="module">
-    const api = '/api';
-    let teacherEmail = '';
 
-    document.getElementById('teacher-login').addEventListener('click', async () => {
-      teacherEmail = document.getElementById('teacher-email').value.trim();
-      await fetch(`${api}/auth/login`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: teacherEmail, role: 'teacher' })
-      });
-      alert('Signed in as ' + teacherEmail);
-    });
-
-    document.getElementById('create-class').addEventListener('click', async () => {
-      const name = document.getElementById('class-name').value.trim();
-      const res = await fetch(`${api}/teacher/classes`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, teacherEmail })
-      });
-      const data = await res.json();
-      const el = document.getElementById('class-result');
-      el.textContent = `Class "${data.name}" created. ID: ${data.id}`;
-      el.classList.remove('hidden');
-      document.getElementById('class-id').value = data.id;
-      document.getElementById('assign-class-id').value = data.id;
-      document.getElementById('report-class-id').value = data.id;
-    });
-
-    document.getElementById('enroll-student').addEventListener('click', async () => {
-      const id = document.getElementById('class-id').value.trim();
-      const studentEmail = document.getElementById('student-email').value.trim();
-      const res = await fetch(`${api}/teacher/classes/${id}/enroll`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ studentEmail })
-      });
-      const data = await res.json();
-      alert(`Enrolled. Class now has ${data.students.length} student(s).`);
-    });
-
-    document.getElementById('create-assignment').addEventListener('click', async () => {
-      const body = {
-        classId: document.getElementById('assign-class-id').value.trim(),
-        lessonId: document.getElementById('assign-lesson-id').value.trim(),
-        title: document.getElementById('assign-title').value.trim(),
-        dueDate: document.getElementById('assign-due').value || null
-      };
-      const res = await fetch(`${api}/teacher/assignments`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(body)
-      });
-      const data = await res.json();
-      document.getElementById('assign-result').textContent = `Assigned "${data.title}" (id: ${data.id})`;
-    });
-
-    document.getElementById('view-report').addEventListener('click', async () => {
-      const id = document.getElementById('report-class-id').value.trim();
-      const res = await fetch(`${api}/teacher/classes/${id}/report`);
-      const data = await res.json();
-      document.getElementById('report-output').textContent = JSON.stringify(data, null, 2);
-      document.getElementById('csv-link').href = `${api}/teacher/classes/${id}/report.csv`;
-    });
-  </script>
+  <div id="teacher-toast-container" class="toast-container" aria-live="polite"></div>
+  <script type="module" src="/src/teacher.js"></script>
 </body>
 </html>

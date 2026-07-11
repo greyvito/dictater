@@ -23,47 +23,47 @@
 
 | Token | Value | Use |
 |-------|-------|-----|
-| `--primary` | `#6366f1` (indigo) | Primary actions, active states, focus rings |
-| `--primary-hover` | `#4f46e5` | Hover end of primary gradients |
-| `--primary-glow` | `rgba(99,102,241,0.15)` | Soft glow behind active/focused primary elements |
-| `--accent` | `#f59e0b` (amber) | "Check answer", submit, reward/dashboard CTAs |
-| `--accent-hover` | `#d97706` | Hover end of accent gradients |
+| `--primary` | `#5E8E63` (Meadow Signal) | Primary actions, active states, focus rings, check/submit CTAs |
+| `--primary-hover` | `#4D7652` | Hover state for primary buttons |
+| `--primary-glow` | `rgba(94,142,99,0.22)` | Soft glow behind active/focused primary elements |
+| `--accent` | `#C9A45C` (Warm Gold) | Achievements, streaks, celebratory highlights only — not primary CTAs |
+| `--accent-hover` | `#B18F47` | Hover state for gold accent elements |
 
 ### 2.2 Color — Backgrounds & Surfaces
 
 | Token | Value | Use |
 |-------|-------|-----|
-| `--bg-app` | radial indigo→navy gradient | Page background |
-| `--bg-deep` | `#0f172a` | Solid dark base (e.g. `<select>` menus) |
-| `--bg-card` | `rgba(30,41,59,0.7)` | Glass cards |
-| `--bg-elevated` | `rgba(30,41,59,0.95)` | Modals, dropdowns, toasts (more opaque = "above") |
-| `--surface-1 … 4` | white @ 2% → 8% | Nested fills *on* glass (list items, control hub, pills) |
-| `--surface-hover` | white @ 10% | Hover fill for surface elements |
-| `--well-1 … 4` | navy @ 30% → 60% | Recessed areas — inputs, control hub, diff panels |
+| `--bg-app` | `#F6F3EE` (Paper Canvas) | Page background |
+| `--bg-deep` | `#E4DBCE` | Solid neutral base (e.g. `<select>` menus) |
+| `--bg-card` | `#FFFCF7` (Warm Chalk) | Cards, panels, writing surfaces |
+| `--bg-elevated` | `#EFE7DA` (Soft Linen) | Modals, dropdowns, toasts |
+| `--surface-1 … 4` | ink @ 2% → 8% | Nested fills on cards (list items, pills) |
+| `--surface-hover` | ink @ 10% | Hover fill for surface elements |
+| `--well-1 … 4` | warm tan ladder | Recessed areas — inputs, control hub, diff panels |
 
-**Mental model:** lighter translucent white = *raised* surface; darker translucent navy = *recessed* well. Opacity is the elevation language.
+**Mental model:** warm chalk cards sit on paper canvas; wells are slightly darker tan recesses for inputs and feedback panels.
 
 ### 2.3 Color — Borders & Text
 
 | Token | Value | Use |
 |-------|-------|-----|
-| `--border-subtle` | white @ 5% | Hairline dividers, quiet separators |
-| `--border-card` | white @ 8% | Default card / control borders |
-| `--border-default` | white @ 10% | Inputs, secondary buttons |
-| `--border-strong` | white @ 20% | Hover/emphasis borders |
-| `--border-focus` | `#6366f1` | Focused input border |
-| `--text-primary` | `#f8fafc` | Headings, body, input text |
-| `--text-secondary` | `#94a3b8` | Supporting copy, labels, meta |
-| `--text-muted` | `#7c8da4` | Placeholders, timestamps, fine print |
-| `--text-on-accent` | `#0f172a` | Dark text on amber/light fills |
+| `--border-subtle` | ink @ 8% | Hairline dividers, quiet separators |
+| `--border-card` | ink @ 10% | Default card / control borders |
+| `--border-default` | ink @ 16% | Inputs, secondary buttons |
+| `--border-strong` | ink @ 24% | Hover/emphasis borders |
+| `--border-focus` | `#5E8E63` | Focused input border |
+| `--text-primary` | `#1F2933` (Studio Ink) | Headings, body, input text |
+| `--text-secondary` | `#667085` (Slate Lesson) | Supporting copy, labels, meta |
+| `--text-muted` | `#9AA4B2` | Placeholders, timestamps, fine print |
+| `--text-on-accent` | `#FFFCF7` | Light text on primary green fills |
 
 ### 2.4 Color — Semantic State
 
 | Token | Text | Background | Use |
 |-------|------|-----------|-----|
-| Success | `--success` `#10b981` | `--success-bg` | Correct words, high scores, success toasts |
-| Error | `--error` `#ef4444` | `--error-bg` | Incorrect words, low scores, delete, error toasts |
-| Warning | `--warning` `#f59e0b` | `--warning-bg` | Medium scores, cautions, warning toasts |
+| Success | `--success` `#5E8E63` | `--success-bg` | Correct words, high scores, success toasts |
+| Error | `--error` `#C46B5D` | `--error-bg` | Incorrect words, low scores, delete, error toasts |
+| Warning | `--warning` `#C9A45C` | `--warning-bg` | Medium scores, cautions, warning toasts |
 
 ### 2.5 Color — Grade Accents
 
@@ -71,7 +71,7 @@
 
 ### 2.6 Typography
 
-**Families:** `--font-heading` (Outfit) for titles/scores/headings; `--font-body` (Inter) for everything else.
+**Families:** `--font-heading` (DM Sans) for titles/scores/headings; `--font-body` (Source Sans 3) for body; `--font-mono` (JetBrains Mono) for counters and stats. PreK mode swaps to Fredoka.
 
 | Token | Size | Typical use |
 |-------|------|-------------|

@@ -42,6 +42,9 @@ import {
   exportAnalyticsBlob
 } from './i18n/strings.js';
 import { applyPrekTheme } from './prek/theme.js';
+import { openModal, closeModal, toggleModal } from './app/modal.js';
+
+const HERO_COLLAPSED_KEY = 'DICTATER_HERO_COLLAPSED';
 
 export class DictaterApp {
   constructor() {
@@ -86,7 +89,106 @@ export class DictaterApp {
     this.renderAssignments();
     this.renderRecommendations();
     this.updatePrekTheme();
+    this.initHeroState();
+    this.updateMobileLessonBar();
+    applyI18n(this.locale);
     console.log('[Dictater] ELA platform initialized');
+  }
+
+  initHeroState() {
+    const collapsed = this.stats.length > 0 || localStorage.getItem(HERO_COLLAPSED_KEY) === '1';
+    document.body.classList.toggle('hero-collapsed', collapsed);
+    this.updateHeroCta();
+  }
+
+  collapseHero() {
+    document.body.classList.add('hero-collapsed');
+    localStorage.setItem(HERO_COLLAPSED_KEY, '1');
+  }
+
+  updateHeroCta() {
+    const heroCta = document.querySelector('#hero-cta');
+    if (!heroCta) return;
+    heroCta.textContent = this.currentLesson
+      ? `${t('continueLesson', this.locale)}: ${this.currentLesson.title}`
+      : t('startLearning', this.locale);
+  }
+
+  getCompletedIds() {
+    return new Set(this.stats.map((s) => s.exerciseId));
+  }
+
+  clearWorkspace() {
+    stopSpeech();
+    this.currentLesson = null;
+    document.querySelector('#current-title').textContent = t('chooseLessonTitle', this.locale);
+    document.querySelector('#current-meta').textContent = t('chooseLessonMeta', this.locale);
+    const hintEl = document.querySelector('#lesson-hint');
+    if (hintEl) hintEl.textContent = '';
+    const badge = document.querySelector('#level-badge-container');
+    if (badge) badge.textContent = '';
+    const workspace = document.querySelector('#activity-workspace');
+    if (workspace) {
+      workspace.replaceChildren();
+      const empty = document.createElement('p');
+      empty.className = 'empty-state';
+      empty.textContent = t('chooseLesson', this.locale);
+      workspace.appendChild(empty);
+    }
+    this.saveSessionState();
+    this.updateMobileLessonBar();
+    this.updatePrekLayout();
+    this.updateHeroCta();
+    this.renderRecommendations();
+  }
+
+  updateMobileLessonBar() {
+    const bar = document.querySelector('#mobile-lesson-bar');
+    const title = document.querySelector('#mobile-lesson-title');
+    const meta = document.querySelector('#mobile-lesson-meta');
+    if (!bar || !title) return;
+    if (this.currentLesson) {
+      bar.classList.remove('hidden');
+      title.textContent = this.currentLesson.title;
+      if (meta) {
+        meta.textContent = `${gradeLabel(this.currentLesson.grade)} • ${this.skillArea}`;
+      }
+    } else {
+      bar.classList.add('hidden');
+      title.textContent = t('chooseLessonTitle', this.locale);
+      if (meta) meta.textContent = '';
+    }
+  }
+
+  updatePrekLayout() {
+    const immersive = this.grade === 'preK' && !!this.currentLesson;
+    document.body.classList.toggle('prek-immersive', immersive);
+    document.querySelector('#btn-prek-menu')?.classList.toggle('hidden', !immersive);
+  }
+
+  openMobileSidebar() {
+    document.querySelector('#sidebar-panel')?.classList.add('sidebar-panel--mobile-open');
+    document.querySelector('#sidebar-backdrop')?.classList.remove('hidden');
+    document.body.classList.add('sidebar-sheet-open');
+  }
+
+  closeMobileSidebar() {
+    document.querySelector('#sidebar-panel')?.classList.remove('sidebar-panel--mobile-open');
+    document.querySelector('#sidebar-backdrop')?.classList.add('hidden');
+    document.body.classList.remove('sidebar-sheet-open');
+  }
+
+  loadNextLesson() {
+    const lessons = this.viewMode === 'custom'
+      ? this.customLessons
+      : getLessonsBySkill(this.grade, this.skillArea);
+    const idx = lessons.findIndex((l) => l.id === this.currentLesson?.id);
+    if (idx >= 0 && idx < lessons.length - 1) {
+      this.loadLesson(lessons[idx + 1]);
+      this.showToast(t('nextLesson', this.locale), 'success');
+    } else {
+      this.showToast(t('noMoreLessons', this.locale), 'info');
+    }
   }
 
   updatePrekTheme() {
@@ -116,15 +218,11 @@ export class DictaterApp {
   bindShell() {
     document.querySelector('#btn-open-dashboard')?.addEventListener('click', () => {
       this.updateDashboard();
-      this.openModal('#dashboard-modal');
+      openModal('#dashboard-modal');
     });
-    document.querySelector('#btn-dashboard-close')?.addEventListener('click', () => this.closeModal('#dashboard-modal'));
-    document.querySelector('#btn-settings-toggle')?.addEventListener('click', () => {
-      document.querySelector('#settings-dropdown')?.classList.toggle('hidden');
-    });
-    document.querySelector('#btn-settings-close')?.addEventListener('click', () => {
-      document.querySelector('#settings-dropdown')?.classList.add('hidden');
-    });
+    document.querySelector('#btn-dashboard-close')?.addEventListener('click', () => closeModal('#dashboard-modal'));
+    document.querySelector('#btn-settings-toggle')?.addEventListener('click', () => toggleModal('#settings-dropdown'));
+    document.querySelector('#btn-settings-close')?.addEventListener('click', () => closeModal('#settings-dropdown'));
     document.querySelector('#btn-mode-curriculum')?.addEventListener('click', () => {
       this.viewMode = 'curriculum';
       this.renderSetup();
@@ -136,9 +234,16 @@ export class DictaterApp {
     document.querySelector('#btn-placement')?.addEventListener('click', () => this.runPlacement());
     document.querySelector('#btn-auth-login')?.addEventListener('click', () => this.handleLogin());
     document.querySelector('#btn-auth-logout')?.addEventListener('click', () => this.handleLogout());
-    document.querySelector('#btn-open-lesson-creator')?.addEventListener('click', () => this.openModal('#lesson-creator-modal'));
-    document.querySelector('#btn-creator-close')?.addEventListener('click', () => this.closeModal('#lesson-creator-modal'));
+    document.querySelector('#btn-open-lesson-creator')?.addEventListener('click', () => openModal('#lesson-creator-modal'));
+    document.querySelector('#btn-creator-close')?.addEventListener('click', () => closeModal('#lesson-creator-modal'));
     document.querySelector('#btn-creator-save')?.addEventListener('click', () => this.saveCustomLesson());
+    document.querySelector('#btn-change-lesson')?.addEventListener('click', () => this.openMobileSidebar());
+    document.querySelector('#sidebar-backdrop')?.addEventListener('click', () => this.closeMobileSidebar());
+    document.querySelector('#btn-collapse-hero')?.addEventListener('click', () => this.collapseHero());
+    document.querySelector('#btn-prek-menu')?.addEventListener('click', () => {
+      document.body.classList.remove('prek-immersive');
+      this.openMobileSidebar();
+    });
     document.querySelector('#locale-select')?.addEventListener('change', (e) => {
       this.locale = e.target.value;
       setLocale(this.locale);
@@ -235,6 +340,7 @@ export class DictaterApp {
         this.grade = g;
         this.currentLesson = null;
         this.pendingLessonId = null;
+        this.clearWorkspace();
         this.saveSessionState();
         this.updatePrekTheme();
         this.renderSetup();
@@ -246,6 +352,11 @@ export class DictaterApp {
     const areas = this.grade === 'preK'
       ? SKILL_AREAS.filter((s) => ['sounds', 'phonics', 'vocabulary', 'speaking'].includes(s.id))
       : SKILL_AREAS;
+    if (!areas.some((s) => s.id === this.skillArea)) {
+      this.skillArea = areas[0]?.id || 'listening';
+      this.currentLesson = null;
+      this.clearWorkspace();
+    }
     areas.forEach((s) => {
       const btn = document.createElement('button');
       btn.type = 'button';
@@ -255,6 +366,7 @@ export class DictaterApp {
         this.skillArea = s.id;
         this.currentLesson = null;
         this.pendingLessonId = null;
+        this.clearWorkspace();
         this.saveSessionState();
         this.updatePrekTheme();
         this.renderSetup();
@@ -269,47 +381,148 @@ export class DictaterApp {
 
     lessonEl.innerHTML = '';
     if (!lessons.length) {
-      lessonEl.innerHTML = '<p class="empty-state">No lessons yet for this skill. Try another area.</p>';
+      if (this.currentLesson) this.clearWorkspace();
+      this.renderEmptyLessonState(lessonEl, areas);
       return;
     }
 
+    const lessonIds = new Set(lessons.map((l) => l.id));
+    if (this.currentLesson && !lessonIds.has(this.currentLesson.id)) {
+      this.clearWorkspace();
+    }
+
+    const completed = this.getCompletedIds();
     lessons.forEach((lesson) => {
       const div = document.createElement('div');
-      div.className = `exercise-item ${this.currentLesson?.id === lesson.id ? 'active' : ''}`;
-      div.innerHTML = `
-        <div class="exercise-title-text">${lesson.title}</div>
-        <span class="exercise-badge badge-diff-${lesson.difficulty || 'beginner'}">${(lesson.difficulty || 'beginner').toUpperCase()}</span>`;
-      div.addEventListener('click', () => this.loadLesson(lesson));
+      div.setAttribute('role', 'listitem');
+      const done = completed.has(lesson.id);
+      div.className = `exercise-item ${this.currentLesson?.id === lesson.id ? 'active' : ''}${done ? ' exercise-item--completed' : ''}`;
+      div.tabIndex = 0;
+      div.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.loadLesson(lesson);
+        }
+      });
+
+      const left = document.createElement('div');
+      left.className = 'exercise-item__left';
+      const title = document.createElement('div');
+      title.className = 'exercise-title-text';
+      title.textContent = lesson.title;
+      left.appendChild(title);
+      if (done) {
+        const check = document.createElement('span');
+        check.className = 'exercise-check';
+        check.textContent = '✓';
+        check.setAttribute('aria-label', t('lessonCompleted', this.locale));
+        left.appendChild(check);
+      }
+      div.appendChild(left);
+
+      const badge = document.createElement('span');
+      badge.className = `exercise-badge badge-diff-${lesson.difficulty || 'beginner'}`;
+      badge.textContent = (lesson.difficulty || 'beginner').toUpperCase();
+      div.appendChild(badge);
+
+      div.addEventListener('click', () => {
+        this.closeMobileSidebar();
+        this.loadLesson(lesson);
+      });
       lessonEl.appendChild(div);
     });
 
-    if (!this.currentLesson && lessons[0] && !this.pendingLessonId) {
-      this.loadLesson(lessons[0]);
-    }
     this.pendingLessonId = null;
   }
 
+  renderEmptyLessonState(container, areas) {
+    container.replaceChildren();
+    const empty = document.createElement('p');
+    empty.className = 'empty-state';
+    empty.textContent = t('noLessons', this.locale);
+    container.appendChild(empty);
+
+    const suggestions = areas.filter((s) => s.id !== this.skillArea).slice(0, 3);
+    if (!suggestions.length) return;
+
+    const wrap = document.createElement('div');
+    wrap.className = 'empty-state-suggestions';
+    const label = document.createElement('span');
+    label.className = 'settings-note';
+    label.textContent = t('trySkill', this.locale);
+    wrap.appendChild(label);
+
+    const group = document.createElement('div');
+    group.className = 'pill-group pill-group--tight';
+    suggestions.forEach((s) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'pill-btn btn-compact-sm';
+      btn.textContent = `${s.icon} ${s.label}`;
+      btn.addEventListener('click', () => {
+        this.skillArea = s.id;
+        this.currentLesson = null;
+        this.clearWorkspace();
+        this.saveSessionState();
+        this.renderSetup();
+      });
+      group.appendChild(btn);
+    });
+    wrap.appendChild(group);
+    container.appendChild(wrap);
+  }
+
   renderCustomLessons(container) {
-    container.innerHTML = '';
+    container.replaceChildren();
     if (!this.customLessons.length) {
-      container.innerHTML = '<p class="empty-state">No saved lessons. Create one below.</p>';
+      const empty = document.createElement('p');
+      empty.className = 'empty-state';
+      empty.textContent = t('noCustomLessons', this.locale);
+      container.appendChild(empty);
+      if (this.currentLesson?.grade === 'Custom') this.clearWorkspace();
       return;
     }
+
+    const completed = this.getCompletedIds();
     this.customLessons.forEach((lesson) => {
       const div = document.createElement('div');
-      div.className = `exercise-item ${this.currentLesson?.id === lesson.id ? 'active' : ''}`;
-      div.innerHTML = `
-        <div class="exercise-title-text">${lesson.title}</div>
-        <span class="exercise-badge badge-grade-6">Custom</span>`;
-      div.addEventListener('click', () => this.loadLesson(lesson));
+      div.setAttribute('role', 'listitem');
+      const done = completed.has(lesson.id);
+      div.className = `exercise-item ${this.currentLesson?.id === lesson.id ? 'active' : ''}${done ? ' exercise-item--completed' : ''}`;
+
+      const left = document.createElement('div');
+      left.className = 'exercise-item__left';
+      const title = document.createElement('div');
+      title.className = 'exercise-title-text';
+      title.textContent = lesson.title;
+      left.appendChild(title);
+      if (done) {
+        const check = document.createElement('span');
+        check.className = 'exercise-check';
+        check.textContent = '✓';
+        left.appendChild(check);
+      }
+      div.appendChild(left);
+
+      const badge = document.createElement('span');
+      badge.className = 'exercise-badge badge-grade-6';
+      badge.textContent = 'Custom';
+      div.appendChild(badge);
+
+      div.addEventListener('click', () => {
+        this.closeMobileSidebar();
+        this.loadLesson(lesson);
+      });
+
       const del = document.createElement('button');
       del.type = 'button';
       del.className = 'btn-secondary btn-compact-sm';
-      del.textContent = 'Delete';
+      del.textContent = t('delete', this.locale);
       del.addEventListener('click', (e) => {
         e.stopPropagation();
         this.customLessons = this.customLessons.filter((l) => l.id !== lesson.id);
         saveCustomLessons(this.customLessons);
+        if (this.currentLesson?.id === lesson.id) this.clearWorkspace();
         this.renderSetup();
       });
       div.appendChild(del);
@@ -322,20 +535,30 @@ export class DictaterApp {
     if (!el) return;
     const completed = new Set(this.stats.map((s) => s.exerciseId));
     const next = recommendNextLesson(this.grade, this.skillMastery, completed);
-    if (next) {
-      el.innerHTML = `<button type="button" class="btn-secondary btn-compact" id="rec-btn">Continue: ${next.title}</button>`;
-      el.querySelector('#rec-btn').addEventListener('click', () => {
+    el.replaceChildren();
+    if (next && this.currentLesson?.id !== next.id) {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'btn-secondary btn-compact';
+      btn.id = 'rec-btn';
+      btn.textContent = `${t('continueLesson', this.locale)}: ${next.title}`;
+      btn.addEventListener('click', () => {
         this.viewMode = 'curriculum';
         this.grade = next.grade;
         this.skillArea = skillAreaForType(next.type);
         this.renderSetup();
         this.loadLesson(next);
       });
+      el.appendChild(btn);
     } else if (this.currentLesson) {
-      el.innerHTML = `<span class="settings-note">Last lesson: ${this.currentLesson.title}</span>`;
+      const note = document.createElement('span');
+      note.className = 'settings-note';
+      note.textContent = `${t('lastLesson', this.locale)}: ${this.currentLesson.title}`;
+      el.appendChild(note);
     } else {
-      el.textContent = 'Pick a grade and skill to start learning.';
+      el.textContent = t('pickGradeSkill', this.locale);
     }
+    this.updateHeroCta();
   }
 
   loadLesson(lesson, opts = {}) {
@@ -361,8 +584,15 @@ export class DictaterApp {
       container: workspace,
       speak: (text) => speakText(text),
       showToast: (msg, type) => this.showToast(msg, type),
-      onComplete: (result) => this.handleComplete(lesson, result)
+      onComplete: (result) => this.handleComplete(lesson, result),
+      retryLesson: () => this.loadLesson(lesson, { skipSave: true }),
+      loadNextLesson: () => this.loadNextLesson()
     });
+    this.closeMobileSidebar();
+    this.updateMobileLessonBar();
+    this.updatePrekLayout();
+    this.updateHeroCta();
+    this.collapseHero();
     this.renderSetup();
     this.renderRecommendations();
   }
@@ -385,6 +615,7 @@ export class DictaterApp {
     this.evaluateBadges(record);
     syncProgress(this.profile, record).catch(() => {});
     trackEvent('lesson_complete', { lessonId: lesson.id, type: lesson.type, score: result.score });
+    this.renderSetup();
     this.renderRecommendations();
     this.showToast(`Score saved: ${result.score}%`, 'success');
   }
@@ -496,15 +727,12 @@ export class DictaterApp {
     };
     this.customLessons.push(lesson);
     saveCustomLessons(this.customLessons);
-    this.closeModal('#lesson-creator-modal');
+    closeModal('#lesson-creator-modal');
     this.viewMode = 'custom';
     this.renderSetup();
     this.loadLesson(lesson);
     this.showToast('Custom lesson saved — opening now', 'success');
   }
-
-  openModal(sel) { document.querySelector(sel)?.classList.remove('hidden'); }
-  closeModal(sel) { document.querySelector(sel)?.classList.add('hidden'); }
 
   showToast(message, type = 'info') {
     const container = document.querySelector('#toast-container');

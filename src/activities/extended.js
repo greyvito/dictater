@@ -60,7 +60,7 @@ export const phonicsBlendActivity = {
         <p class="input-label">Build the word: ${lesson.content.prompt || 'Blend the sounds'}</p>
         <div class="tile-bank" id="tile-bank"></div>
         <div class="tile-answer" id="tile-answer"></div>
-        <button type="button" class="btn-accent" id="tile-check">Check</button>
+        <button type="button" class="btn-primary" id="tile-check">Check</button>
       </div>`;
 
     const bank = container.querySelector('#tile-bank');
@@ -140,7 +140,7 @@ export const sentenceBuilderActivity = {
         <p class="input-label">Put the words in order</p>
         <div class="tile-bank" id="sb-bank"></div>
         <div class="tile-answer" id="sb-answer"></div>
-        <button type="button" class="btn-accent" id="sb-check">Check Sentence</button>
+        <button type="button" class="btn-primary" id="sb-check">Check Sentence</button>
       </div>`;
 
     const bank = container.querySelector('#sb-bank');
@@ -197,7 +197,7 @@ export const writingPromptActivity = {
         <p class="speak-target-card">${lesson.content.prompt}</p>
         <textarea id="write-prompt" class="dictation-input" placeholder="Write your answer here..."></textarea>
         <ul class="settings-note">${(lesson.content.checklist || ['Clear ideas', 'Complete sentences']).map((c) => `<li>${c}</li>`).join('')}</ul>
-        <button type="button" class="btn-accent" id="write-done">Done</button>
+        <button type="button" class="btn-primary" id="write-done">Done</button>
       </div>`;
     container.querySelector('#write-done').addEventListener('click', () => {
       const text = container.querySelector('#write-prompt').value.trim();
