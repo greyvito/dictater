@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="apple">
   <defs>
-    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#FFCDD2;stop-opacity:1"/>
-      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0.35"/>
+    <linearGradient id="bg-apple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFCDD2"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
     </linearGradient>
   </defs>
-  <rect width="120" height="120" rx="28" fill="url(#g)" stroke="rgba(0,0,0,0.08)" stroke-width="2"/>
-  <circle cx="60" cy="60" r="46" fill="rgba(255,255,255,0.45)"/>
-  <text x="60" y="74" font-size="52" text-anchor="middle" dominant-baseline="middle">🍎</text>
+  <rect width="120" height="120" rx="28" fill="url(#bg-apple)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <circle cx="60" cy="65" r="26" fill="#FF6B6B"/><ellipse cx="60" cy="42" rx="4" ry="8" fill="#6BCB77"/><path d="M60 38 Q68 32 72 36" stroke="#8D6E63" stroke-width="2" fill="none"/><ellipse cx="52" cy="58" rx="6" ry="10" fill="#FF8787" opacity="0.5"/>
 </svg>
