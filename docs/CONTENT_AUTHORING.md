@@ -6,7 +6,8 @@ Curriculum lessons live in `content/<grade>/index.json`.
 
 1. Add or edit JSON lesson objects following the schema in `src/curriculum/schema.js`
 2. Run `npm run validate:content` to check structure
-3. Open a PR for review (Git-based CMS for v1)
+3. Run `npm run expand:content` to generate additional pack lessons (idempotent; target 800+)
+4. Open a PR for review (Git-based CMS for v1)
 
 ## Lesson template
 

@@ -98,6 +98,18 @@ export function saveSkillMastery(skills) {
   writeJSON('DICTATER_SKILLS', skills);
 }
 
+export function loadSession() {
+  return readJSON('DICTATER_SESSION', {
+    grade: '3',
+    skillArea: 'listening',
+    lessonId: null
+  });
+}
+
+export function saveSession(session) {
+  writeJSON('DICTATER_SESSION', session);
+}
+
 export async function mirrorStatsToIndexedDB(record) {
   try {
     await db.stats.put(record);

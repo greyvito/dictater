@@ -1493,5 +1493,6 @@ footer {
 .toast-success { border-left: 4px solid var(--primary); }
 .toast-warning { border-left: 4px solid var(--accent); }
 .toast-error { border-left: 4px solid #C46B5D; }
-.toast-achievement { border-left: 4px solid var(--accent); }
+.diff-word-clickable { cursor: pointer; text-decoration: underline dotted; }
+.diff-word-clickable:hover { background: var(--surface-2); }
 

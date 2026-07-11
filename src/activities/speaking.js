@@ -88,15 +88,20 @@ function renderSpeakingSession(ctx, config) {
     micBtn.classList.add('speaker-playing');
     heardEl.textContent = 'Listening…';
     try {
-      const transcript = await listenOnce({ continuous: mode !== 'word' });
+      const transcript = await listenOnce({ continuous: mode !== 'word', expectedHint: expected });
       heardEl.textContent = `You said: "${transcript}"`;
       const result = scoreSpeech(expected, transcript, {
         mode,
         fuzzy: true,
+        childMode: true,
         alternatives: /** @type {string[]} */ (lesson.content.acceptAlternatives || [])
       });
       feedbackEl.classList.remove('hidden');
-      renderDiffToContainer(feedbackEl, result.alignment);
+      renderDiffToContainer(feedbackEl, result.alignment, {
+        onWordClick: (word) => {
+          speak(word).catch(() => showToast('Could not play word', 'warning'));
+        }
+      });
       if (result.passed || attempts >= maxAttempts) {
         results.push({ label: expected, score: result.score, passed: result.passed });
         nextRow.classList.remove('hidden');
