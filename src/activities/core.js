@@ -1,35 +1,6 @@
 import { renderDiffToContainer, alignWords, scoreAlignment, splitIntoWords } from '../grading/wordDiff.js';
 import { splitIntoPhrases, speakText } from '../speech/tts.js';
-
-function appendPostCheckActions(parent, ctx, score, passed = true) {
-  const { retryLesson, loadNextLesson } = ctx;
-  if (!retryLesson && !loadNextLesson) return;
-
-  let row = parent.querySelector('.post-check-actions');
-  if (!row) {
-    row = document.createElement('div');
-    row.className = 'post-check-actions btn-row';
-    parent.appendChild(row);
-  }
-  row.replaceChildren();
-
-  if (retryLesson) {
-    const retry = document.createElement('button');
-    retry.type = 'button';
-    retry.className = 'btn-secondary btn-compact';
-    retry.textContent = 'Try again';
-    retry.addEventListener('click', () => retryLesson());
-    row.appendChild(retry);
-  }
-  if (loadNextLesson && passed) {
-    const next = document.createElement('button');
-    next.type = 'button';
-    next.className = 'btn-primary btn-compact';
-    next.textContent = 'Next lesson';
-    next.addEventListener('click', () => loadNextLesson());
-    row.appendChild(next);
-  }
-}
+import { appendPostCheckActions } from './postCheck.js';
 
 export const dictationActivity = {
   type: 'dictation',
@@ -114,7 +85,7 @@ export const dictationActivity = {
       renderDiffToContainer(container.querySelector('#dict-diff'), alignment);
       container.querySelector('#dict-score').textContent = `${score}% Accuracy`;
       results.classList.remove('hidden');
-      appendPostCheckActions(results, ctx, score, passed);
+      appendPostCheckActions(results, ctx, passed);
       onComplete({ score, passed, details: { alignment } });
     });
   }
@@ -167,7 +138,7 @@ export const spellingActivity = {
         diffEl.appendChild(row);
       });
       results.classList.remove('hidden');
-      appendPostCheckActions(results, ctx, score, passed);
+      appendPostCheckActions(results, ctx, passed);
       onComplete({ score, passed, details: { history } });
     };
 

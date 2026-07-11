@@ -45,12 +45,18 @@ import { applyPrekTheme } from './prek/theme.js';
 import { openModal, closeModal, toggleModal } from './app/modal.js';
 
 const HERO_COLLAPSED_KEY = 'DICTATER_HERO_COLLAPSED';
+const PREK_SKILLS = ['sounds', 'phonics', 'vocabulary', 'speaking'];
+
+function normalizePrekSkill(grade, skillArea) {
+  if (grade === 'preK' && !PREK_SKILLS.includes(skillArea)) return 'sounds';
+  return skillArea;
+}
 
 export class DictaterApp {
   constructor() {
     const session = loadSession();
     this.grade = session.grade || '3';
-    this.skillArea = session.skillArea || 'listening';
+    this.skillArea = normalizePrekSkill(session.grade || '3', session.skillArea || 'listening');
     this.pendingLessonId = session.lessonId;
     this.viewMode = 'curriculum';
     this.difficulty = 'all';
