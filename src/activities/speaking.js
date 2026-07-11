@@ -1,5 +1,7 @@
 import { renderDiffToContainer } from '../grading/wordDiff.js';
 import { listenOnce, scoreSpeech, isSTTSupported } from '../speech/stt.js';
+import { resolveWordVisual } from '../prek/images.js';
+import { celebrateCorrect, encourageTryAgain, mountMascot } from '../prek/delight.js';
 
 function micButtonHtml(id) {
   return `<button type="button" class="btn-circle speak-mic-btn" id="${id}" aria-label="Start speaking">
@@ -26,8 +28,11 @@ function renderSpeakingSession(ctx, config) {
   const maxAttempts = /** @type {number} */ (lesson.content.maxAttempts) || 3;
   const results = [];
 
+  const isPrek = lesson.grade === 'preK';
+
   container.innerHTML = `
-    <div class="speaking-workspace">
+    <div class="speaking-workspace${isPrek ? ' speaking-workspace--prek' : ''}">
+      ${isPrek ? '<div id="prek-mascot-slot"></div>' : ''}
       <p class="input-label" id="speak-label"></p>
       <div class="speak-target-card" id="speak-target"></div>
       <div class="speak-controls">
@@ -52,12 +57,23 @@ function renderSpeakingSession(ctx, config) {
   const summaryEl = container.querySelector('#speak-summary');
   const micBtn = container.querySelector('#speak-mic');
 
+  if (isPrek) mountMascot(container.querySelector('#prek-mascot-slot'));
+
   const loadItem = () => {
     attempts = 0;
     const item = items[itemIdx];
     const expected = getExpected(item);
     labelEl.textContent = getLabel(item, itemIdx, items.length);
-    targetEl.textContent = lesson.content.showText ? expected : 'Tap Listen, then speak';
+    if (isPrek) {
+      const vis = resolveWordVisual(expected);
+      targetEl.innerHTML = vis.src
+        ? `<img class="prek-prompt-img prek-speak-img" src="${vis.src}" alt="${vis.alt}" width="160" height="160"><span class="prek-prompt-label">${expected}</span>`
+        : `<span class="prek-prompt-emoji">${vis.emoji}</span><span class="prek-prompt-label">${expected}</span>`;
+      targetEl.classList.add('prek-prompt-card');
+    } else {
+      targetEl.classList.remove('prek-prompt-card');
+      targetEl.textContent = lesson.content.showText ? expected : 'Tap Listen, then speak';
+    }
     heardEl.textContent = '';
     feedbackEl.classList.add('hidden');
     nextRow.classList.add('hidden');
@@ -110,14 +126,24 @@ function renderSpeakingSession(ctx, config) {
           if (itemIdx >= items.length) finishAll();
           else loadItem();
         };
-        if (result.passed) showToast('Great job!', 'success');
-        else if (attempts >= maxAttempts) {
+        if (result.passed) {
+          showToast('Great job!', 'success');
+          if (isPrek) celebrateCorrect(container.querySelector('.speaking-workspace') || container);
+        } else if (attempts >= maxAttempts) {
           showToast('Here is the model — try again later', 'info');
           speak(expected).catch(() => {});
-          targetEl.textContent = expected;
+          if (isPrek) {
+            const vis = resolveWordVisual(expected);
+            targetEl.innerHTML = vis.src
+              ? `<img class="prek-prompt-img prek-speak-img" src="${vis.src}" alt="${vis.alt}" width="160" height="160"><span class="prek-prompt-label">${expected}</span>`
+              : `<span class="prek-prompt-emoji">${vis.emoji}</span><span class="prek-prompt-label">${expected}</span>`;
+          } else {
+            targetEl.textContent = expected;
+          }
         }
       } else {
         showToast('Almost — try again', 'warning');
+        if (isPrek) encourageTryAgain();
         speak(expected).catch(() => {});
       }
     } catch (err) {

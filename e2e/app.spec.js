@@ -7,12 +7,17 @@ test('loads learning studio with grade navigation', async ({ page }) => {
   await expect(page.locator('#skill-filters .pill-btn').first()).toBeVisible();
 });
 
-test('PreK rhyme lesson renders choices', async ({ page }) => {
+test('PreK picture vocab shows image choice cards', async ({ page }) => {
   await page.goto('/');
+  await expect(page.locator('#grade-filters .pill-btn')).toHaveCount(8);
   await page.locator('#grade-filters .pill-btn', { hasText: 'PreK' }).click();
-  await page.locator('#skill-filters .pill-btn', { hasText: 'Sounds' }).click();
-  await page.locator('.exercise-item').first().click();
-  await expect(page.locator('.choice-grid .choice-btn').first()).toBeVisible({ timeout: 10000 });
+  await expect(page.locator('body')).toHaveClass(/prek-mode/);
+  await page.locator('#skill-filters .pill-btn', { hasText: 'Vocabulary' }).click();
+  await page.locator('.exercise-item', { hasText: 'Word: dog' }).first().click();
+  await expect(page.locator('.prek-prompt-img')).toBeVisible({ timeout: 10000 });
+  await expect(page.locator('.prek-choice-card')).toHaveCount(3);
+  await expect(page.locator('.prek-choice-img').first()).toBeVisible();
+  await expect(page.locator('.prek-mascot')).toBeVisible();
 });
 
 test('custom lesson mode toggle', async ({ page }) => {

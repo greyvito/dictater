@@ -15,6 +15,7 @@
     "validate:content": "node scripts/validate-content.mjs",
     "migrate:curriculum": "node scripts/migrate-curriculum.mjs",
     "expand:content": "node scripts/expand-content.mjs",
+    "generate:prek-images": "node scripts/generate-prek-svgs.mjs",
     "backend": "node backend/server.js",
     "start:prod": "node backend/server.js"
   },

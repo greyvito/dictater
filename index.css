@@ -1496,3 +1496,312 @@ footer {
 .diff-word-clickable { cursor: pointer; text-decoration: underline dotted; }
 .diff-word-clickable:hover { background: var(--surface-2); }
 
+/* ---- PreK playful mode (A + B + D) ---- */
+body.prek-mode {
+  --primary: #FF6B6B;
+  --primary-hover: #EE5A5A;
+  --primary-glow: rgba(255, 107, 107, 0.25);
+  --accent: #FFD93D;
+  --bg-app: #FFF8E7;
+  --bg-card: #FFFFFF;
+  --font-heading: 'Fredoka', 'DM Sans', sans-serif;
+  --font-body: 'Fredoka', 'Source Sans 3', sans-serif;
+}
+
+body.prek-mode .site-hero.prek-hero {
+  background: linear-gradient(135deg, #FFE082 0%, #F8BBD0 45%, #B3E5FC 100%);
+}
+
+body.prek-mode .site-hero.prek-hero .hero-headline,
+body.prek-mode .site-hero.prek-hero .hero-lede {
+  color: #2D3748;
+}
+
+body.prek-mode .pill-btn {
+  min-height: 52px;
+  font-size: var(--text-md);
+  border-radius: 999px;
+}
+
+body.prek-mode .grade-filter.active {
+  background: linear-gradient(135deg, #FF6B6B, #FFD93D);
+  border-color: transparent;
+  color: #fff;
+}
+
+body.prek-mode .skill-filter.active {
+  background: linear-gradient(135deg, #4D96FF, #6BCB77);
+  border-color: transparent;
+  color: #fff;
+}
+
+body.prek-mode .workspace-panel {
+  border: 3px solid #FFD93D;
+  box-shadow: 0 8px 24px rgba(255, 107, 107, 0.15);
+}
+
+body.prek-mode .exercise-item {
+  border-radius: 16px;
+}
+
+.prek-activity {
+  position: relative;
+  padding: var(--space-2) 0 var(--space-4);
+}
+
+.prek-instruction {
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  text-align: center;
+  color: #2D3748;
+  margin-bottom: var(--space-3);
+}
+
+.prek-prompt-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  background: linear-gradient(180deg, #fff 0%, #FFF9C4 100%);
+  border: 4px solid #FFD93D;
+  border-radius: 28px;
+  padding: var(--space-5);
+  margin: var(--space-3) auto;
+  max-width: 280px;
+  box-shadow: 0 6px 0 #F4C430;
+  animation: prek-bounce-in 0.45s ease;
+}
+
+.prek-prompt-img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+
+.prek-speak-img {
+  width: 160px;
+  height: 160px;
+}
+
+.prek-prompt-emoji {
+  font-size: 5rem;
+  line-height: 1;
+}
+
+.prek-prompt-text,
+.prek-prompt-label {
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-bold);
+  color: #2D3748;
+}
+
+.prek-listen-btn {
+  display: block;
+  margin: 0 auto var(--space-4);
+  font-size: var(--text-lg);
+  min-height: 52px;
+  padding: 0 var(--space-5);
+  border-radius: 999px;
+  background: #4D96FF;
+  color: #fff;
+  border: none;
+}
+
+.prek-listen-btn:hover {
+  background: #3d7fd9;
+}
+
+.prek-choice-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: var(--space-4);
+  margin-top: var(--space-2);
+}
+
+.prek-choice-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  min-height: 160px;
+  padding: var(--space-4);
+  border: 4px solid rgba(0, 0, 0, 0.06);
+  border-radius: 24px;
+  background: var(--prek-card-bg, #FFE082);
+  box-shadow: 0 5px 0 rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.prek-choice-card:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.1);
+}
+
+.prek-choice-card:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+}
+
+.prek-choice-card.choice-correct {
+  background: #6BCB77 !important;
+  border-color: #4CAF50 !important;
+  color: #fff !important;
+  animation: prek-pop 0.4s ease;
+}
+
+.prek-choice-card.choice-wrong {
+  border-color: #FF6B6B !important;
+  animation: prek-shake 0.4s ease;
+}
+
+.prek-choice-img {
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+}
+
+.prek-choice-emoji {
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+.prek-choice-label {
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  color: #2D3748;
+}
+
+.prek-choice-card.choice-correct .prek-choice-label {
+  color: #fff;
+}
+
+.prek-feedback {
+  text-align: center;
+  font-size: var(--text-xl);
+  font-weight: var(--weight-bold);
+  margin-top: var(--space-4);
+  border-radius: 20px;
+}
+
+.prek-feedback--yes {
+  background: #E8F5E9;
+  border: 3px solid #6BCB77;
+  color: #2E7D32;
+}
+
+.prek-feedback--oops {
+  background: #FFF3E0;
+  border: 3px solid #FFB74D;
+  color: #E65100;
+}
+
+/* Mascot (D) */
+.prek-mascot {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  justify-content: center;
+  margin-bottom: var(--space-3);
+}
+
+.prek-mascot-svg {
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.prek-mascot-speech {
+  background: #fff;
+  border: 3px solid #4D96FF;
+  border-radius: 20px;
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-lg);
+  font-weight: var(--weight-bold);
+  color: #2D3748;
+  margin: 0;
+  position: relative;
+}
+
+.prek-mascot--happy .prek-mascot-svg,
+.prek-mascot--celebrate .prek-mascot-svg {
+  animation: prek-mascot-jump 0.6s ease;
+}
+
+.prek-mascot--celebrate .prek-mascot-wing {
+  animation: prek-wing-flap 0.35s ease infinite alternate;
+}
+
+.prek-mascot--sad .prek-mascot-svg {
+  transform: rotate(-8deg) scale(0.95);
+  opacity: 0.85;
+}
+
+/* Confetti (D) */
+.prek-confetti-layer {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 10;
+}
+
+.prek-confetti-piece {
+  position: absolute;
+  top: -12px;
+  width: 10px;
+  height: 14px;
+  border-radius: 2px;
+  animation: prek-confetti-fall linear forwards;
+}
+
+.speaking-workspace--prek .speak-target-card.prek-prompt-card {
+  border: 4px solid #FFD93D;
+  box-shadow: 0 6px 0 #F4C430;
+}
+
+@keyframes prek-bounce-in {
+  0% { transform: scale(0.85); opacity: 0; }
+  60% { transform: scale(1.04); }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes prek-pop {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.06); }
+}
+
+@keyframes prek-shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-6px); }
+  75% { transform: translateX(6px); }
+}
+
+@keyframes prek-mascot-jump {
+  0%, 100% { transform: translateY(0); }
+  40% { transform: translateY(-12px); }
+}
+
+@keyframes prek-wing-flap {
+  from { transform: rotate(-6deg); }
+  to { transform: rotate(8deg); }
+}
+
+@keyframes prek-confetti-fall {
+  to {
+    transform: translateY(110vh) rotate(720deg);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .prek-choice-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .prek-choice-card {
+    min-height: 140px;
+  }
+}
+
