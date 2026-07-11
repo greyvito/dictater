@@ -10,6 +10,8 @@
     "start": "vite preview --host",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "test:e2e:install": "playwright install chromium",
     "validate:content": "node scripts/validate-content.mjs",
     "migrate:curriculum": "node scripts/migrate-curriculum.mjs",
     "backend": "node backend/server.js"
@@ -21,6 +23,7 @@
     "uuid": "^11.1.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.51.0",
     "vite": "^6.2.0",
     "vitest": "^3.0.8"
   }

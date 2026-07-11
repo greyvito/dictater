@@ -27,12 +27,12 @@ app.use(cors());
 app.use(express.json());
 
 app.post('/api/auth/login', (req, res) => {
-  const { email } = req.body;
+  const { email, role = 'student' } = req.body;
   if (!email) return res.status(400).json({ error: 'Email required' });
   const db = loadDb();
   let user = db.users[email];
   if (!user) {
-    user = { id: randomUUID(), email, role: 'student', createdAt: Date.now() };
+    user = { id: randomUUID(), email, role, createdAt: Date.now() };
     db.users[email] = user;
     saveDb(db);
   }
@@ -53,13 +53,19 @@ app.get('/api/assignments', (req, res) => {
   const token = req.headers.authorization?.replace('Bearer ', '');
   if (!token) return res.status(401).json({ error: 'Unauthorized' });
   const db = loadDb();
-  res.json(db.assignments.filter((a) => !a.userId || a.userId === token));
+  const user = Object.values(db.users).find((u) => u.id === token);
+  const email = user?.email;
+  res.json(
+    db.assignments.filter(
+      (a) => a.classId && db.classes[a.classId]?.students?.includes(email)
+    )
+  );
 });
 
 app.post('/api/teacher/classes', (req, res) => {
   const { name, teacherEmail } = req.body;
   const db = loadDb();
-  const id = randomUUID();
+  const id = randomUUID().slice(0, 8);
   db.classes[id] = { id, name, teacherEmail, students: [], createdAt: Date.now() };
   saveDb(db);
   res.json(db.classes[id]);
@@ -70,7 +76,7 @@ app.post('/api/teacher/classes/:id/enroll', (req, res) => {
   const cls = db.classes[req.params.id];
   if (!cls) return res.status(404).json({ error: 'Class not found' });
   const { studentEmail } = req.body;
-  if (!cls.students.includes(studentEmail)) cls.students.push(studentEmail);
+  if (studentEmail && !cls.students.includes(studentEmail)) cls.students.push(studentEmail);
   saveDb(db);
   res.json(cls);
 });
@@ -79,23 +85,54 @@ app.get('/api/teacher/classes/:id/report', (req, res) => {
   const db = loadDb();
   const cls = db.classes[req.params.id];
   if (!cls) return res.status(404).json({ error: 'Class not found' });
-  const studentProgress = cls.students.map((email) => {
+  const students = cls.students.map((email) => {
     const user = db.users[email];
     const records = db.progress.filter((p) => p.userId === user?.id);
     const avg = records.length
       ? Math.round(records.reduce((a, r) => a + r.score, 0) / records.length)
       : 0;
-    return { email, sessions: records.length, avgScore: avg };
+    return { email, sessions: records.length, avgScore: avg, records };
   });
-  res.json({ class: cls, students: studentProgress });
+  res.json({ class: cls, students });
+});
+
+app.get('/api/teacher/classes/:id/report.csv', (req, res) => {
+  const db = loadDb();
+  const cls = db.classes[req.params.id];
+  if (!cls) return res.status(404).json({ error: 'Class not found' });
+  const rows = [['email', 'sessions', 'avg_score']];
+  cls.students.forEach((email) => {
+    const user = db.users[email];
+    const records = db.progress.filter((p) => p.userId === user?.id);
+    const avg = records.length
+      ? Math.round(records.reduce((a, r) => a + r.score, 0) / records.length)
+      : 0;
+    rows.push([email, String(records.length), String(avg)]);
+  });
+  const csv = rows.map((r) => r.join(',')).join('\n');
+  res.setHeader('Content-Type', 'text/csv');
+  res.setHeader('Content-Disposition', `attachment; filename="class-${cls.id}-report.csv"`);
+  res.send(csv);
 });
 
 app.post('/api/teacher/assignments', (req, res) => {
   const db = loadDb();
-  const assignment = { id: randomUUID(), ...req.body, createdAt: Date.now() };
+  const assignment = {
+    id: randomUUID(),
+    classId: req.body.classId,
+    lessonId: req.body.lessonId,
+    title: req.body.title,
+    dueDate: req.body.dueDate || null,
+    createdAt: Date.now()
+  };
   db.assignments.push(assignment);
   saveDb(db);
   res.json(assignment);
+});
+
+app.get('/api/teacher/classes', (req, res) => {
+  const db = loadDb();
+  res.json(Object.values(db.classes));
 });
 
 const PORT = process.env.PORT || 3001;

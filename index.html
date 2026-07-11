@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="/index.css">
   <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#F6F3EE">
+  <script src="https://js.puter.com/v2/" async defer onerror="window.puterLoadFailed=true;"></script>
 </head>
 <body>
   <header class="site-hero">
@@ -40,6 +41,13 @@
   <main>
     <section class="glass-card sidebar-panel">
       <div class="setup-step">
+        <h3 class="section-title">Mode</h3>
+        <div class="pill-group mt-sm">
+          <button type="button" id="btn-mode-curriculum" class="pill-btn active">Curriculum</button>
+          <button type="button" id="btn-mode-custom" class="pill-btn">My Lessons</button>
+        </div>
+      </div>
+      <div class="setup-step">
         <h3 class="section-title">1. Grade</h3>
         <div id="grade-filters" class="pill-group pill-group--tight"></div>
       </div>
@@ -50,6 +58,10 @@
       <div class="setup-step">
         <h3 class="section-title">3. Lessons</h3>
         <div id="exercise-list" class="exercise-list" role="listbox"></div>
+      </div>
+      <div id="custom-lessons-panel" class="hidden setup-step">
+        <h3 class="section-title">Saved Custom Lessons</h3>
+        <p class="settings-note">Lessons you create appear here and run in the activity player.</p>
       </div>
       <div class="sidebar-footer divider-top stack-sm">
         <button type="button" id="btn-placement" class="btn-secondary btn-block">Take Placement Mini-Test</button>
@@ -91,10 +103,20 @@
     </div>
     <div class="settings-row">
       <label class="input-label" for="voice-engine">TTS Engine</label>
-      <select id="voice-engine" class="settings-select">
-        <option value="webspeech">Native Web Speech API</option>
+      <select id="voice-engine" class="settings-select"></select>
+    </div>
+    <div class="settings-row" id="accent-selection-row">
+      <label class="input-label" for="voice-accent">Accent</label>
+      <select id="voice-accent" class="settings-select">
+        <option value="US">American English (US)</option>
+        <option value="UK">British English (UK)</option>
       </select>
     </div>
+    <div class="settings-row" id="voice-selection-row">
+      <label class="input-label" for="voice-select">Voice Model</label>
+      <select id="voice-select" class="settings-select"></select>
+    </div>
+    <p class="settings-note">Chrome and Edge offer the best speech recognition for speaking practice.</p>
   </div>
 
   <div id="lesson-creator-modal" class="settings-dropdown modal-centered hidden" role="dialog">
@@ -111,6 +133,7 @@
       <select id="creator-type" class="settings-select">
         <option value="passage">Passage Dictation</option>
         <option value="words">Word Spelling List</option>
+        <option value="speak">Speaking Word List</option>
       </select>
     </div>
     <div class="settings-row">

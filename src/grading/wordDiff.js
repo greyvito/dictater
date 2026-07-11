@@ -8,7 +8,19 @@ export function normalizeWord(word) {
   return word.replace(/[.,!?;()]/g, '').toLowerCase().trim();
 }
 
-const FILLER_WORDS = new Set(['um', 'uh', 'er', 'ah']);
+const FILLER_WORDS = new Set(['um', 'uh', 'er', 'ah', 'like', 'so']);
+
+/** Common STT mishears for young speakers */
+const PHONETIC_ALIASES = {
+  a: ['uh', 'ah'],
+  the: ['da', 'duh'],
+  to: ['too', 'two'],
+  you: ['u'],
+  are: ['our', 'r'],
+  they: ['day'],
+  said: ['say', 'sed'],
+  was: ['wuz', 'what']
+};
 
 export function stripFillerWords(words) {
   return words.filter((w) => !FILLER_WORDS.has(normalizeWord(w)));
@@ -29,13 +41,28 @@ export function levenshtein(a, b) {
   return dp[m][n];
 }
 
+function maxFuzzyDistance(len) {
+  if (len <= 3) return 1;
+  if (len <= 6) return 2;
+  return Math.floor(len * 0.25);
+}
+
 export function wordsMatch(expected, spoken, options = {}) {
-  const { fuzzy = false, alternatives = [] } = options;
+  const { fuzzy = false, alternatives = [], childMode = false } = options;
   const e = normalizeWord(expected);
   const s = normalizeWord(spoken);
+  if (!e || !s) return false;
   if (e === s) return true;
   if (alternatives.some((alt) => normalizeWord(alt) === s)) return true;
-  if (fuzzy && e.length <= 4 && levenshtein(e, s) <= 1) return true;
+
+  const aliases = PHONETIC_ALIASES[e];
+  if (aliases?.includes(s)) return true;
+
+  if (fuzzy || childMode) {
+    const maxDist = maxFuzzyDistance(Math.max(e.length, s.length));
+    if (levenshtein(e, s) <= maxDist) return true;
+    if (childMode && e.length >= 4 && s.length >= 3 && e.startsWith(s.slice(0, 3))) return true;
+  }
   return false;
 }
 
@@ -99,7 +126,12 @@ export function scoreAlignment(alignment, expectedCount) {
   return Math.round((correctCount / total) * 100);
 }
 
-export function renderDiffToContainer(container, alignment) {
+/**
+ * @param {HTMLElement} container
+ * @param {AlignmentItem[]} alignment
+ * @param {{ onWordClick?: (word: string) => void }} [opts]
+ */
+export function renderDiffToContainer(container, alignment, opts = {}) {
   container.innerHTML = '';
   alignment.forEach((item) => {
     const span = document.createElement('span');
@@ -110,11 +142,19 @@ export function renderDiffToContainer(container, alignment) {
     } else if (item.status === 'incorrect') {
       span.classList.add('incorrect');
       span.textContent = item.typed;
-      span.title = 'Extra or incorrect word';
+      span.title = 'Tap to hear the correct word';
+      if (opts.onWordClick && item.original) {
+        span.classList.add('diff-word-clickable');
+        span.addEventListener('click', () => opts.onWordClick(item.original));
+      }
     } else {
       span.classList.add('missing');
       span.textContent = item.original;
-      span.title = 'Missing word';
+      span.title = 'Tap to hear this word';
+      if (opts.onWordClick && item.original) {
+        span.classList.add('diff-word-clickable');
+        span.addEventListener('click', () => opts.onWordClick(item.original));
+      }
     }
     container.appendChild(span);
   });
