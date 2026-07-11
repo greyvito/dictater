@@ -133,3 +133,10 @@ test('comprehension shows post-check actions after completion', async ({ page })
   await expect(page.locator('.post-check-actions')).toBeVisible();
   await expect(page.locator('.post-check-actions button')).toHaveCount(2);
 });
+
+test('teacher portal has class hub and report table', async ({ page }) => {
+  await page.goto('/teacher.html');
+  await expect(page.locator('#teacher-hub-section')).toBeAttached();
+  await expect(page.locator('#class-hub-table')).toBeAttached();
+  await expect(page.locator('#report-table')).toBeAttached();
+});

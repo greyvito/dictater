@@ -2080,12 +2080,90 @@ body.prek-immersive .workspace-panel {
   .teacher-main {
     grid-template-columns: repeat(2, 1fr);
   }
-  .teacher-main .teacher-card:last-child {
+  .teacher-main .teacher-card--full {
     grid-column: 1 / -1;
   }
 }
 .teacher-card {
   margin: 0;
+}
+.teacher-card--full {
+  grid-column: 1 / -1;
+}
+.teacher-hub-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+}
+.teacher-table-scroll {
+  overflow-x: auto;
+  margin-bottom: var(--space-3);
+}
+.teacher-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--text-sm);
+}
+.teacher-table th,
+.teacher-table td {
+  padding: var(--space-2) var(--space-3);
+  text-align: left;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: top;
+}
+.teacher-table th {
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.teacher-table tbody tr:hover {
+  background: var(--surface-muted);
+}
+.teacher-table-actions {
+  text-align: right;
+  white-space: nowrap;
+}
+.teacher-class-id {
+  font-size: var(--text-xs);
+  background: var(--surface-muted);
+  padding: 0.1rem 0.35rem;
+  border-radius: var(--radius-sm);
+}
+.teacher-report-summary {
+  margin-bottom: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+}
+.teacher-recent-cell {
+  max-width: 18rem;
+  color: var(--text-muted);
+  font-size: var(--text-xs);
+}
+.teacher-json-details {
+  margin-top: var(--space-3);
+}
+.teacher-json-details summary {
+  cursor: pointer;
+}
+#csv-link.is-disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 .teacher-report {
   min-height: 120px;

@@ -14,7 +14,7 @@
     <div class="teacher-header__brand">
       <a href="/" class="teacher-back-link">← Student app</a>
       <h1 class="section-title section-title--plain">Teacher Portal</h1>
-      <p class="settings-note">Create classes, enroll students, assign lessons, and export progress.</p>
+      <p class="settings-note">Create classes, enroll students, assign lessons, and track progress.</p>
     </div>
     <p id="teacher-status" class="settings-note teacher-status">Not signed in</p>
     <div id="teacher-signed-in" class="hidden">
@@ -31,6 +31,31 @@
       </div>
     </section>
 
+    <section id="teacher-hub-section" class="glass-card teacher-card teacher-card--full hidden">
+      <div class="teacher-hub-header">
+        <h2 class="input-label">Your classes</h2>
+        <button type="button" id="refresh-classes" class="btn-secondary btn-compact">Refresh</button>
+      </div>
+      <div class="teacher-table-scroll">
+        <table id="class-hub-table" class="teacher-table" aria-label="Class list">
+          <thead>
+            <tr>
+              <th scope="col">Class</th>
+              <th scope="col">ID</th>
+              <th scope="col">Students</th>
+              <th scope="col"><span class="sr-only">Actions</span></th>
+            </tr>
+          </thead>
+          <tbody id="class-hub-body"></tbody>
+        </table>
+        <p id="class-hub-empty" class="empty-state hidden">No classes yet. Create one below.</p>
+      </div>
+      <label class="input-label" for="active-class-select">Active class</label>
+      <select id="active-class-select" class="settings-select">
+        <option value="">Select a class…</option>
+      </select>
+    </section>
+
     <section class="glass-card teacher-card">
       <h2 class="input-label">Create class</h2>
       <div class="auth-row">
@@ -42,8 +67,8 @@
 
     <section class="glass-card teacher-card">
       <h2 class="input-label">Enroll student</h2>
+      <p id="enroll-class-hint" class="settings-note">Select an active class above first.</p>
       <div class="auth-row">
-        <input type="text" id="class-id" class="settings-select" placeholder="Class ID">
         <input type="email" id="student-email" class="settings-select" placeholder="student@school.edu">
         <button type="button" id="enroll-student" class="btn-secondary btn-compact">Enroll</button>
       </div>
@@ -53,7 +78,6 @@
       <h2 class="input-label">Assign lesson</h2>
       <div class="stack-sm">
         <div class="auth-row">
-          <input type="text" id="assign-class-id" class="settings-select" placeholder="Class ID">
           <input type="date" id="assign-due" class="settings-select">
         </div>
         <div class="auth-row">
@@ -73,14 +97,33 @@
       <div id="assign-result" class="settings-note"></div>
     </section>
 
-    <section class="glass-card teacher-card">
-      <h2 class="input-label">Class report</h2>
-      <div class="auth-row">
-        <input type="text" id="report-class-id" class="settings-select" placeholder="Class ID">
-        <button type="button" id="view-report" class="btn-secondary btn-compact">View JSON</button>
-        <a id="csv-link" class="btn-secondary btn-compact" href="#" download>Export CSV</a>
+    <section class="glass-card teacher-card teacher-card--full">
+      <div class="teacher-hub-header">
+        <h2 class="input-label">Class progress</h2>
+        <div class="auth-row">
+          <button type="button" id="view-report" class="btn-secondary btn-compact">Load report</button>
+          <a id="csv-link" class="btn-secondary btn-compact" href="#" download>Export CSV</a>
+        </div>
       </div>
-      <pre id="report-output" class="original-peek activity-log-scroll teacher-report"></pre>
+      <p id="report-hint" class="settings-note">Select a class, then load the report to see student scores.</p>
+      <div id="report-summary" class="teacher-report-summary hidden"></div>
+      <div class="teacher-table-scroll">
+        <table class="teacher-table" id="report-table" hidden>
+          <thead>
+            <tr>
+              <th scope="col">Student</th>
+              <th scope="col">Sessions</th>
+              <th scope="col">Avg score</th>
+              <th scope="col">Recent lessons</th>
+            </tr>
+          </thead>
+          <tbody id="report-table-body"></tbody>
+        </table>
+      </div>
+      <details id="report-json-details" class="teacher-json-details hidden">
+        <summary class="settings-note">Raw JSON</summary>
+        <pre id="report-output" class="original-peek activity-log-scroll teacher-report"></pre>
+      </details>
     </section>
   </main>
 
