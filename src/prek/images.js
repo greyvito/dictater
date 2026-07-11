@@ -13,7 +13,7 @@ export const WORD_EMOJI = {
   heart: '❤️', banana: '🍌', dish: '🍽️', run: '🏃', tall: '🦒', king: '👑',
   ring: '💍', light: '💡', night: '🌃', day: '🌤️', happy: '😊', sad: '😢',
   angry: '😠', hot: '🔥', blue: '🔵', green: '🟢', red: '🔴', big: '🐘',
-  small: '🐭', hello: '👋', friend: '🤝', 'thank you': '🙏', one: '1️⃣', two: '2️⃣',
+  small: '🐭', tiny: '🐜', hello: '👋', friend: '🤝', 'thank you': '🙏', one: '1️⃣', two: '2️⃣',
   three: '3️⃣', ch: '🐔', sh: '🐚', hippopotamus: '🦛'
 };
 

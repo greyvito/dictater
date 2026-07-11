@@ -13,6 +13,7 @@
     "test:e2e": "playwright test",
     "test:e2e:install": "playwright install chromium",
     "validate:content": "node scripts/validate-content.mjs",
+    "qa:content": "node scripts/qa-content.mjs",
     "migrate:curriculum": "node scripts/migrate-curriculum.mjs",
     "expand:content": "node scripts/expand-content.mjs",
     "generate:prek-images": "node scripts/generate-prek-svgs.mjs",

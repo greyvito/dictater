@@ -1796,6 +1796,22 @@ body.prek-mode .exercise-item {
   }
 }
 
+.speak-mic-btn.speaker-playing {
+  animation: prek-mic-pulse 0.8s ease infinite;
+  box-shadow: 0 0 0 4px rgba(255, 107, 107, 0.35);
+}
+
+@keyframes prek-mic-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+.speaking-workspace .settings-note:first-child {
+  text-align: center;
+  color: #4D96FF;
+  font-weight: var(--weight-semibold);
+}
+
 @media (max-width: 600px) {
   .prek-choice-grid {
     grid-template-columns: repeat(2, 1fr);
