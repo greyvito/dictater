@@ -1,0 +1,1632 @@
+[
+  {
+    "id": "g1-p1",
+    "grade": "1",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "My Big Family",
+    "hint": "Familiar family words and high-frequency sight words.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "I love my big family. My mom and dad help me. I play with my brother and sister at home."
+    }
+  },
+  {
+    "id": "g1-p1-comp",
+    "grade": "1",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: My Big Family",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "I love my big family. My mom and dad help me. I play with my brother and sister at home.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g1-p2",
+    "grade": "1",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "School is Fun",
+    "hint": "School words and common verbs.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "I go to school every morning. I sit at my desk. My kind teacher helps me read and write."
+    }
+  },
+  {
+    "id": "g1-p2-comp",
+    "grade": "1",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: School is Fun",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "I go to school every morning. I sit at my desk. My kind teacher helps me read and write.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g1-p3",
+    "grade": "1",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "Eating Lunch",
+    "hint": "Common food words and present tense.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "For lunch, I eat a red apple and a sandwich. I drink a cup of cold milk. Food makes me strong."
+    }
+  },
+  {
+    "id": "g1-p3-comp",
+    "grade": "1",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: Eating Lunch",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "For lunch, I eat a red apple and a sandwich. I drink a cup of cold milk. Food makes me strong.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g1-p4",
+    "grade": "1",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "The Playful Puppy",
+    "hint": "Sight words and familiar dog actions.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "My little puppy likes to run. He chases a yellow ball in the yard. He is my best friend."
+    }
+  },
+  {
+    "id": "g1-p4-comp",
+    "grade": "1",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: The Playful Puppy",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "My little puppy likes to run. He chases a yellow ball in the yard. He is my best friend.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g1-p5",
+    "grade": "1",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "At the Toy Shop",
+    "hint": "Color words and simple shopping verbs.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "I see a blue toy train. I see a big green balloon. I want to buy a new puzzle today."
+    }
+  },
+  {
+    "id": "g1-p5-comp",
+    "grade": "1",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: At the Toy Shop",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "I see a blue toy train. I see a big green balloon. I want to buy a new puzzle today.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g1-p6",
+    "grade": "1",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "A Day at the Zoo",
+    "hint": "Past tense, sequence words (first, then) and double consonants.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "First, we went to see the tall giraffes. Then, we watched the penguins swim. Some happy monkeys clapped their hands. We had a great time."
+    }
+  },
+  {
+    "id": "g1-p6-comp",
+    "grade": "1",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: A Day at the Zoo",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "First, we went to see the tall giraffes. Then, we watched the penguins swim. Some happy monkeys clapped their hands. We had a great time.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g1-p7",
+    "grade": "1",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "Baking a Cake",
+    "hint": "Check sequence words and spelling of butter, eggs, cake, smells.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "First, we mix the sweet yellow butter and sugar. Then, we add two fresh eggs and sweet milk. We put the cake in the hot oven. It smells so good!"
+    }
+  },
+  {
+    "id": "g1-p7-comp",
+    "grade": "1",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: Baking a Cake",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "First, we mix the sweet yellow butter and sugar. Then, we add two fresh eggs and sweet milk. We put the cake in the hot oven. It smells so good!",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g1-p8",
+    "grade": "1",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "Cleaning the Room",
+    "hint": "Look for contraction didn't, plural boxes, and past tense swept.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "My brother didn't want to clean his messy room. First, he put his small toys into the big wooden boxes. Then, he swept the dirty floor. Now it looks very clean."
+    }
+  },
+  {
+    "id": "g1-p8-comp",
+    "grade": "1",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: Cleaning the Room",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "My brother didn't want to clean his messy room. First, he put his small toys into the big wooden boxes. Then, he swept the dirty floor. Now it looks very clean.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g1-p9",
+    "grade": "1",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "Rainy Day Play",
+    "hint": "Contraction couldn't, past tense started, built, read, and plural storybooks, pillows.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "It started to rain after lunch. We couldn't play in the garden. First, we built a cozy fort with pillows. Then, we read funny storybooks together."
+    }
+  },
+  {
+    "id": "g1-p9-comp",
+    "grade": "1",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: Rainy Day Play",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "It started to rain after lunch. We couldn't play in the garden. First, we built a cozy fort with pillows. Then, we read funny storybooks together.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g1-p10",
+    "grade": "1",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "Helping Grandma",
+    "hint": "Check past tense verbs helped, washed, made, ate, and double consonant letters.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Yesterday, I helped Grandma in the kitchen. First, we washed some sweet red apples. Then, we made a delicious hot pie. Grandpa ate three big slices."
+    }
+  },
+  {
+    "id": "g1-p10-comp",
+    "grade": "1",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: Helping Grandma",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Yesterday, I helped Grandma in the kitchen. First, we washed some sweet red apples. Then, we made a delicious hot pie. Grandpa ate three big slices.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g1-p11",
+    "grade": "1",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "A Visit to the Apple Farm",
+    "hint": "Compound sentences with and/but, past tense verbs, silent-e words.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Yesterday, my family visited a huge apple farm, and we picked many sweet red apples. We wanted to bake a fresh pie, but we did not have enough white sugar. My kind mother walked to the small shop nearby. She bought a bag of sugar, and we made a wonderful pie together."
+    }
+  },
+  {
+    "id": "g1-p11-comp",
+    "grade": "1",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: A Visit to the Apple Farm",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Yesterday, my family visited a huge apple farm, and we picked many sweet red apples. We wanted to bake a fresh pie, but we did not have enough white sugar. My kind mother walked to the small shop nearby. She bought a bag of sugar, and we made a wonderful pie together.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g1-p12",
+    "grade": "1",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "The Lost Kitten in the Rain",
+    "hint": "Compound sentences, vowel teams (rain, gray, cried, afraid), and irregular past tense.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "A tiny gray kitten sat under a green bench in the rain, and it cried sadly because it was wet. I wanted to help, but the kitten was too afraid to come to me. I walked home and brought some warm milk, and then the sweet kitten ran to me. We are happy now."
+    }
+  },
+  {
+    "id": "g1-p12-comp",
+    "grade": "1",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: The Lost Kitten in the Rain",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "A tiny gray kitten sat under a green bench in the rain, and it cried sadly because it was wet. I wanted to help, but the kitten was too afraid to come to me. I walked home and brought some warm milk, and then the sweet kitten ran to me. We are happy now.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g1-p13",
+    "grade": "1",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "Fun at the Sandy Beach",
+    "hint": "Check vowel teams (beach, waves, seashells) and irregular plurals.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Last Saturday, we drove to the beautiful beach to swim. We built a giant sandcastle near the water, but the big ocean waves washed it away quickly. We did not cry, and instead, we looked for pretty seashells. We found five shiny blue shells and three tiny red crabs."
+    }
+  },
+  {
+    "id": "g1-p13-comp",
+    "grade": "1",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: Fun at the Sandy Beach",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Last Saturday, we drove to the beautiful beach to swim. We built a giant sandcastle near the water, but the big ocean waves washed it away quickly. We did not cry, and instead, we looked for pretty seashells. We found five shiny blue shells and three tiny red crabs.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g1-p14",
+    "grade": "1",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "The Story of the Clever Crow",
+    "hint": "Silent-e/vowel teams (crow, pitcher, low, thought, rose, drank) and compound structures.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "A thirsty black crow found a deep pitcher of water, but he could not drink from it because the water was too low. The clever crow thought for a minute, and then he dropped small stones into the pitcher. The water rose to the top, and he drank his fill."
+    }
+  },
+  {
+    "id": "g1-p14-comp",
+    "grade": "1",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: The Story of the Clever Crow",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "A thirsty black crow found a deep pitcher of water, but he could not drink from it because the water was too low. The clever crow thought for a minute, and then he dropped small stones into the pitcher. The water rose to the top, and he drank his fill.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g1-p15",
+    "grade": "1",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "Winter Snow and Warm Cocoa",
+    "hint": "Look for vowel teams (snow, cocoa, fireplace, stayed, cookies, watching) and compound sentences.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Heavy white snow fell from the sky all day long, so we played outside and built a giant snowman. Our cold hands were freezing, but we stayed warm inside by the fireplace. My dad made delicious sweet cocoa, and we ate crunchy chocolate cookies while watching the snow fall."
+    }
+  },
+  {
+    "id": "g1-p15-comp",
+    "grade": "1",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: Winter Snow and Warm Cocoa",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Heavy white snow fell from the sky all day long, so we played outside and built a giant snowman. Our cold hands were freezing, but we stayed warm inside by the fireplace. My dad made delicious sweet cocoa, and we ate crunchy chocolate cookies while watching the snow fall.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g1-w1",
+    "grade": "1",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Sight Words A",
+    "hint": "High-frequency words for Grade 1.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "where",
+        "there",
+        "what",
+        "their",
+        "about",
+        "would",
+        "could",
+        "should"
+      ]
+    }
+  },
+  {
+    "id": "g1-w1-speak",
+    "grade": "1",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Sight Words A",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "where",
+        "there",
+        "what",
+        "their",
+        "about",
+        "would",
+        "could",
+        "should"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g1-w2",
+    "grade": "1",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "My Family Members",
+    "hint": "Spelling names of family members.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "mother",
+        "father",
+        "brother",
+        "sister",
+        "grandma",
+        "grandpa",
+        "family",
+        "uncle",
+        "aunt"
+      ]
+    }
+  },
+  {
+    "id": "g1-w2-speak",
+    "grade": "1",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: My Family Members",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "mother",
+        "father",
+        "brother",
+        "sister",
+        "grandma",
+        "grandpa",
+        "family",
+        "uncle",
+        "aunt"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g1-w3",
+    "grade": "1",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Delicious Food",
+    "hint": "Names of common foods and drinks.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "apple",
+        "banana",
+        "bread",
+        "cheese",
+        "water",
+        "milk",
+        "lunch",
+        "dinner",
+        "snack"
+      ]
+    }
+  },
+  {
+    "id": "g1-w3-speak",
+    "grade": "1",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Delicious Food",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "apple",
+        "banana",
+        "bread",
+        "cheese",
+        "water",
+        "milk",
+        "lunch",
+        "dinner",
+        "snack"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g1-w4",
+    "grade": "1",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "My School Classroom",
+    "hint": "Words used everyday at school.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "school",
+        "teacher",
+        "desk",
+        "book",
+        "paper",
+        "pencil",
+        "friend",
+        "read",
+        "write"
+      ]
+    }
+  },
+  {
+    "id": "g1-w4-speak",
+    "grade": "1",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: My School Classroom",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "school",
+        "teacher",
+        "desk",
+        "book",
+        "paper",
+        "pencil",
+        "friend",
+        "read",
+        "write"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g1-w5",
+    "grade": "1",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Double Consonants",
+    "hint": "Words with two of the same consonants side-by-side.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "puppy",
+        "kitten",
+        "yellow",
+        "little",
+        "summer",
+        "butter",
+        "happy",
+        "clapped",
+        "running"
+      ]
+    }
+  },
+  {
+    "id": "g1-w5-speak",
+    "grade": "1",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Double Consonants",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "puppy",
+        "kitten",
+        "yellow",
+        "little",
+        "summer",
+        "butter",
+        "happy",
+        "clapped",
+        "running"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g1-w6",
+    "grade": "1",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Plural Nouns (-s, -es)",
+    "hint": "Spelling nouns that mean more than one.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "boxes",
+        "dishes",
+        "benches",
+        "apples",
+        "dogs",
+        "frogs",
+        "trees",
+        "friends"
+      ]
+    }
+  },
+  {
+    "id": "g1-w6-speak",
+    "grade": "1",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Plural Nouns (-s, -es)",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "boxes",
+        "dishes",
+        "benches",
+        "apples",
+        "dogs",
+        "frogs",
+        "trees",
+        "friends"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g1-w7",
+    "grade": "1",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Common Contractions",
+    "hint": "Shortened words using apostrophes.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "don't",
+        "didn't",
+        "can't",
+        "couldn't",
+        "it's",
+        "he's",
+        "she's",
+        "we're",
+        "they're"
+      ]
+    }
+  },
+  {
+    "id": "g1-w7-speak",
+    "grade": "1",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Common Contractions",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "don't",
+        "didn't",
+        "can't",
+        "couldn't",
+        "it's",
+        "he's",
+        "she's",
+        "we're",
+        "they're"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g1-w8",
+    "grade": "1",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Telling a Story",
+    "hint": "Words used to order events in time.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "yesterday",
+        "morning",
+        "afternoon",
+        "first",
+        "then",
+        "after",
+        "before",
+        "always"
+      ]
+    }
+  },
+  {
+    "id": "g1-w8-speak",
+    "grade": "1",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Telling a Story",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "yesterday",
+        "morning",
+        "afternoon",
+        "first",
+        "then",
+        "after",
+        "before",
+        "always"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g1-w9",
+    "grade": "1",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Silent-e Words",
+    "hint": "Words with a silent e at the end that makes the first vowel say its name.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "huge",
+        "lake",
+        "cake",
+        "snake",
+        "home",
+        "stone",
+        "rose",
+        "drove",
+        "write",
+        "time"
+      ]
+    }
+  },
+  {
+    "id": "g1-w9-speak",
+    "grade": "1",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Silent-e Words",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "huge",
+        "lake",
+        "cake",
+        "snake",
+        "home",
+        "stone",
+        "rose",
+        "drove",
+        "write",
+        "time"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g1-w10",
+    "grade": "1",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Vowel Teams (AI, EA)",
+    "hint": "Words with two vowels walking together to make one sound.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "rain",
+        "train",
+        "pain",
+        "afraid",
+        "beach",
+        "peach",
+        "clean",
+        "eat",
+        "read",
+        "teacher"
+      ]
+    }
+  },
+  {
+    "id": "g1-w10-speak",
+    "grade": "1",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Vowel Teams (AI, EA)",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "rain",
+        "train",
+        "pain",
+        "afraid",
+        "beach",
+        "peach",
+        "clean",
+        "eat",
+        "read",
+        "teacher"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g1-w11",
+    "grade": "1",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Vowel Teams (OA, EE)",
+    "hint": "Words with vowel combinations oa and ee.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "boat",
+        "coat",
+        "goat",
+        "road",
+        "tree",
+        "seed",
+        "sweet",
+        "green",
+        "sleep",
+        "deep"
+      ]
+    }
+  },
+  {
+    "id": "g1-w11-speak",
+    "grade": "1",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Vowel Teams (OA, EE)",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "boat",
+        "coat",
+        "goat",
+        "road",
+        "tree",
+        "seed",
+        "sweet",
+        "green",
+        "sleep",
+        "deep"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g1-w12",
+    "grade": "1",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Irregular Plurals",
+    "hint": "Plural words that change spelling instead of just adding s.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "men",
+        "women",
+        "children",
+        "mice",
+        "feet",
+        "teeth",
+        "sheep",
+        "fish"
+      ]
+    }
+  },
+  {
+    "id": "g1-w12-speak",
+    "grade": "1",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Irregular Plurals",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "men",
+        "women",
+        "children",
+        "mice",
+        "feet",
+        "teeth",
+        "sheep",
+        "fish"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g1-w13",
+    "grade": "1",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Feelings & Emotions",
+    "hint": "Words that describe how we feel inside.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "happy",
+        "sad",
+        "glad",
+        "mad",
+        "kind",
+        "warm",
+        "cold",
+        "safe"
+      ]
+    }
+  },
+  {
+    "id": "g1-w13-speak",
+    "grade": "1",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Feelings & Emotions",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "happy",
+        "sad",
+        "glad",
+        "mad",
+        "kind",
+        "warm",
+        "cold",
+        "safe"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g1-w14",
+    "grade": "1",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "R-Controlled Vowels",
+    "hint": "Vowels followed by r make a special sound.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "star",
+        "park",
+        "herd",
+        "bird",
+        "girl",
+        "horn",
+        "turn",
+        "fur"
+      ]
+    }
+  },
+  {
+    "id": "g1-w14-speak",
+    "grade": "1",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: R-Controlled Vowels",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "star",
+        "park",
+        "herd",
+        "bird",
+        "girl",
+        "horn",
+        "turn",
+        "fur"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g1-w15",
+    "grade": "1",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Diphthongs: OU, OW, OI, OY",
+    "hint": "Two vowels that glide together to make a new sound.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "house",
+        "mouse",
+        "town",
+        "brown",
+        "oil",
+        "soil",
+        "boy",
+        "toy"
+      ]
+    }
+  },
+  {
+    "id": "g1-w15-speak",
+    "grade": "1",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Diphthongs: OU, OW, OI, OY",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "house",
+        "mouse",
+        "town",
+        "brown",
+        "oil",
+        "soil",
+        "boy",
+        "toy"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g1-w16",
+    "grade": "1",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Sounds Alike A",
+    "hint": "Be careful! These words sound very similar but have different vowels and meanings.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "than",
+        "then",
+        "bat",
+        "bet",
+        "bad",
+        "bed",
+        "man",
+        "men"
+      ]
+    }
+  },
+  {
+    "id": "g1-w16-speak",
+    "grade": "1",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Sounds Alike A",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "than",
+        "then",
+        "bat",
+        "bet",
+        "bad",
+        "bed",
+        "man",
+        "men"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g1-w17",
+    "grade": "1",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Silent Letters K & W",
+    "hint": "The starting letters k and w are silent and not pronounced.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "know",
+        "knee",
+        "knot",
+        "write",
+        "wrong",
+        "wrist",
+        "wrap",
+        "who"
+      ]
+    }
+  },
+  {
+    "id": "g1-w17-speak",
+    "grade": "1",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Silent Letters K & W",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "know",
+        "knee",
+        "knot",
+        "write",
+        "wrong",
+        "wrist",
+        "wrap",
+        "who"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g1-w18",
+    "grade": "1",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Tricky Short Words",
+    "hint": "Pay close attention to contractions with apostrophes vs pronouns.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "its",
+        "it's",
+        "lets",
+        "let's",
+        "your",
+        "you're",
+        "there",
+        "they're"
+      ]
+    }
+  },
+  {
+    "id": "g1-w18-speak",
+    "grade": "1",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Tricky Short Words",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "its",
+        "it's",
+        "lets",
+        "let's",
+        "your",
+        "you're",
+        "there",
+        "they're"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g1-w19",
+    "grade": "1",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Fry First 100: Set D",
+    "hint": "Core words frequently appearing in early grade textbooks.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "from",
+        "or",
+        "one",
+        "had",
+        "by",
+        "words",
+        "but",
+        "not"
+      ]
+    }
+  },
+  {
+    "id": "g1-w19-speak",
+    "grade": "1",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Fry First 100: Set D",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "from",
+        "or",
+        "one",
+        "had",
+        "by",
+        "words",
+        "but",
+        "not"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g1-w20",
+    "grade": "1",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Fry First 100: Set E",
+    "hint": "Important sight words that are frequently used in conversation.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "what",
+        "all",
+        "were",
+        "we",
+        "when",
+        "your",
+        "can",
+        "said"
+      ]
+    }
+  },
+  {
+    "id": "g1-w20-speak",
+    "grade": "1",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Fry First 100: Set E",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "what",
+        "all",
+        "were",
+        "we",
+        "when",
+        "your",
+        "can",
+        "said"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g1-w21",
+    "grade": "1",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Fry First 100: Set F",
+    "hint": "Key pronouns and verbs essential for first grade mastery.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "there",
+        "use",
+        "an",
+        "each",
+        "which",
+        "she",
+        "do",
+        "how"
+      ]
+    }
+  },
+  {
+    "id": "g1-w21-speak",
+    "grade": "1",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Fry First 100: Set F",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "there",
+        "use",
+        "an",
+        "each",
+        "which",
+        "she",
+        "do",
+        "how"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  }
+]

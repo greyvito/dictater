@@ -1,0 +1,1670 @@
+[
+  {
+    "id": "g5-p1",
+    "grade": "5",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "The Smart Dolphins",
+    "hint": "Look out for quotation marks and comma placement in dialogue, as well as the spelling of 'intelligent' and 'synchronized'.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Dolphins are highly intelligent marine mammals that communicate with each other using a series of clicks, whistles, and squeaks. They travel in social groups called pods and work together to herd fish for an easy meal. Scientists believe that these animals have developed a complex language. During a recent harbor study, \"Can they understand our hand gestures?\" asked the lead researcher. Indeed, the dolphins responded quickly by performing amazing synchronized flips in the air, showing how they interact with humans."
+    }
+  },
+  {
+    "id": "g5-p1-comp",
+    "grade": "5",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: The Smart Dolphins",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Dolphins are highly intelligent marine mammals that communicate with each other using a series of clicks, whistles, and squeaks. They travel in social groups called pods and work together to herd fish for an easy meal. Scientists believe that these animals have developed a complex language. During a recent harbor study, \"Can they understand our hand gestures?\" asked the lead researcher. Indeed, the dolphins responded quickly by performing amazing synchronized flips in the air, showing how they interact with humans.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g5-p2",
+    "grade": "5",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "An Invisible Shield",
+    "hint": "Notice the spelling of 'atmosphere' and the structure of the direct quote from the scientist.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "The atmosphere is an invisible blanket of gases surrounding our planet. It acts like a protective shield by blocking dangerous rays from the Sun and keeping the temperature comfortable enough for living things to thrive. Without this shield, the Earth would be vulnerable to solar radiation. Scientists warn that human activity is releasing harmful chemicals into the air. \"We must protect this fragile barrier,\" said the environmental scientist. By reducing pollution, we can help preserve the atmosphere for future generations to enjoy."
+    }
+  },
+  {
+    "id": "g5-p2-comp",
+    "grade": "5",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: An Invisible Shield",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "The atmosphere is an invisible blanket of gases surrounding our planet. It acts like a protective shield by blocking dangerous rays from the Sun and keeping the temperature comfortable enough for living things to thrive. Without this shield, the Earth would be vulnerable to solar radiation. Scientists warn that human activity is releasing harmful chemicals into the air. \"We must protect this fragile barrier,\" said the environmental scientist. By reducing pollution, we can help preserve the atmosphere for future generations to enjoy.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g5-p3",
+    "grade": "5",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "A Hike in the Redwood Forest",
+    "hint": "Pay attention to the spelling of 'cathedral', 'sanctuary', and the capitalization of the first word in the quotation.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Walking through the ancient redwood forest feels like entering a giant cathedral. These massive trees, some of which have lived for over a thousand years, stretch high into the foggy sky, block out the wind, and create a quiet sanctuary. As we walked deeper, we saw sunlight filtering through the dense canopy. \"Look at the size of that trunk!\" shouted the excited guide. It was clear that these majestic giants represent a vital part of our natural heritage, which must be protected."
+    }
+  },
+  {
+    "id": "g5-p3-comp",
+    "grade": "5",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: A Hike in the Redwood Forest",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Walking through the ancient redwood forest feels like entering a giant cathedral. These massive trees, some of which have lived for over a thousand years, stretch high into the foggy sky, block out the wind, and create a quiet sanctuary. As we walked deeper, we saw sunlight filtering through the dense canopy. \"Look at the size of that trunk!\" shouted the excited guide. It was clear that these majestic giants represent a vital part of our natural heritage, which must be protected.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g5-p4",
+    "grade": "5",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "The History of Coins",
+    "hint": "Identify passive verb structures like 'were invented' and 'were developed', and spell 'societies' and 'currency' correctly.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Before coins were invented, early societies relied heavily on bartering, which means trading goods directly. For example, a farmer might trade fresh eggs for warm wool. Over time, this system proved to be quite inconvenient because carrying heavy goods was difficult. Eventually, small metal pieces were developed to make buying and selling much simpler. \"We need a standard currency,\" declared the ancient king. Soon, coins were adopted across the land, which transformed trade and shaped the modern economy."
+    }
+  },
+  {
+    "id": "g5-p4-comp",
+    "grade": "5",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: The History of Coins",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Before coins were invented, early societies relied heavily on bartering, which means trading goods directly. For example, a farmer might trade fresh eggs for warm wool. Over time, this system proved to be quite inconvenient because carrying heavy goods was difficult. Eventually, small metal pieces were developed to make buying and selling much simpler. \"We need a standard currency,\" declared the ancient king. Soon, coins were adopted across the land, which transformed trade and shaped the modern economy.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g5-p5",
+    "grade": "5",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "How Plants Make Food",
+    "hint": "Pay close attention to the scientific vocabulary, including 'photosynthesis', 'carbon dioxide', and the passive voice in 'is produced by'.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Photosynthesis is the amazing process by which green plants create their own food. Using energy that is captured from sunlight, plants combine carbon dioxide from the air with water absorbed by their roots to produce simple sugars. \"This process is vital for life on Earth,\" explained the science teacher. Oxygen, which is also produced by this process, is released into the atmosphere for animals to breathe. Without this reaction, most living organisms would not be able to survive."
+    }
+  },
+  {
+    "id": "g5-p5-comp",
+    "grade": "5",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: How Plants Make Food",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Photosynthesis is the amazing process by which green plants create their own food. Using energy that is captured from sunlight, plants combine carbon dioxide from the air with water absorbed by their roots to produce simple sugars. \"This process is vital for life on Earth,\" explained the science teacher. Oxygen, which is also produced by this process, is released into the atmosphere for animals to breathe. Without this reaction, most living organisms would not be able to survive.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g5-p6",
+    "grade": "5",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "The Incredible Arctic Tern",
+    "hint": "Notice the spelling of geographical terms like 'Arctic' and 'Antarctica', and the use of quotes for the biologist's comment.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "The arctic tern is a small, elegant seabird famous for making the longest migration journey of any animal on Earth. Every year, it flies from the freezing Arctic circle all the way to Antarctica and back, experiencing two summers in a single year. These birds travel along specific wind currents to conserve their energy. A biologist remarked, \"They are truly the masters of the sky.\" Because they fly such vast distances, their survival depends on finding reliable food sources in both hemispheres."
+    }
+  },
+  {
+    "id": "g5-p6-comp",
+    "grade": "5",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: The Incredible Arctic Tern",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "The arctic tern is a small, elegant seabird famous for making the longest migration journey of any animal on Earth. Every year, it flies from the freezing Arctic circle all the way to Antarctica and back, experiencing two summers in a single year. These birds travel along specific wind currents to conserve their energy. A biologist remarked, \"They are truly the masters of the sky.\" Because they fly such vast distances, their survival depends on finding reliable food sources in both hemispheres.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g5-p7",
+    "grade": "5",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "The Invention of the Wheel",
+    "hint": "Pay attention to the spelling of 'civilization' and 'vehicles', and note the passive constructions like 'were adapted'.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "The invention of the wheel completely transformed human civilization by allowing people to transport heavy loads across long distances with ease. Over time, wheels were adapted for pottery, heavy chariots, and eventually, modern vehicles. This remarkable technology was transformed by various cultures to suit their specific transport needs. \"Without the wheel, progress would have been extremely slow,\" commented the history teacher. Today, almost every machine relies on this simple circular design, which shows how ancient ideas continue to shape our lives."
+    }
+  },
+  {
+    "id": "g5-p7-comp",
+    "grade": "5",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: The Invention of the Wheel",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "The invention of the wheel completely transformed human civilization by allowing people to transport heavy loads across long distances with ease. Over time, wheels were adapted for pottery, heavy chariots, and eventually, modern vehicles. This remarkable technology was transformed by various cultures to suit their specific transport needs. \"Without the wheel, progress would have been extremely slow,\" commented the history teacher. Today, almost every machine relies on this simple circular design, which shows how ancient ideas continue to shape our lives.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g5-p8",
+    "grade": "5",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "The Volcano Eruption",
+    "hint": "Watch for scientific terms like 'magma' and 'volcanologists', and notice passive verbs like 'is studied by'.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Deep inside the Earth, rock is so hot that it melts into a liquid called magma. When pressure builds up, the magma is pushed up through a volcano and erupts onto the surface as red lava, which eventually cools into solid stone. This process, which can be extremely destructive, is studied by scientists called volcanologists. \"Safety plans must be followed,\" explained the local guide. By studying these powerful natural events, researchers can predict future eruptions and save many lives from danger."
+    }
+  },
+  {
+    "id": "g5-p8-comp",
+    "grade": "5",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: The Volcano Eruption",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Deep inside the Earth, rock is so hot that it melts into a liquid called magma. When pressure builds up, the magma is pushed up through a volcano and erupts onto the surface as red lava, which eventually cools into solid stone. This process, which can be extremely destructive, is studied by scientists called volcanologists. \"Safety plans must be followed,\" explained the local guide. By studying these powerful natural events, researchers can predict future eruptions and save many lives from danger.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g5-p9",
+    "grade": "5",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "Understanding Animal Camouflage",
+    "hint": "Check the spelling of 'camouflage' and 'environments', and notice the dialogue structure.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Camouflage is a useful survival tool that helps animals blend into their surroundings to hide from predators. For instance, the arctic fox grows white fur in winter to match the snow, but changes to brown fur during the summer. This clever technique is utilized by many different species to remain safe. \"How do they change color so quickly?\" asked the curious student. Through natural selection, these creatures have adapted to their environments, making them incredibly difficult for hungry predators to spot."
+    }
+  },
+  {
+    "id": "g5-p9-comp",
+    "grade": "5",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: Understanding Animal Camouflage",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Camouflage is a useful survival tool that helps animals blend into their surroundings to hide from predators. For instance, the arctic fox grows white fur in winter to match the snow, but changes to brown fur during the summer. This clever technique is utilized by many different species to remain safe. \"How do they change color so quickly?\" asked the curious student. Through natural selection, these creatures have adapted to their environments, making them incredibly difficult for hungry predators to spot.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g5-p10",
+    "grade": "5",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "The Coral Reef Ecosystem",
+    "hint": "Notice the spelling of 'ecosystems' and 'delicate', and pay attention to the comma after the introductory clause.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "People often call coral reefs the rainforests of the sea because they support a massive variety of marine life. Although corals look like rocks or plants, they are actually tiny animals that build giant limestone structures over centuries. \"These ecosystems are very delicate,\" warned the marine biologist. Because ocean temperatures are rising, many reefs experience bleaching, which threatens the organisms that rely on them. Protecting these underwater habitats is essential for preserving global ocean biodiversity."
+    }
+  },
+  {
+    "id": "g5-p10-comp",
+    "grade": "5",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: The Coral Reef Ecosystem",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "People often call coral reefs the rainforests of the sea because they support a massive variety of marine life. Although corals look like rocks or plants, they are actually tiny animals that build giant limestone structures over centuries. \"These ecosystems are very delicate,\" warned the marine biologist. Because ocean temperatures are rising, many reefs experience bleaching, which threatens the organisms that rely on them. Protecting these underwater habitats is essential for preserving global ocean biodiversity.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g5-p11",
+    "grade": "5",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "How Trees Talk",
+    "hint": "Notice the spelling of 'possess' and 'nutrients', and look at the punctuation used for the question in the dialogue.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Underneath the forest floor lies a complex network of tiny fungal roots. Through this hidden network, trees share valuable nutrients and send warning signals about dangerous insect pests, which helps the entire forest community survive. \"Do you think trees feel pain?\" inquired the young student. Although trees do not possess brains, they communicate dynamically, showing that they are far more interconnected than scientists previously believed. This cooperative behavior demonstrates that forests are unified organisms rather than simple collections of individual trees."
+    }
+  },
+  {
+    "id": "g5-p11-comp",
+    "grade": "5",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: How Trees Talk",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Underneath the forest floor lies a complex network of tiny fungal roots. Through this hidden network, trees share valuable nutrients and send warning signals about dangerous insect pests, which helps the entire forest community survive. \"Do you think trees feel pain?\" inquired the young student. Although trees do not possess brains, they communicate dynamically, showing that they are far more interconnected than scientists previously believed. This cooperative behavior demonstrates that forests are unified organisms rather than simple collections of individual trees.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g5-p12",
+    "grade": "5",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "Ocean Mapping Exploration",
+    "hint": "Focus on spelling words like 'insufficient' and 'analyzing', and note the dialogue quotation format.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Most of the deep ocean floor remains unmapped and unexplored because traditional methods are insufficient for reaching such extreme depths. Scientists use advanced sonar technology, sending sound waves deep into the water, to map the dark mountains, deep trenches, and volcanic vents on the seabed. \"What mysteries lie down there?\" asked the eager explorer. By analyzing how these sound waves bounce back, researchers can create detailed maps of this alien landscape, which provides critical information about the geological activity of our planet."
+    }
+  },
+  {
+    "id": "g5-p12-comp",
+    "grade": "5",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: Ocean Mapping Exploration",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Most of the deep ocean floor remains unmapped and unexplored because traditional methods are insufficient for reaching such extreme depths. Scientists use advanced sonar technology, sending sound waves deep into the water, to map the dark mountains, deep trenches, and volcanic vents on the seabed. \"What mysteries lie down there?\" asked the eager explorer. By analyzing how these sound waves bounce back, researchers can create detailed maps of this alien landscape, which provides critical information about the geological activity of our planet.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g5-p13",
+    "grade": "5",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "The Compass Navigation",
+    "hint": "Notice the spelling of 'treacherous' and 'consequently', and ensure you capitalize 'North Pole' correctly.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "A compass is a simple tool that has guided sailors for centuries across treacherous seas. Its magnetized metal needle aligns perfectly with the magnetic field of the Earth, pointing steadily toward the geographic North Pole. \"How did ancient mariners navigate without it?\" wondered the history student. Before this invention, sailors relied entirely on the stars, which clouds often blocked from view. Consequently, this brilliant tool revolutionized exploration and allowed brave captains to map unknown territories with greater confidence."
+    }
+  },
+  {
+    "id": "g5-p13-comp",
+    "grade": "5",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: The Compass Navigation",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "A compass is a simple tool that has guided sailors for centuries across treacherous seas. Its magnetized metal needle aligns perfectly with the magnetic field of the Earth, pointing steadily toward the geographic North Pole. \"How did ancient mariners navigate without it?\" wondered the history student. Before this invention, sailors relied entirely on the stars, which clouds often blocked from view. Consequently, this brilliant tool revolutionized exploration and allowed brave captains to map unknown territories with greater confidence.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g5-p14",
+    "grade": "5",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "Sound Waves and Hearing",
+    "hint": "Focus on spelling words like 'vibrations', 'translates', and 'harmonies' while noting direct speech syntax.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Vibrations that travel through the air as invisible waves produce sound. When these sound waves reach our ears, they cause the eardrum to vibrate. Our brain translates these rapid signals into voices, music, and noises. \"How do we hear soft sounds?\" asked the curious girl. In response, the teacher explained that the brain possesses a remarkable ability to amplify faint sounds, which allows us to appreciate subtle harmonies. This intricate process demonstrates the amazing complexity of the human nervous system."
+    }
+  },
+  {
+    "id": "g5-p14-comp",
+    "grade": "5",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: Sound Waves and Hearing",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Vibrations that travel through the air as invisible waves produce sound. When these sound waves reach our ears, they cause the eardrum to vibrate. Our brain translates these rapid signals into voices, music, and noises. \"How do we hear soft sounds?\" asked the curious girl. In response, the teacher explained that the brain possesses a remarkable ability to amplify faint sounds, which allows us to appreciate subtle harmonies. This intricate process demonstrates the amazing complexity of the human nervous system.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g5-p15",
+    "grade": "5",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "The Energy Conservation",
+    "hint": "Check the spelling of 'unplugging', 'footprint', and 'ecosystem', and pay attention to commas in list items.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Conserving energy is essential to protect our planet. By turning off lights, unplugging chargers, and walking instead of driving, we reduce the amount of fossil fuels we burn in factories, which decreases air pollution. \"Can small changes make a difference?\" asked the young boy. Indeed, every action counts when we aim to reduce our carbon footprint. If communities cooperate globally, we can ensure a healthier environment, which will benefit future generations and help restore the natural balance of our delicate ecosystem."
+    }
+  },
+  {
+    "id": "g5-p15-comp",
+    "grade": "5",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: The Energy Conservation",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Conserving energy is essential to protect our planet. By turning off lights, unplugging chargers, and walking instead of driving, we reduce the amount of fossil fuels we burn in factories, which decreases air pollution. \"Can small changes make a difference?\" asked the young boy. Indeed, every action counts when we aim to reduce our carbon footprint. If communities cooperate globally, we can ensure a healthier environment, which will benefit future generations and help restore the natural balance of our delicate ecosystem.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g5-w1",
+    "grade": "5",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Ecosystem & Biology",
+    "hint": "Scientific words related to biology and animal environments.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "ecosystem",
+        "mammal",
+        "predator",
+        "camouflage",
+        "organism",
+        "bacteria",
+        "extinct",
+        "environment",
+        "pollinate",
+        "habitat"
+      ]
+    }
+  },
+  {
+    "id": "g5-w1-speak",
+    "grade": "5",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Ecosystem & Biology",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "ecosystem",
+        "mammal",
+        "predator",
+        "camouflage",
+        "organism",
+        "bacteria",
+        "extinct",
+        "environment",
+        "pollinate",
+        "habitat"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g5-w2",
+    "grade": "5",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Transition & Linking Words",
+    "hint": "Linking words used to connect ideas in complex sentences.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "therefore",
+        "although",
+        "however",
+        "furthermore",
+        "instead",
+        "otherwise",
+        "meanwhile",
+        "consequently",
+        "because",
+        "unless"
+      ]
+    }
+  },
+  {
+    "id": "g5-w2-speak",
+    "grade": "5",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Transition & Linking Words",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "therefore",
+        "although",
+        "however",
+        "furthermore",
+        "instead",
+        "otherwise",
+        "meanwhile",
+        "consequently",
+        "because",
+        "unless"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g5-w3",
+    "grade": "5",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Commonly Confused Words",
+    "hint": "Pay close attention to vowel sequences (ie vs ei) and spelling.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "whether",
+        "weather",
+        "desert",
+        "dessert",
+        "receive",
+        "believe",
+        "through",
+        "thought",
+        "though",
+        "favorite"
+      ]
+    }
+  },
+  {
+    "id": "g5-w3-speak",
+    "grade": "5",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Commonly Confused Words",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "whether",
+        "weather",
+        "desert",
+        "dessert",
+        "receive",
+        "believe",
+        "through",
+        "thought",
+        "though",
+        "favorite"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g5-w4",
+    "grade": "5",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Advanced Adjectives",
+    "hint": "Check spelling endings (-ent, -ous, -ate).",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "mysterious",
+        "delicate",
+        "sufficient",
+        "temporary",
+        "generous",
+        "obedient",
+        "curious",
+        "persistent",
+        "vocabulary",
+        "absolute"
+      ]
+    }
+  },
+  {
+    "id": "g5-w4-speak",
+    "grade": "5",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Advanced Adjectives",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "mysterious",
+        "delicate",
+        "sufficient",
+        "temporary",
+        "generous",
+        "obedient",
+        "curious",
+        "persistent",
+        "vocabulary",
+        "absolute"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g5-w5",
+    "grade": "5",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Social & Historical",
+    "hint": "Key historical and societal terms.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "civilization",
+        "century",
+        "society",
+        "ancient",
+        "barter",
+        "museum",
+        "monument",
+        "tradition",
+        "culture",
+        "heritage"
+      ]
+    }
+  },
+  {
+    "id": "g5-w5-speak",
+    "grade": "5",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Social & Historical",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "civilization",
+        "century",
+        "society",
+        "ancient",
+        "barter",
+        "museum",
+        "monument",
+        "tradition",
+        "culture",
+        "heritage"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g5-w6",
+    "grade": "5",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Descriptive Adjectives",
+    "hint": "Adjectives for expressing characteristics.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "enormous",
+        "brilliant",
+        "cautious",
+        "delightful",
+        "exhausted",
+        "fantastic",
+        "harmonious",
+        "marvelous",
+        "prosperous",
+        "remarkable"
+      ]
+    }
+  },
+  {
+    "id": "g5-w6-speak",
+    "grade": "5",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Descriptive Adjectives",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "enormous",
+        "brilliant",
+        "cautious",
+        "delightful",
+        "exhausted",
+        "fantastic",
+        "harmonious",
+        "marvelous",
+        "prosperous",
+        "remarkable"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g5-w7",
+    "grade": "5",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Scientific Instruments",
+    "hint": "Tools used in science labs and research.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "microscope",
+        "telescope",
+        "barometer",
+        "thermometer",
+        "compass",
+        "balance",
+        "calculator",
+        "magnet",
+        "cylinder",
+        "pipette"
+      ]
+    }
+  },
+  {
+    "id": "g5-w7-speak",
+    "grade": "5",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Scientific Instruments",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "microscope",
+        "telescope",
+        "barometer",
+        "thermometer",
+        "compass",
+        "balance",
+        "calculator",
+        "magnet",
+        "cylinder",
+        "pipette"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g5-w8",
+    "grade": "5",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Geographical Features",
+    "hint": "Landforms and environments on the globe.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "peninsula",
+        "continent",
+        "canyon",
+        "glacier",
+        "volcano",
+        "plateau",
+        "archipelago",
+        "savanna",
+        "waterfall",
+        "swamp"
+      ]
+    }
+  },
+  {
+    "id": "g5-w8-speak",
+    "grade": "5",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Geographical Features",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "peninsula",
+        "continent",
+        "canyon",
+        "glacier",
+        "volcano",
+        "plateau",
+        "archipelago",
+        "savanna",
+        "waterfall",
+        "swamp"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g5-w9",
+    "grade": "5",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Prefix & Suffix Changes",
+    "hint": "Analyzing base words modified by affixes.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "impossible",
+        "disappear",
+        "uncomfortable",
+        "happily",
+        "beautifully",
+        "careless",
+        "misunderstand",
+        "irregular",
+        "subway",
+        "interaction"
+      ]
+    }
+  },
+  {
+    "id": "g5-w9-speak",
+    "grade": "5",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Prefix & Suffix Changes",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "impossible",
+        "disappear",
+        "uncomfortable",
+        "happily",
+        "beautifully",
+        "careless",
+        "misunderstand",
+        "irregular",
+        "subway",
+        "interaction"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g5-w10",
+    "grade": "5",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Spelling Homophones",
+    "hint": "Words that sound identical but differ in spelling and meaning.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "principal",
+        "principle",
+        "stationery",
+        "stationary",
+        "allowed",
+        "aloud",
+        "coarse",
+        "course",
+        "counsel",
+        "council"
+      ]
+    }
+  },
+  {
+    "id": "g5-w10-speak",
+    "grade": "5",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Spelling Homophones",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "principal",
+        "principle",
+        "stationery",
+        "stationary",
+        "allowed",
+        "aloud",
+        "coarse",
+        "course",
+        "counsel",
+        "council"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g5-w11",
+    "grade": "5",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Tricky Words: Spelling Traps I",
+    "hint": "Watch out for vowel placements and silent letters.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "definitely",
+        "business",
+        "beginning",
+        "embarrass",
+        "government",
+        "separate",
+        "foreign",
+        "probably",
+        "height",
+        "parallel"
+      ]
+    }
+  },
+  {
+    "id": "g5-w11-speak",
+    "grade": "5",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Tricky Words: Spelling Traps I",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "definitely",
+        "business",
+        "beginning",
+        "embarrass",
+        "government",
+        "separate",
+        "foreign",
+        "probably",
+        "height",
+        "parallel"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g5-w12",
+    "grade": "5",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Tricky Words: Spelling Traps II",
+    "hint": "Pay close attention to double consonants and suffix spelling rules.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "independent",
+        "successful",
+        "calendar",
+        "scissors",
+        "temperature",
+        "restaurant",
+        "necessary",
+        "library",
+        "medicine",
+        "surprise"
+      ]
+    }
+  },
+  {
+    "id": "g5-w12-speak",
+    "grade": "5",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Tricky Words: Spelling Traps II",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "independent",
+        "successful",
+        "calendar",
+        "scissors",
+        "temperature",
+        "restaurant",
+        "necessary",
+        "library",
+        "medicine",
+        "surprise"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g5-w13",
+    "grade": "5",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Verbal Idioms",
+    "hint": "Common two-word phrasal verbs used in everyday English.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "break down",
+        "clean up",
+        "give up",
+        "look after",
+        "run out",
+        "put off",
+        "set up",
+        "take off",
+        "turn on",
+        "call off"
+      ]
+    }
+  },
+  {
+    "id": "g5-w13-speak",
+    "grade": "5",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Verbal Idioms",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "break down",
+        "clean up",
+        "give up",
+        "look after",
+        "run out",
+        "put off",
+        "set up",
+        "take off",
+        "turn on",
+        "call off"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g5-w14",
+    "grade": "5",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Silent Consonants: GN, MB, KN, WR",
+    "hint": "Words featuring silent letter combinations.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "gnat",
+        "sign",
+        "climb",
+        "thumb",
+        "knee",
+        "knife",
+        "write",
+        "wrong",
+        "wrap",
+        "wrist"
+      ]
+    }
+  },
+  {
+    "id": "g5-w14-speak",
+    "grade": "5",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Silent Consonants: GN, MB, KN, WR",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "gnat",
+        "sign",
+        "climb",
+        "thumb",
+        "knee",
+        "knife",
+        "write",
+        "wrong",
+        "wrap",
+        "wrist"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g5-w15",
+    "grade": "5",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Suffix Spelling Changes",
+    "hint": "Spelling rules when attaching suffixes (drop-e, double consonant, change y to i).",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "having",
+        "hoping",
+        "running",
+        "stopped",
+        "studied",
+        "babies",
+        "carried",
+        "sillier",
+        "prettier",
+        "happier"
+      ]
+    }
+  },
+  {
+    "id": "g5-w15-speak",
+    "grade": "5",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Suffix Spelling Changes",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "having",
+        "hoping",
+        "running",
+        "stopped",
+        "studied",
+        "babies",
+        "carried",
+        "sillier",
+        "prettier",
+        "happier"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g5-w16",
+    "grade": "5",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Homophones: Capital & Capitol",
+    "hint": "Advanced homophones with identical pronunciation but separate orthographies.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "capital",
+        "capitol",
+        "stationary",
+        "stationery",
+        "principal",
+        "principle",
+        "complement",
+        "compliment"
+      ]
+    }
+  },
+  {
+    "id": "g5-w16-speak",
+    "grade": "5",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Homophones: Capital & Capitol",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "capital",
+        "capitol",
+        "stationary",
+        "stationery",
+        "principal",
+        "principle",
+        "complement",
+        "compliment"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g5-w17",
+    "grade": "5",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Silent Letters b, c, s, p",
+    "hint": "Silent consonant traps. Make sure to write the silent letters.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "doubt",
+        "debt",
+        "subtle",
+        "muscle",
+        "scissors",
+        "island",
+        "debris",
+        "receipt"
+      ]
+    }
+  },
+  {
+    "id": "g5-w17-speak",
+    "grade": "5",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Silent Letters b, c, s, p",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "doubt",
+        "debt",
+        "subtle",
+        "muscle",
+        "scissors",
+        "island",
+        "debris",
+        "receipt"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g5-w18",
+    "grade": "5",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Spelling Demons",
+    "hint": "High-frequency spelling demons containing counter-intuitive spelling patterns.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "definitely",
+        "separate",
+        "necessary",
+        "embarrassed",
+        "rhythm",
+        "calendar",
+        "library",
+        "restaurant"
+      ]
+    }
+  },
+  {
+    "id": "g5-w18-speak",
+    "grade": "5",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Spelling Demons",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "definitely",
+        "separate",
+        "necessary",
+        "embarrassed",
+        "rhythm",
+        "calendar",
+        "library",
+        "restaurant"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g5-w19",
+    "grade": "5",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Fry Fifth 100: Set A",
+    "hint": "Important structural vocabulary for fifth-grade writing.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "name",
+        "good",
+        "sentence",
+        "man",
+        "think",
+        "say",
+        "great",
+        "where"
+      ]
+    }
+  },
+  {
+    "id": "g5-w19-speak",
+    "grade": "5",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Fry Fifth 100: Set A",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "name",
+        "good",
+        "sentence",
+        "man",
+        "think",
+        "say",
+        "great",
+        "where"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g5-w20",
+    "grade": "5",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Fry Fifth 100: Set B",
+    "hint": "Words commonly misspelled by intermediate primary students.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "help",
+        "through",
+        "much",
+        "before",
+        "line",
+        "right",
+        "too",
+        "mean"
+      ]
+    }
+  },
+  {
+    "id": "g5-w20-speak",
+    "grade": "5",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Fry Fifth 100: Set B",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "help",
+        "through",
+        "much",
+        "before",
+        "line",
+        "right",
+        "too",
+        "mean"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g5-w21",
+    "grade": "5",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Fry Fifth 100: Set C",
+    "hint": "Key conceptual words from high-frequency core lists.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "old",
+        "any",
+        "same",
+        "tell",
+        "boy",
+        "follow",
+        "came",
+        "want"
+      ]
+    }
+  },
+  {
+    "id": "g5-w21-speak",
+    "grade": "5",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Fry Fifth 100: Set C",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "old",
+        "any",
+        "same",
+        "tell",
+        "boy",
+        "follow",
+        "came",
+        "want"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  }
+]

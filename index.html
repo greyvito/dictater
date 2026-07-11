@@ -3,51 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dictater — English Listening & Dictation Practice</title>
-  <meta name="description" content="Dictater helps primary school students master English spelling, listening comprehension, and dictation through interactive exercises with speech synthesis.">
+  <title>Dictater — English Learning Studio</title>
+  <meta name="description" content="English learning for PreK through Grade 6 — listening, speaking, reading, writing, phonics, and grammar.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800&family=JetBrains+Mono:wght@400;500;600&family=Source+Sans+3:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="index.css">
-  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="/index.css">
+  <link rel="manifest" href="/manifest.json">
   <meta name="theme-color" content="#F6F3EE">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <link rel="apple-touch-icon" href="images/icon.svg">
-  <script src="https://js.puter.com/v2/" async defer onerror="window.puterLoadFailed=true; console.warn('[Dictater] Puter.js failed to load — cloud voices disabled.');"></script>
 </head>
 <body>
-
   <header class="site-hero">
     <div class="hero-grid">
       <div class="hero-content">
         <div class="logo-container">
           <div class="logo-icon">
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.4z"/>
-            </svg>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.53c-.26-.81-1-1.4-1.9-1.4h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.4z"/></svg>
           </div>
           <span class="hero-preview-label">Dictater</span>
         </div>
-        <h1 class="hero-headline">Listen, <span class="hero-inline-chip" aria-hidden="true">Aa</span> write, and catch every word.</h1>
-        <p class="hero-lede">A calm listening studio for primary school English. Hear a passage, write what you hear, and see exactly which words need more practice.</p>
-        <a href="#workspace" class="btn-primary hero-cta">Start practicing</a>
+        <h1 class="hero-headline">Listen, <span class="hero-inline-chip" aria-hidden="true">Aa</span> speak, read, and write.</h1>
+        <p class="hero-lede">A calm learning studio for PreK through Grade 6. Build literacy skills across listening, speaking, reading, and writing.</p>
+        <a href="#workspace" class="btn-primary hero-cta">Start learning</a>
+        <div id="recommended-lesson" class="mt-sm"></div>
       </div>
       <aside class="hero-preview" aria-hidden="true">
         <div class="hero-preview-card">
-          <span class="hero-preview-label">Today's lesson</span>
-          <p class="hero-preview-title">Morning at the park</p>
-          <div class="hero-preview-lines">
-            <div class="hero-preview-line"></div>
-            <div class="hero-preview-line"></div>
-            <div class="hero-preview-line"></div>
-          </div>
-          <div class="hero-preview-play">
-            <div class="hero-preview-dot"></div>
-            <div class="hero-preview-bars">
-              <span></span><span></span><span></span><span></span><span></span>
-            </div>
-          </div>
+          <span class="hero-preview-label">Today's path</span>
+          <p class="hero-preview-title">Grade → Skill → Lesson</p>
+          <div class="hero-preview-lines"><div class="hero-preview-line"></div><div class="hero-preview-line"></div></div>
         </div>
       </aside>
     </div>
@@ -55,246 +39,72 @@
 
   <main>
     <section class="glass-card sidebar-panel">
-      <div>
-        <h3 class="section-title">Mode</h3>
-        <div class="pill-group mt-sm">
-          <button id="btn-mode-curriculum" class="pill-btn active">Curriculum</button>
-          <button id="btn-mode-custom" class="pill-btn">Custom Text</button>
-        </div>
+      <div class="setup-step">
+        <h3 class="section-title">1. Grade</h3>
+        <div id="grade-filters" class="pill-group pill-group--tight"></div>
       </div>
-
-      <div id="format-selection-container">
-        <h3 class="section-title">Type</h3>
-        <div class="pill-group mt-sm">
-          <button id="btn-format-passage" class="pill-btn active">Passages</button>
-          <button id="btn-format-words" class="pill-btn">Word Lists</button>
-        </div>
+      <div class="setup-step">
+        <h3 class="section-title">2. Skill Area</h3>
+        <div id="skill-filters" class="pill-group pill-group--tight skill-filter-grid"></div>
       </div>
-
-      <div id="curriculum-filters">
-        <div class="filter-block stack-sm">
-          <h4 class="input-label input-label--spaced">Level / Grade</h4>
-          <div class="pill-group pill-group--tight">
-            <button class="pill-btn grade-filter" data-grade="K">Kinder</button>
-            <button class="pill-btn grade-filter" data-grade="1">Grade 1</button>
-            <button class="pill-btn grade-filter" data-grade="2">Grade 2</button>
-          </div>
-          <div class="pill-group pill-group--tight">
-            <button class="pill-btn grade-filter active" data-grade="3">Grade 3</button>
-            <button class="pill-btn grade-filter" data-grade="4">Grade 4</button>
-            <button class="pill-btn grade-filter" data-grade="5">Grade 5</button>
-            <button class="pill-btn grade-filter" data-grade="6">Grade 6</button>
-          </div>
-        </div>
-
-        <div id="difficulty-filter-container" class="hidden filter-block">
-          <h4 class="input-label input-label--spaced">Difficulty</h4>
-          <div class="pill-group pill-group--tight">
-            <button class="pill-btn difficulty-filter active" data-difficulty="all">All</button>
-            <button class="pill-btn difficulty-filter" data-difficulty="beginner">Beginner</button>
-            <button class="pill-btn difficulty-filter" data-difficulty="intermediate">Intermediate</button>
-            <button class="pill-btn difficulty-filter" data-difficulty="advanced">Advanced</button>
-          </div>
-        </div>
-
-        <div>
-          <h4 class="input-label input-label--spaced">Exercises</h4>
-          <div id="exercise-list" class="exercise-list" role="listbox" aria-label="Available exercises"></div>
-        </div>
+      <div class="setup-step">
+        <h3 class="section-title">3. Lessons</h3>
+        <div id="exercise-list" class="exercise-list" role="listbox"></div>
       </div>
-
-      <div id="custom-text-panel" class="custom-panel hidden stack-md">
-        <h4 class="input-label">Quick Practice</h4>
-        <textarea id="custom-dictation-text" class="dictation-input dictation-input--short" placeholder="Type or paste any English text, words, or paragraph here..."></textarea>
-        <button id="btn-load-custom" class="btn-primary text-center">Load Quick Text</button>
-
-        <div class="divider-top stack-sm">
-          <h4 class="input-label">Saved Lessons</h4>
-          <button id="btn-open-lesson-creator" class="btn-secondary btn-compact">Create Custom Lesson</button>
-          <div id="custom-saved-list" class="exercise-list exercise-list--short"></div>
-        </div>
-      </div>
-
-      <div class="sidebar-footer divider-top">
-        <button id="btn-open-dashboard" class="btn-primary btn-block">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
-            <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
-          </svg>
-          Student Dashboard
-        </button>
-        <button id="btn-settings-toggle" class="settings-toggle settings-toggle--flush">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-            <circle cx="12" cy="12" r="3"></circle>
-            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-          </svg>
-          Speech & Voice Settings
-        </button>
+      <div class="sidebar-footer divider-top stack-sm">
+        <button type="button" id="btn-placement" class="btn-secondary btn-block">Take Placement Mini-Test</button>
+        <button type="button" id="btn-open-dashboard" class="btn-primary btn-block">Student Dashboard</button>
+        <button type="button" id="btn-open-lesson-creator" class="btn-secondary btn-compact btn-block">Create Custom Lesson</button>
+        <button type="button" id="btn-settings-toggle" class="settings-toggle settings-toggle--flush">Speech Settings</button>
       </div>
     </section>
 
     <section id="workspace" class="glass-card workspace-panel workspace-card">
       <div class="workout-header">
         <div>
-          <div class="workspace-title-row">
-            <h2 id="current-title">Curriculum loading...</h2>
-            <button id="btn-title-speaker" class="btn-secondary-circle btn-icon-sm" title="Play title aloud" aria-label="Play title aloud">
-              <svg id="title-speaker-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-                <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-              </svg>
-            </button>
-          </div>
-          <p id="current-meta">Intermediate Primary English</p>
+          <h2 id="current-title">Choose a lesson</h2>
+          <p id="current-meta">PreK–Grade 6 English Learning Studio</p>
+          <p id="lesson-hint" class="settings-note"></p>
         </div>
-        <div class="workspace-actions">
-          <button id="btn-show-text-global" class="btn-secondary btn-compact">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-              <circle cx="12" cy="12" r="3"></circle>
-            </svg>
-            Show Text
-          </button>
-          <div id="level-badge-container"></div>
-        </div>
+        <div id="level-badge-container"></div>
       </div>
-
-      <div id="global-text-peek" class="original-peek hidden"></div>
-
-      <div class="control-hub">
-        <div class="play-row">
-          <button id="btn-replay" class="btn-secondary-circle" title="Replay from start" aria-label="Replay from start">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"></path>
-            </svg>
-          </button>
-          <button id="btn-play-pause" class="btn-circle" title="Play / Pause" aria-label="Play or Pause audio">
-            <svg id="play-icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <polygon points="5 3 19 12 5 21 5 3"></polygon>
-            </svg>
-            <svg id="pause-icon" class="hidden" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <rect x="6" y="4" width="4" height="16"></rect>
-              <rect x="14" y="4" width="4" height="16"></rect>
-            </svg>
-          </button>
-          <div class="waveform" id="visualizer" role="status" aria-label="Audio playback indicator">
-            <div class="waveform-bar"></div>
-            <div class="waveform-bar"></div>
-            <div class="waveform-bar"></div>
-            <div class="waveform-bar"></div>
-            <div class="waveform-bar"></div>
-            <div class="waveform-bar"></div>
-          </div>
-        </div>
-        <div class="speed-picker" role="radiogroup" aria-label="Playback speed">
-          <span>Speed:</span>
-          <button class="speed-btn" data-speed="0.5" role="radio" aria-checked="false">0.5x</button>
-          <button class="speed-btn" data-speed="0.75" role="radio" aria-checked="false">0.75x</button>
-          <button class="speed-btn active" data-speed="1.0" role="radio" aria-checked="true">1.0x</button>
-        </div>
-      </div>
-
-      <div id="phrase-navigation-container" class="phrase-nav">
-        <div class="phrase-nav-actions">
-          <button id="btn-phrase-prev" class="pill-btn btn-compact-sm">&larr; Prev Phrase</button>
-          <button id="btn-phrase-play" class="btn-primary btn-compact-sm">Play Phrase</button>
-          <button id="btn-phrase-next" class="pill-btn btn-compact-sm">Next Phrase &rarr;</button>
-        </div>
-        <span id="phrase-progress-indicator" class="phrase-progress">Phrase 1 of 4</span>
-      </div>
-
-      <div id="passage-workspace-container" class="writing-workspace">
-        <div class="input-section">
-          <div class="workout-header">
-            <h4 class="input-label">Your Writing Area</h4>
-            <p id="word-count" class="word-count-label">Words: 0</p>
-          </div>
-          <textarea id="student-writing" class="dictation-input" placeholder="Listen to the audio, then write here exactly what you hear..."></textarea>
-        </div>
-        <div class="actions-row">
-          <button id="btn-clear" class="btn-secondary">Clear Text</button>
-          <button id="btn-check-dictation" class="btn-accent">Check My Answer</button>
-        </div>
-      </div>
-
-      <div id="word-workspace-container" class="hidden spelling-workspace">
-        <div class="input-section">
-          <h4 class="input-label input-label--spaced">Spell the Word You Hear</h4>
-          <input type="text" id="word-spelling-input" class="dictation-input dictation-input--spelling" autocomplete="off" spellcheck="false" placeholder="Type the word here...">
-        </div>
-        <div class="actions-row">
-          <p class="progress-label">Progress: <strong id="word-spelling-progress">Word 1 of 10</strong></p>
-          <div class="btn-row-sm">
-            <button id="btn-word-skip" class="btn-secondary btn-compact">Skip</button>
-            <button id="btn-word-submit" class="btn-accent btn-compact">Submit Word</button>
-          </div>
-        </div>
-        <div id="word-results-report" class="result-card feedback hidden">
-          <div class="result-header">
-            <h3 class="section-title section-title--plain">Spelling Test Summary</h3>
-            <div id="word-evaluation-score" class="result-score">0 / 0 Correct</div>
-          </div>
-          <div id="word-spelling-diff" class="diff-container"></div>
-        </div>
-      </div>
-
-      <div id="results-panel" class="result-card feedback hidden">
-        <div class="result-header">
-          <h3 class="section-title section-title--plain">Evaluation Results</h3>
-          <div id="evaluation-score" class="result-score">0% Accuracy</div>
-        </div>
-        <p class="input-label">Word Comparison:</p>
-        <div id="diff-results" class="diff-container"></div>
-        <div class="btn-row">
-          <button id="btn-toggle-peek" class="btn-secondary btn-compact">Show Original Passage</button>
-          <button id="btn-try-again" class="btn-primary btn-compact">Try Again</button>
-        </div>
-        <div id="original-text-peek" class="original-peek hidden"></div>
+      <div id="activity-workspace" class="activity-workspace">
+        <p class="empty-state">Select a grade, skill area, and lesson to begin.</p>
       </div>
     </section>
   </main>
 
-  <div id="settings-dropdown" class="settings-dropdown hidden" role="dialog" aria-label="Speech Configuration">
+  <section class="glass-card auth-panel">
+    <h3 class="section-title">Account (optional)</h3>
+    <p id="auth-status" class="settings-note">Offline mode — progress saved on this device</p>
+    <div class="auth-row">
+      <input type="email" id="auth-email" class="settings-select" placeholder="Email for cloud sync">
+      <button type="button" id="btn-auth-login" class="btn-primary btn-compact">Sign In</button>
+      <button type="button" id="btn-auth-logout" class="btn-secondary btn-compact">Sign Out</button>
+    </div>
+  </section>
+
+  <div id="settings-dropdown" class="settings-dropdown hidden" role="dialog">
     <div class="result-header">
       <h4 class="input-label section-title--plain">Speech Configuration</h4>
-      <button id="btn-settings-close" class="modal-close modal-close--sm" aria-label="Close settings">&times;</button>
+      <button type="button" id="btn-settings-close" class="modal-close modal-close--sm">&times;</button>
     </div>
     <div class="settings-row">
       <label class="input-label" for="voice-engine">TTS Engine</label>
       <select id="voice-engine" class="settings-select">
-        <option value="webspeech">Native Web Speech API (Local & Free)</option>
-        <option value="puter">Puter AI Voices (Natural Cloud TTS)</option>
-        <option value="kokoro">Kokoro TTS (Local Neural — High Quality)</option>
-        <option value="kokoro-mlx">Local kokoro-mlx (M1 Optimized)</option>
-        <option value="piper">Local Piper TTS (Fast Offline)</option>
-        <option value="f5-tts">Local F5-TTS (Flow Matching)</option>
-        <option value="chatterbox">Local Chatterbox TTS (Zero-Shot)</option>
+        <option value="webspeech">Native Web Speech API</option>
       </select>
     </div>
-    <div class="settings-row" id="accent-selection-row">
-      <label class="input-label" for="voice-accent">Accent Preference</label>
-      <select id="voice-accent" class="settings-select">
-        <option value="US">American English (US)</option>
-        <option value="UK">British/Commonwealth English (UK)</option>
-      </select>
-    </div>
-    <div class="settings-row" id="voice-selection-row">
-      <label class="input-label" for="voice-select">Voice Model</label>
-      <select id="voice-select" class="settings-select"></select>
-    </div>
-    <p class="settings-note">
-      <strong>Note:</strong> Microsoft Edge, Google Chrome, and Apple Safari offer highly natural native voices for English. Feel free to toggle between local and cloud AI engines.
-    </p>
   </div>
 
-  <div id="lesson-creator-modal" class="settings-dropdown modal-centered hidden" role="dialog" aria-label="Create Custom Lesson">
+  <div id="lesson-creator-modal" class="settings-dropdown modal-centered hidden" role="dialog">
     <div class="result-header">
       <h4 class="input-label section-title--plain">Create Custom Lesson</h4>
-      <button id="btn-creator-close" class="modal-close modal-close--sm" aria-label="Close lesson creator">&times;</button>
+      <button type="button" id="btn-creator-close" class="modal-close modal-close--sm">&times;</button>
     </div>
     <div class="settings-row">
-      <label class="input-label" for="creator-title">Lesson Title</label>
-      <input type="text" id="creator-title" class="settings-select" placeholder="e.g. Science Vocabulary Lists">
+      <label class="input-label" for="creator-title">Title</label>
+      <input type="text" id="creator-title" class="settings-select">
     </div>
     <div class="settings-row">
       <label class="input-label" for="creator-type">Type</label>
@@ -305,74 +115,32 @@
     </div>
     <div class="settings-row">
       <label class="input-label" for="creator-content">Content</label>
-      <textarea id="creator-content" class="dictation-input dictation-input--short" placeholder="For Passage: Type full text. For Word List: Type words separated by commas (e.g. apple, banana, cherry)."></textarea>
+      <textarea id="creator-content" class="dictation-input dictation-input--short"></textarea>
     </div>
     <div class="settings-row">
-      <label class="input-label" for="creator-hint">Hint / Tips</label>
-      <input type="text" id="creator-hint" class="settings-select" placeholder="e.g. Focus on spelling double letters.">
+      <label class="input-label" for="creator-hint">Hint</label>
+      <input type="text" id="creator-hint" class="settings-select">
     </div>
-    <button id="btn-creator-save" class="btn-accent text-center btn-block">Save Custom Lesson</button>
+    <button type="button" id="btn-creator-save" class="btn-accent btn-block">Save</button>
   </div>
 
-  <div id="dashboard-modal" class="settings-dropdown modal-lg hidden" role="dialog" aria-label="Student Progress Dashboard">
+  <div id="dashboard-modal" class="settings-dropdown modal-lg hidden" role="dialog">
     <div class="result-header modal-header">
       <h3 class="section-title section-title--plain">Student Progress</h3>
-      <button id="btn-dashboard-close" class="modal-close" aria-label="Close dashboard">&times;</button>
+      <button type="button" id="btn-dashboard-close" class="modal-close">&times;</button>
     </div>
-
     <div class="dashboard-stats">
-      <div class="stat-tile stat-tile--featured">
-        <span id="stat-completed" class="stat-value stat-value--primary">0</span>
-        <span class="stat-label">Lessons completed</span>
-      </div>
-      <div class="stat-tile">
-        <span id="stat-accuracy" class="stat-value stat-value--success">0%</span>
-        <span class="stat-label">Avg accuracy</span>
-      </div>
-      <div class="stat-tile">
-        <span id="stat-streak" class="stat-value stat-value--gold">0 Days</span>
-        <span class="stat-label">Daily streak</span>
-      </div>
+      <div class="stat-tile stat-tile--featured"><span id="stat-completed" class="stat-value stat-value--primary">0</span><span class="stat-label">Completed</span></div>
+      <div class="stat-tile"><span id="stat-accuracy" class="stat-value stat-value--success">0%</span><span class="stat-label">Avg accuracy</span></div>
+      <div class="stat-tile"><span id="stat-streak" class="stat-value stat-value--gold">0</span><span class="stat-label">Streak</span></div>
+      <div class="stat-tile"><span id="stat-speaking" class="stat-value">0</span><span class="stat-label">Speaking sessions</span></div>
     </div>
-
-    <div class="mb-md">
-      <h4 class="input-label input-label--spaced">Collectible Badges</h4>
-      <div id="badges-grid" class="badges-grid"></div>
-    </div>
-
-    <div>
-      <h4 class="input-label input-label--spaced">Recent Activity</h4>
-      <div id="dashboard-activity-log" class="diff-container activity-log-scroll">
-        <p class="empty-state">No activity recorded yet. Start practicing to log scores.</p>
-      </div>
-    </div>
+    <div class="mb-md"><h4 class="input-label">Badges</h4><div id="badges-grid" class="badges-grid"></div></div>
+    <div><h4 class="input-label">Recent Activity</h4><div id="dashboard-activity-log" class="diff-container activity-log-scroll"></div></div>
   </div>
 
-  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
-
-  <footer>
-    <p>Dictater &copy; 2026. Designed for Intermediate Primary School English Dictation (Cambridge American Standard).</p>
-  </footer>
-
-  <script>window.DICTATER_CURRICULUM = {};</script>
-  <script src="curriculum/gradeK.js"></script>
-  <script src="curriculum/grade1.js"></script>
-  <script src="curriculum/grade2.js"></script>
-  <script src="curriculum/grade3.js"></script>
-  <script src="curriculum/grade4.js"></script>
-  <script src="curriculum/grade5.js"></script>
-  <script src="curriculum/grade6.js"></script>
-  <script src="app.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('./sw.js').then((reg) => {
-          console.log('PWA Service Worker registered successfully:', reg.scope);
-        }).catch((err) => {
-          console.error('PWA Service Worker registration failed:', err);
-        });
-      });
-    }
-  </script>
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+  <footer><p>Dictater &copy; 2026 — PreK to Grade 6 English Learning Studio</p></footer>
+  <script type="module" src="/src/main.js"></script>
 </body>
 </html>

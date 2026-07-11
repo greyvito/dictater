@@ -1464,3 +1464,34 @@ footer {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ---- ELA Platform extensions ---- */
+.setup-step { margin-bottom: var(--space-4); }
+.skill-filter-grid { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+.skill-filter-grid .pill-btn { min-height: 44px; }
+.activity-workspace { min-height: 320px; }
+.choice-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: var(--space-3); margin-top: var(--space-3); }
+.choice-btn { min-height: 48px; width: 100%; }
+.choice-correct { background: var(--primary) !important; color: var(--bg-card) !important; }
+.choice-wrong { border-color: var(--danger, #C46B5D) !important; }
+.speak-target-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  font-size: var(--text-xl);
+  text-align: center;
+  margin: var(--space-3) 0;
+}
+.speak-controls { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
+.speak-mic-btn { min-width: 56px; min-height: 56px; }
+.speaking-workspace, .prek-activity, .comprehension-workspace, .phonics-workspace { padding: var(--space-2) 0; }
+.tile-bank, .tile-answer { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: var(--space-3) 0; min-height: 48px; }
+.auth-panel { max-width: 1400px; margin: var(--space-6) auto; padding: var(--space-5); }
+.auth-row { display: flex; flex-wrap: wrap; gap: var(--space-2); align-items: center; }
+.auth-row input { flex: 1; min-width: 200px; }
+.toast-success { border-left: 4px solid var(--primary); }
+.toast-warning { border-left: 4px solid var(--accent); }
+.toast-error { border-left: 4px solid #C46B5D; }
+.toast-achievement { border-left: 4px solid var(--accent); }
+

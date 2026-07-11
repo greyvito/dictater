@@ -1,0 +1,1670 @@
+[
+  {
+    "id": "g6-p1",
+    "grade": "6",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "The Great Barrier Reef",
+    "hint": "Focus on geographical capitalization, direct speech, and first conditionals.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "The Great Barrier Reef, located off the coast of Australia, is the largest coral reef system in the world. It is so vast that it can even be seen from space. Thousands of unique species, including colorful fish, sea turtles, and sharks, rely on this delicate ecosystem for survival. If tourists visit the reef, they must swim carefully so that they do not damage the fragile corals. A guide recently explained, \"We must protect this natural wonder for future generations to enjoy.\" Hopefully, global conservation efforts will help keep the ocean clean and save this beautiful habitat."
+    }
+  },
+  {
+    "id": "g6-p1-comp",
+    "grade": "6",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: The Great Barrier Reef",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "The Great Barrier Reef, located off the coast of Australia, is the largest coral reef system in the world. It is so vast that it can even be seen from space. Thousands of unique species, including colorful fish, sea turtles, and sharks, rely on this delicate ecosystem for survival. If tourists visit the reef, they must swim carefully so that they do not damage the fragile corals. A guide recently explained, \"We must protect this natural wonder for future generations to enjoy.\" Hopefully, global conservation efforts will help keep the ocean clean and save this beautiful habitat.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g6-p2",
+    "grade": "6",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "Renewable Energy Sources",
+    "hint": "Practice spelling renewable, turbines, geothermal, sustainable, and second conditionals.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "As global energy demands rapidly increase, scientists are actively developing cleaner ways to power our modern world. Renewable energy resources, such as solar panels, wind turbines, and geothermal stations, generate clean electricity without emitting harmful greenhouse gases. If we were to transition fully to these sustainable sources, we would drastically reduce carbon emissions and combat climate change. Many engineers agree that storing this green energy remains a major challenge. \"We need better battery systems,\" explained a leading researcher during a conference last week. Despite these challenges, green technology continues to improve, offering hope for a cleaner, healthier future."
+    }
+  },
+  {
+    "id": "g6-p2-comp",
+    "grade": "6",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: Renewable Energy Sources",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "As global energy demands rapidly increase, scientists are actively developing cleaner ways to power our modern world. Renewable energy resources, such as solar panels, wind turbines, and geothermal stations, generate clean electricity without emitting harmful greenhouse gases. If we were to transition fully to these sustainable sources, we would drastically reduce carbon emissions and combat climate change. Many engineers agree that storing this green energy remains a major challenge. \"We need better battery systems,\" explained a leading researcher during a conference last week. Despite these challenges, green technology continues to improve, offering hope for a cleaner, healthier future.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g6-p3",
+    "grade": "6",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "The Legend of Atlantis",
+    "hint": "Check spelling of philosophers, civilization, archaeologist, and conditional constructions.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "For centuries, creative philosophers and bold explorers have wondered about the mythical island of Atlantis, which was first described by the ancient Greek writer Plato. According to legend, this advanced civilization boasted incredible technology and wealth before it sank beneath the ocean waves in a single day. Some historians suggest that the story was merely a fable, whereas others argue that a real natural disaster destroyed the city. \"I believe the truth lies hidden under the seabed,\" declared a passionate underwater archaeologist during a podcast. If we were to discover the ruins, it would surely revolutionize our understanding of early human history."
+    }
+  },
+  {
+    "id": "g6-p3-comp",
+    "grade": "6",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: The Legend of Atlantis",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "For centuries, creative philosophers and bold explorers have wondered about the mythical island of Atlantis, which was first described by the ancient Greek writer Plato. According to legend, this advanced civilization boasted incredible technology and wealth before it sank beneath the ocean waves in a single day. Some historians suggest that the story was merely a fable, whereas others argue that a real natural disaster destroyed the city. \"I believe the truth lies hidden under the seabed,\" declared a passionate underwater archaeologist during a podcast. If we were to discover the ruins, it would surely revolutionize our understanding of early human history.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g6-p4",
+    "grade": "6",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "The Purpose of Sleep",
+    "hint": "Focus on words ending in -ly, relative clauses, and direct speech punctuation.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Although we might think of sleep as a simple time of complete rest, our brains remain remarkably active throughout the night. During these quiet hours, the brain organizes memories, repairs damaged tissues, and flushes out toxic waste. If you do not get enough sleep, you will likely feel tired, grumpy, and unable to focus the next morning. A doctor recently warned, \"Children who sleep poorly often struggle to learn new lessons at school.\" Therefore, establishing a peaceful bedtime routine is essential if one wishes to maintain a healthy body and a sharp mind."
+    }
+  },
+  {
+    "id": "g6-p4-comp",
+    "grade": "6",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: The Purpose of Sleep",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Although we might think of sleep as a simple time of complete rest, our brains remain remarkably active throughout the night. During these quiet hours, the brain organizes memories, repairs damaged tissues, and flushes out toxic waste. If you do not get enough sleep, you will likely feel tired, grumpy, and unable to focus the next morning. A doctor recently warned, \"Children who sleep poorly often struggle to learn new lessons at school.\" Therefore, establishing a peaceful bedtime routine is essential if one wishes to maintain a healthy body and a sharp mind.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g6-p5",
+    "grade": "6",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "The Importance of Biodiversity",
+    "hint": "Focus on complex words: biodiversity, microorganisms, environmental, and conditional clauses.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Biodiversity refers to the incredible variety of life on Earth, including all plants, animals, and microorganisms. Every single species plays a critical role in maintaining the balance of nature. Consequently, the loss of even one species can disrupt the entire food web and threaten other organisms. If ecosystems are not protected, human communities will also suffer from the consequences of environmental damage. \"We must act now before it is too late,\" declared an environmental activist during a school assembly. Unless we take immediate action to preserve these habitats, we might lose precious resources that are essential for our survival."
+    }
+  },
+  {
+    "id": "g6-p5-comp",
+    "grade": "6",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: The Importance of Biodiversity",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Biodiversity refers to the incredible variety of life on Earth, including all plants, animals, and microorganisms. Every single species plays a critical role in maintaining the balance of nature. Consequently, the loss of even one species can disrupt the entire food web and threaten other organisms. If ecosystems are not protected, human communities will also suffer from the consequences of environmental damage. \"We must act now before it is too late,\" declared an environmental activist during a school assembly. Unless we take immediate action to preserve these habitats, we might lose precious resources that are essential for our survival.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g6-p6",
+    "grade": "6",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "The Exploration of Mars",
+    "hint": "Key vocabulary: fascinated, astronomers, successfully, microbial, and subjunctive/conditional verbs.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Mars has fascinated astronomers for generations because of its reddish hue and striking similarities to Earth. Several robotic rovers have successfully traveled across its dusty, windswept surface, analyzing soil samples and searching for evidence of ancient liquid water. If scientists were to discover signs of past microbial life, it would prove that Earth is not the only planet capable of supporting living organisms. One scientist excitedly stated, \"We might find answers sooner than we think!\" Although sending humans to Mars presents massive engineering challenges, researchers are determined to make this ambitious mission a reality in the near future."
+    }
+  },
+  {
+    "id": "g6-p6-comp",
+    "grade": "6",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: The Exploration of Mars",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Mars has fascinated astronomers for generations because of its reddish hue and striking similarities to Earth. Several robotic rovers have successfully traveled across its dusty, windswept surface, analyzing soil samples and searching for evidence of ancient liquid water. If scientists were to discover signs of past microbial life, it would prove that Earth is not the only planet capable of supporting living organisms. One scientist excitedly stated, \"We might find answers sooner than we think!\" Although sending humans to Mars presents massive engineering challenges, researchers are determined to make this ambitious mission a reality in the near future.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g6-p7",
+    "grade": "6",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "How Glaciers Shape the Earth",
+    "hint": "Observe the spelling of glaciers, immense, landscape, disappearing, and second conditionals.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Glaciers are massive, moving rivers of ice that slowly creep down steep mountain valleys over thousands of years. As these heavy sheets of ice slide, their immense weight crushes solid rock and carves deep valleys, which dramatically reshapes the local landscape. If you stood near a glacier, you would likely hear the deep, rumbling sounds of ice shifting. A local park ranger explained, \"These giants are slowly disappearing because of rising global temperatures.\" By studying glaciers, scientists can learn how the Earth looked in the ancient past, helping us prepare for future environmental changes."
+    }
+  },
+  {
+    "id": "g6-p7-comp",
+    "grade": "6",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: How Glaciers Shape the Earth",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Glaciers are massive, moving rivers of ice that slowly creep down steep mountain valleys over thousands of years. As these heavy sheets of ice slide, their immense weight crushes solid rock and carves deep valleys, which dramatically reshapes the local landscape. If you stood near a glacier, you would likely hear the deep, rumbling sounds of ice shifting. A local park ranger explained, \"These giants are slowly disappearing because of rising global temperatures.\" By studying glaciers, scientists can learn how the Earth looked in the ancient past, helping us prepare for future environmental changes.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g6-p8",
+    "grade": "6",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "The History of Printing",
+    "hint": "Practice spelling revolutionized, fifteenth, Gutenberg's, millennium, and third conditionals.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "The invention of the printing press by Johannes Gutenberg in the fifteenth century revolutionized how knowledge was spread. Before this invention, books had to be copied by hand, which was a slow and expensive process. Suddenly, books could be produced quickly and cheaply, allowing ordinary people to learn to read and write. A historian noted, \"Gutenberg's press was arguably the most significant invention of the second millennium.\" If Gutenberg had not developed this technology, the spread of scientific ideas would have been delayed for decades. Today, digital books continue this legacy of making information accessible."
+    }
+  },
+  {
+    "id": "g6-p8-comp",
+    "grade": "6",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: The History of Printing",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "The invention of the printing press by Johannes Gutenberg in the fifteenth century revolutionized how knowledge was spread. Before this invention, books had to be copied by hand, which was a slow and expensive process. Suddenly, books could be produced quickly and cheaply, allowing ordinary people to learn to read and write. A historian noted, \"Gutenberg's press was arguably the most significant invention of the second millennium.\" If Gutenberg had not developed this technology, the spread of scientific ideas would have been delayed for decades. Today, digital books continue this legacy of making information accessible.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g6-p9",
+    "grade": "6",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "The Role of Pollinators",
+    "hint": "Watch for spelling of pollinators, reproduction, threatened, and second conditionals.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Pollinators, including busy bees, colorful butterflies, and nocturnal bats, are essential for the reproduction of many flowering plants. By carrying pollen from one flower to another, they help produce fruits, vegetables, and seeds. If pollinators were to disappear, our global food supply would be seriously threatened, and ecosystems would collapse. \"We must protect these creatures at all costs,\" warned a biologist during a nature walk. By planting gardens with native flowers and avoiding harmful pesticides, we can help these helpful insects survive. Consequently, we ensure that our environment remains healthy and productive for everyone."
+    }
+  },
+  {
+    "id": "g6-p9-comp",
+    "grade": "6",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: The Role of Pollinators",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Pollinators, including busy bees, colorful butterflies, and nocturnal bats, are essential for the reproduction of many flowering plants. By carrying pollen from one flower to another, they help produce fruits, vegetables, and seeds. If pollinators were to disappear, our global food supply would be seriously threatened, and ecosystems would collapse. \"We must protect these creatures at all costs,\" warned a biologist during a nature walk. By planting gardens with native flowers and avoiding harmful pesticides, we can help these helpful insects survive. Consequently, we ensure that our environment remains healthy and productive for everyone.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g6-p10",
+    "grade": "6",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "The Mystery of Aurora Borealis",
+    "hint": "Advanced spelling: Borealis, phenomenon, collide, atmosphere, and polar vocabulary.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "The Aurora Borealis, commonly known as the Northern Lights, is a breathtaking natural display of colorful lights that dance across the dark night sky. This amazing phenomenon occurs when charged particles from the Sun collide with gases in the Earth's upper atmosphere. If you were to travel to polar regions, you might witness these vibrant green and purple light ribbons yourself. \"It is a truly unforgettable experience,\" remarked an astronomer who studies solar winds. Although scientists understand the chemical reactions behind these glows, the sight continues to fascinate and inspire visitors from around the world."
+    }
+  },
+  {
+    "id": "g6-p10-comp",
+    "grade": "6",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: The Mystery of Aurora Borealis",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "The Aurora Borealis, commonly known as the Northern Lights, is a breathtaking natural display of colorful lights that dance across the dark night sky. This amazing phenomenon occurs when charged particles from the Sun collide with gases in the Earth's upper atmosphere. If you were to travel to polar regions, you might witness these vibrant green and purple light ribbons yourself. \"It is a truly unforgettable experience,\" remarked an astronomer who studies solar winds. Although scientists understand the chemical reactions behind these glows, the sight continues to fascinate and inspire visitors from around the world.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g6-p11",
+    "grade": "6",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "Deep Ocean Thermal Vents",
+    "hint": "Notice technical terms: hydrothermal, ecosystems, chemical, submarine, and conditionals.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Deep on the ocean floor, hydrothermal vents are cracks that release boiling water rich in minerals. Despite the extreme heat, immense pressure, and total darkness, strange ecosystems thrive here, surviving on chemical energy rather than solar energy. If we were to dive in a submarine, we would see bizarre tube worms and pale crabs living near these hot springs. A marine scientist explained, \"These creatures have adapted to conditions that would instantly kill most other life forms on Earth.\" By studying these extreme environments, researchers hope to understand how life might exist on icy moons in outer space."
+    }
+  },
+  {
+    "id": "g6-p11-comp",
+    "grade": "6",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: Deep Ocean Thermal Vents",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Deep on the ocean floor, hydrothermal vents are cracks that release boiling water rich in minerals. Despite the extreme heat, immense pressure, and total darkness, strange ecosystems thrive here, surviving on chemical energy rather than solar energy. If we were to dive in a submarine, we would see bizarre tube worms and pale crabs living near these hot springs. A marine scientist explained, \"These creatures have adapted to conditions that would instantly kill most other life forms on Earth.\" By studying these extreme environments, researchers hope to understand how life might exist on icy moons in outer space.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g6-p12",
+    "grade": "6",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "Robotic Space Probes",
+    "hint": "Key technology spelling: unmanned, autonomous, high-resolution, algorithms, and circuitry.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Space probes are unmanned robotic spacecraft that are launched to explore distant and dangerous parts of our solar system. Equipped with advanced cameras and sensitive sensors, these autonomous explorers transmit high-resolution images and crucial data back to Earth. If a probe were to crash during its landing sequence, years of scientific research would be lost. An engineer at the space center proudly declared, \"Our latest probe will soon enter the orbit of Jupiter to study its moons.\" By using smart algorithms and durable circuitry, engineers ensure that these robotic travelers can make critical decisions without immediate human control."
+    }
+  },
+  {
+    "id": "g6-p12-comp",
+    "grade": "6",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: Robotic Space Probes",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Space probes are unmanned robotic spacecraft that are launched to explore distant and dangerous parts of our solar system. Equipped with advanced cameras and sensitive sensors, these autonomous explorers transmit high-resolution images and crucial data back to Earth. If a probe were to crash during its landing sequence, years of scientific research would be lost. An engineer at the space center proudly declared, \"Our latest probe will soon enter the orbit of Jupiter to study its moons.\" By using smart algorithms and durable circuitry, engineers ensure that these robotic travelers can make critical decisions without immediate human control.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g6-p13",
+    "grade": "6",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "Biodiversity in Rainforests",
+    "hint": "Observe vocabulary: tropical, concentration, biodiversity, environmental, and first conditionals.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Tropical rainforests house over half of the species of plants and animals on our planet. This incredible concentration of biodiversity creates a complex web of interactions where every organism, from tall trees to tiny bugs, is closely linked. If humans continue to destroy these beautiful forests, we will lose many rare species that could never be replaced. A researcher recently warned, \"Many rainforest plants contain secret ingredients that could cure human diseases.\" Therefore, we must work together to protect these habitats and teach others about the value of environmental conservation before it is too late."
+    }
+  },
+  {
+    "id": "g6-p13-comp",
+    "grade": "6",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: Biodiversity in Rainforests",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Tropical rainforests house over half of the species of plants and animals on our planet. This incredible concentration of biodiversity creates a complex web of interactions where every organism, from tall trees to tiny bugs, is closely linked. If humans continue to destroy these beautiful forests, we will lose many rare species that could never be replaced. A researcher recently warned, \"Many rainforest plants contain secret ingredients that could cure human diseases.\" Therefore, we must work together to protect these habitats and teach others about the value of environmental conservation before it is too late.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g6-p14",
+    "grade": "6",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "Solar Energy Storage",
+    "hint": "Practice spelling generate, lithium, battery, efficiency, and second conditionals.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "While solar panels generate vast amounts of electricity during sunny days, storing that clean energy for use at night remains a technical challenge. Engineers are developing giant lithium batteries that can store power safely and efficiently. If we had better storage systems, we could power entire cities using only solar energy throughout the night. A clean energy researcher explained, \"We must improve battery efficiency if we want to reduce our reliance on fossil fuels.\" By combining solar panels with advanced power grids, scientists are working hard to create a sustainable world powered entirely by green energy."
+    }
+  },
+  {
+    "id": "g6-p14-comp",
+    "grade": "6",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: Solar Energy Storage",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "While solar panels generate vast amounts of electricity during sunny days, storing that clean energy for use at night remains a technical challenge. Engineers are developing giant lithium batteries that can store power safely and efficiently. If we had better storage systems, we could power entire cities using only solar energy throughout the night. A clean energy researcher explained, \"We must improve battery efficiency if we want to reduce our reliance on fossil fuels.\" By combining solar panels with advanced power grids, scientists are working hard to create a sustainable world powered entirely by green energy.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g6-p15",
+    "grade": "6",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "Autonomous Rescue Robots",
+    "hint": "Practice spelling autonomous, coordinates, emergency, independent, and complex sentence structures.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "In the wake of natural disasters, autonomous rescue robots are deployed to search for survivors in dangerous, ruined buildings. Equipped with thermal cameras, acoustic sensors, and carbon dioxide detectors, these machines navigate rubble that is too unstable for human search teams. If a robot detects a human signal, it will immediately transmit the exact coordinates to emergency workers. One developer explained, \"Our robots are programmed to make independent navigation choices when communication is cut off.\" Although these robotic rescue assistants require complex software algorithms to navigate obstacles, they save valuable time and protect human lives."
+    }
+  },
+  {
+    "id": "g6-p15-comp",
+    "grade": "6",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: Autonomous Rescue Robots",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "In the wake of natural disasters, autonomous rescue robots are deployed to search for survivors in dangerous, ruined buildings. Equipped with thermal cameras, acoustic sensors, and carbon dioxide detectors, these machines navigate rubble that is too unstable for human search teams. If a robot detects a human signal, it will immediately transmit the exact coordinates to emergency workers. One developer explained, \"Our robots are programmed to make independent navigation choices when communication is cut off.\" Although these robotic rescue assistants require complex software algorithms to navigate obstacles, they save valuable time and protect human lives.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g6-w1",
+    "grade": "6",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Advanced Science",
+    "hint": "Advanced scientific vocabulary.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "geothermal",
+        "biodiversity",
+        "phenomenon",
+        "microorganism",
+        "atmosphere",
+        "ecosystem",
+        "seismologist",
+        "hydrothermal",
+        "lithium",
+        "glacier"
+      ]
+    }
+  },
+  {
+    "id": "g6-w1-speak",
+    "grade": "6",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Advanced Science",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "geothermal",
+        "biodiversity",
+        "phenomenon",
+        "microorganism",
+        "atmosphere",
+        "ecosystem",
+        "seismologist",
+        "hydrothermal",
+        "lithium",
+        "glacier"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g6-w2",
+    "grade": "6",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Academic Verbs",
+    "hint": "Practice verbs related to research and reasoning.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "fascinate",
+        "revolutionize",
+        "maintain",
+        "investigate",
+        "disrupt",
+        "analyze",
+        "collaborate",
+        "generate",
+        "reproduce",
+        "accumulate"
+      ]
+    }
+  },
+  {
+    "id": "g6-w2-speak",
+    "grade": "6",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Academic Verbs",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "fascinate",
+        "revolutionize",
+        "maintain",
+        "investigate",
+        "disrupt",
+        "analyze",
+        "collaborate",
+        "generate",
+        "reproduce",
+        "accumulate"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g6-w3",
+    "grade": "6",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Abstract Nouns",
+    "hint": "Check spelling endings (-tion, -y, -edge).",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "civilization",
+        "philosophy",
+        "exploration",
+        "sanctuary",
+        "immensity",
+        "knowledge",
+        "generation",
+        "interaction",
+        "resolution",
+        "invention"
+      ]
+    }
+  },
+  {
+    "id": "g6-w3-speak",
+    "grade": "6",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Abstract Nouns",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "civilization",
+        "philosophy",
+        "exploration",
+        "sanctuary",
+        "immensity",
+        "knowledge",
+        "generation",
+        "interaction",
+        "resolution",
+        "invention"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g6-w4",
+    "grade": "6",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Tricky Spellings",
+    "hint": "Common spelling words in 6th grade.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "successful",
+        "beautiful",
+        "delicate",
+        "essential",
+        "remarkable",
+        "ordinary",
+        "mythical",
+        "delightful",
+        "familiar",
+        "separate"
+      ]
+    }
+  },
+  {
+    "id": "g6-w4-speak",
+    "grade": "6",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Tricky Spellings",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "successful",
+        "beautiful",
+        "delicate",
+        "essential",
+        "remarkable",
+        "ordinary",
+        "mythical",
+        "delightful",
+        "familiar",
+        "separate"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g6-w5",
+    "grade": "6",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Prefix & Suffix Words",
+    "hint": "Analyze prefix and suffix modifications.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "disagree",
+        "disappear",
+        "submerge",
+        "supermarket",
+        "impolite",
+        "unhappy",
+        "careless",
+        "playful",
+        "active",
+        "kindness"
+      ]
+    }
+  },
+  {
+    "id": "g6-w5-speak",
+    "grade": "6",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Prefix & Suffix Words",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "disagree",
+        "disappear",
+        "submerge",
+        "supermarket",
+        "impolite",
+        "unhappy",
+        "careless",
+        "playful",
+        "active",
+        "kindness"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g6-w6",
+    "grade": "6",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Compound Words",
+    "hint": "Compound words made of two shorter words.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "breathtaking",
+        "greenhouse",
+        "sunflower",
+        "rainforest",
+        "earthquake",
+        "underground",
+        "keyboard",
+        "notebook",
+        "watermelon",
+        "lighthouse"
+      ]
+    }
+  },
+  {
+    "id": "g6-w6-speak",
+    "grade": "6",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Compound Words",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "breathtaking",
+        "greenhouse",
+        "sunflower",
+        "rainforest",
+        "earthquake",
+        "underground",
+        "keyboard",
+        "notebook",
+        "watermelon",
+        "lighthouse"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g6-w7",
+    "grade": "6",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Homophones & Confusables",
+    "hint": "Distinguish these look-alike or sound-alike words.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "principal",
+        "principle",
+        "stationery",
+        "stationary",
+        "desert",
+        "dessert",
+        "affect",
+        "effect",
+        "compliment",
+        "complement"
+      ]
+    }
+  },
+  {
+    "id": "g6-w7-speak",
+    "grade": "6",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Homophones & Confusables",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "principal",
+        "principle",
+        "stationery",
+        "stationary",
+        "desert",
+        "dessert",
+        "affect",
+        "effect",
+        "compliment",
+        "complement"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g6-w8",
+    "grade": "6",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Space & Astronomy",
+    "hint": "Explore geological and astronomical terms.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "astronomer",
+        "satellite",
+        "constellation",
+        "nebula",
+        "galaxy",
+        "gravity",
+        "orbit",
+        "telescope",
+        "meteorite",
+        "cosmos"
+      ]
+    }
+  },
+  {
+    "id": "g6-w8-speak",
+    "grade": "6",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Space & Astronomy",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "astronomer",
+        "satellite",
+        "constellation",
+        "nebula",
+        "galaxy",
+        "gravity",
+        "orbit",
+        "telescope",
+        "meteorite",
+        "cosmos"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g6-w9",
+    "grade": "6",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Transition Words",
+    "hint": "Linking and transitioning words.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "consequently",
+        "furthermore",
+        "nevertheless",
+        "meanwhile",
+        "therefore",
+        "however",
+        "although",
+        "additionally",
+        "alternatively",
+        "subsequently"
+      ]
+    }
+  },
+  {
+    "id": "g6-w9-speak",
+    "grade": "6",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Transition Words",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "consequently",
+        "furthermore",
+        "nevertheless",
+        "meanwhile",
+        "therefore",
+        "however",
+        "although",
+        "additionally",
+        "alternatively",
+        "subsequently"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g6-w10",
+    "grade": "6",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Robotics & Technology",
+    "hint": "Technical vocabulary from engineering and computer science.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "algorithm",
+        "automation",
+        "sensor",
+        "cybernetic",
+        "programming",
+        "circuitry",
+        "mechanism",
+        "synthetic",
+        "calibrate",
+        "autonomous"
+      ]
+    }
+  },
+  {
+    "id": "g6-w10-speak",
+    "grade": "6",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Robotics & Technology",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "algorithm",
+        "automation",
+        "sensor",
+        "cybernetic",
+        "programming",
+        "circuitry",
+        "mechanism",
+        "synthetic",
+        "calibrate",
+        "autonomous"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g6-w11",
+    "grade": "6",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Spelling Demons I",
+    "hint": "Watch for tricky silent letter patterns and double consonant combinations.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "accommodate",
+        "mischievous",
+        "pronunciation",
+        "rhythm",
+        "privilege",
+        "guarantee",
+        "apparent",
+        "committee",
+        "conscientious",
+        "exaggerate"
+      ]
+    }
+  },
+  {
+    "id": "g6-w11-speak",
+    "grade": "6",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Spelling Demons I",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "accommodate",
+        "mischievous",
+        "pronunciation",
+        "rhythm",
+        "privilege",
+        "guarantee",
+        "apparent",
+        "committee",
+        "conscientious",
+        "exaggerate"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g6-w12",
+    "grade": "6",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Spelling Demons II",
+    "hint": "Classic spelling demons with unexpected letter combinations.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "occurrence",
+        "embarrassment",
+        "maneuver",
+        "definitely",
+        "receipt",
+        "queue",
+        "conscience",
+        "liaison",
+        "vacuum",
+        "maintenance"
+      ]
+    }
+  },
+  {
+    "id": "g6-w12-speak",
+    "grade": "6",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Spelling Demons II",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "occurrence",
+        "embarrassment",
+        "maneuver",
+        "definitely",
+        "receipt",
+        "queue",
+        "conscience",
+        "liaison",
+        "vacuum",
+        "maintenance"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g6-w13",
+    "grade": "6",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Media & Communication",
+    "hint": "Spelling words related to news and communications technology.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "broadcast",
+        "internet",
+        "television",
+        "journalism",
+        "article",
+        "podcast",
+        "interview",
+        "digital",
+        "social",
+        "network"
+      ]
+    }
+  },
+  {
+    "id": "g6-w13-speak",
+    "grade": "6",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Media & Communication",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "broadcast",
+        "internet",
+        "television",
+        "journalism",
+        "article",
+        "podcast",
+        "interview",
+        "digital",
+        "social",
+        "network"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g6-w14",
+    "grade": "6",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Greek & Latin Roots",
+    "hint": "Root words that form the base of many English academic terms.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "geology",
+        "biology",
+        "telescope",
+        "photograph",
+        "telephone",
+        "script",
+        "dictionary",
+        "transport",
+        "inspect",
+        "contradict"
+      ]
+    }
+  },
+  {
+    "id": "g6-w14-speak",
+    "grade": "6",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Greek & Latin Roots",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "geology",
+        "biology",
+        "telescope",
+        "photograph",
+        "telephone",
+        "script",
+        "dictionary",
+        "transport",
+        "inspect",
+        "contradict"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g6-w15",
+    "grade": "6",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Assimilated Prefixes",
+    "hint": "Prefixes that modify their ending letter to match the root consonant.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "impossible",
+        "illegal",
+        "irregular",
+        "immature",
+        "illogical",
+        "irresponsible",
+        "impatient",
+        "imperfect",
+        "invisible",
+        "indirect"
+      ]
+    }
+  },
+  {
+    "id": "g6-w15-speak",
+    "grade": "6",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Assimilated Prefixes",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "impossible",
+        "illegal",
+        "irregular",
+        "immature",
+        "illogical",
+        "irresponsible",
+        "impatient",
+        "imperfect",
+        "invisible",
+        "indirect"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g6-w16",
+    "grade": "6",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Homophones: Assure & Ensure",
+    "hint": "High-level homophones and spelling confusables.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "assure",
+        "ensure",
+        "device",
+        "devise",
+        "envelope",
+        "envelop",
+        "complementary",
+        "complimentary"
+      ]
+    }
+  },
+  {
+    "id": "g6-w16-speak",
+    "grade": "6",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Homophones: Assure & Ensure",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "assure",
+        "ensure",
+        "device",
+        "devise",
+        "envelope",
+        "envelop",
+        "complementary",
+        "complimentary"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g6-w17",
+    "grade": "6",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Academic Confusables",
+    "hint": "Words often misheard and misused in academic discourse.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "precede",
+        "proceed",
+        "conscious",
+        "conscience",
+        "illusion",
+        "allusion",
+        "emigrate",
+        "immigrate"
+      ]
+    }
+  },
+  {
+    "id": "g6-w17-speak",
+    "grade": "6",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Academic Confusables",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "precede",
+        "proceed",
+        "conscious",
+        "conscience",
+        "illusion",
+        "allusion",
+        "emigrate",
+        "immigrate"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g6-w18",
+    "grade": "6",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Advanced Spelling Demons",
+    "hint": "Toughest spelling demons in middle-school ELA.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "accommodate",
+        "mischievous",
+        "liaison",
+        "questionnaire",
+        "vacuum",
+        "maintenance",
+        "occurrence",
+        "gauge"
+      ]
+    }
+  },
+  {
+    "id": "g6-w18-speak",
+    "grade": "6",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Advanced Spelling Demons",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "accommodate",
+        "mischievous",
+        "liaison",
+        "questionnaire",
+        "vacuum",
+        "maintenance",
+        "occurrence",
+        "gauge"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g6-w19",
+    "grade": "6",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Fry Seventh 100: Set A",
+    "hint": "High-frequency core words essential for academic reading fluency.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "show",
+        "also",
+        "around",
+        "form",
+        "three",
+        "small",
+        "set",
+        "put"
+      ]
+    }
+  },
+  {
+    "id": "g6-w19-speak",
+    "grade": "6",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Fry Seventh 100: Set A",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "show",
+        "also",
+        "around",
+        "form",
+        "three",
+        "small",
+        "set",
+        "put"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g6-w20",
+    "grade": "6",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Fry Seventh 100: Set B",
+    "hint": "Common verbs and determiners to check for correct orthography.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "end",
+        "does",
+        "another",
+        "well",
+        "large",
+        "must",
+        "big",
+        "even"
+      ]
+    }
+  },
+  {
+    "id": "g6-w20-speak",
+    "grade": "6",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Fry Seventh 100: Set B",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "end",
+        "does",
+        "another",
+        "well",
+        "large",
+        "must",
+        "big",
+        "even"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g6-w21",
+    "grade": "6",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Fry Seventh 100: Set C",
+    "hint": "Frequently appearing words in narrative and informational texts.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "such",
+        "because",
+        "turn",
+        "here",
+        "why",
+        "ask",
+        "went",
+        "men"
+      ]
+    }
+  },
+  {
+    "id": "g6-w21-speak",
+    "grade": "6",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Fry Seventh 100: Set C",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "such",
+        "because",
+        "turn",
+        "here",
+        "why",
+        "ask",
+        "went",
+        "men"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  }
+]

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dictater Teacher Portal</title>
+  <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <main class="auth-panel">
+    <h1 class="section-title">Teacher Portal</h1>
+    <p class="settings-note">Create classes, assign lessons, and view student progress.</p>
+    <div class="settings-row">
+      <input type="email" id="teacher-email" class="settings-select" placeholder="Teacher email">
+      <input type="text" id="class-name" class="settings-select" placeholder="Class name">
+      <button type="button" id="create-class" class="btn-primary">Create Class</button>
+    </div>
+    <div id="class-result" class="result-card feedback hidden"></div>
+    <div class="settings-row mt-sm">
+      <input type="text" id="class-id" class="settings-select" placeholder="Class ID">
+      <button type="button" id="view-report" class="btn-secondary">View Report</button>
+    </div>
+    <pre id="report-output" class="original-peek"></pre>
+  </main>
+  <script type="module">
+    const api = '/api';
+    document.getElementById('create-class').addEventListener('click', async () => {
+      const teacherEmail = document.getElementById('teacher-email').value.trim();
+      const name = document.getElementById('class-name').value.trim();
+      const res = await fetch(`${api}/teacher/classes`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ teacherEmail, name })
+      });
+      const data = await res.json();
+      const el = document.getElementById('class-result');
+      el.textContent = `Class created. ID: ${data.id} — share with students to enroll.`;
+      el.classList.remove('hidden');
+      document.getElementById('class-id').value = data.id;
+    });
+    document.getElementById('view-report').addEventListener('click', async () => {
+      const id = document.getElementById('class-id').value.trim();
+      const res = await fetch(`${api}/teacher/classes/${id}/report`);
+      const data = await res.json();
+      document.getElementById('report-output').textContent = JSON.stringify(data, null, 2);
+    });
+  </script>
+</body>
+</html>

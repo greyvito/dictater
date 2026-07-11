@@ -1,0 +1,1670 @@
+[
+  {
+    "id": "g4-p1",
+    "grade": "4",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "The Solar System",
+    "hint": "Pay attention to compound sentences and words with silent letters like Earth and science terms like solar system.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Earth is one of the eight major planets that constantly travel around the Sun in our vast solar system. The Sun is a giant, glowing star that provides bright light and warm heat. This essential energy allows plants, unique animals, and humans to survive and thrive on our beautiful planet. Without this constant source of warmth, our world would become a frozen place where nothing could ever live."
+    }
+  },
+  {
+    "id": "g4-p1-comp",
+    "grade": "4",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: The Solar System",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Earth is one of the eight major planets that constantly travel around the Sun in our vast solar system. The Sun is a giant, glowing star that provides bright light and warm heat. This essential energy allows plants, unique animals, and humans to survive and thrive on our beautiful planet. Without this constant source of warmth, our world would become a frozen place where nothing could ever live.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g4-p2",
+    "grade": "4",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "Preparing for the Camping Trip",
+    "hint": "Notice the dialogue quotation marks, compound words like flashlight and backpack, and the spelling of adventure.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Before we start our camping adventure in the deep forest, we must carefully check all of our equipment. We will need a strong tent, sleeping bags, a bright flashlight, and plenty of fresh water. 'Do not forget the maps!' shouted my sister as she packed her heavy backpack. Planning ahead keeps us safe, and it makes our outdoor journey much more enjoyable."
+    }
+  },
+  {
+    "id": "g4-p2-comp",
+    "grade": "4",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: Preparing for the Camping Trip",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Before we start our camping adventure in the deep forest, we must carefully check all of our equipment. We will need a strong tent, sleeping bags, a bright flashlight, and plenty of fresh water. 'Do not forget the maps!' shouted my sister as she packed her heavy backpack. Planning ahead keeps us safe, and it makes our outdoor journey much more enjoyable.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g4-p3",
+    "grade": "4",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "How Honeybee Communities Work",
+    "hint": "Focus on scientific vocabulary like colonies, honeycomb, and words with double letters like succeed.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Honeybees are incredibly hard-working insects that live in large, organized groups called colonies. Every member of the hive has a specific job to perform. While some bees fly far away to collect sweet nectar from colorful flowers, others stay behind to build the wax honeycomb. The queen bee lays all the eggs, ensuring that the busy colony continues to grow and succeed."
+    }
+  },
+  {
+    "id": "g4-p3-comp",
+    "grade": "4",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: How Honeybee Communities Work",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Honeybees are incredibly hard-working insects that live in large, organized groups called colonies. Every member of the hive has a specific job to perform. While some bees fly far away to collect sweet nectar from colorful flowers, others stay behind to build the wax honeycomb. The queen bee lays all the eggs, ensuring that the busy colony continues to grow and succeed.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g4-p4",
+    "grade": "4",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "The History of Paper",
+    "hint": "Practice historical vocabulary such as ancient, civilizations, papyrus, and Nile River.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Long ago, before modern paper was invented, ancient civilizations recorded their thoughts on flat stones, clay tablets, and dried animal skins. Eventually, the Egyptians created a light, paper-like material from papyrus, which was a tall water plant that grew along the banks of the Nile River. This revolutionary invention made writing much easier and allowed stories and histories to travel across different lands."
+    }
+  },
+  {
+    "id": "g4-p4-comp",
+    "grade": "4",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: The History of Paper",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Long ago, before modern paper was invented, ancient civilizations recorded their thoughts on flat stones, clay tablets, and dried animal skins. Eventually, the Egyptians created a light, paper-like material from papyrus, which was a tall water plant that grew along the banks of the Nile River. This revolutionary invention made writing much easier and allowed stories and histories to travel across different lands.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g4-p5",
+    "grade": "4",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "Stormy Night Wonders",
+    "hint": "Check spelling of sensory words like rumble, thunder, lightning, cocoa, and whispered.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "A loud rumble of thunder suddenly shook the windows as bright lightning flashed across the dark sky. We sat close to the warm fireplace, drinking delicious hot cocoa and listening to the heavy rain beat against the roof. 'I love watching the storm,' my brother whispered. We felt completely safe and cozy inside our house while nature put on a wild show."
+    }
+  },
+  {
+    "id": "g4-p5-comp",
+    "grade": "4",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: Stormy Night Wonders",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "A loud rumble of thunder suddenly shook the windows as bright lightning flashed across the dark sky. We sat close to the warm fireplace, drinking delicious hot cocoa and listening to the heavy rain beat against the roof. 'I love watching the storm,' my brother whispered. We felt completely safe and cozy inside our house while nature put on a wild show.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g4-p6",
+    "grade": "4",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "Exploring the Rainforest Canopy",
+    "hint": "Focus on rainforest vocabulary: tropical, canopy, environment, and double letters in bustling.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "The tropical rainforest is a bustling home to millions of unique plants and animals. High above the forest floor, the thick green canopy acts like a giant umbrella, blocking out most of the warm sunlight. Bright parrots fly between the tall branches, while curious monkeys swing from vine to vine. This dense jungle environment is full of life and remains one of Earth's greatest natural wonders."
+    }
+  },
+  {
+    "id": "g4-p6-comp",
+    "grade": "4",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: Exploring the Rainforest Canopy",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "The tropical rainforest is a bustling home to millions of unique plants and animals. High above the forest floor, the thick green canopy acts like a giant umbrella, blocking out most of the warm sunlight. Bright parrots fly between the tall branches, while curious monkeys swing from vine to vine. This dense jungle environment is full of life and remains one of Earth's greatest natural wonders.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g4-p7",
+    "grade": "4",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "An Ocean Mystery",
+    "hint": "Pay attention to advanced science spelling: mysterious, scientists, submarines, descend, volcanoes, and voyage.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Deep beneath the ocean surface lies a dark and mysterious world that scientists are still eager to explore. Strange creatures with glowing bodies swim through the freezing, pitch-black water. Researchers must use special submarines to descend into these deep canyons, where they can safely study marine life and discover active underwater volcanoes. Each successful voyage reveals amazing secrets about this vast and unknown environment."
+    }
+  },
+  {
+    "id": "g4-p7-comp",
+    "grade": "4",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: An Ocean Mystery",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Deep beneath the ocean surface lies a dark and mysterious world that scientists are still eager to explore. Strange creatures with glowing bodies swim through the freezing, pitch-black water. Researchers must use special submarines to descend into these deep canyons, where they can safely study marine life and discover active underwater volcanoes. Each successful voyage reveals amazing secrets about this vast and unknown environment.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g4-p8",
+    "grade": "4",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "The Magic of Seeds",
+    "hint": "Listen for silent vowels and spelling in receives, fertile, downward, and sprout.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "A tiny seed looks dry and quiet, but inside is a sleeping plant waiting to grow. When a seed receives warm sunlight, fertile soil, and fresh water, it wakes up from its long rest. It slowly starts to push roots downward into the earth and green shoots upward toward the light. Soon, a small sprout becomes a strong plant that makes its own seeds."
+    }
+  },
+  {
+    "id": "g4-p8-comp",
+    "grade": "4",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: The Magic of Seeds",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "A tiny seed looks dry and quiet, but inside is a sleeping plant waiting to grow. When a seed receives warm sunlight, fertile soil, and fresh water, it wakes up from its long rest. It slowly starts to push roots downward into the earth and green shoots upward toward the light. Soon, a small sprout becomes a strong plant that makes its own seeds.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g4-p9",
+    "grade": "4",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "A Birthday Surprise",
+    "hint": "Check the spelling of classroom, blackboard, ceiling, returned, and joyfully.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "We secretly planned a wonderful surprise party for our favorite teacher last week. While she was helping a student outside the classroom, we decorated the blackboard with colorful markers and hung bright balloons from the high ceiling. When she finally returned, we all shouted, 'Happy birthday!' She smiled joyfully and thanked us for the beautiful decorations and the delicious cupcakes that we shared."
+    }
+  },
+  {
+    "id": "g4-p9-comp",
+    "grade": "4",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: A Birthday Surprise",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "We secretly planned a wonderful surprise party for our favorite teacher last week. While she was helping a student outside the classroom, we decorated the blackboard with colorful markers and hung bright balloons from the high ceiling. When she finally returned, we all shouted, 'Happy birthday!' She smiled joyfully and thanked us for the beautiful decorations and the delicious cupcakes that we shared.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g4-p10",
+    "grade": "4",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "The Cycle of Water",
+    "hint": "Check scientific process words: constantly, liquid, invisible, vapor, condenses, and eventually.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Water on Earth is constantly moving in a giant, endless loop. Warm heat from the Sun heats up the liquid water in oceans, lakes, and rivers, turning it into an invisible gas called water vapor. This light vapor rises high into the cool sky, where it condenses to form fluffy white clouds. Eventually, the water falls back to the ground as rain or snow."
+    }
+  },
+  {
+    "id": "g4-p10-comp",
+    "grade": "4",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: The Cycle of Water",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Water on Earth is constantly moving in a giant, endless loop. Warm heat from the Sun heats up the liquid water in oceans, lakes, and rivers, turning it into an invisible gas called water vapor. This light vapor rises high into the cool sky, where it condenses to form fluffy white clouds. Eventually, the water falls back to the ground as rain or snow.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g4-p11",
+    "grade": "4",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "The History of Writing",
+    "hint": "Practice words with complex spelling: alphabets, cultures, symbols, accurate, and successfully.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Before modern alphabets were ever invented, early humans painted complex drawings on cave walls. These expressive pictures told stories of successful hunts and dangerous animals. Over time, different cultures developed written symbols to trade valuable goods, count items, and keep accurate records of their history. This major step allowed people to communicate across distances and successfully preserve their knowledge for future generations."
+    }
+  },
+  {
+    "id": "g4-p11-comp",
+    "grade": "4",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: The History of Writing",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Before modern alphabets were ever invented, early humans painted complex drawings on cave walls. These expressive pictures told stories of successful hunts and dangerous animals. Over time, different cultures developed written symbols to trade valuable goods, count items, and keep accurate records of their history. This major step allowed people to communicate across distances and successfully preserve their knowledge for future generations.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g4-p12",
+    "grade": "4",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "Electricity in Our Home",
+    "hint": "Check spelling: electricity, refrigerator, extremely, electrical, outlets, and household.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Electricity is a powerful form of energy that flows through thin metal wires to power our modern homes. It keeps the refrigerator cold, lights up the bright lamps, and charges our small laptops. However, we must always be extremely careful around this energy. We should never touch electrical outlets with wet hands, because safety is the most important rule in every single household."
+    }
+  },
+  {
+    "id": "g4-p12-comp",
+    "grade": "4",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: Electricity in Our Home",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Electricity is a powerful form of energy that flows through thin metal wires to power our modern homes. It keeps the refrigerator cold, lights up the bright lamps, and charges our small laptops. However, we must always be extremely careful around this energy. We should never touch electrical outlets with wet hands, because safety is the most important rule in every single household.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g4-p13",
+    "grade": "4",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "Bicycle Safety Rules",
+    "hint": "Notice the dialogue format, and check spelling of exercise, helmet, designated, traffic, and officer.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Riding a bicycle is excellent exercise, but safety must always come first for everyone. You should always wear a hard helmet to protect your head from serious injury. Obey all traffic signs, stay on the designated bike path, and look both ways before crossing a busy street. 'Watch out for cars!' warned the police officer during our safety class last Tuesday."
+    }
+  },
+  {
+    "id": "g4-p13-comp",
+    "grade": "4",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: Bicycle Safety Rules",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Riding a bicycle is excellent exercise, but safety must always come first for everyone. You should always wear a hard helmet to protect your head from serious injury. Obey all traffic signs, stay on the designated bike path, and look both ways before crossing a busy street. 'Watch out for cars!' warned the police officer during our safety class last Tuesday.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g4-p14",
+    "grade": "4",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "The Local State Fair",
+    "hint": "Check capitalized words like Ferris, and the spelling of healthiest, exhibition, and bustling.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Every summer, the exciting state fair comes to our town, bringing bright lights and happy crowds. We enjoy riding the giant Ferris wheel and eating sweet, fluffy cotton candy. Proud farmers show their largest pumpkins and healthiest farm animals to win blue ribbons. 'Look at that massive pig!' yelled my excited sister as we walked together through the bustling exhibition halls."
+    }
+  },
+  {
+    "id": "g4-p14-comp",
+    "grade": "4",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: The Local State Fair",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Every summer, the exciting state fair comes to our town, bringing bright lights and happy crowds. We enjoy riding the giant Ferris wheel and eating sweet, fluffy cotton candy. Proud farmers show their largest pumpkins and healthiest farm animals to win blue ribbons. 'Look at that massive pig!' yelled my excited sister as we walked together through the bustling exhibition halls.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g4-p15",
+    "grade": "4",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "A Bird Nest Construction",
+    "hint": "Spelling check for incredibly, construct, cradle, and predators.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "In the warm spring, a busy robin works incredibly hard to construct a safe nest for her family. She gathers small twigs, dry grass, and soft mud from the nearby fields. She carefully shapes the nest with her body to make a warm, round cradle. Here, she will lay her bright blue eggs and protect them from cold winds and hungry forest predators."
+    }
+  },
+  {
+    "id": "g4-p15-comp",
+    "grade": "4",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: A Bird Nest Construction",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "In the warm spring, a busy robin works incredibly hard to construct a safe nest for her family. She gathers small twigs, dry grass, and soft mud from the nearby fields. She carefully shapes the nest with her body to make a warm, round cradle. Here, she will lay her bright blue eggs and protect them from cold winds and hungry forest predators.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g4-w1",
+    "grade": "4",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Nature Trek",
+    "hint": "Vocabulary related to outdoor adventures and nature exploration.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "adventure",
+        "equipment",
+        "mountain",
+        "journey",
+        "backpack",
+        "campfire",
+        "valley",
+        "compass",
+        "scenery",
+        "forest"
+      ]
+    }
+  },
+  {
+    "id": "g4-w1-speak",
+    "grade": "4",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Nature Trek",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "adventure",
+        "equipment",
+        "mountain",
+        "journey",
+        "backpack",
+        "campfire",
+        "valley",
+        "compass",
+        "scenery",
+        "forest"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g4-w2",
+    "grade": "4",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Space & Sky",
+    "hint": "Focus on outer space vocabulary. Remember to capitalize proper nouns like Jupiter.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "planet",
+        "gravity",
+        "astronaut",
+        "orbit",
+        "galaxy",
+        "telescope",
+        "meteor",
+        "satellite",
+        "universe",
+        "Jupiter"
+      ]
+    }
+  },
+  {
+    "id": "g4-w2-speak",
+    "grade": "4",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Space & Sky",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "planet",
+        "gravity",
+        "astronaut",
+        "orbit",
+        "galaxy",
+        "telescope",
+        "meteor",
+        "satellite",
+        "universe",
+        "Jupiter"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g4-w3",
+    "grade": "4",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Healthy Habits",
+    "hint": "Words about body health, nutrition, and exercise.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "exercise",
+        "healthy",
+        "vegetable",
+        "vitamin",
+        "calcium",
+        "hygiene",
+        "muscle",
+        "energy",
+        "stretch",
+        "medicine"
+      ]
+    }
+  },
+  {
+    "id": "g4-w3-speak",
+    "grade": "4",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Healthy Habits",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "exercise",
+        "healthy",
+        "vegetable",
+        "vitamin",
+        "calcium",
+        "hygiene",
+        "muscle",
+        "energy",
+        "stretch",
+        "medicine"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g4-w4",
+    "grade": "4",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Occupations & Careers",
+    "hint": "Focus on suffixes like -ist, -er, -cian, and -tect.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "scientist",
+        "engineer",
+        "musician",
+        "architect",
+        "mechanic",
+        "reporter",
+        "soldier",
+        "dentist",
+        "pilot",
+        "writer"
+      ]
+    }
+  },
+  {
+    "id": "g4-w4-speak",
+    "grade": "4",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Occupations & Careers",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "scientist",
+        "engineer",
+        "musician",
+        "architect",
+        "mechanic",
+        "reporter",
+        "soldier",
+        "dentist",
+        "pilot",
+        "writer"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g4-w5",
+    "grade": "4",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Everyday Double Letters",
+    "hint": "Look closely at where letters are doubled in these common words.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "suddenly",
+        "tomorrow",
+        "different",
+        "difficult",
+        "happened",
+        "possible",
+        "grammar",
+        "succeed",
+        "message",
+        "suppose"
+      ]
+    }
+  },
+  {
+    "id": "g4-w5-speak",
+    "grade": "4",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Everyday Double Letters",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "suddenly",
+        "tomorrow",
+        "different",
+        "difficult",
+        "happened",
+        "possible",
+        "grammar",
+        "succeed",
+        "message",
+        "suppose"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g4-w6",
+    "grade": "4",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Sports & Games",
+    "hint": "Spelling focus on recreational activities and gear.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "practice",
+        "referee",
+        "champion",
+        "athlete",
+        "stadium",
+        "helmet",
+        "whistle",
+        "hockey",
+        "gymnast",
+        "soccer"
+      ]
+    }
+  },
+  {
+    "id": "g4-w6-speak",
+    "grade": "4",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Sports & Games",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "practice",
+        "referee",
+        "champion",
+        "athlete",
+        "stadium",
+        "helmet",
+        "whistle",
+        "hockey",
+        "gymnast",
+        "soccer"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g4-w7",
+    "grade": "4",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Feelings & Emotions",
+    "hint": "Adjectives that describe how we feel.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "cheerful",
+        "jealous",
+        "nervous",
+        "excited",
+        "friendly",
+        "patient",
+        "curious",
+        "worried",
+        "proud",
+        "gentle"
+      ]
+    }
+  },
+  {
+    "id": "g4-w7-speak",
+    "grade": "4",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Feelings & Emotions",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "cheerful",
+        "jealous",
+        "nervous",
+        "excited",
+        "friendly",
+        "patient",
+        "curious",
+        "worried",
+        "proud",
+        "gentle"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g4-w8",
+    "grade": "4",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Modes of Transport",
+    "hint": "Vehicles and locations used for travel.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "bicycle",
+        "subway",
+        "helicopter",
+        "motorcycle",
+        "airplane",
+        "railway",
+        "vehicle",
+        "charter",
+        "harbor",
+        "ferry"
+      ]
+    }
+  },
+  {
+    "id": "g4-w8-speak",
+    "grade": "4",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Modes of Transport",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "bicycle",
+        "subway",
+        "helicopter",
+        "motorcycle",
+        "airplane",
+        "railway",
+        "vehicle",
+        "charter",
+        "harbor",
+        "ferry"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g4-w9",
+    "grade": "4",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Complex Double Letters",
+    "hint": "These advanced words contain multiple sets of double letters.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "committee",
+        "classroom",
+        "balloon",
+        "suggest",
+        "attention",
+        "disappear",
+        "excellent",
+        "process",
+        "support",
+        "passenger"
+      ]
+    }
+  },
+  {
+    "id": "g4-w9-speak",
+    "grade": "4",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Complex Double Letters",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "committee",
+        "classroom",
+        "balloon",
+        "suggest",
+        "attention",
+        "disappear",
+        "excellent",
+        "process",
+        "support",
+        "passenger"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g4-w10",
+    "grade": "4",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Compound Nouns",
+    "hint": "Compound nouns created by joining two smaller words together.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "sandcastle",
+        "seashell",
+        "sunscreen",
+        "playground",
+        "blackboard",
+        "rainforest",
+        "sunlight",
+        "sheepdog",
+        "honeycomb",
+        "afternoon"
+      ]
+    }
+  },
+  {
+    "id": "g4-w10-speak",
+    "grade": "4",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Compound Nouns",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "sandcastle",
+        "seashell",
+        "sunscreen",
+        "playground",
+        "blackboard",
+        "rainforest",
+        "sunlight",
+        "sheepdog",
+        "honeycomb",
+        "afternoon"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g4-w11",
+    "grade": "4",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Prefixes & Suffixes",
+    "hint": "Pay attention to how prefixes and suffixes change the root words.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "necessary",
+        "address",
+        "pattern",
+        "collect",
+        "correct",
+        "discover",
+        "explore",
+        "prepare",
+        "safely",
+        "complete"
+      ]
+    }
+  },
+  {
+    "id": "g4-w11-speak",
+    "grade": "4",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Prefixes & Suffixes",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "necessary",
+        "address",
+        "pattern",
+        "collect",
+        "correct",
+        "discover",
+        "explore",
+        "prepare",
+        "safely",
+        "complete"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g4-w12",
+    "grade": "4",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "High-Frequency Tricky Words",
+    "hint": "Watch out for irregular spelling patterns and silent vowels.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "believe",
+        "receive",
+        "crying",
+        "family",
+        "finally",
+        "until",
+        "chief",
+        "caught",
+        "bought",
+        "brought"
+      ]
+    }
+  },
+  {
+    "id": "g4-w12-speak",
+    "grade": "4",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: High-Frequency Tricky Words",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "believe",
+        "receive",
+        "crying",
+        "family",
+        "finally",
+        "until",
+        "chief",
+        "caught",
+        "bought",
+        "brought"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g4-w13",
+    "grade": "4",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Instruments & Music",
+    "hint": "Musical terms and instrument spelling.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "guitar",
+        "piano",
+        "violin",
+        "drums",
+        "flute",
+        "trumpet",
+        "singer",
+        "concert",
+        "rhythm",
+        "melody"
+      ]
+    }
+  },
+  {
+    "id": "g4-w13-speak",
+    "grade": "4",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Instruments & Music",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "guitar",
+        "piano",
+        "violin",
+        "drums",
+        "flute",
+        "trumpet",
+        "singer",
+        "concert",
+        "rhythm",
+        "melody"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g4-w14",
+    "grade": "4",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Homophones & Homographs",
+    "hint": "Words that sound alike (homophones) or look alike (homographs).",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "bored",
+        "board",
+        "male",
+        "mail",
+        "plain",
+        "plane",
+        "wind",
+        "lead",
+        "close",
+        "live"
+      ]
+    }
+  },
+  {
+    "id": "g4-w14-speak",
+    "grade": "4",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Homophones & Homographs",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "bored",
+        "board",
+        "male",
+        "mail",
+        "plain",
+        "plane",
+        "wind",
+        "lead",
+        "close",
+        "live"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g4-w15",
+    "grade": "4",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Suffixes: -able & -ible",
+    "hint": "Adjective suffixes that mean can be done or able to.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "readable",
+        "edible",
+        "visible",
+        "flexible",
+        "valuable",
+        "sensible",
+        "suitable",
+        "terrible",
+        "horrible",
+        "possible"
+      ]
+    }
+  },
+  {
+    "id": "g4-w15-speak",
+    "grade": "4",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Suffixes: -able & -ible",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "readable",
+        "edible",
+        "visible",
+        "flexible",
+        "valuable",
+        "sensible",
+        "suitable",
+        "terrible",
+        "horrible",
+        "possible"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g4-w16",
+    "grade": "4",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Homophones: Wood & Would",
+    "hint": "Words that sound identical but differ in spelling and definition.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "wood",
+        "would",
+        "flour",
+        "flower",
+        "peak",
+        "peek",
+        "piece",
+        "peace"
+      ]
+    }
+  },
+  {
+    "id": "g4-w16-speak",
+    "grade": "4",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Homophones: Wood & Would",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "wood",
+        "would",
+        "flour",
+        "flower",
+        "peak",
+        "peek",
+        "piece",
+        "peace"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g4-w17",
+    "grade": "4",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Silent Letters t, u, w",
+    "hint": "Be careful! The letters t, u, and w are silent in these words.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "listen",
+        "castle",
+        "whistle",
+        "guard",
+        "guest",
+        "guide",
+        "answer",
+        "sword"
+      ]
+    }
+  },
+  {
+    "id": "g4-w17-speak",
+    "grade": "4",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Silent Letters t, u, w",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "listen",
+        "castle",
+        "whistle",
+        "guard",
+        "guest",
+        "guide",
+        "answer",
+        "sword"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g4-w18",
+    "grade": "4",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Confused Pairs",
+    "hint": "These word pairs have near-identical spelling and sound but different meanings.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "accept",
+        "except",
+        "affect",
+        "effect",
+        "desert",
+        "dessert",
+        "diary",
+        "dairy"
+      ]
+    }
+  },
+  {
+    "id": "g4-w18-speak",
+    "grade": "4",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Confused Pairs",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "accept",
+        "except",
+        "affect",
+        "effect",
+        "desert",
+        "dessert",
+        "diary",
+        "dairy"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g4-w19",
+    "grade": "4",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Fry Fourth 100: Set A",
+    "hint": "High-frequency primary words essential for reading speed.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "come",
+        "made",
+        "may",
+        "part",
+        "over",
+        "new",
+        "sound",
+        "take"
+      ]
+    }
+  },
+  {
+    "id": "g4-w19-speak",
+    "grade": "4",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Fry Fourth 100: Set A",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "come",
+        "made",
+        "may",
+        "part",
+        "over",
+        "new",
+        "sound",
+        "take"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g4-w20",
+    "grade": "4",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Fry Fourth 100: Set B",
+    "hint": "Core words that appear constantly in fourth-grade texts.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "only",
+        "little",
+        "work",
+        "know",
+        "place",
+        "year",
+        "live",
+        "me"
+      ]
+    }
+  },
+  {
+    "id": "g4-w20-speak",
+    "grade": "4",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Fry Fourth 100: Set B",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "only",
+        "little",
+        "work",
+        "know",
+        "place",
+        "year",
+        "live",
+        "me"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g4-w21",
+    "grade": "4",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Fry Fourth 100: Set C",
+    "hint": "Important structural vocabulary to build spelling fluency.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "back",
+        "give",
+        "most",
+        "very",
+        "after",
+        "thing",
+        "our",
+        "just"
+      ]
+    }
+  },
+  {
+    "id": "g4-w21-speak",
+    "grade": "4",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Fry Fourth 100: Set C",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "back",
+        "give",
+        "most",
+        "very",
+        "after",
+        "thing",
+        "our",
+        "just"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  }
+]

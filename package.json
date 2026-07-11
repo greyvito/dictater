@@ -1,12 +1,27 @@
 {
   "name": "dictater",
-  "version": "1.0.0",
-  "description": "English listening and dictation practice web application for primary school students",
-  "main": "index.html",
+  "version": "2.0.0",
+  "description": "English learning app for PreK through Grade 6 — listening, speaking, reading, and writing",
+  "type": "module",
   "scripts": {
-    "start": "npx -y serve ./",
-    "dev": "npx -y serve ./"
+    "dev": "vite",
+    "build": "vite build && node scripts/copy-static.mjs",
+    "preview": "vite preview",
+    "start": "vite preview --host",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "validate:content": "node scripts/validate-content.mjs",
+    "migrate:curriculum": "node scripts/migrate-curriculum.mjs",
+    "backend": "node backend/server.js"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "dexie": "^4.0.11",
+    "express": "^4.21.2",
+    "cors": "^2.8.5",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0",
+    "vitest": "^3.0.8"
+  }
 }
