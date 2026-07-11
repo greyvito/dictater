@@ -32,8 +32,15 @@ import {
   recordSkillResult,
   recommendNextLesson
 } from './adaptive/engine.js';
-import { syncProgress, loginUser } from './app/api.js';
-import { trackEvent } from './i18n/strings.js';
+import { syncProgress, loginUser, fetchAssignments } from './app/api.js';
+import {
+  trackEvent,
+  applyI18n,
+  getLocale,
+  setLocale,
+  t,
+  exportAnalyticsBlob
+} from './i18n/strings.js';
 
 export class DictaterApp {
   constructor() {
@@ -50,6 +57,8 @@ export class DictaterApp {
     this.customLessons = loadCustomLessons();
     this.skillMastery = loadSkillMastery();
     this.placement = loadPlacementResults();
+    this.locale = getLocale();
+    this.assignments = [];
   }
 
   async init() {
@@ -64,8 +73,16 @@ export class DictaterApp {
         bindSettingsPanel();
       };
     }
+    applyI18n(this.locale);
+    const localeSelect = document.querySelector('#locale-select');
+    if (localeSelect) localeSelect.value = this.locale;
+    if (this.profile.authToken) {
+      await this.refreshAssignments();
+      document.querySelector('#auth-status').textContent = `${t('signedInAs', this.locale)} ${this.profile.email}`;
+    }
     this.restoreSession();
     this.renderSetup();
+    this.renderAssignments();
     this.renderRecommendations();
     console.log('[Dictater] ELA platform initialized');
   }
@@ -81,17 +98,12 @@ export class DictaterApp {
   restoreSession() {
     if (this.pendingLessonId) {
       const lesson = getLessonById(this.pendingLessonId);
-      if (lesson && (lesson.grade === this.grade || lesson.grade === 'Custom')) {
-        this.skillArea = skillAreaForType(lesson.type);
+      const skillMatches = lesson && skillAreaForType(lesson.type) === this.skillArea;
+      if (lesson && skillMatches && (lesson.grade === this.grade || lesson.grade === 'Custom')) {
         this.loadLesson(lesson, { skipSave: true });
         return;
       }
       this.pendingLessonId = null;
-    }
-    const completed = new Set(this.stats.map((s) => s.exerciseId));
-    const next = recommendNextLesson(this.grade, this.skillMastery, completed);
-    if (next) {
-      this.skillArea = skillAreaForType(next.type);
     }
   }
 
@@ -121,6 +133,68 @@ export class DictaterApp {
     document.querySelector('#btn-open-lesson-creator')?.addEventListener('click', () => this.openModal('#lesson-creator-modal'));
     document.querySelector('#btn-creator-close')?.addEventListener('click', () => this.closeModal('#lesson-creator-modal'));
     document.querySelector('#btn-creator-save')?.addEventListener('click', () => this.saveCustomLesson());
+    document.querySelector('#locale-select')?.addEventListener('change', (e) => {
+      this.locale = e.target.value;
+      setLocale(this.locale);
+      applyI18n(this.locale);
+      this.renderAssignments();
+      this.renderSetup();
+    });
+    document.querySelector('#btn-export-progress')?.addEventListener('click', () => this.exportProgress());
+  }
+
+  async refreshAssignments() {
+    try {
+      this.assignments = await fetchAssignments(this.profile);
+    } catch {
+      this.assignments = [];
+    }
+    this.renderAssignments();
+  }
+
+  renderAssignments() {
+    const panel = document.querySelector('#assignments-list');
+    if (!panel) return;
+    panel.innerHTML = '';
+    if (!this.profile.authToken) {
+      panel.innerHTML = `<p class="settings-note">${t('noAssignments', this.locale)}</p>`;
+      return;
+    }
+    if (!this.assignments.length) {
+      panel.innerHTML = `<p class="settings-note">${t('noAssignments', this.locale)}</p>`;
+      return;
+    }
+    this.assignments.forEach((a) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'exercise-item';
+      const due = a.dueDate ? ` · ${t('due', this.locale)} ${a.dueDate}` : '';
+      btn.innerHTML = `<div class="exercise-title-text">${a.title || a.lessonId}</div><span class="exercise-badge badge-diff-intermediate">${a.lessonId}</span>`;
+      btn.title = a.lessonId + due;
+      btn.addEventListener('click', () => {
+        const lesson = getLessonById(a.lessonId);
+        if (lesson) {
+          this.viewMode = 'curriculum';
+          this.loadLesson(lesson);
+          trackEvent('assignment_opened', { assignmentId: a.id, lessonId: a.lessonId });
+        } else {
+          this.showToast(`Lesson ${a.lessonId} not found in curriculum`, 'warning');
+        }
+      });
+      panel.appendChild(btn);
+    });
+  }
+
+  exportProgress() {
+    const blob = exportAnalyticsBlob(this.stats);
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `dictater-progress-${new Date().toISOString().slice(0, 10)}.json`;
+    a.click();
+    URL.revokeObjectURL(url);
+    trackEvent('progress_exported', { records: this.stats.length });
+    this.showToast('Progress exported', 'success');
   }
 
   renderSetup() {
@@ -172,6 +246,8 @@ export class DictaterApp {
       btn.innerHTML = `<span aria-hidden="true">${s.icon}</span> ${s.label}`;
       btn.addEventListener('click', () => {
         this.skillArea = s.id;
+        this.currentLesson = null;
+        this.pendingLessonId = null;
         this.saveSessionState();
         this.renderSetup();
       });
@@ -364,22 +440,31 @@ export class DictaterApp {
 
   async handleLogin() {
     const email = document.querySelector('#auth-email')?.value?.trim();
+    const parentConsent = document.querySelector('#parent-consent')?.checked;
     if (!email) { this.showToast('Enter an email to sign in', 'warning'); return; }
+    if (!parentConsent) {
+      this.showToast(t('parentConsent', this.locale), 'warning');
+      return;
+    }
     try {
-      const result = await loginUser(email);
-      this.profile = { ...this.profile, ...result, authToken: result.token };
+      const result = await loginUser(email, { parentConsent });
+      this.profile = { ...this.profile, ...result, authToken: result.token, email };
       saveProfile(this.profile);
-      document.querySelector('#auth-status').textContent = `Signed in as ${email}`;
+      document.querySelector('#auth-status').textContent = `${t('signedInAs', this.locale)} ${email}`;
+      await this.refreshAssignments();
       this.showToast('Signed in successfully', 'success');
+      trackEvent('user_login', { email });
     } catch {
       this.showToast('Sign in failed — using offline mode', 'warning');
     }
   }
 
   handleLogout() {
-    this.profile = { ...this.profile, authToken: null, userId: null };
+    this.profile = { ...this.profile, authToken: null, userId: null, email: null };
     saveProfile(this.profile);
-    document.querySelector('#auth-status').textContent = 'Offline mode';
+    this.assignments = [];
+    document.querySelector('#auth-status').textContent = t('offlineMode', this.locale);
+    this.renderAssignments();
   }
 
   saveCustomLesson() {

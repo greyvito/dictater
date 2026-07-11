@@ -1656,5 +1656,144 @@
       "maxAttempts": 3
     },
     "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g2-gram-cap",
+    "grade": "2",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Capital Letters",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which sentence is correct?",
+          "choices": [
+            "I like cats.",
+            "i like cats.",
+            "I Like cats."
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Pick the best answer."
+  },
+  {
+    "id": "g2-gram-plural",
+    "grade": "2",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Plurals",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Choose the correct plural.",
+          "choices": [
+            "dogs",
+            "doges",
+            "dog"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Pick the best answer."
+  },
+  {
+    "id": "g2-gram-verb",
+    "grade": "2",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Verb Tense",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "She ___ to school every day.",
+          "choices": [
+            "go",
+            "goes",
+            "going"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    "hint": "Pick the best answer."
+  },
+  {
+    "id": "g2-vocab-ctx-1",
+    "grade": "2",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Word in Context",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "We felt ___ when we won the game.",
+          "choices": [
+            "happy",
+            "slowly",
+            "because"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Use context clues."
+  },
+  {
+    "id": "g2-vocab-ctx-2",
+    "grade": "2",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Opposite Words",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Hot is the opposite of ___.",
+          "choices": [
+            "cold",
+            "warm",
+            "fire"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Use context clues."
+  },
+  {
+    "id": "g2-write-prompt-1",
+    "grade": "2",
+    "type": "writing_prompt",
+    "difficulty": "intermediate",
+    "title": "Write About Your Favorite Place",
+    "skills": [
+      "writing"
+    ],
+    "content": {
+      "prompt": "Describe your favorite place and why you like it.",
+      "minWords": 20,
+      "checklist": [
+        "Complete sentences",
+        "Clear ideas"
+      ]
+    },
+    "hint": "Write in full sentences."
   }
 ]

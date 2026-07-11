@@ -28,9 +28,31 @@ test('settings panel opens', async ({ page }) => {
   await expect(page.locator('#voice-engine option')).toHaveCount(7);
 });
 
-test('session persists grade selection', async ({ page }) => {
+test('assignments panel shows when signed out', async ({ page }) => {
   await page.goto('/');
-  await page.locator('#grade-filters .pill-btn', { hasText: 'PreK' }).click();
+  await expect(page.locator('#assignments-list')).toBeVisible();
+  await expect(page.locator('#assignments-list')).toContainText(/No assignments|Sin tareas/i);
+});
+
+test('language toggle switches to Spanish', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('#grade-filters .pill-btn')).toHaveCount(8);
+  await page.selectOption('#locale-select', 'es');
+  await expect(page.locator('#btn-mode-curriculum')).toHaveText('Plan de estudios');
+});
+
+test('export progress button exists', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('#btn-export-progress')).toBeVisible();
+});
+
+test('session persists grade and skill across reload', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('#grade-filters .pill-btn')).toHaveCount(8);
+  await page.locator('#grade-filters .pill-btn', { hasText: 'Grade 2' }).click();
+  await page.locator('#skill-filters .pill-btn', { hasText: 'Writing' }).click();
   await page.reload();
-  await expect(page.locator('#grade-filters .pill-btn.active')).toHaveText('PreK');
+  await expect(page.locator('#grade-filters .pill-btn')).toHaveCount(8);
+  await expect(page.locator('#grade-filters .pill-btn.active', { hasText: 'Grade 2' })).toBeVisible();
+  await expect(page.locator('#skill-filters .pill-btn.active', { hasText: 'Writing' })).toBeVisible();
 });

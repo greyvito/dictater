@@ -14,7 +14,9 @@
     "test:e2e:install": "playwright install chromium",
     "validate:content": "node scripts/validate-content.mjs",
     "migrate:curriculum": "node scripts/migrate-curriculum.mjs",
-    "backend": "node backend/server.js"
+    "expand:content": "node scripts/expand-content.mjs",
+    "backend": "node backend/server.js",
+    "start:prod": "node backend/server.js"
   },
   "dependencies": {
     "dexie": "^4.0.11",

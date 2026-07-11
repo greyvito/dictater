@@ -11,8 +11,12 @@ Built with **Vite + vanilla JavaScript modules**, it runs as a static PWA with o
 - **Speaking training**: Web Speech API recognition with word-level correctness feedback
 - **Adaptive learning**: placement mini-test, skill mastery tracking, lesson recommendations
 - **Progress journal**: stats, streaks, badges (localStorage + IndexedDB)
-- **Teacher portal**: class creation and progress reports (`teacher.html` + API)
-- **541+ curriculum lessons** in validated JSON format
+- **Teacher portal**: class creation, enrollments, assignments, CSV reports (`teacher.html` + API)
+- **Student assignments**: signed-in learners see teacher-assigned lessons in the sidebar
+- **English / Spanish UI** toggle (i18n for shell labels)
+- **COPPA-lite cloud sync**: optional sign-in with parent/guardian consent checkbox
+- **Progress export**: download stats and analytics events as JSON
+- **541+ curriculum lessons** in validated JSON format (expand with `npm run expand:content`)
 
 ## Quick Start
 
@@ -24,6 +28,17 @@ npm start          # Preview production build
 npm test           # Run unit tests
 npm run validate:content  # Validate curriculum JSON
 npm run backend    # Start API server on port 3001
+npm run start:prod # Build + serve dist/ and API together (after npm run build)
+npm run expand:content  # Add grammar/vocab/writing packs per grade
+```
+
+## Deployment
+
+See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for GitHub Pages, Netlify, and combined production server setup.
+
+```bash
+GITHUB_PAGES=true npm run build   # For https://<user>.github.io/dictater/
+npm run build && npm run start:prod  # Self-hosted full stack
 ```
 
 ## Project Structure

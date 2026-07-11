@@ -5,9 +5,21 @@
     "type": "phonological_rhyme",
     "difficulty": "beginner",
     "title": "Rhyme: cat",
-    "skills": ["rhyme_recognition"],
-    "standards": ["CCSS.ELA-LITERACY.RF.K.2.A"],
-    "content": { "prompt": "cat", "choices": ["hat", "dog", "sun"], "correctIndex": 0 },
+    "skills": [
+      "rhyme_recognition"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.2.A"
+    ],
+    "content": {
+      "prompt": "cat",
+      "choices": [
+        "hat",
+        "dog",
+        "sun"
+      ],
+      "correctIndex": 0
+    },
     "hint": "Rhyming words sound the same at the end."
   },
   {
@@ -16,8 +28,18 @@
     "type": "phonological_rhyme",
     "difficulty": "beginner",
     "title": "Rhyme: ball",
-    "skills": ["rhyme_recognition"],
-    "content": { "prompt": "ball", "choices": ["tall", "book", "fish"], "correctIndex": 0 },
+    "skills": [
+      "rhyme_recognition"
+    ],
+    "content": {
+      "prompt": "ball",
+      "choices": [
+        "tall",
+        "book",
+        "fish"
+      ],
+      "correctIndex": 0
+    },
     "hint": "Listen for the ending sound."
   },
   {
@@ -26,8 +48,18 @@
     "type": "phonological_rhyme",
     "difficulty": "beginner",
     "title": "Rhyme: sun",
-    "skills": ["rhyme_recognition"],
-    "content": { "prompt": "sun", "choices": ["run", "tree", "cup"], "correctIndex": 0 },
+    "skills": [
+      "rhyme_recognition"
+    ],
+    "content": {
+      "prompt": "sun",
+      "choices": [
+        "run",
+        "tree",
+        "cup"
+      ],
+      "correctIndex": 0
+    },
     "hint": "Sun and run rhyme."
   },
   {
@@ -36,8 +68,18 @@
     "type": "phonological_rhyme",
     "difficulty": "intermediate",
     "title": "Rhyme: star",
-    "skills": ["rhyme_recognition"],
-    "content": { "prompt": "star", "choices": ["car", "moon", "bed"], "correctIndex": 0 },
+    "skills": [
+      "rhyme_recognition"
+    ],
+    "content": {
+      "prompt": "star",
+      "choices": [
+        "car",
+        "moon",
+        "bed"
+      ],
+      "correctIndex": 0
+    },
     "hint": "Star and car rhyme."
   },
   {
@@ -46,8 +88,18 @@
     "type": "phonological_rhyme",
     "difficulty": "intermediate",
     "title": "Rhyme: tree",
-    "skills": ["rhyme_recognition"],
-    "content": { "prompt": "tree", "choices": ["bee", "house", "pig"], "correctIndex": 0 },
+    "skills": [
+      "rhyme_recognition"
+    ],
+    "content": {
+      "prompt": "tree",
+      "choices": [
+        "bee",
+        "house",
+        "pig"
+      ],
+      "correctIndex": 0
+    },
     "hint": "Tree and bee rhyme."
   },
   {
@@ -56,8 +108,18 @@
     "type": "phonological_syllable",
     "difficulty": "beginner",
     "title": "Syllables: cat",
-    "skills": ["syllable_count"],
-    "content": { "prompt": "cat", "choices": ["1", "2", "3"], "correctIndex": 0 },
+    "skills": [
+      "syllable_count"
+    ],
+    "content": {
+      "prompt": "cat",
+      "choices": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correctIndex": 0
+    },
     "hint": "Clap once for cat."
   },
   {
@@ -66,8 +128,18 @@
     "type": "phonological_syllable",
     "difficulty": "beginner",
     "title": "Syllables: apple",
-    "skills": ["syllable_count"],
-    "content": { "prompt": "apple", "choices": ["1", "2", "3"], "correctIndex": 1 },
+    "skills": [
+      "syllable_count"
+    ],
+    "content": {
+      "prompt": "apple",
+      "choices": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correctIndex": 1
+    },
     "hint": "Ap-ple has two parts."
   },
   {
@@ -76,8 +148,18 @@
     "type": "phonological_syllable",
     "difficulty": "beginner",
     "title": "Syllables: banana",
-    "skills": ["syllable_count"],
-    "content": { "prompt": "banana", "choices": ["1", "2", "3"], "correctIndex": 2 },
+    "skills": [
+      "syllable_count"
+    ],
+    "content": {
+      "prompt": "banana",
+      "choices": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correctIndex": 2
+    },
     "hint": "Ba-na-na has three claps."
   },
   {
@@ -86,8 +168,18 @@
     "type": "phonological_syllable",
     "difficulty": "intermediate",
     "title": "Syllables: elephant",
-    "skills": ["syllable_count"],
-    "content": { "prompt": "elephant", "choices": ["2", "3", "4"], "correctIndex": 1 },
+    "skills": [
+      "syllable_count"
+    ],
+    "content": {
+      "prompt": "elephant",
+      "choices": [
+        "2",
+        "3",
+        "4"
+      ],
+      "correctIndex": 1
+    },
     "hint": "El-e-phant — three claps."
   },
   {
@@ -96,8 +188,18 @@
     "type": "phonological_syllable",
     "difficulty": "intermediate",
     "title": "Syllables: butterfly",
-    "skills": ["syllable_count"],
-    "content": { "prompt": "butterfly", "choices": ["2", "3", "4"], "correctIndex": 1 },
+    "skills": [
+      "syllable_count"
+    ],
+    "content": {
+      "prompt": "butterfly",
+      "choices": [
+        "2",
+        "3",
+        "4"
+      ],
+      "correctIndex": 1
+    },
     "hint": "But-ter-fly has three syllables."
   },
   {
@@ -106,8 +208,18 @@
     "type": "phonological_initial",
     "difficulty": "beginner",
     "title": "Start sound: /b/",
-    "skills": ["initial_sound"],
-    "content": { "prompt": "ball", "choices": ["/b/", "/s/", "/m/"], "correctIndex": 0 },
+    "skills": [
+      "initial_sound"
+    ],
+    "content": {
+      "prompt": "ball",
+      "choices": [
+        "/b/",
+        "/s/",
+        "/m/"
+      ],
+      "correctIndex": 0
+    },
     "hint": "Ball starts with b."
   },
   {
@@ -116,8 +228,18 @@
     "type": "phonological_initial",
     "difficulty": "beginner",
     "title": "Start sound: /m/",
-    "skills": ["initial_sound"],
-    "content": { "prompt": "moon", "choices": ["/m/", "/t/", "/p/"], "correctIndex": 0 },
+    "skills": [
+      "initial_sound"
+    ],
+    "content": {
+      "prompt": "moon",
+      "choices": [
+        "/m/",
+        "/t/",
+        "/p/"
+      ],
+      "correctIndex": 0
+    },
     "hint": "Moon starts with m."
   },
   {
@@ -126,8 +248,18 @@
     "type": "phonological_initial",
     "difficulty": "beginner",
     "title": "Start sound: /s/",
-    "skills": ["initial_sound"],
-    "content": { "prompt": "sun", "choices": ["/s/", "/d/", "/g/"], "correctIndex": 0 },
+    "skills": [
+      "initial_sound"
+    ],
+    "content": {
+      "prompt": "sun",
+      "choices": [
+        "/s/",
+        "/d/",
+        "/g/"
+      ],
+      "correctIndex": 0
+    },
     "hint": "Sun starts with s."
   },
   {
@@ -136,8 +268,18 @@
     "type": "phonological_initial",
     "difficulty": "intermediate",
     "title": "Start sound: /f/",
-    "skills": ["initial_sound"],
-    "content": { "prompt": "fish", "choices": ["/f/", "/sh/", "/ch/"], "correctIndex": 0 },
+    "skills": [
+      "initial_sound"
+    ],
+    "content": {
+      "prompt": "fish",
+      "choices": [
+        "/f/",
+        "/sh/",
+        "/ch/"
+      ],
+      "correctIndex": 0
+    },
     "hint": "Fish starts with f."
   },
   {
@@ -146,8 +288,18 @@
     "type": "phonological_initial",
     "difficulty": "intermediate",
     "title": "Start sound: /sh/",
-    "skills": ["initial_sound"],
-    "content": { "prompt": "shoe", "choices": ["/sh/", "/s/", "/ch/"], "correctIndex": 0 },
+    "skills": [
+      "initial_sound"
+    ],
+    "content": {
+      "prompt": "shoe",
+      "choices": [
+        "/sh/",
+        "/s/",
+        "/ch/"
+      ],
+      "correctIndex": 0
+    },
     "hint": "Shoe starts with sh."
   },
   {
@@ -156,8 +308,18 @@
     "type": "letter_sound",
     "difficulty": "beginner",
     "title": "Letter A",
-    "skills": ["letter_sound"],
-    "content": { "letter": "A", "choices": ["apple", "ball", "cat"], "correctIndex": 0 },
+    "skills": [
+      "letter_sound"
+    ],
+    "content": {
+      "letter": "A",
+      "choices": [
+        "apple",
+        "ball",
+        "cat"
+      ],
+      "correctIndex": 0
+    },
     "hint": "Apple starts with a."
   },
   {
@@ -166,8 +328,18 @@
     "type": "letter_sound",
     "difficulty": "beginner",
     "title": "Letter B",
-    "skills": ["letter_sound"],
-    "content": { "letter": "B", "choices": ["dog", "ball", "sun"], "correctIndex": 1 },
+    "skills": [
+      "letter_sound"
+    ],
+    "content": {
+      "letter": "B",
+      "choices": [
+        "dog",
+        "ball",
+        "sun"
+      ],
+      "correctIndex": 1
+    },
     "hint": "Ball starts with b."
   },
   {
@@ -176,8 +348,18 @@
     "type": "letter_sound",
     "difficulty": "beginner",
     "title": "Letter C",
-    "skills": ["letter_sound"],
-    "content": { "letter": "C", "choices": ["cat", "fish", "hat"], "correctIndex": 0 },
+    "skills": [
+      "letter_sound"
+    ],
+    "content": {
+      "letter": "C",
+      "choices": [
+        "cat",
+        "fish",
+        "hat"
+      ],
+      "correctIndex": 0
+    },
     "hint": "Cat starts with c."
   },
   {
@@ -186,8 +368,18 @@
     "type": "letter_sound",
     "difficulty": "beginner",
     "title": "Letter D",
-    "skills": ["letter_sound"],
-    "content": { "letter": "D", "choices": ["dog", "egg", "fan"], "correctIndex": 0 },
+    "skills": [
+      "letter_sound"
+    ],
+    "content": {
+      "letter": "D",
+      "choices": [
+        "dog",
+        "egg",
+        "fan"
+      ],
+      "correctIndex": 0
+    },
     "hint": "Dog starts with d."
   },
   {
@@ -196,8 +388,18 @@
     "type": "letter_sound",
     "difficulty": "intermediate",
     "title": "Letter M",
-    "skills": ["letter_sound"],
-    "content": { "letter": "M", "choices": ["map", "net", "pig"], "correctIndex": 0 },
+    "skills": [
+      "letter_sound"
+    ],
+    "content": {
+      "letter": "M",
+      "choices": [
+        "map",
+        "net",
+        "pig"
+      ],
+      "correctIndex": 0
+    },
     "hint": "Map starts with m."
   },
   {
@@ -206,8 +408,18 @@
     "type": "picture_vocab",
     "difficulty": "beginner",
     "title": "Word: red",
-    "skills": ["oral_vocabulary"],
-    "content": { "prompt": "red", "choices": ["red", "blue", "green"], "correctIndex": 0 },
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "red",
+      "choices": [
+        "red",
+        "blue",
+        "green"
+      ],
+      "correctIndex": 0
+    },
     "hint": "Tap the color red."
   },
   {
@@ -216,8 +428,18 @@
     "type": "picture_vocab",
     "difficulty": "beginner",
     "title": "Word: dog",
-    "skills": ["oral_vocabulary"],
-    "content": { "prompt": "dog", "choices": ["dog", "cat", "bird"], "correctIndex": 0 },
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "dog",
+      "choices": [
+        "dog",
+        "cat",
+        "bird"
+      ],
+      "correctIndex": 0
+    },
     "hint": "Which word is dog?"
   },
   {
@@ -226,8 +448,18 @@
     "type": "picture_vocab",
     "difficulty": "beginner",
     "title": "Word: one",
-    "skills": ["oral_vocabulary"],
-    "content": { "prompt": "one", "choices": ["one", "two", "three"], "correctIndex": 0 },
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "one",
+      "choices": [
+        "one",
+        "two",
+        "three"
+      ],
+      "correctIndex": 0
+    },
     "hint": "Tap the number one."
   },
   {
@@ -236,8 +468,18 @@
     "type": "picture_vocab",
     "difficulty": "intermediate",
     "title": "Word: happy",
-    "skills": ["oral_vocabulary"],
-    "content": { "prompt": "happy", "choices": ["happy", "sad", "angry"], "correctIndex": 0 },
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "happy",
+      "choices": [
+        "happy",
+        "sad",
+        "angry"
+      ],
+      "correctIndex": 0
+    },
     "hint": "Which word means happy?"
   },
   {
@@ -246,8 +488,18 @@
     "type": "picture_vocab",
     "difficulty": "intermediate",
     "title": "Word: big",
-    "skills": ["oral_vocabulary"],
-    "content": { "prompt": "big", "choices": ["big", "small", "tiny"], "correctIndex": 0 },
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "big",
+      "choices": [
+        "big",
+        "small",
+        "tiny"
+      ],
+      "correctIndex": 0
+    },
     "hint": "Big is the opposite of small."
   },
   {
@@ -256,8 +508,15 @@
     "type": "speak_repeat",
     "difficulty": "beginner",
     "title": "Say: cat",
-    "skills": ["speaking", "oral_fluency"],
-    "content": { "prompt": "cat", "expectedText": "cat", "maxAttempts": 2 },
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "cat",
+      "expectedText": "cat",
+      "maxAttempts": 2
+    },
     "hint": "Repeat the word after you hear it."
   },
   {
@@ -266,8 +525,14 @@
     "type": "speak_repeat",
     "difficulty": "beginner",
     "title": "Say: dog",
-    "skills": ["speaking"],
-    "content": { "prompt": "dog", "expectedText": "dog", "maxAttempts": 2 },
+    "skills": [
+      "speaking"
+    ],
+    "content": {
+      "prompt": "dog",
+      "expectedText": "dog",
+      "maxAttempts": 2
+    },
     "hint": "Say dog clearly."
   },
   {
@@ -276,8 +541,14 @@
     "type": "speak_repeat",
     "difficulty": "beginner",
     "title": "Say: sun",
-    "skills": ["speaking"],
-    "content": { "prompt": "sun", "expectedText": "sun", "maxAttempts": 2 },
+    "skills": [
+      "speaking"
+    ],
+    "content": {
+      "prompt": "sun",
+      "expectedText": "sun",
+      "maxAttempts": 2
+    },
     "hint": "Repeat sun."
   },
   {
@@ -286,8 +557,14 @@
     "type": "speak_repeat",
     "difficulty": "intermediate",
     "title": "Say: apple",
-    "skills": ["speaking"],
-    "content": { "prompt": "apple", "expectedText": "apple", "maxAttempts": 3 },
+    "skills": [
+      "speaking"
+    ],
+    "content": {
+      "prompt": "apple",
+      "expectedText": "apple",
+      "maxAttempts": 3
+    },
     "hint": "Two syllables: ap-ple."
   },
   {
@@ -296,8 +573,134 @@
     "type": "speak_repeat",
     "difficulty": "intermediate",
     "title": "Say: hello",
-    "skills": ["speaking"],
-    "content": { "prompt": "hello", "expectedText": "hello", "maxAttempts": 3 },
+    "skills": [
+      "speaking"
+    ],
+    "content": {
+      "prompt": "hello",
+      "expectedText": "hello",
+      "maxAttempts": 3
+    },
     "hint": "Say hello!"
+  },
+  {
+    "id": "gpreK-gram-cap",
+    "grade": "preK",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Capital Letters",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which sentence is correct?",
+          "choices": [
+            "I like cats.",
+            "i like cats.",
+            "I Like cats."
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Pick the best answer."
+  },
+  {
+    "id": "gpreK-gram-plural",
+    "grade": "preK",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Plurals",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Choose the correct plural.",
+          "choices": [
+            "dogs",
+            "doges",
+            "dog"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Pick the best answer."
+  },
+  {
+    "id": "gpreK-gram-verb",
+    "grade": "preK",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Verb Tense",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "She ___ to school every day.",
+          "choices": [
+            "go",
+            "goes",
+            "going"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    "hint": "Pick the best answer."
+  },
+  {
+    "id": "gpreK-vocab-ctx-1",
+    "grade": "preK",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Word in Context",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "We felt ___ when we won the game.",
+          "choices": [
+            "happy",
+            "slowly",
+            "because"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Use context clues."
+  },
+  {
+    "id": "gpreK-vocab-ctx-2",
+    "grade": "preK",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Opposite Words",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Hot is the opposite of ___.",
+          "choices": [
+            "cold",
+            "warm",
+            "fire"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Use context clues."
   }
 ]

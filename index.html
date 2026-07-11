@@ -25,7 +25,7 @@
         </div>
         <h1 class="hero-headline">Listen, <span class="hero-inline-chip" aria-hidden="true">Aa</span> speak, read, and write.</h1>
         <p class="hero-lede">A calm learning studio for PreK through Grade 6. Build literacy skills across listening, speaking, reading, and writing.</p>
-        <a href="#workspace" class="btn-primary hero-cta">Start learning</a>
+        <a href="#workspace" class="btn-primary hero-cta" data-i18n="startLearning">Start learning</a>
         <div id="recommended-lesson" class="mt-sm"></div>
       </div>
       <aside class="hero-preview" aria-hidden="true">
@@ -41,33 +41,38 @@
   <main>
     <section class="glass-card sidebar-panel">
       <div class="setup-step">
-        <h3 class="section-title">Mode</h3>
+        <h3 class="section-title" data-i18n="mode">Mode</h3>
         <div class="pill-group mt-sm">
-          <button type="button" id="btn-mode-curriculum" class="pill-btn active">Curriculum</button>
-          <button type="button" id="btn-mode-custom" class="pill-btn">My Lessons</button>
+          <button type="button" id="btn-mode-curriculum" class="pill-btn active" data-i18n="curriculum">Curriculum</button>
+          <button type="button" id="btn-mode-custom" class="pill-btn" data-i18n="myLessons">My Lessons</button>
         </div>
       </div>
       <div class="setup-step">
-        <h3 class="section-title">1. Grade</h3>
+        <h3 class="section-title">1. <span data-i18n="grade">Grade</span></h3>
         <div id="grade-filters" class="pill-group pill-group--tight"></div>
       </div>
       <div class="setup-step">
-        <h3 class="section-title">2. Skill Area</h3>
+        <h3 class="section-title">2. <span data-i18n="skillArea">Skill Area</span></h3>
         <div id="skill-filters" class="pill-group pill-group--tight skill-filter-grid"></div>
       </div>
       <div class="setup-step">
-        <h3 class="section-title">3. Lessons</h3>
+        <h3 class="section-title">3. <span data-i18n="lessons">Lessons</span></h3>
         <div id="exercise-list" class="exercise-list" role="listbox"></div>
       </div>
       <div id="custom-lessons-panel" class="hidden setup-step">
-        <h3 class="section-title">Saved Custom Lessons</h3>
+        <h3 class="section-title" data-i18n="myLessons">My Lessons</h3>
         <p class="settings-note">Lessons you create appear here and run in the activity player.</p>
       </div>
+      <div class="setup-step divider-top">
+        <h3 class="section-title" data-i18n="assignments">Teacher Assignments</h3>
+        <div id="assignments-list" class="exercise-list exercise-list--short"></div>
+      </div>
       <div class="sidebar-footer divider-top stack-sm">
-        <button type="button" id="btn-placement" class="btn-secondary btn-block">Take Placement Mini-Test</button>
-        <button type="button" id="btn-open-dashboard" class="btn-primary btn-block">Student Dashboard</button>
-        <button type="button" id="btn-open-lesson-creator" class="btn-secondary btn-compact btn-block">Create Custom Lesson</button>
-        <button type="button" id="btn-settings-toggle" class="settings-toggle settings-toggle--flush">Speech Settings</button>
+        <button type="button" id="btn-placement" class="btn-secondary btn-block" data-i18n="placement">Take Placement Mini-Test</button>
+        <button type="button" id="btn-open-dashboard" class="btn-primary btn-block" data-i18n="dashboard">Student Dashboard</button>
+        <button type="button" id="btn-export-progress" class="btn-secondary btn-compact btn-block" data-i18n="exportProgress">Export Progress (JSON)</button>
+        <button type="button" id="btn-open-lesson-creator" class="btn-secondary btn-compact btn-block" data-i18n="createLesson">Create Custom Lesson</button>
+        <button type="button" id="btn-settings-toggle" class="settings-toggle settings-toggle--flush" data-i18n="speechSettings">Speech Settings</button>
       </div>
     </section>
 
@@ -81,24 +86,39 @@
         <div id="level-badge-container"></div>
       </div>
       <div id="activity-workspace" class="activity-workspace">
-        <p class="empty-state">Select a grade, skill area, and lesson to begin.</p>
+        <p class="empty-state" data-i18n="chooseLesson">Select a grade, skill area, and lesson to begin.</p>
       </div>
     </section>
   </main>
 
   <section class="glass-card auth-panel">
-    <h3 class="section-title">Account (optional)</h3>
-    <p id="auth-status" class="settings-note">Offline mode — progress saved on this device</p>
+    <div class="auth-row" style="justify-content: space-between; margin-bottom: 0.75rem;">
+      <h3 class="section-title" data-i18n="account">Account (optional)</h3>
+      <label class="settings-note">
+        <span data-i18n="language">Language</span>:
+        <select id="locale-select" class="settings-select" style="width: auto; display: inline-block;">
+          <option value="en">English</option>
+          <option value="es">Español</option>
+        </select>
+      </label>
+    </div>
+    <p id="auth-status" class="settings-note" data-i18n="offlineMode">Offline mode — progress saved on this device</p>
+    <p class="settings-note" data-i18n="coppaNote">Cloud sync stores email and lesson scores only. Users under 13 need parental consent.</p>
     <div class="auth-row">
       <input type="email" id="auth-email" class="settings-select" placeholder="Email for cloud sync">
-      <button type="button" id="btn-auth-login" class="btn-primary btn-compact">Sign In</button>
-      <button type="button" id="btn-auth-logout" class="btn-secondary btn-compact">Sign Out</button>
+      <button type="button" id="btn-auth-login" class="btn-primary btn-compact" data-i18n="signIn">Sign In</button>
+      <button type="button" id="btn-auth-logout" class="btn-secondary btn-compact" data-i18n="signOut">Sign Out</button>
     </div>
+    <label class="settings-note auth-row">
+      <input type="checkbox" id="parent-consent">
+      <span data-i18n="parentConsent">I am 13+ or have parent/guardian consent to use cloud sync</span>
+    </label>
+    <p class="settings-note"><a href="teacher.html" data-i18n="teacherPortal">Teacher portal</a></p>
   </section>
 
   <div id="settings-dropdown" class="settings-dropdown hidden" role="dialog">
     <div class="result-header">
-      <h4 class="input-label section-title--plain">Speech Configuration</h4>
+      <h4 class="input-label section-title--plain" data-i18n="speechSettings">Speech Configuration</h4>
       <button type="button" id="btn-settings-close" class="modal-close modal-close--sm">&times;</button>
     </div>
     <div class="settings-row">
@@ -121,7 +141,7 @@
 
   <div id="lesson-creator-modal" class="settings-dropdown modal-centered hidden" role="dialog">
     <div class="result-header">
-      <h4 class="input-label section-title--plain">Create Custom Lesson</h4>
+      <h4 class="input-label section-title--plain" data-i18n="createLesson">Create Custom Lesson</h4>
       <button type="button" id="btn-creator-close" class="modal-close modal-close--sm">&times;</button>
     </div>
     <div class="settings-row">
@@ -149,7 +169,7 @@
 
   <div id="dashboard-modal" class="settings-dropdown modal-lg hidden" role="dialog">
     <div class="result-header modal-header">
-      <h3 class="section-title section-title--plain">Student Progress</h3>
+      <h3 class="section-title section-title--plain" data-i18n="dashboard">Student Progress</h3>
       <button type="button" id="btn-dashboard-close" class="modal-close">&times;</button>
     </div>
     <div class="dashboard-stats">
