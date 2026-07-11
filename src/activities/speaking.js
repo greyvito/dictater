@@ -1,4 +1,5 @@
 import { renderDiffToContainer } from '../grading/wordDiff.js';
+import { appendPostCheckActions } from './postCheck.js';
 import { listenOnce, scoreSpeech, isSTTSupported } from '../speech/stt.js';
 import { fetchWhisperStatus } from '../speech/whisper.js';
 import { resolveWordVisual } from '../prek/images.js';
@@ -94,6 +95,7 @@ function renderSpeakingSession(ctx, config) {
 
   const finishAll = () => {
     const avg = Math.round(results.reduce((a, r) => a + r.score, 0) / results.length);
+    const passed = avg >= 70;
     summaryEl.innerHTML = `<div class="result-header"><h3 class="section-title section-title--plain">Speaking Summary</h3><div class="result-score">${avg}%</div></div>`;
     results.forEach((r) => {
       const row = document.createElement('div');
@@ -102,7 +104,8 @@ function renderSpeakingSession(ctx, config) {
       summaryEl.appendChild(row);
     });
     summaryEl.classList.remove('hidden');
-    onComplete({ score: avg, passed: avg >= 70, details: { results } });
+    appendPostCheckActions(summaryEl, ctx, passed);
+    onComplete({ score: avg, passed, details: { results } });
   };
 
   micBtn.addEventListener('click', async () => {

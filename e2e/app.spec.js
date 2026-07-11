@@ -75,9 +75,10 @@ test('export progress button exists in more tools', async ({ page }) => {
 
 test('parent consent checkbox is interactive', async ({ page }) => {
   await page.goto('/');
-  await page.locator('details.auth-disclosure').evaluate((el) => { el.open = true; });
+  await openAccountPanel(page);
   const consent = page.locator('#parent-consent');
-  await consent.check({ force: true });
+  await expect(consent).toBeVisible();
+  await consent.check();
   await expect(consent).toBeChecked();
 });
 
@@ -110,6 +111,16 @@ test('mobile lesson bar opens sidebar sheet', async ({ page }) => {
   await expect(page.locator('#mobile-lesson-bar')).toBeVisible();
   await page.locator('#btn-change-lesson').click();
   await expect(page.locator('#sidebar-panel')).toHaveClass(/sidebar-panel--mobile-open/);
+});
+
+test('PreK activity shows post-check actions after answer', async ({ page }) => {
+  await page.goto('/');
+  await page.locator('#grade-filters .pill-btn', { hasText: 'PreK' }).click();
+  await page.locator('#skill-filters .pill-btn', { hasText: 'Sounds' }).click();
+  await page.locator('.exercise-item').first().click();
+  await page.locator('.prek-choice-card').first().click();
+  await expect(page.locator('.post-check-actions')).toBeVisible();
+  await expect(page.locator('.post-check-actions button')).toHaveCount(2);
 });
 
 test('comprehension shows post-check actions after completion', async ({ page }) => {

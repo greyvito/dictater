@@ -4,6 +4,7 @@ import {
   CHOICE_CARD_COLORS
 } from '../prek/images.js';
 import { celebrateCorrect, encourageTryAgain, mountMascot } from '../prek/delight.js';
+import { appendPostCheckActions } from './postCheck.js';
 
 /**
  * @param {string} instruction
@@ -83,15 +84,18 @@ function renderChoices(ctx, config) {
         choicesEl.querySelectorAll('.prek-choice-card')[correctIndex]?.classList.add('choice-correct');
       }
       const fb = container.querySelector('#prek-feedback');
-      fb.textContent = correct ? '🌟 Yes! You got it!' : `Nice try! The answer is "${normalized[correctIndex].label}".`;
       fb.classList.remove('hidden');
       fb.classList.add(correct ? 'prek-feedback--yes' : 'prek-feedback--oops');
+      const msg = document.createElement('p');
+      msg.textContent = correct ? '🌟 Yes! You got it!' : `Nice try! The answer is "${normalized[correctIndex].label}".`;
+      fb.replaceChildren(msg);
+      appendPostCheckActions(fb, ctx, correct);
 
       const activity = container.querySelector('.prek-activity');
       if (correct && activity) celebrateCorrect(activity);
       else encourageTryAgain();
 
-      setTimeout(() => onComplete({ score: correct ? 100 : 0, passed: correct }), correct ? 900 : 1200);
+      onComplete({ score: correct ? 100 : 0, passed: correct });
     });
   });
 }
