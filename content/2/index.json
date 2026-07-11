@@ -1,0 +1,1660 @@
+[
+  {
+    "id": "g2-p1",
+    "grade": "2",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "A Morning in the Forest",
+    "hint": "Prepositions and time/adverbs.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Early in the morning, a tiny brown rabbit hopped out of its warm hole. It ran quickly under the tall green bushes and searched for fresh grass. Near the clear blue stream, it stopped to drink some water before running back home under the trees."
+    }
+  },
+  {
+    "id": "g2-p1-comp",
+    "grade": "2",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: A Morning in the Forest",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Early in the morning, a tiny brown rabbit hopped out of its warm hole. It ran quickly under the tall green bushes and searched for fresh grass. Near the clear blue stream, it stopped to drink some water before running back home under the trees.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g2-p2",
+    "grade": "2",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "Helping Dad in the Yard",
+    "hint": "Common action verbs, time words, prepositions.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "On Saturday afternoon, my dad and I worked outside in the backyard. First, we gathered the dry leaves with a big yellow rake. Then, we put them into large bags. Finally, we watered the beautiful flowers together and sat down for cold juice."
+    }
+  },
+  {
+    "id": "g2-p2-comp",
+    "grade": "2",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: Helping Dad in the Yard",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "On Saturday afternoon, my dad and I worked outside in the backyard. First, we gathered the dry leaves with a big yellow rake. Then, we put them into large bags. Finally, we watered the beautiful flowers together and sat down for cold juice.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g2-p3",
+    "grade": "2",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "The Lost Toy Train",
+    "hint": "Prepositions and common verbs.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Billy could not find his favorite toy train anywhere in the house. He looked behind the blue couch, under the soft rug, and inside the big toy box. Suddenly, he saw the shiny red train peeking out from behind his bedroom door. He smiled happily."
+    }
+  },
+  {
+    "id": "g2-p3-comp",
+    "grade": "2",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: The Lost Toy Train",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Billy could not find his favorite toy train anywhere in the house. He looked behind the blue couch, under the soft rug, and inside the big toy box. Suddenly, he saw the shiny red train peeking out from behind his bedroom door. He smiled happily.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g2-p4",
+    "grade": "2",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "A Hungry Bird's Search",
+    "hint": "Check prepositions (down, from, across, near, back to) and verbs.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "A little robin flew down from the branch of an oak tree. It walked slowly across the damp green grass and looked for dinner. Soon, it spotted a long worm near the garden fence. The bird pulled it out and flew back to its nest."
+    }
+  },
+  {
+    "id": "g2-p4-comp",
+    "grade": "2",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: A Hungry Bird's Search",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "A little robin flew down from the branch of an oak tree. It walked slowly across the damp green grass and looked for dinner. Soon, it spotted a long worm near the garden fence. The bird pulled it out and flew back to its nest.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g2-p5",
+    "grade": "2",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "Baking Bread with Grandma",
+    "hint": "Sequence words (today, first, next) and common action verbs.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Today, Grandma taught me how to bake fresh white bread in the kitchen. First, we measured the flour and water into a large bowl. Next, we mixed the dough with our hands. We put the bread into the warm oven and waited patiently for it to cook."
+    }
+  },
+  {
+    "id": "g2-p5-comp",
+    "grade": "2",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: Baking Bread with Grandma",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Today, Grandma taught me how to bake fresh white bread in the kitchen. First, we measured the flour and water into a large bowl. Next, we mixed the dough with our hands. We put the bread into the warm oven and waited patiently for it to cook.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g2-p6",
+    "grade": "2",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "The Playful Squirrel's Mistake",
+    "hint": "Descriptive adverbs, compound words, and dialogue.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "A playful squirrel scurried quickly up the tall pine tree, holding a small brown acorn in its mouth. It decided to hide the acorn inside a dark hole, but the hole was already full of dry leaves. \"Oh no!\" squeaked the squirrel. It dropped the acorn onto the soft grass below and searched for another tree. Finally, it found a safe branch."
+    }
+  },
+  {
+    "id": "g2-p6-comp",
+    "grade": "2",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: The Playful Squirrel's Mistake",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "A playful squirrel scurried quickly up the tall pine tree, holding a small brown acorn in its mouth. It decided to hide the acorn inside a dark hole, but the hole was already full of dry leaves. \"Oh no!\" squeaked the squirrel. It dropped the acorn onto the soft grass below and searched for another tree. Finally, it found a safe branch.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g2-p7",
+    "grade": "2",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "A Rainy Afternoon Rescue",
+    "hint": "Suffixes (-ed, -ing, -ly), dialogue, descriptive words.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Yesterday afternoon, it rained heavily, so we stayed inside the cozy house. Suddenly, my sister heard a soft meowing sound near the front door. We opened it slowly and found a tiny wet kitten. \"Let's help it!\" my sister whispered excitedly. We dried the kitten with a warm blanket and gave it some milk. The little kitten purred happily and fell asleep."
+    }
+  },
+  {
+    "id": "g2-p7-comp",
+    "grade": "2",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: A Rainy Afternoon Rescue",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Yesterday afternoon, it rained heavily, so we stayed inside the cozy house. Suddenly, my sister heard a soft meowing sound near the front door. We opened it slowly and found a tiny wet kitten. \"Let's help it!\" my sister whispered excitedly. We dried the kitten with a warm blanket and gave it some milk. The little kitten purred happily and fell asleep.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g2-p8",
+    "grade": "2",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "Finding a Secret Pathway",
+    "hint": "Suffixes, dialogue, descriptive text.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "During our weekend walk in the deep woods, my brother and I discovered a hidden pathway. The path was covered with yellow wildflowers and green moss. \"Where does this go?\" my brother asked quietly. We walked cautiously along the path until we reached a beautiful blue lake. A family of ducks swam peacefully across the calm water. It was a wonderful adventure."
+    }
+  },
+  {
+    "id": "g2-p8-comp",
+    "grade": "2",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: Finding a Secret Pathway",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "During our weekend walk in the deep woods, my brother and I discovered a hidden pathway. The path was covered with yellow wildflowers and green moss. \"Where does this go?\" my brother asked quietly. We walked cautiously along the path until we reached a beautiful blue lake. A family of ducks swam peacefully across the calm water. It was a wonderful adventure.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g2-p9",
+    "grade": "2",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "The New Playground",
+    "hint": "Compound words, suffixes (-ed, -ing, -ly), dialogue.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "The town built a brand-new playground near our school last week. There are tall silver slides, red swings, and a big sandbox. \"Look at me!\" yelled my friend from the top of the climbing wall. He climbed carefully and slid down with a huge smile. We played tag until sunset and promised to return the next afternoon."
+    }
+  },
+  {
+    "id": "g2-p9-comp",
+    "grade": "2",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: The New Playground",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "The town built a brand-new playground near our school last week. There are tall silver slides, red swings, and a big sandbox. \"Look at me!\" yelled my friend from the top of the climbing wall. He climbed carefully and slid down with a huge smile. We played tag until sunset and promised to return the next afternoon.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g2-p10",
+    "grade": "2",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "Preparing for a Picnic",
+    "hint": "Homophones, compound words, suffixes, dialogue.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "We prepared a special picnic for our mother's birthday. My brother made delicious peanut butter sandwiches, and I washed sweet red grapes. \"Don't forget the napkins!\" mother said cheerfully when we packed the basket. We drove to the state park and sat under a shady tree. The weather was perfect, and we spent the entire afternoon playing games."
+    }
+  },
+  {
+    "id": "g2-p10-comp",
+    "grade": "2",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: Preparing for a Picnic",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "We prepared a special picnic for our mother's birthday. My brother made delicious peanut butter sandwiches, and I washed sweet red grapes. \"Don't forget the napkins!\" mother said cheerfully when we packed the basket. We drove to the state park and sat under a shady tree. The weather was perfect, and we spent the entire afternoon playing games.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g2-p11",
+    "grade": "2",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "The Mystery of the Missing Keys",
+    "hint": "Prefixes (un-, re-, mis-), multi-syllable words, and tricky vowels.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "My mother was unhappy because she misplaced her car keys again. We started an untidy search through the entire living room. First, we checked under the sofa cushions, but they were not there. Then, we decided to rebuild our search area and looked in the kitchen. Unexpectedly, my little sister found the keys inside the refrigerator next to the milk. Mother smiled and thanked her, and we promised to always return them to the hook by the doorway."
+    }
+  },
+  {
+    "id": "g2-p11-comp",
+    "grade": "2",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: The Mystery of the Missing Keys",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "My mother was unhappy because she misplaced her car keys again. We started an untidy search through the entire living room. First, we checked under the sofa cushions, but they were not there. Then, we decided to rebuild our search area and looked in the kitchen. Unexpectedly, my little sister found the keys inside the refrigerator next to the milk. Mother smiled and thanked her, and we promised to always return them to the hook by the doorway.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g2-p12",
+    "grade": "2",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "The Brave Little Sea Turtle",
+    "hint": "Prefixes, multi-syllable, tricky vowels.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "A tiny sea turtle hatched from its egg on the sandy beach. It felt unsafe because the ocean waves were loud, but it crawled bravely toward the water. The little turtle had to navigate around deep holes and drift wood. Suddenly, a gentle wave swept it into the cool ocean. It swam excitedly into the deep water to begin its new life. Many colorful fish swam beside it, and the young turtle felt happy and free at last."
+    }
+  },
+  {
+    "id": "g2-p12-comp",
+    "grade": "2",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: The Brave Little Sea Turtle",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "A tiny sea turtle hatched from its egg on the sandy beach. It felt unsafe because the ocean waves were loud, but it crawled bravely toward the water. The little turtle had to navigate around deep holes and drift wood. Suddenly, a gentle wave swept it into the cool ocean. It swam excitedly into the deep water to begin its new life. Many colorful fish swam beside it, and the young turtle felt happy and free at last.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g2-p13",
+    "grade": "2",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "Exploring the Starry Night Sky",
+    "hint": "Prefixes (unusually, rewriting, unforgettable), multi-syllable, tricky vowels.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Last night, the sky was unusually clear, so we set up our telescope in the backyard. We wanted to observe the bright moon and search for distant planets. My father pointed to a group of stars and explained how they formed patterns. \"That is the Big Dipper!\" he said excitedly. We watched the stars twinkle for an hour before rewriting our observations in our science notebooks. It was an unforgettable night, and I want to study astronomy."
+    }
+  },
+  {
+    "id": "g2-p13-comp",
+    "grade": "2",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: Exploring the Starry Night Sky",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Last night, the sky was unusually clear, so we set up our telescope in the backyard. We wanted to observe the bright moon and search for distant planets. My father pointed to a group of stars and explained how they formed patterns. \"That is the Big Dipper!\" he said excitedly. We watched the stars twinkle for an hour before rewriting our observations in our science notebooks. It was an unforgettable night, and I want to study astronomy.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g2-p14",
+    "grade": "2",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "A Clever Crow's Big Idea",
+    "hint": "Prefixes (unable, reuse), multi-syllable, tricky vowels.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "During a hot summer afternoon, a thirsty crow searched frantically for water. It discovered a glass pitcher on a garden table, but the water level was too low to reach. The crow realized it was unable to tip the heavy pitcher over. It decided to reuse some small pebbles from the garden path. The crow dropped them one by one into the glass. Slowly, the water rose, and the clever bird drank happily."
+    }
+  },
+  {
+    "id": "g2-p14-comp",
+    "grade": "2",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: A Clever Crow's Big Idea",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "During a hot summer afternoon, a thirsty crow searched frantically for water. It discovered a glass pitcher on a garden table, but the water level was too low to reach. The crow realized it was unable to tip the heavy pitcher over. It decided to reuse some small pebbles from the garden path. The crow dropped them one by one into the glass. Slowly, the water rose, and the clever bird drank happily.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g2-p15",
+    "grade": "2",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "A Special School Science Project",
+    "hint": "Prefixes (recycle, reuse, repaint), multi-syllable, tricky vowels.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Our class was excited to prepare a science project about recycling. We wanted to show how to reuse old plastic bottles to make beautiful flower pots. First, we gathered thirty empty bottles from the school cafeteria. Then, we repainted them with bright colors and filled them with rich soil. Finally, we planted green seeds and watched them sprout. Our teacher praised our hard work, and we felt proud of our green classroom."
+    }
+  },
+  {
+    "id": "g2-p15-comp",
+    "grade": "2",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: A Special School Science Project",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Our class was excited to prepare a science project about recycling. We wanted to show how to reuse old plastic bottles to make beautiful flower pots. First, we gathered thirty empty bottles from the school cafeteria. Then, we repainted them with bright colors and filled them with rich soil. Finally, we planted green seeds and watched them sprout. Our teacher praised our hard work, and we felt proud of our green classroom.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "g2-w1",
+    "grade": "2",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Common Action Verbs",
+    "hint": "Verbs ending in standard past tense suffix -ed.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "walked",
+        "jumped",
+        "pulled",
+        "pushed",
+        "turned",
+        "opened",
+        "closed",
+        "looked",
+        "called",
+        "helped"
+      ]
+    }
+  },
+  {
+    "id": "g2-w1-speak",
+    "grade": "2",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Common Action Verbs",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "walked",
+        "jumped",
+        "pulled",
+        "pushed",
+        "turned",
+        "opened",
+        "closed",
+        "looked",
+        "called",
+        "helped"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g2-w2",
+    "grade": "2",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Direction Prepositions",
+    "hint": "Words that show where things are located.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "under",
+        "over",
+        "behind",
+        "between",
+        "through",
+        "across",
+        "towards",
+        "inside",
+        "outside",
+        "around"
+      ]
+    }
+  },
+  {
+    "id": "g2-w2-speak",
+    "grade": "2",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Direction Prepositions",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "under",
+        "over",
+        "behind",
+        "between",
+        "through",
+        "across",
+        "towards",
+        "inside",
+        "outside",
+        "around"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g2-w3",
+    "grade": "2",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Time & Sequence Words",
+    "hint": "Words that describe when actions happen.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "morning",
+        "afternoon",
+        "evening",
+        "before",
+        "during",
+        "finally",
+        "suddenly",
+        "always",
+        "sometimes",
+        "tomorrow"
+      ]
+    }
+  },
+  {
+    "id": "g2-w3-speak",
+    "grade": "2",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Time & Sequence Words",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "morning",
+        "afternoon",
+        "evening",
+        "before",
+        "during",
+        "finally",
+        "suddenly",
+        "always",
+        "sometimes",
+        "tomorrow"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g2-w4",
+    "grade": "2",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Everyday Verbs",
+    "hint": "Action words showing ongoing actions (ending in -ing).",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "eating",
+        "drinking",
+        "running",
+        "sleeping",
+        "reading",
+        "writing",
+        "playing",
+        "singing",
+        "flying",
+        "swimming"
+      ]
+    }
+  },
+  {
+    "id": "g2-w4-speak",
+    "grade": "2",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Everyday Verbs",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "eating",
+        "drinking",
+        "running",
+        "sleeping",
+        "reading",
+        "writing",
+        "playing",
+        "singing",
+        "flying",
+        "swimming"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g2-w5",
+    "grade": "2",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Spelling Suffixes (-ly)",
+    "hint": "Adverbs that describe how actions are performed.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "quickly",
+        "slowly",
+        "happily",
+        "sadly",
+        "quietly",
+        "loudly",
+        "safely",
+        "cautiously",
+        "peacefully",
+        "bravely"
+      ]
+    }
+  },
+  {
+    "id": "g2-w5-speak",
+    "grade": "2",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Spelling Suffixes (-ly)",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "quickly",
+        "slowly",
+        "happily",
+        "sadly",
+        "quietly",
+        "loudly",
+        "safely",
+        "cautiously",
+        "peacefully",
+        "bravely"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g2-w6",
+    "grade": "2",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Compound Words",
+    "hint": "Words made by combining two smaller words.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "backyard",
+        "playfield",
+        "wildflower",
+        "sandbox",
+        "sunset",
+        "notebook",
+        "doorway",
+        "classroom",
+        "backpack",
+        "seashore"
+      ]
+    }
+  },
+  {
+    "id": "g2-w6-speak",
+    "grade": "2",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Compound Words",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "backyard",
+        "playfield",
+        "wildflower",
+        "sandbox",
+        "sunset",
+        "notebook",
+        "doorway",
+        "classroom",
+        "backpack",
+        "seashore"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g2-w7",
+    "grade": "2",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Tricky Homophones",
+    "hint": "Words that sound the same but have different spellings and meanings.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "there",
+        "their",
+        "they're",
+        "to",
+        "too",
+        "two",
+        "here",
+        "hear",
+        "see",
+        "sea"
+      ]
+    }
+  },
+  {
+    "id": "g2-w7-speak",
+    "grade": "2",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Tricky Homophones",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "there",
+        "their",
+        "they're",
+        "to",
+        "too",
+        "two",
+        "here",
+        "hear",
+        "see",
+        "sea"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g2-w8",
+    "grade": "2",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Spelling Suffixes (-ed & -ing)",
+    "hint": "Verb inflections with suffix endings.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "scurried",
+        "whispered",
+        "discovered",
+        "reached",
+        "promised",
+        "holding",
+        "peeking",
+        "climbing",
+        "preparing",
+        "playing"
+      ]
+    }
+  },
+  {
+    "id": "g2-w8-speak",
+    "grade": "2",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Spelling Suffixes (-ed & -ing)",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "scurried",
+        "whispered",
+        "discovered",
+        "reached",
+        "promised",
+        "holding",
+        "peeking",
+        "climbing",
+        "preparing",
+        "playing"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g2-w9",
+    "grade": "2",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Prefixes (UN- & RE-)",
+    "hint": "Words starting with prefixes un- (not) and re- (again).",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "unhappy",
+        "unsafe",
+        "unusual",
+        "unlucky",
+        "unable",
+        "rebuild",
+        "rewrite",
+        "reuse",
+        "repaint",
+        "return"
+      ]
+    }
+  },
+  {
+    "id": "g2-w9-speak",
+    "grade": "2",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Prefixes (UN- & RE-)",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "unhappy",
+        "unsafe",
+        "unusual",
+        "unlucky",
+        "unable",
+        "rebuild",
+        "rewrite",
+        "reuse",
+        "repaint",
+        "return"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g2-w10",
+    "grade": "2",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Multi-Syllable Words",
+    "hint": "Longer words with three or more syllables.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "refrigerator",
+        "telescope",
+        "astronomy",
+        "observation",
+        "beautiful",
+        "cafeteria",
+        "unexpectedly",
+        "unforgettable",
+        "cushions",
+        "pitcher"
+      ]
+    }
+  },
+  {
+    "id": "g2-w10-speak",
+    "grade": "2",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Multi-Syllable Words",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "refrigerator",
+        "telescope",
+        "astronomy",
+        "observation",
+        "beautiful",
+        "cafeteria",
+        "unexpectedly",
+        "unforgettable",
+        "cushions",
+        "pitcher"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g2-w11",
+    "grade": "2",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Tricky Vowels",
+    "hint": "Words with vowel combinations or pronunciations that can be tricky.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "acorn",
+        "squirrel",
+        "turtle",
+        "crawled",
+        "science",
+        "project",
+        "recycle",
+        "praised",
+        "damp",
+        "pebbles"
+      ]
+    }
+  },
+  {
+    "id": "g2-w11-speak",
+    "grade": "2",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Tricky Vowels",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "acorn",
+        "squirrel",
+        "turtle",
+        "crawled",
+        "science",
+        "project",
+        "recycle",
+        "praised",
+        "damp",
+        "pebbles"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g2-w12",
+    "grade": "2",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Common Suffixes (-ful & -less)",
+    "hint": "Suffixes -ful (full of) and -less (without).",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "wonderful",
+        "beautiful",
+        "playful",
+        "colorful",
+        "helpful",
+        "careless",
+        "hopeless",
+        "fearless",
+        "harmless",
+        "useless"
+      ]
+    }
+  },
+  {
+    "id": "g2-w12-speak",
+    "grade": "2",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Common Suffixes (-ful & -less)",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "wonderful",
+        "beautiful",
+        "playful",
+        "colorful",
+        "helpful",
+        "careless",
+        "hopeless",
+        "fearless",
+        "harmless",
+        "useless"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g2-w13",
+    "grade": "2",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Days of the Week",
+    "hint": "Days of the week always start with a capital letter.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ]
+    }
+  },
+  {
+    "id": "g2-w13-speak",
+    "grade": "2",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Days of the Week",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g2-w14",
+    "grade": "2",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Digraphs: PH, CK, NG, GH",
+    "hint": "Consonants that work together to make one unique sound.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "phone",
+        "photo",
+        "duck",
+        "lock",
+        "sing",
+        "song",
+        "laugh",
+        "rough"
+      ]
+    }
+  },
+  {
+    "id": "g2-w14-speak",
+    "grade": "2",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Digraphs: PH, CK, NG, GH",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "phone",
+        "photo",
+        "duck",
+        "lock",
+        "sing",
+        "song",
+        "laugh",
+        "rough"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g2-w15",
+    "grade": "2",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Prefixes: DIS- & MIS-",
+    "hint": "Prefixes dis- (not) and mis- (wrong) added to the front of words.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "dislike",
+        "disagree",
+        "distrust",
+        "mislead",
+        "mistake",
+        "misspell",
+        "misbehave",
+        "mismatch"
+      ]
+    }
+  },
+  {
+    "id": "g2-w15-speak",
+    "grade": "2",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Prefixes: DIS- & MIS-",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "dislike",
+        "disagree",
+        "distrust",
+        "mislead",
+        "mistake",
+        "misspell",
+        "misbehave",
+        "mismatch"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g2-w16",
+    "grade": "2",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Homophones: Sound-Alikes",
+    "hint": "These pairs sound exactly the same but are spelled differently.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "son",
+        "sun",
+        "blue",
+        "blew",
+        "deer",
+        "dear",
+        "night",
+        "knight"
+      ]
+    }
+  },
+  {
+    "id": "g2-w16-speak",
+    "grade": "2",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Homophones: Sound-Alikes",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "son",
+        "sun",
+        "blue",
+        "blew",
+        "deer",
+        "dear",
+        "night",
+        "knight"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g2-w17",
+    "grade": "2",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Frequently Confused Vowels",
+    "hint": "Watch the vowels! Small changes in spelling create completely different words.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "quiet",
+        "quite",
+        "loose",
+        "lose",
+        "chose",
+        "choose",
+        "close",
+        "clothes"
+      ]
+    }
+  },
+  {
+    "id": "g2-w17-speak",
+    "grade": "2",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Frequently Confused Vowels",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "quiet",
+        "quite",
+        "loose",
+        "lose",
+        "chose",
+        "choose",
+        "close",
+        "clothes"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g2-w18",
+    "grade": "2",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Double Letter Traps",
+    "hint": "These words have adjacent twin consonants that must be written.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "happy",
+        "funny",
+        "sunny",
+        "middle",
+        "yellow",
+        "butter",
+        "puppy",
+        "kitten",
+        "sudden",
+        "letter"
+      ]
+    }
+  },
+  {
+    "id": "g2-w18-speak",
+    "grade": "2",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Double Letter Traps",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "happy",
+        "funny",
+        "sunny",
+        "middle",
+        "yellow",
+        "butter",
+        "puppy",
+        "kitten",
+        "sudden",
+        "letter"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g2-w19",
+    "grade": "2",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Fry Second 100: Set A",
+    "hint": "Core words that form the foundation of second-grade literacy.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "their",
+        "if",
+        "will",
+        "up",
+        "other",
+        "about",
+        "out",
+        "many"
+      ]
+    }
+  },
+  {
+    "id": "g2-w19-speak",
+    "grade": "2",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Fry Second 100: Set A",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "their",
+        "if",
+        "will",
+        "up",
+        "other",
+        "about",
+        "out",
+        "many"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g2-w20",
+    "grade": "2",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Fry Second 100: Set B",
+    "hint": "High-frequency determiners, pronouns, and verbs.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "then",
+        "them",
+        "these",
+        "so",
+        "some",
+        "her",
+        "would",
+        "make"
+      ]
+    }
+  },
+  {
+    "id": "g2-w20-speak",
+    "grade": "2",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Fry Second 100: Set B",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "then",
+        "them",
+        "these",
+        "so",
+        "some",
+        "her",
+        "would",
+        "make"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g2-w21",
+    "grade": "2",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Fry Second 100: Set C",
+    "hint": "Common structural words found in children's literature.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "like",
+        "him",
+        "into",
+        "time",
+        "has",
+        "look",
+        "two",
+        "more"
+      ]
+    }
+  },
+  {
+    "id": "g2-w21-speak",
+    "grade": "2",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Fry Second 100: Set C",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "like",
+        "him",
+        "into",
+        "time",
+        "has",
+        "look",
+        "two",
+        "more"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  }
+]

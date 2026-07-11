@@ -1,0 +1,1614 @@
+[
+  {
+    "id": "gK-p1",
+    "grade": "K",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "My Cat",
+    "hint": "Short CVC words and sight words.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "I have a cat. The cat is fat."
+    }
+  },
+  {
+    "id": "gK-p1-comp",
+    "grade": "K",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: My Cat",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "I have a cat. The cat is fat.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "gK-p2",
+    "grade": "K",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "A Big Dog",
+    "hint": "Short CVC words and sight words.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "The dog is big. He can run to me."
+    }
+  },
+  {
+    "id": "gK-p2-comp",
+    "grade": "K",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: A Big Dog",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "The dog is big. He can run to me.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "gK-p3",
+    "grade": "K",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "In the Sun",
+    "hint": "Focus on short u and o sounds.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "It is hot. The sun is up."
+    }
+  },
+  {
+    "id": "gK-p3-comp",
+    "grade": "K",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: In the Sun",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "It is hot. The sun is up.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "gK-p4",
+    "grade": "K",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "The Red Bug",
+    "hint": "Focus on color red and short u sounds.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "I see a red bug. The bug can hop."
+    }
+  },
+  {
+    "id": "gK-p4-comp",
+    "grade": "K",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: The Red Bug",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "I see a red bug. The bug can hop.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "gK-p5",
+    "grade": "K",
+    "type": "dictation",
+    "difficulty": "beginner",
+    "title": "My Dad",
+    "hint": "Focus on short a sounds.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "My dad is sad. He has no cap."
+    }
+  },
+  {
+    "id": "gK-p5-comp",
+    "grade": "K",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Comprehension: My Dad",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "My dad is sad. He has no cap.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "gK-p6",
+    "grade": "K",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "Play in the Mud",
+    "hint": "Adjectives like brown and happy, and blends like spin.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "The brown pig is in the mud. He is happy. He can jump and spin."
+    }
+  },
+  {
+    "id": "gK-p6-comp",
+    "grade": "K",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: Play in the Mud",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "The brown pig is in the mud. He is happy. He can jump and spin.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "gK-p7",
+    "grade": "K",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "The Green Frog",
+    "hint": "Look for green, frog, and the number ten.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "A green frog is on the log. He can hop fast. I see ten frogs."
+    }
+  },
+  {
+    "id": "gK-p7-comp",
+    "grade": "K",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: The Green Frog",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "A green frog is on the log. He can hop fast. I see ten frogs.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "gK-p8",
+    "grade": "K",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "My Red Hat",
+    "hint": "Body part (head) and color (red).",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "I have a red hat. It fits my big head. I wear it to the park."
+    }
+  },
+  {
+    "id": "gK-p8-comp",
+    "grade": "K",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: My Red Hat",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "I have a red hat. It fits my big head. I wear it to the park.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "gK-p9",
+    "grade": "K",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "A Frog Can Swim",
+    "hint": "Word check: swim, pond, green.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Look at the little frog. It can swim in the pond. It is green and fast."
+    }
+  },
+  {
+    "id": "gK-p9-comp",
+    "grade": "K",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: A Frog Can Swim",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Look at the little frog. It can swim in the pond. It is green and fast.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "gK-p10",
+    "grade": "K",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "Ten Red Birds",
+    "hint": "Check number ten, color red, and blend fly.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "I see ten red birds in the tree. They sing a happy song. They fly away."
+    }
+  },
+  {
+    "id": "gK-p10-comp",
+    "grade": "K",
+    "type": "comprehension",
+    "difficulty": "intermediate",
+    "title": "Comprehension: Ten Red Birds",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "I see ten red birds in the tree. They sing a happy song. They fly away.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "gK-p11",
+    "grade": "K",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "At the Fish Shop",
+    "hint": "Focus on digraph sh (she, fish, shop) and past tense went, saw, liked.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "She went to the fish shop. She saw a big fish. The fish was red and blue. She liked it a lot."
+    }
+  },
+  {
+    "id": "gK-p11-comp",
+    "grade": "K",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: At the Fish Shop",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "She went to the fish shop. She saw a big fish. The fish was red and blue. She liked it a lot.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "gK-p12",
+    "grade": "K",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "The Playful Chick",
+    "hint": "Digraph ch (chick), vowel team (seed, sweet), and past tense had, ate, ran, was.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "The little yellow chick had a small nest. He ate a sweet seed. Then he ran to his mom. He was warm."
+    }
+  },
+  {
+    "id": "gK-p12-comp",
+    "grade": "K",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: The Playful Chick",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "The little yellow chick had a small nest. He ate a sweet seed. Then he ran to his mom. He was warm.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "gK-p13",
+    "grade": "K",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "A Day at the Lake",
+    "hint": "Long a silent-e words: lake, gate, tame, cake.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "We went to the big lake. We saw a white gate. A tame duck ate cake near the gate. It was a fun day."
+    }
+  },
+  {
+    "id": "gK-p13-comp",
+    "grade": "K",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: A Day at the Lake",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "We went to the big lake. We saw a white gate. A tame duck ate cake near the gate. It was a fun day.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "gK-p14",
+    "grade": "K",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "Where is the Toy?",
+    "hint": "Question words (where) and digraph th (the, here).",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Where is my red toy? It is not on the bed. Did it fall under the rug? Yes, here it is!"
+    }
+  },
+  {
+    "id": "gK-p14-comp",
+    "grade": "K",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: Where is the Toy?",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Where is my red toy? It is not on the bed. Did it fall under the rug? Yes, here it is!",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "gK-p15",
+    "grade": "K",
+    "type": "dictation",
+    "difficulty": "advanced",
+    "title": "The Cold Wind",
+    "hint": "Past tense blew, sat, drank, slept.",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "The cold wind blew all night. We sat by the warm fire. We drank hot milk and slept well in our beds."
+    }
+  },
+  {
+    "id": "gK-p15-comp",
+    "grade": "K",
+    "type": "comprehension",
+    "difficulty": "advanced",
+    "title": "Comprehension: The Cold Wind",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "The cold wind blew all night. We sat by the warm fire. We drank hot milk and slept well in our beds.",
+      "questions": [
+        {
+          "question": "What is this passage mostly about?",
+          "choices": [
+            "The main topic",
+            "A different story",
+            "Nothing at all"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read carefully, then answer."
+  },
+  {
+    "id": "gK-w1",
+    "grade": "K",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "CVC Short A",
+    "hint": "CVC words with short A vowel.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "cat",
+        "hat",
+        "mat",
+        "dad",
+        "sad",
+        "bag",
+        "cap",
+        "map"
+      ]
+    }
+  },
+  {
+    "id": "gK-w1-speak",
+    "grade": "K",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: CVC Short A",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "cat",
+        "hat",
+        "mat",
+        "dad",
+        "sad",
+        "bag",
+        "cap",
+        "map"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "gK-w2",
+    "grade": "K",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "CVC Short O & U",
+    "hint": "CVC words with short O and short U.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "dog",
+        "hot",
+        "log",
+        "bug",
+        "sun",
+        "run",
+        "mud",
+        "cup"
+      ]
+    }
+  },
+  {
+    "id": "gK-w2-speak",
+    "grade": "K",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: CVC Short O & U",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "dog",
+        "hot",
+        "log",
+        "bug",
+        "sun",
+        "run",
+        "mud",
+        "cup"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "gK-w3",
+    "grade": "K",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "CVC Short E & I",
+    "hint": "CVC words with short E and short I.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "hen",
+        "red",
+        "bed",
+        "ten",
+        "pig",
+        "wig",
+        "sit",
+        "bin"
+      ]
+    }
+  },
+  {
+    "id": "gK-w3-speak",
+    "grade": "K",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: CVC Short E & I",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "hen",
+        "red",
+        "bed",
+        "ten",
+        "pig",
+        "wig",
+        "sit",
+        "bin"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "gK-w4",
+    "grade": "K",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "High-Frequency Sight Words",
+    "hint": "Common words you see very often.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "the",
+        "is",
+        "and",
+        "see",
+        "you",
+        "for",
+        "was",
+        "are"
+      ]
+    }
+  },
+  {
+    "id": "gK-w4-speak",
+    "grade": "K",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: High-Frequency Sight Words",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "the",
+        "is",
+        "and",
+        "see",
+        "you",
+        "for",
+        "was",
+        "are"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "gK-w5",
+    "grade": "K",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Consonant Blends",
+    "hint": "Words starting with two consonants blended together.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "stop",
+        "frog",
+        "plug",
+        "swim",
+        "spin",
+        "flag",
+        "drum",
+        "clap"
+      ]
+    }
+  },
+  {
+    "id": "gK-w5-speak",
+    "grade": "K",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Consonant Blends",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "stop",
+        "frog",
+        "plug",
+        "swim",
+        "spin",
+        "flag",
+        "drum",
+        "clap"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "gK-w6",
+    "grade": "K",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Colors & Numbers",
+    "hint": "Names of common colors and numbers.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "red",
+        "blue",
+        "green",
+        "black",
+        "white",
+        "one",
+        "two",
+        "three",
+        "four",
+        "five"
+      ]
+    }
+  },
+  {
+    "id": "gK-w6-speak",
+    "grade": "K",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Colors & Numbers",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "red",
+        "blue",
+        "green",
+        "black",
+        "white",
+        "one",
+        "two",
+        "three",
+        "four",
+        "five"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "gK-w7",
+    "grade": "K",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "My Body Parts",
+    "hint": "Common parts of the body.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "head",
+        "hand",
+        "foot",
+        "leg",
+        "arm",
+        "ear",
+        "eye",
+        "nose"
+      ]
+    }
+  },
+  {
+    "id": "gK-w7-speak",
+    "grade": "K",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: My Body Parts",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "head",
+        "hand",
+        "foot",
+        "leg",
+        "arm",
+        "ear",
+        "eye",
+        "nose"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "gK-w8",
+    "grade": "K",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "At the Farm",
+    "hint": "Words related to farm life.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "pig",
+        "cow",
+        "duck",
+        "goat",
+        "sheep",
+        "barn",
+        "milk",
+        "farm"
+      ]
+    }
+  },
+  {
+    "id": "gK-w8-speak",
+    "grade": "K",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: At the Farm",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "pig",
+        "cow",
+        "duck",
+        "goat",
+        "sheep",
+        "barn",
+        "milk",
+        "farm"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "gK-w9",
+    "grade": "K",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Digraphs: SH & CH",
+    "hint": "Words with digraphs sh and ch.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "she",
+        "ship",
+        "fish",
+        "shop",
+        "chin",
+        "chip",
+        "rich",
+        "much"
+      ]
+    }
+  },
+  {
+    "id": "gK-w9-speak",
+    "grade": "K",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Digraphs: SH & CH",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "she",
+        "ship",
+        "fish",
+        "shop",
+        "chin",
+        "chip",
+        "rich",
+        "much"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "gK-w10",
+    "grade": "K",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Digraphs: TH & WH",
+    "hint": "Words with digraphs th and wh.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "this",
+        "that",
+        "with",
+        "them",
+        "who",
+        "what",
+        "when",
+        "where"
+      ]
+    }
+  },
+  {
+    "id": "gK-w10-speak",
+    "grade": "K",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Digraphs: TH & WH",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "this",
+        "that",
+        "with",
+        "them",
+        "who",
+        "what",
+        "when",
+        "where"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "gK-w11",
+    "grade": "K",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Long Vowel Sounds",
+    "hint": "Silent-e words with long vowel sounds.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "lake",
+        "cake",
+        "gate",
+        "like",
+        "bike",
+        "home",
+        "rose",
+        "cute"
+      ]
+    }
+  },
+  {
+    "id": "gK-w11-speak",
+    "grade": "K",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Long Vowel Sounds",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "lake",
+        "cake",
+        "gate",
+        "like",
+        "bike",
+        "home",
+        "rose",
+        "cute"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "gK-w12",
+    "grade": "K",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Simple Past Verbs",
+    "hint": "Action words for things that already happened.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "went",
+        "saw",
+        "had",
+        "ran",
+        "sat",
+        "got",
+        "was",
+        "were"
+      ]
+    }
+  },
+  {
+    "id": "gK-w12-speak",
+    "grade": "K",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Simple Past Verbs",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "went",
+        "saw",
+        "had",
+        "ran",
+        "sat",
+        "got",
+        "was",
+        "were"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "gK-w13",
+    "grade": "K",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "High-Frequency Sight Words B",
+    "hint": "More common words you see very often.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "to",
+        "he",
+        "she",
+        "me",
+        "we",
+        "my",
+        "go",
+        "no"
+      ]
+    }
+  },
+  {
+    "id": "gK-w13-speak",
+    "grade": "K",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: High-Frequency Sight Words B",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "to",
+        "he",
+        "she",
+        "me",
+        "we",
+        "my",
+        "go",
+        "no"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "gK-w14",
+    "grade": "K",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "In the Forest",
+    "hint": "Names of things you can see in the forest.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "tree",
+        "leaf",
+        "bird",
+        "bug",
+        "fox",
+        "bear",
+        "deer",
+        "owl"
+      ]
+    }
+  },
+  {
+    "id": "gK-w14-speak",
+    "grade": "K",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: In the Forest",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "tree",
+        "leaf",
+        "bird",
+        "bug",
+        "fox",
+        "bear",
+        "deer",
+        "owl"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "gK-w15",
+    "grade": "K",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Silent E Magic",
+    "hint": "Silent e at the end makes the vowel say its name.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "make",
+        "take",
+        "game",
+        "fine",
+        "ride",
+        "hope",
+        "rope",
+        "tube"
+      ]
+    }
+  },
+  {
+    "id": "gK-w15-speak",
+    "grade": "K",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Silent E Magic",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "make",
+        "take",
+        "game",
+        "fine",
+        "ride",
+        "hope",
+        "rope",
+        "tube"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "gK-w16",
+    "grade": "K",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Tricky Letter Sounds",
+    "hint": "Be careful with letters that sound similar like f/v, s/z, or th/f.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "fun",
+        "van",
+        "sun",
+        "zip",
+        "thin",
+        "fin",
+        "ship",
+        "chip"
+      ]
+    }
+  },
+  {
+    "id": "gK-w16-speak",
+    "grade": "K",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Tricky Letter Sounds",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "fun",
+        "van",
+        "sun",
+        "zip",
+        "thin",
+        "fin",
+        "ship",
+        "chip"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "gK-w17",
+    "grade": "K",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Short Vowel Mix-ups",
+    "hint": "Listen closely to the differences between short vowels.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "pen",
+        "pin",
+        "ten",
+        "tin",
+        "bat",
+        "bet",
+        "bag",
+        "beg"
+      ]
+    }
+  },
+  {
+    "id": "gK-w17-speak",
+    "grade": "K",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Short Vowel Mix-ups",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "pen",
+        "pin",
+        "ten",
+        "tin",
+        "bat",
+        "bet",
+        "bag",
+        "beg"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "gK-w18",
+    "grade": "K",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Silent E Confusions",
+    "hint": "Adding silent e changes both the sound and spelling of the word.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "bit",
+        "bite",
+        "hop",
+        "hope",
+        "cut",
+        "cute",
+        "tap",
+        "tape"
+      ]
+    }
+  },
+  {
+    "id": "gK-w18-speak",
+    "grade": "K",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Silent E Confusions",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "bit",
+        "bite",
+        "hop",
+        "hope",
+        "cut",
+        "cute",
+        "tap",
+        "tape"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "gK-w19",
+    "grade": "K",
+    "type": "spelling",
+    "difficulty": "beginner",
+    "title": "Fry First 100: Set A",
+    "hint": "The most common high-frequency words in written English.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "the",
+        "of",
+        "and",
+        "a",
+        "to",
+        "in",
+        "is",
+        "you"
+      ]
+    }
+  },
+  {
+    "id": "gK-w19-speak",
+    "grade": "K",
+    "type": "speak_word",
+    "difficulty": "beginner",
+    "title": "Speak: Fry First 100: Set A",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "the",
+        "of",
+        "and",
+        "a",
+        "to",
+        "in",
+        "is",
+        "you"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "gK-w20",
+    "grade": "K",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Fry First 100: Set B",
+    "hint": "High-frequency core words to master.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "that",
+        "it",
+        "he",
+        "was",
+        "for",
+        "on",
+        "are",
+        "as"
+      ]
+    }
+  },
+  {
+    "id": "gK-w20-speak",
+    "grade": "K",
+    "type": "speak_word",
+    "difficulty": "intermediate",
+    "title": "Speak: Fry First 100: Set B",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "that",
+        "it",
+        "he",
+        "was",
+        "for",
+        "on",
+        "are",
+        "as"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "gK-w21",
+    "grade": "K",
+    "type": "spelling",
+    "difficulty": "advanced",
+    "title": "Fry First 100: Set C",
+    "hint": "Core words frequently used in simple sentences.",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "with",
+        "his",
+        "they",
+        "I",
+        "at",
+        "be",
+        "this",
+        "have"
+      ]
+    }
+  },
+  {
+    "id": "gK-w21-speak",
+    "grade": "K",
+    "type": "speak_word",
+    "difficulty": "advanced",
+    "title": "Speak: Fry First 100: Set C",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "words": [
+        "with",
+        "his",
+        "they",
+        "I",
+        "at",
+        "be",
+        "this",
+        "have"
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say each word after you hear it."
+  }
+]

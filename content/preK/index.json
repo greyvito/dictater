@@ -1,0 +1,303 @@
+[
+  {
+    "id": "preK-rhyme-01",
+    "grade": "preK",
+    "type": "phonological_rhyme",
+    "difficulty": "beginner",
+    "title": "Rhyme: cat",
+    "skills": ["rhyme_recognition"],
+    "standards": ["CCSS.ELA-LITERACY.RF.K.2.A"],
+    "content": { "prompt": "cat", "choices": ["hat", "dog", "sun"], "correctIndex": 0 },
+    "hint": "Rhyming words sound the same at the end."
+  },
+  {
+    "id": "preK-rhyme-02",
+    "grade": "preK",
+    "type": "phonological_rhyme",
+    "difficulty": "beginner",
+    "title": "Rhyme: ball",
+    "skills": ["rhyme_recognition"],
+    "content": { "prompt": "ball", "choices": ["tall", "book", "fish"], "correctIndex": 0 },
+    "hint": "Listen for the ending sound."
+  },
+  {
+    "id": "preK-rhyme-03",
+    "grade": "preK",
+    "type": "phonological_rhyme",
+    "difficulty": "beginner",
+    "title": "Rhyme: sun",
+    "skills": ["rhyme_recognition"],
+    "content": { "prompt": "sun", "choices": ["run", "tree", "cup"], "correctIndex": 0 },
+    "hint": "Sun and run rhyme."
+  },
+  {
+    "id": "preK-rhyme-04",
+    "grade": "preK",
+    "type": "phonological_rhyme",
+    "difficulty": "intermediate",
+    "title": "Rhyme: star",
+    "skills": ["rhyme_recognition"],
+    "content": { "prompt": "star", "choices": ["car", "moon", "bed"], "correctIndex": 0 },
+    "hint": "Star and car rhyme."
+  },
+  {
+    "id": "preK-rhyme-05",
+    "grade": "preK",
+    "type": "phonological_rhyme",
+    "difficulty": "intermediate",
+    "title": "Rhyme: tree",
+    "skills": ["rhyme_recognition"],
+    "content": { "prompt": "tree", "choices": ["bee", "house", "pig"], "correctIndex": 0 },
+    "hint": "Tree and bee rhyme."
+  },
+  {
+    "id": "preK-syl-01",
+    "grade": "preK",
+    "type": "phonological_syllable",
+    "difficulty": "beginner",
+    "title": "Syllables: cat",
+    "skills": ["syllable_count"],
+    "content": { "prompt": "cat", "choices": ["1", "2", "3"], "correctIndex": 0 },
+    "hint": "Clap once for cat."
+  },
+  {
+    "id": "preK-syl-02",
+    "grade": "preK",
+    "type": "phonological_syllable",
+    "difficulty": "beginner",
+    "title": "Syllables: apple",
+    "skills": ["syllable_count"],
+    "content": { "prompt": "apple", "choices": ["1", "2", "3"], "correctIndex": 1 },
+    "hint": "Ap-ple has two parts."
+  },
+  {
+    "id": "preK-syl-03",
+    "grade": "preK",
+    "type": "phonological_syllable",
+    "difficulty": "beginner",
+    "title": "Syllables: banana",
+    "skills": ["syllable_count"],
+    "content": { "prompt": "banana", "choices": ["1", "2", "3"], "correctIndex": 2 },
+    "hint": "Ba-na-na has three claps."
+  },
+  {
+    "id": "preK-syl-04",
+    "grade": "preK",
+    "type": "phonological_syllable",
+    "difficulty": "intermediate",
+    "title": "Syllables: elephant",
+    "skills": ["syllable_count"],
+    "content": { "prompt": "elephant", "choices": ["2", "3", "4"], "correctIndex": 1 },
+    "hint": "El-e-phant — three claps."
+  },
+  {
+    "id": "preK-syl-05",
+    "grade": "preK",
+    "type": "phonological_syllable",
+    "difficulty": "intermediate",
+    "title": "Syllables: butterfly",
+    "skills": ["syllable_count"],
+    "content": { "prompt": "butterfly", "choices": ["2", "3", "4"], "correctIndex": 1 },
+    "hint": "But-ter-fly has three syllables."
+  },
+  {
+    "id": "preK-init-01",
+    "grade": "preK",
+    "type": "phonological_initial",
+    "difficulty": "beginner",
+    "title": "Start sound: /b/",
+    "skills": ["initial_sound"],
+    "content": { "prompt": "ball", "choices": ["/b/", "/s/", "/m/"], "correctIndex": 0 },
+    "hint": "Ball starts with b."
+  },
+  {
+    "id": "preK-init-02",
+    "grade": "preK",
+    "type": "phonological_initial",
+    "difficulty": "beginner",
+    "title": "Start sound: /m/",
+    "skills": ["initial_sound"],
+    "content": { "prompt": "moon", "choices": ["/m/", "/t/", "/p/"], "correctIndex": 0 },
+    "hint": "Moon starts with m."
+  },
+  {
+    "id": "preK-init-03",
+    "grade": "preK",
+    "type": "phonological_initial",
+    "difficulty": "beginner",
+    "title": "Start sound: /s/",
+    "skills": ["initial_sound"],
+    "content": { "prompt": "sun", "choices": ["/s/", "/d/", "/g/"], "correctIndex": 0 },
+    "hint": "Sun starts with s."
+  },
+  {
+    "id": "preK-init-04",
+    "grade": "preK",
+    "type": "phonological_initial",
+    "difficulty": "intermediate",
+    "title": "Start sound: /f/",
+    "skills": ["initial_sound"],
+    "content": { "prompt": "fish", "choices": ["/f/", "/sh/", "/ch/"], "correctIndex": 0 },
+    "hint": "Fish starts with f."
+  },
+  {
+    "id": "preK-init-05",
+    "grade": "preK",
+    "type": "phonological_initial",
+    "difficulty": "intermediate",
+    "title": "Start sound: /sh/",
+    "skills": ["initial_sound"],
+    "content": { "prompt": "shoe", "choices": ["/sh/", "/s/", "/ch/"], "correctIndex": 0 },
+    "hint": "Shoe starts with sh."
+  },
+  {
+    "id": "preK-letter-01",
+    "grade": "preK",
+    "type": "letter_sound",
+    "difficulty": "beginner",
+    "title": "Letter A",
+    "skills": ["letter_sound"],
+    "content": { "letter": "A", "choices": ["apple", "ball", "cat"], "correctIndex": 0 },
+    "hint": "Apple starts with a."
+  },
+  {
+    "id": "preK-letter-02",
+    "grade": "preK",
+    "type": "letter_sound",
+    "difficulty": "beginner",
+    "title": "Letter B",
+    "skills": ["letter_sound"],
+    "content": { "letter": "B", "choices": ["dog", "ball", "sun"], "correctIndex": 1 },
+    "hint": "Ball starts with b."
+  },
+  {
+    "id": "preK-letter-03",
+    "grade": "preK",
+    "type": "letter_sound",
+    "difficulty": "beginner",
+    "title": "Letter C",
+    "skills": ["letter_sound"],
+    "content": { "letter": "C", "choices": ["cat", "fish", "hat"], "correctIndex": 0 },
+    "hint": "Cat starts with c."
+  },
+  {
+    "id": "preK-letter-04",
+    "grade": "preK",
+    "type": "letter_sound",
+    "difficulty": "beginner",
+    "title": "Letter D",
+    "skills": ["letter_sound"],
+    "content": { "letter": "D", "choices": ["dog", "egg", "fan"], "correctIndex": 0 },
+    "hint": "Dog starts with d."
+  },
+  {
+    "id": "preK-letter-05",
+    "grade": "preK",
+    "type": "letter_sound",
+    "difficulty": "intermediate",
+    "title": "Letter M",
+    "skills": ["letter_sound"],
+    "content": { "letter": "M", "choices": ["map", "net", "pig"], "correctIndex": 0 },
+    "hint": "Map starts with m."
+  },
+  {
+    "id": "preK-vocab-01",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Word: red",
+    "skills": ["oral_vocabulary"],
+    "content": { "prompt": "red", "choices": ["red", "blue", "green"], "correctIndex": 0 },
+    "hint": "Tap the color red."
+  },
+  {
+    "id": "preK-vocab-02",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Word: dog",
+    "skills": ["oral_vocabulary"],
+    "content": { "prompt": "dog", "choices": ["dog", "cat", "bird"], "correctIndex": 0 },
+    "hint": "Which word is dog?"
+  },
+  {
+    "id": "preK-vocab-03",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Word: one",
+    "skills": ["oral_vocabulary"],
+    "content": { "prompt": "one", "choices": ["one", "two", "three"], "correctIndex": 0 },
+    "hint": "Tap the number one."
+  },
+  {
+    "id": "preK-vocab-04",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "intermediate",
+    "title": "Word: happy",
+    "skills": ["oral_vocabulary"],
+    "content": { "prompt": "happy", "choices": ["happy", "sad", "angry"], "correctIndex": 0 },
+    "hint": "Which word means happy?"
+  },
+  {
+    "id": "preK-vocab-05",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "intermediate",
+    "title": "Word: big",
+    "skills": ["oral_vocabulary"],
+    "content": { "prompt": "big", "choices": ["big", "small", "tiny"], "correctIndex": 0 },
+    "hint": "Big is the opposite of small."
+  },
+  {
+    "id": "preK-speak-01",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: cat",
+    "skills": ["speaking", "oral_fluency"],
+    "content": { "prompt": "cat", "expectedText": "cat", "maxAttempts": 2 },
+    "hint": "Repeat the word after you hear it."
+  },
+  {
+    "id": "preK-speak-02",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: dog",
+    "skills": ["speaking"],
+    "content": { "prompt": "dog", "expectedText": "dog", "maxAttempts": 2 },
+    "hint": "Say dog clearly."
+  },
+  {
+    "id": "preK-speak-03",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: sun",
+    "skills": ["speaking"],
+    "content": { "prompt": "sun", "expectedText": "sun", "maxAttempts": 2 },
+    "hint": "Repeat sun."
+  },
+  {
+    "id": "preK-speak-04",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "intermediate",
+    "title": "Say: apple",
+    "skills": ["speaking"],
+    "content": { "prompt": "apple", "expectedText": "apple", "maxAttempts": 3 },
+    "hint": "Two syllables: ap-ple."
+  },
+  {
+    "id": "preK-speak-05",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "intermediate",
+    "title": "Say: hello",
+    "skills": ["speaking"],
+    "content": { "prompt": "hello", "expectedText": "hello", "maxAttempts": 3 },
+    "hint": "Say hello!"
+  }
+]
