@@ -1,3 +1,5 @@
+import { showActivityResult } from './postCheck.js';
+
 function mcqActivity(type, label, instruction) {
   return {
     type,
@@ -30,8 +32,13 @@ function mcqActivity(type, label, instruction) {
             qIdx++;
             if (qIdx >= questions.length) {
               const score = Math.round((correct / questions.length) * 100);
-              container.innerHTML = `<div class="result-card feedback"><div class="result-score">${score}%</div><p>${correct} of ${questions.length} correct</p></div>`;
-              onComplete({ score, passed: score >= 60 });
+              const passed = score >= 60;
+              showActivityResult(container, ctx, {
+                score,
+                passed,
+                summary: `${correct} of ${questions.length} correct`
+              });
+              onComplete({ score, passed });
             } else renderQ();
           });
           grid.appendChild(btn);
@@ -60,7 +67,7 @@ export const phonicsBlendActivity = {
         <p class="input-label">Build the word: ${lesson.content.prompt || 'Blend the sounds'}</p>
         <div class="tile-bank" id="tile-bank"></div>
         <div class="tile-answer" id="tile-answer"></div>
-        <button type="button" class="btn-accent" id="tile-check">Check</button>
+        <button type="button" class="btn-primary" id="tile-check">Check</button>
       </div>`;
 
     const bank = container.querySelector('#tile-bank');
@@ -102,8 +109,14 @@ export const phonicsBlendActivity = {
     renderBank();
     container.querySelector('#tile-check').addEventListener('click', () => {
       const built = selected.join('');
-      const score = built.toLowerCase() === target.toLowerCase() ? 100 : 0;
-      onComplete({ score, passed: score === 100 });
+      const passed = built.toLowerCase() === target.toLowerCase();
+      const score = passed ? 100 : 0;
+      showActivityResult(container, ctx, {
+        score,
+        passed,
+        summary: passed ? 'Great blend!' : `Try again — target word: ${target}`
+      });
+      onComplete({ score, passed });
     });
   }
 };
@@ -140,7 +153,7 @@ export const sentenceBuilderActivity = {
         <p class="input-label">Put the words in order</p>
         <div class="tile-bank" id="sb-bank"></div>
         <div class="tile-answer" id="sb-answer"></div>
-        <button type="button" class="btn-accent" id="sb-check">Check Sentence</button>
+        <button type="button" class="btn-primary" id="sb-check">Check Sentence</button>
       </div>`;
 
     const bank = container.querySelector('#sb-bank');
@@ -181,8 +194,14 @@ export const sentenceBuilderActivity = {
     render();
     container.querySelector('#sb-check').addEventListener('click', () => {
       const built = selected.join(' ');
-      const score = built.toLowerCase() === target.toLowerCase() ? 100 : 0;
-      onComplete({ score, passed: score === 100 });
+      const passed = built.toLowerCase() === target.toLowerCase();
+      const score = passed ? 100 : 0;
+      showActivityResult(container, ctx, {
+        score,
+        passed,
+        summary: passed ? 'Sentence built correctly!' : 'Check the word order and try again.'
+      });
+      onComplete({ score, passed });
     });
   }
 };
@@ -197,14 +216,20 @@ export const writingPromptActivity = {
         <p class="speak-target-card">${lesson.content.prompt}</p>
         <textarea id="write-prompt" class="dictation-input" placeholder="Write your answer here..."></textarea>
         <ul class="settings-note">${(lesson.content.checklist || ['Clear ideas', 'Complete sentences']).map((c) => `<li>${c}</li>`).join('')}</ul>
-        <button type="button" class="btn-accent" id="write-done">Done</button>
+        <button type="button" class="btn-primary" id="write-done">Done</button>
       </div>`;
     container.querySelector('#write-done').addEventListener('click', () => {
       const text = container.querySelector('#write-prompt').value.trim();
       const wordCount = text ? text.split(/\s+/).length : 0;
       const min = lesson.content.minWords || 10;
-      const score = wordCount >= min ? 100 : Math.round((wordCount / min) * 100);
-      onComplete({ score, passed: wordCount >= min, details: { wordCount } });
+      const passed = wordCount >= min;
+      const score = passed ? 100 : Math.round((wordCount / min) * 100);
+      showActivityResult(container, ctx, {
+        score,
+        passed,
+        summary: `${wordCount} words written (goal: ${min})`
+      });
+      onComplete({ score, passed, details: { wordCount } });
     });
   }
 };

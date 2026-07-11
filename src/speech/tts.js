@@ -1,5 +1,7 @@
 /** Full TTS engine manager — Web Speech, Puter, Kokoro, local server */
 
+const TTS_SETTINGS_KEY = 'DICTATER_TTS_SETTINGS';
+
 let rate = 1.0;
 let engine = 'webspeech';
 let voiceName = '';
@@ -7,6 +9,10 @@ let accent = 'US';
 
 /** @type {SpeechSynthesisVoice[]} */
 let webVoices = [];
+/** Monotonic token — newer speakText calls cancel in-flight playback. */
+let speakGeneration = 0;
+/** @type {Promise<void>} */
+let speakChain = Promise.resolve();
 /** @type {HTMLAudioElement|null} */
 let puterAudio = null;
 /** @type {HTMLAudioElement|null} */
@@ -29,11 +35,39 @@ function toast(msg, type = 'info') {
   else console.warn('[TTS]', msg);
 }
 
+function loadTTSSettings() {
+  try {
+    const raw = localStorage.getItem(TTS_SETTINGS_KEY);
+    if (!raw) return;
+    const saved = JSON.parse(raw);
+    if (saved.engine) engine = saved.engine;
+    if (saved.voiceName) voiceName = saved.voiceName;
+    if (saved.accent) accent = saved.accent;
+    if (saved.rate != null) rate = saved.rate;
+  } catch {
+    // ignore corrupt settings
+  }
+}
+
+function saveTTSSettings() {
+  try {
+    localStorage.setItem(
+      TTS_SETTINGS_KEY,
+      JSON.stringify({ engine, voiceName, accent, rate })
+    );
+  } catch {
+    // private browsing / quota
+  }
+}
+
+loadTTSSettings();
+
 export function setTTSOptions({ speed, voice, accentPref, engine: eng }) {
   if (speed != null) rate = speed;
   if (voice != null) voiceName = voice;
   if (accentPref != null) accent = accentPref;
   if (eng != null) engine = eng;
+  saveTTSSettings();
 }
 
 export function getTTSOptions() {
@@ -131,13 +165,15 @@ export function populateVoiceDropdowns() {
   } else if (LOCAL_ENGINES[engine]) {
     voiceRow?.classList.remove('hidden');
     accentRow?.classList.add('hidden');
-    LOCAL_ENGINES[engine].forEach((v) => {
+    const voices = LOCAL_ENGINES[engine];
+    if (!voiceName || !voices.includes(voiceName)) voiceName = voices[0];
+    voices.forEach((v) => {
       const opt = document.createElement('option');
       opt.value = v;
       opt.textContent = v;
+      if (v === voiceName) opt.selected = true;
       voiceSelect.appendChild(opt);
     });
-    voiceName = LOCAL_ENGINES[engine][0];
   } else if (engine === 'puter') {
     voiceRow?.classList.add('hidden');
     accentRow?.classList.remove('hidden');
@@ -154,10 +190,27 @@ export function stopSpeech() {
   });
 }
 
-function speakWebSpeech(text) {
-  return new Promise((resolve, reject) => {
+function ensureWebVoicesReady() {
+  if (!window.speechSynthesis) return Promise.resolve();
+  if (loadVoices().length) return Promise.resolve();
+  return new Promise((resolve) => {
+    const done = () => {
+      window.speechSynthesis.removeEventListener('voiceschanged', done);
+      resolve();
+    };
+    window.speechSynthesis.addEventListener('voiceschanged', done);
+    setTimeout(done, 400);
+  });
+}
+
+function speakWebSpeech(text, generation) {
+  return ensureWebVoicesReady().then(() => new Promise((resolve, reject) => {
     if (!window.speechSynthesis) {
       reject(new Error('Speech synthesis not supported'));
+      return;
+    }
+    if (generation !== speakGeneration) {
+      resolve();
       return;
     }
     window.speechSynthesis.cancel();
@@ -165,27 +218,38 @@ function speakWebSpeech(text) {
     utter.rate = rate;
     const voice = filterWebVoices().find((v) => v.name === voiceName) || filterWebVoices()[0];
     if (voice) utter.voice = voice;
-    utter.onend = () => resolve();
-    utter.onerror = (e) => reject(e);
-    window.speechSynthesis.speak(utter);
-  });
+    utter.onend = () => {
+      if (generation === speakGeneration) resolve();
+    };
+    utter.onerror = (e) => {
+      if (generation === speakGeneration) reject(e);
+    };
+    // Chrome/Safari often drop or repeat utterances if speak() follows cancel() immediately.
+    setTimeout(() => {
+      if (generation !== speakGeneration) return;
+      if (window.speechSynthesis.paused) window.speechSynthesis.resume();
+      window.speechSynthesis.speak(utter);
+    }, 50);
+  }));
 }
 
-async function speakPuter(text) {
+async function speakPuter(text, generation) {
   if (typeof puter === 'undefined' || window.puterLoadFailed) {
-    toast('Cloud voices unavailable — using local engine.', 'warning');
-    engine = 'webspeech';
-    document.querySelector('#voice-engine').value = 'webspeech';
-    populateVoiceDropdowns();
-    return speakWebSpeech(text);
+    toast('Cloud voices unavailable.', 'warning');
+    throw new Error('Puter TTS unavailable');
   }
-  stopSpeech();
+  if (generation !== speakGeneration) return;
   puterAudio = await puter.ai.txt2speech(text);
+  if (generation !== speakGeneration) return;
   puterAudio.playbackRate = rate;
   puterAudio.dataset.text = text;
   return new Promise((resolve, reject) => {
-    puterAudio.onended = () => resolve();
-    puterAudio.onerror = () => reject(new Error('Puter playback failed'));
+    puterAudio.onended = () => {
+      if (generation === speakGeneration) resolve();
+    };
+    puterAudio.onerror = () => {
+      if (generation === speakGeneration) reject(new Error('Puter playback failed'));
+    };
     puterAudio.play().catch(reject);
   });
 }
@@ -233,61 +297,93 @@ async function initKokoro() {
   return kokoroLoading;
 }
 
-async function speakKokoro(text) {
+async function speakKokoro(text, generation) {
   const tts = await initKokoro();
-  if (!tts) return speakWebSpeech(text);
-  stopSpeech();
+  if (!tts) throw new Error('Kokoro TTS unavailable');
+  if (generation !== speakGeneration) return;
   const audio = await tts.generate(text, { voice: voiceName || 'af_heart' });
+  if (generation !== speakGeneration) return;
   const url = URL.createObjectURL(bufferToWav(audio.audio, audio.sampling_rate));
   kokoroAudio = new Audio(url);
   kokoroAudio.playbackRate = rate;
   return new Promise((resolve, reject) => {
-    kokoroAudio.onended = () => { URL.revokeObjectURL(url); resolve(); };
-    kokoroAudio.onerror = () => reject(new Error('Kokoro playback failed'));
+    kokoroAudio.onended = () => {
+      URL.revokeObjectURL(url);
+      if (generation === speakGeneration) resolve();
+    };
+    kokoroAudio.onerror = () => {
+      if (generation === speakGeneration) reject(new Error('Kokoro playback failed'));
+    };
     kokoroAudio.play().catch(reject);
   });
 }
 
-async function speakLocalServer(text, eng) {
-  stopSpeech();
+async function speakLocalServer(text, eng, generation) {
+  if (generation !== speakGeneration) return;
   const url = `http://localhost:5002/tts?engine=${eng}&voice=${encodeURIComponent(voiceName)}&speed=${rate}&text=${encodeURIComponent(text)}`;
-  try {
-    const res = await fetch(url);
-    if (!res.ok) throw new Error(`Server error ${res.status}`);
-    const blob = await res.blob();
-    const objUrl = URL.createObjectURL(blob);
-    localAudio = new Audio(objUrl);
-    localAudio.playbackRate = rate;
-    return new Promise((resolve, reject) => {
-      localAudio.onended = () => { URL.revokeObjectURL(objUrl); resolve(); };
-      localAudio.onerror = () => reject(new Error('Local TTS failed'));
-      localAudio.play().catch(reject);
-    });
-  } catch (e) {
-    toast('Local TTS server unavailable — using Web Speech.', 'warning');
-    engine = 'webspeech';
-    document.querySelector('#voice-engine').value = 'webspeech';
-    populateVoiceDropdowns();
-    return speakWebSpeech(text);
+  const res = await fetch(url);
+  if (!res.ok) {
+    const detail = res.status === 412 ? 'engine not installed on server' : `HTTP ${res.status}`;
+    throw new Error(`Local TTS failed (${detail})`);
+  }
+  if (generation !== speakGeneration) return;
+  const blob = await res.blob();
+  if (generation !== speakGeneration) return;
+  const objUrl = URL.createObjectURL(blob);
+  localAudio = new Audio(objUrl);
+  localAudio.playbackRate = rate;
+  return new Promise((resolve, reject) => {
+    localAudio.onended = () => {
+      URL.revokeObjectURL(objUrl);
+      if (generation === speakGeneration) resolve();
+    };
+    localAudio.onerror = () => {
+      if (generation === speakGeneration) reject(new Error('Local TTS failed'));
+    };
+    localAudio.play().catch(reject);
+  });
+}
+
+async function speakWithEngine(text, generation) {
+  switch (engine) {
+    case 'puter':
+      return speakPuter(text, generation);
+    case 'kokoro':
+      return speakKokoro(text, generation);
+    case 'kokoro-mlx':
+    case 'piper':
+    case 'f5-tts':
+    case 'chatterbox':
+      return speakLocalServer(text, engine, generation);
+    default:
+      return speakWebSpeech(text, generation);
   }
 }
 
 /** @returns {Promise<void>} */
 export async function speakText(text) {
   if (!text?.trim()) return;
-  switch (engine) {
-    case 'puter':
-      return speakPuter(text);
-    case 'kokoro':
-      return speakKokoro(text);
-    case 'kokoro-mlx':
-    case 'piper':
-    case 'f5-tts':
-    case 'chatterbox':
-      return speakLocalServer(text, engine);
-    default:
-      return speakWebSpeech(text);
-  }
+  speakGeneration += 1;
+  const generation = speakGeneration;
+  stopSpeech();
+
+  const run = async () => {
+    try {
+      await speakWithEngine(text, generation);
+    } catch (err) {
+      if (generation !== speakGeneration) return;
+      const isLocal = LOCAL_ENGINES[engine];
+      if (isLocal) {
+        toast('Local TTS server unavailable. Start it with: npm run tts', 'warning');
+      } else {
+        toast('Could not play audio', 'warning');
+      }
+      throw err;
+    }
+  };
+
+  speakChain = speakChain.then(run, run);
+  return speakChain;
 }
 
 export function splitIntoPhrases(text) {
@@ -310,17 +406,22 @@ export function bindSettingsPanel() {
     });
     engineSelect.addEventListener('change', (ev) => {
       engine = ev.target.value;
+      saveTTSSettings();
       populateVoiceDropdowns();
     });
+    engineSelect.value = engine;
   }
 
   accentSelect?.addEventListener('change', (ev) => {
     accent = ev.target.value;
+    saveTTSSettings();
     populateVoiceDropdowns();
   });
+  if (accentSelect) accentSelect.value = accent;
 
   voiceSelect?.addEventListener('change', (ev) => {
     voiceName = ev.target.value;
+    saveTTSSettings();
   });
 
   populateVoiceDropdowns();

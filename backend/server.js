@@ -155,7 +155,12 @@ app.post('/api/teacher/assignments', (req, res) => {
 
 app.get('/api/teacher/classes', (req, res) => {
   const db = loadDb();
-  res.json(Object.values(db.classes));
+  let classes = Object.values(db.classes);
+  const { teacherEmail } = req.query;
+  if (teacherEmail) {
+    classes = classes.filter((c) => c.teacherEmail === teacherEmail);
+  }
+  res.json(classes);
 });
 
 app.get('/api/speech/status', async (req, res) => {

@@ -14,7 +14,8 @@
   <script src="https://js.puter.com/v2/" async defer onerror="window.puterLoadFailed=true;"></script>
 </head>
 <body>
-  <header class="site-hero">
+  <a href="#workspace" class="skip-link">Skip to lesson</a>
+  <header class="site-hero" id="site-hero">
     <div class="hero-grid">
       <div class="hero-content">
         <div class="logo-container">
@@ -25,8 +26,9 @@
         </div>
         <h1 class="hero-headline">Listen, <span class="hero-inline-chip" aria-hidden="true">Aa</span> speak, read, and write.</h1>
         <p class="hero-lede">A calm learning studio for PreK through Grade 6. Build literacy skills across listening, speaking, reading, and writing.</p>
-        <a href="#workspace" class="btn-primary hero-cta" data-i18n="startLearning">Start learning</a>
+        <a href="#workspace" id="hero-cta" class="btn-primary hero-cta" data-i18n="startLearning">Start learning</a>
         <div id="recommended-lesson" class="mt-sm"></div>
+        <button type="button" id="btn-collapse-hero" class="btn-secondary btn-compact hero-collapse-btn" data-i18n="collapseHero">Minimize header</button>
       </div>
       <aside class="hero-preview" aria-hidden="true">
         <div class="hero-preview-card">
@@ -38,8 +40,17 @@
     </div>
   </header>
 
+  <div id="mobile-lesson-bar" class="mobile-lesson-bar hidden" aria-live="polite">
+    <div class="mobile-lesson-bar__info">
+      <span id="mobile-lesson-title" class="mobile-lesson-bar__title">Choose a lesson</span>
+      <span id="mobile-lesson-meta" class="settings-note"></span>
+    </div>
+    <button type="button" id="btn-change-lesson" class="btn-secondary btn-compact" data-i18n="changeLesson">Change</button>
+  </div>
+  <div id="sidebar-backdrop" class="sidebar-backdrop hidden" aria-hidden="true"></div>
+
   <main>
-    <section class="glass-card sidebar-panel">
+    <section id="sidebar-panel" class="glass-card sidebar-panel">
       <div class="setup-step">
         <h3 class="section-title" data-i18n="mode">Mode</h3>
         <div class="pill-group mt-sm">
@@ -57,7 +68,7 @@
       </div>
       <div class="setup-step">
         <h3 class="section-title">3. <span data-i18n="lessons">Lessons</span></h3>
-        <div id="exercise-list" class="exercise-list" role="listbox"></div>
+        <div id="exercise-list" class="exercise-list" role="list" aria-label="Lessons"></div>
       </div>
       <div id="custom-lessons-panel" class="hidden setup-step">
         <h3 class="section-title" data-i18n="myLessons">My Lessons</h3>
@@ -68,11 +79,16 @@
         <div id="assignments-list" class="exercise-list exercise-list--short"></div>
       </div>
       <div class="sidebar-footer divider-top stack-sm">
+        <button type="button" id="btn-open-dashboard" class="btn-secondary btn-block" data-i18n="dashboard">Student Dashboard</button>
         <button type="button" id="btn-placement" class="btn-secondary btn-block" data-i18n="placement">Take Placement Mini-Test</button>
-        <button type="button" id="btn-open-dashboard" class="btn-primary btn-block" data-i18n="dashboard">Student Dashboard</button>
-        <button type="button" id="btn-export-progress" class="btn-secondary btn-compact btn-block" data-i18n="exportProgress">Export Progress (JSON)</button>
-        <button type="button" id="btn-open-lesson-creator" class="btn-secondary btn-compact btn-block" data-i18n="createLesson">Create Custom Lesson</button>
-        <button type="button" id="btn-settings-toggle" class="settings-toggle settings-toggle--flush" data-i18n="speechSettings">Speech Settings</button>
+        <details class="sidebar-disclosure">
+          <summary class="sidebar-disclosure__summary" data-i18n="moreTools">More tools</summary>
+          <div class="stack-sm">
+            <button type="button" id="btn-export-progress" class="btn-secondary btn-compact btn-block" data-i18n="exportProgress">Export Progress (JSON)</button>
+            <button type="button" id="btn-open-lesson-creator" class="btn-secondary btn-compact btn-block" data-i18n="createLesson">Create Custom Lesson</button>
+            <button type="button" id="btn-settings-toggle" class="btn-secondary btn-compact btn-block" data-i18n="speechSettings">Speech Settings</button>
+          </div>
+        </details>
       </div>
     </section>
 
@@ -83,7 +99,10 @@
           <p id="current-meta">PreK–Grade 6 English Learning Studio</p>
           <p id="lesson-hint" class="settings-note"></p>
         </div>
-        <div id="level-badge-container"></div>
+        <div class="workout-header__actions">
+          <button type="button" id="btn-prek-menu" class="btn-secondary btn-compact hidden" data-i18n="prekMenu">Lessons</button>
+          <div id="level-badge-container"></div>
+        </div>
       </div>
       <div id="activity-workspace" class="activity-workspace">
         <p class="empty-state" data-i18n="chooseLesson">Select a grade, skill area, and lesson to begin.</p>
@@ -91,34 +110,36 @@
     </section>
   </main>
 
-  <section class="glass-card auth-panel">
-    <div class="auth-row" style="justify-content: space-between; margin-bottom: 0.75rem;">
-      <h3 class="section-title" data-i18n="account">Account (optional)</h3>
-      <label class="settings-note">
-        <span data-i18n="language">Language</span>:
-        <select id="locale-select" class="settings-select" style="width: auto; display: inline-block;">
-          <option value="en">English</option>
-          <option value="es">Español</option>
-        </select>
+  <details class="glass-card auth-panel auth-disclosure">
+    <summary class="section-title section-title--disclosure" data-i18n="account">Account (optional)</summary>
+    <div class="stack-sm auth-disclosure__body">
+      <div class="auth-row auth-row--between">
+        <p id="auth-status" class="settings-note" data-i18n="offlineMode">Offline mode — progress saved on this device</p>
+        <label class="settings-note locale-label">
+          <span data-i18n="language">Language</span>
+          <select id="locale-select" class="settings-select settings-select--inline">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+          </select>
+        </label>
+      </div>
+      <p id="coppa-note" class="settings-note" data-i18n="coppaNote">Cloud sync stores email and lesson scores only. Users under 13 need parental consent.</p>
+      <div class="auth-row">
+        <input type="email" id="auth-email" class="settings-select" placeholder="Email for cloud sync">
+        <button type="button" id="btn-auth-login" class="btn-secondary btn-compact" data-i18n="signIn">Sign In</button>
+        <button type="button" id="btn-auth-logout" class="btn-secondary btn-compact" data-i18n="signOut">Sign Out</button>
+      </div>
+      <label class="auth-consent-label">
+        <input type="checkbox" id="parent-consent" name="parent-consent" aria-describedby="coppa-note">
+        <span data-i18n="parentConsent">I am 13+ or have parent/guardian consent to use cloud sync</span>
       </label>
+      <p class="settings-note"><a href="teacher.html" data-i18n="teacherPortal">Teacher portal</a></p>
     </div>
-    <p id="auth-status" class="settings-note" data-i18n="offlineMode">Offline mode — progress saved on this device</p>
-    <p class="settings-note" data-i18n="coppaNote">Cloud sync stores email and lesson scores only. Users under 13 need parental consent.</p>
-    <div class="auth-row">
-      <input type="email" id="auth-email" class="settings-select" placeholder="Email for cloud sync">
-      <button type="button" id="btn-auth-login" class="btn-primary btn-compact" data-i18n="signIn">Sign In</button>
-      <button type="button" id="btn-auth-logout" class="btn-secondary btn-compact" data-i18n="signOut">Sign Out</button>
-    </div>
-    <label class="settings-note auth-row">
-      <input type="checkbox" id="parent-consent">
-      <span data-i18n="parentConsent">I am 13+ or have parent/guardian consent to use cloud sync</span>
-    </label>
-    <p class="settings-note"><a href="teacher.html" data-i18n="teacherPortal">Teacher portal</a></p>
-  </section>
+  </details>
 
-  <div id="settings-dropdown" class="settings-dropdown hidden" role="dialog">
+  <div id="settings-dropdown" class="settings-dropdown modal-centered hidden" role="dialog" aria-labelledby="settings-dialog-title">
     <div class="result-header">
-      <h4 class="input-label section-title--plain" data-i18n="speechSettings">Speech Configuration</h4>
+      <h4 id="settings-dialog-title" class="input-label section-title--plain" data-i18n="speechSettings">Speech Configuration</h4>
       <button type="button" id="btn-settings-close" class="modal-close modal-close--sm">&times;</button>
     </div>
     <div class="settings-row">
@@ -139,9 +160,9 @@
     <p class="settings-note">Chrome and Edge offer the best speech recognition for speaking practice.</p>
   </div>
 
-  <div id="lesson-creator-modal" class="settings-dropdown modal-centered hidden" role="dialog">
+  <div id="lesson-creator-modal" class="settings-dropdown modal-centered hidden" role="dialog" aria-labelledby="creator-dialog-title">
     <div class="result-header">
-      <h4 class="input-label section-title--plain" data-i18n="createLesson">Create Custom Lesson</h4>
+      <h4 id="creator-dialog-title" class="input-label section-title--plain" data-i18n="createLesson">Create Custom Lesson</h4>
       <button type="button" id="btn-creator-close" class="modal-close modal-close--sm">&times;</button>
     </div>
     <div class="settings-row">
@@ -164,12 +185,12 @@
       <label class="input-label" for="creator-hint">Hint</label>
       <input type="text" id="creator-hint" class="settings-select">
     </div>
-    <button type="button" id="btn-creator-save" class="btn-accent btn-block">Save</button>
+    <button type="button" id="btn-creator-save" class="btn-primary btn-block">Save</button>
   </div>
 
-  <div id="dashboard-modal" class="settings-dropdown modal-lg hidden" role="dialog">
+  <div id="dashboard-modal" class="settings-dropdown modal-lg hidden" role="dialog" aria-labelledby="dashboard-dialog-title">
     <div class="result-header modal-header">
-      <h3 class="section-title section-title--plain" data-i18n="dashboard">Student Progress</h3>
+      <h3 id="dashboard-dialog-title" class="section-title section-title--plain" data-i18n="dashboard">Student Progress</h3>
       <button type="button" id="btn-dashboard-close" class="modal-close">&times;</button>
     </div>
     <div class="dashboard-stats">

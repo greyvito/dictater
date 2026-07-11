@@ -1,5 +1,6 @@
 import { renderDiffToContainer, alignWords, scoreAlignment, splitIntoWords } from '../grading/wordDiff.js';
 import { splitIntoPhrases, speakText } from '../speech/tts.js';
+import { appendPostCheckActions } from './postCheck.js';
 
 export const dictationActivity = {
   type: 'dictation',
@@ -25,9 +26,10 @@ export const dictationActivity = {
           <button type="button" class="pill-btn btn-compact-sm" id="dict-next">Next Phrase →</button>
           <span class="phrase-progress" id="dict-progress">Phrase 1 of ${phrases.length}</span>
         </div>
+        <p class="settings-note phrase-hint">Phrase navigation replays audio — write the full passage in the box above.</p>
         <div class="actions-row">
           <button type="button" class="btn-secondary" id="dict-clear">Clear</button>
-          <button type="button" class="btn-accent" id="dict-check">Check My Answer</button>
+          <button type="button" class="btn-primary" id="dict-check">Check My Answer</button>
         </div>
         <div id="dict-results" class="result-card feedback hidden">
           <div class="result-header">
@@ -78,10 +80,13 @@ export const dictationActivity = {
       const typedWords = splitIntoWords(typed);
       const alignment = alignWords(orig, typedWords);
       const score = scoreAlignment(alignment, orig.length);
+      const passed = score >= 70;
+      const results = container.querySelector('#dict-results');
       renderDiffToContainer(container.querySelector('#dict-diff'), alignment);
       container.querySelector('#dict-score').textContent = `${score}% Accuracy`;
-      container.querySelector('#dict-results').classList.remove('hidden');
-      onComplete({ score, passed: score >= 70, details: { alignment } });
+      results.classList.remove('hidden');
+      appendPostCheckActions(results, ctx, passed);
+      onComplete({ score, passed, details: { alignment } });
     });
   }
 };
@@ -103,7 +108,7 @@ export const spellingActivity = {
         <div class="actions-row">
           <button type="button" class="btn-secondary btn-compact" id="spell-play">Play Word</button>
           <button type="button" class="btn-secondary btn-compact" id="spell-skip">Skip</button>
-          <button type="button" class="btn-accent btn-compact" id="spell-submit">Submit</button>
+          <button type="button" class="btn-primary btn-compact" id="spell-submit">Submit</button>
         </div>
         <div id="spell-results" class="result-card feedback hidden">
           <div class="result-header">
@@ -121,6 +126,8 @@ export const spellingActivity = {
     const finish = () => {
       const correct = history.filter((h) => h.correct).length;
       const score = Math.round((correct / words.length) * 100);
+      const passed = score >= 70;
+      const results = container.querySelector('#spell-results');
       container.querySelector('#spell-score').textContent = `${correct} / ${words.length} Correct`;
       const diffEl = container.querySelector('#spell-diff');
       diffEl.innerHTML = '';
@@ -130,8 +137,9 @@ export const spellingActivity = {
         row.innerHTML = `<span>${h.word}</span><span class="${h.correct ? 'score-high' : 'score-low'}">${h.correct ? '✓' : h.typed || '—'}</span>`;
         diffEl.appendChild(row);
       });
-      container.querySelector('#spell-results').classList.remove('hidden');
-      onComplete({ score, passed: score >= 70, details: { history } });
+      results.classList.remove('hidden');
+      appendPostCheckActions(results, ctx, passed);
+      onComplete({ score, passed, details: { history } });
     };
 
     const submit = () => {
