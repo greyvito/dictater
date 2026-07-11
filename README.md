@@ -16,7 +16,7 @@ Built with **Vite + vanilla JavaScript modules**, it runs as a static PWA with o
 - **English / Spanish UI** toggle (i18n for shell labels)
 - **COPPA-lite cloud sync**: optional sign-in with parent/guardian consent checkbox
 - **Progress export**: download stats and analytics events as JSON
-- **541+ curriculum lessons** in validated JSON format (expand with `npm run expand:content`)
+- **889 curriculum lessons** in validated JSON format (expand with `npm run expand:content`)
 
 ## Quick Start
 
@@ -29,7 +29,7 @@ npm test           # Run unit tests
 npm run validate:content  # Validate curriculum JSON
 npm run backend    # Start API server on port 3001
 npm run start:prod # Build + serve dist/ and API together (after npm run build)
-npm run expand:content  # Add grammar/vocab/writing packs per grade
+npm run expand:content  # Add grammar/vocab/writing packs per grade (target 800+)
 ```
 
 ## Deployment

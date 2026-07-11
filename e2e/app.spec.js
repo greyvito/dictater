@@ -23,7 +23,9 @@ test('custom lesson mode toggle', async ({ page }) => {
 
 test('settings panel opens', async ({ page }) => {
   await page.goto('/');
+  await expect(page.locator('#grade-filters .pill-btn')).toHaveCount(8);
   await page.locator('#btn-settings-toggle').click();
+  await expect(page.locator('#settings-dropdown')).toBeVisible();
   await expect(page.locator('#voice-engine')).toBeVisible();
   await expect(page.locator('#voice-engine option')).toHaveCount(7);
 });

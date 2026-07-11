@@ -702,5 +702,857 @@
       ]
     },
     "hint": "Use context clues."
+  },
+  {
+    "id": "gpreK-gram-punct",
+    "grade": "preK",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "End Punctuation",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which sentence ends correctly?",
+          "choices": [
+            "Where are you?",
+            "Where are you.",
+            "Where are you,"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Questions need a question mark."
+  },
+  {
+    "id": "gpreK-gram-noun",
+    "grade": "preK",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Common Nouns",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which word is a person, place, or thing?",
+          "choices": [
+            "school",
+            "quickly",
+            "happy"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Nouns name people, places, or things."
+  },
+  {
+    "id": "gpreK-gram-adj",
+    "grade": "preK",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Adjectives",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which word describes the noun?",
+          "choices": [
+            "The tall tree.",
+            "The run tree.",
+            "The quickly tree."
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Adjectives tell what kind or how many."
+  },
+  {
+    "id": "gpreK-gram-pronoun",
+    "grade": "preK",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Pronouns",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Choose the best pronoun: ___ went to the store.",
+          "choices": [
+            "She",
+            "Her",
+            "Hers"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Use a subject pronoun."
+  },
+  {
+    "id": "gpreK-gram-conj",
+    "grade": "preK",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Conjunctions",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "I wanted to play, ___ it was raining.",
+          "choices": [
+            "but",
+            "so",
+            "the"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "But shows contrast."
+  },
+  {
+    "id": "gpreK-gram-article",
+    "grade": "preK",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Articles a/an",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Choose the correct article: ___ umbrella.",
+          "choices": [
+            "an",
+            "a",
+            "the the"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Use an before vowel sounds."
+  },
+  {
+    "id": "gpreK-gram-comma",
+    "grade": "preK",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Commas in a List",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which list uses commas correctly?",
+          "choices": [
+            "red, blue, and green",
+            "red blue and green",
+            "red, blue and, green"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Separate items in a list with commas."
+  },
+  {
+    "id": "gpreK-gram-past",
+    "grade": "preK",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Past Tense",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Yesterday we ___ to the lake.",
+          "choices": [
+            "walked",
+            "walk",
+            "walking"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Past tense often ends in -ed."
+  },
+  {
+    "id": "gpreK-vocab-syn-1",
+    "grade": "preK",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Synonyms: big",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which word means almost the same as big?",
+          "choices": [
+            "large",
+            "tiny",
+            "slow"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Synonyms have similar meanings."
+  },
+  {
+    "id": "gpreK-vocab-syn-2",
+    "grade": "preK",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Synonyms: fast",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which word is like fast?",
+          "choices": [
+            "quick",
+            "heavy",
+            "quiet"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Quick and fast are synonyms."
+  },
+  {
+    "id": "gpreK-vocab-ant-1",
+    "grade": "preK",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Antonyms: happy",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Sad is the opposite of ___.",
+          "choices": [
+            "happy",
+            "glad",
+            "joyful"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Antonyms mean the opposite."
+  },
+  {
+    "id": "gpreK-vocab-ctx-3",
+    "grade": "preK",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Context Clues",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "The puppy was very ___. It wagged its tail and licked my hand.",
+          "choices": [
+            "friendly",
+            "angry",
+            "sleepy"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Use clues in the sentence."
+  },
+  {
+    "id": "gpreK-vocab-ctx-4",
+    "grade": "preK",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Shades of Meaning",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which word is stronger than said?",
+          "choices": [
+            "shouted",
+            "whispered",
+            "mumbled"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Shouted is louder than said."
+  },
+  {
+    "id": "gpreK-vocab-root",
+    "grade": "preK",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Word Parts",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Unhappy means not happy. Unpack means ___.",
+          "choices": [
+            "not packed",
+            "very packed",
+            "packed again"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Un- often means not."
+  },
+  {
+    "id": "gpreK-vocab-homo",
+    "grade": "preK",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Multiple Meanings",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Bat can mean an animal or a sports tool. In \"The bat flew at night,\" bat means ___.",
+          "choices": [
+            "animal",
+            "sports tool",
+            "building"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read the whole sentence."
+  },
+  {
+    "id": "gpreK-vocab-prefix",
+    "grade": "preK",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Prefixes re-",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Rewrite means to write again. Reread means ___.",
+          "choices": [
+            "read again",
+            "read once",
+            "not read"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Re- means again."
+  },
+  {
+    "id": "preK-rhyme-p800-6",
+    "grade": "preK",
+    "type": "phonological_rhyme",
+    "difficulty": "beginner",
+    "title": "Rhyme: tree",
+    "skills": [
+      "rhyme_recognition"
+    ],
+    "content": {
+      "prompt": "tree",
+      "choices": [
+        "bee",
+        "car",
+        "cup"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Rhyming words sound the same at the end."
+  },
+  {
+    "id": "preK-rhyme-p800-7",
+    "grade": "preK",
+    "type": "phonological_rhyme",
+    "difficulty": "beginner",
+    "title": "Rhyme: fish",
+    "skills": [
+      "rhyme_recognition"
+    ],
+    "content": {
+      "prompt": "fish",
+      "choices": [
+        "dish",
+        "dog",
+        "run"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Rhyming words sound the same at the end."
+  },
+  {
+    "id": "preK-rhyme-p800-8",
+    "grade": "preK",
+    "type": "phonological_rhyme",
+    "difficulty": "beginner",
+    "title": "Rhyme: king",
+    "skills": [
+      "rhyme_recognition"
+    ],
+    "content": {
+      "prompt": "king",
+      "choices": [
+        "ring",
+        "book",
+        "sun"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Rhyming words sound the same at the end."
+  },
+  {
+    "id": "preK-rhyme-p800-9",
+    "grade": "preK",
+    "type": "phonological_rhyme",
+    "difficulty": "beginner",
+    "title": "Rhyme: light",
+    "skills": [
+      "rhyme_recognition"
+    ],
+    "content": {
+      "prompt": "light",
+      "choices": [
+        "night",
+        "day",
+        "hot"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Rhyming words sound the same at the end."
+  },
+  {
+    "id": "preK-syl-p800-6",
+    "grade": "preK",
+    "type": "phonological_syllable",
+    "difficulty": "beginner",
+    "title": "Syllables: robot",
+    "skills": [
+      "syllable_count"
+    ],
+    "content": {
+      "prompt": "robot",
+      "choices": [
+        "2",
+        "3",
+        "4"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Clap for each syllable."
+  },
+  {
+    "id": "preK-syl-p800-7",
+    "grade": "preK",
+    "type": "phonological_syllable",
+    "difficulty": "beginner",
+    "title": "Syllables: watermelon",
+    "skills": [
+      "syllable_count"
+    ],
+    "content": {
+      "prompt": "watermelon",
+      "choices": [
+        "3",
+        "4",
+        "5"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Clap for each syllable."
+  },
+  {
+    "id": "preK-syl-p800-8",
+    "grade": "preK",
+    "type": "phonological_syllable",
+    "difficulty": "beginner",
+    "title": "Syllables: pencil",
+    "skills": [
+      "syllable_count"
+    ],
+    "content": {
+      "prompt": "pencil",
+      "choices": [
+        "1",
+        "2",
+        "3"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Clap for each syllable."
+  },
+  {
+    "id": "preK-syl-p800-9",
+    "grade": "preK",
+    "type": "phonological_syllable",
+    "difficulty": "beginner",
+    "title": "Syllables: hippopotamus",
+    "skills": [
+      "syllable_count"
+    ],
+    "content": {
+      "prompt": "hippopotamus",
+      "choices": [
+        "4",
+        "5",
+        "6"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Clap for each syllable."
+  },
+  {
+    "id": "preK-init-p800-6",
+    "grade": "preK",
+    "type": "phonological_initial",
+    "difficulty": "beginner",
+    "title": "Start sound: /m/",
+    "skills": [
+      "initial_sound"
+    ],
+    "content": {
+      "prompt": "moon",
+      "choices": [
+        "/m/",
+        "/s/",
+        "/t/"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Listen to the first sound."
+  },
+  {
+    "id": "preK-init-p800-7",
+    "grade": "preK",
+    "type": "phonological_initial",
+    "difficulty": "beginner",
+    "title": "Start sound: /s/",
+    "skills": [
+      "initial_sound"
+    ],
+    "content": {
+      "prompt": "snake",
+      "choices": [
+        "/s/",
+        "/b/",
+        "/p/"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Listen to the first sound."
+  },
+  {
+    "id": "preK-init-p800-8",
+    "grade": "preK",
+    "type": "phonological_initial",
+    "difficulty": "beginner",
+    "title": "Start sound: /t/",
+    "skills": [
+      "initial_sound"
+    ],
+    "content": {
+      "prompt": "tiger",
+      "choices": [
+        "/t/",
+        "/f/",
+        "/l/"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Listen to the first sound."
+  },
+  {
+    "id": "preK-init-p800-9",
+    "grade": "preK",
+    "type": "phonological_initial",
+    "difficulty": "beginner",
+    "title": "Start sound: /f/",
+    "skills": [
+      "initial_sound"
+    ],
+    "content": {
+      "prompt": "flower",
+      "choices": [
+        "/f/",
+        "/m/",
+        "/n/"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Listen to the first sound."
+  },
+  {
+    "id": "preK-letter-p800-6",
+    "grade": "preK",
+    "type": "letter_sound",
+    "difficulty": "beginner",
+    "title": "Letter D",
+    "skills": [
+      "letter_sound"
+    ],
+    "content": {
+      "letter": "D",
+      "choices": [
+        "dog",
+        "sun",
+        "cat"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Which word starts with this letter?"
+  },
+  {
+    "id": "preK-letter-p800-7",
+    "grade": "preK",
+    "type": "letter_sound",
+    "difficulty": "beginner",
+    "title": "Letter G",
+    "skills": [
+      "letter_sound"
+    ],
+    "content": {
+      "letter": "G",
+      "choices": [
+        "goat",
+        "bat",
+        "hen"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Which word starts with this letter?"
+  },
+  {
+    "id": "preK-letter-p800-8",
+    "grade": "preK",
+    "type": "letter_sound",
+    "difficulty": "beginner",
+    "title": "Letter H",
+    "skills": [
+      "letter_sound"
+    ],
+    "content": {
+      "letter": "H",
+      "choices": [
+        "hat",
+        "pig",
+        "net"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Which word starts with this letter?"
+  },
+  {
+    "id": "preK-letter-p800-9",
+    "grade": "preK",
+    "type": "letter_sound",
+    "difficulty": "beginner",
+    "title": "Letter J",
+    "skills": [
+      "letter_sound"
+    ],
+    "content": {
+      "letter": "J",
+      "choices": [
+        "jam",
+        "kite",
+        "log"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Which word starts with this letter?"
+  },
+  {
+    "id": "preK-pic-p800-6",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Picture Word: tree",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "prompt": "tree",
+      "choices": [
+        "tree",
+        "car",
+        "shoe"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the word you hear."
+  },
+  {
+    "id": "preK-pic-p800-7",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Picture Word: book",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "prompt": "book",
+      "choices": [
+        "book",
+        "ball",
+        "bed"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the word you hear."
+  },
+  {
+    "id": "preK-pic-p800-8",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Picture Word: star",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "prompt": "star",
+      "choices": [
+        "star",
+        "sock",
+        "spoon"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the word you hear."
+  },
+  {
+    "id": "preK-pic-p800-9",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Picture Word: house",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "prompt": "house",
+      "choices": [
+        "house",
+        "hand",
+        "heart"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the word you hear."
+  },
+  {
+    "id": "preK-speak-p800-6",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: book",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "book",
+      "expectedText": "book",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word clearly."
+  },
+  {
+    "id": "preK-speak-p800-7",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: friend",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "friend",
+      "expectedText": "friend",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word clearly."
+  },
+  {
+    "id": "preK-speak-p800-8",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: thank you",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "thank you",
+      "expectedText": "thank you",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word clearly."
+  },
+  {
+    "id": "preK-speak-p800-9",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: butterfly",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "butterfly",
+      "expectedText": "butterfly",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word clearly."
   }
 ]

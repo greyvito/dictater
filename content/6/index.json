@@ -1805,5 +1805,838 @@
       ]
     },
     "hint": "Write in full sentences."
+  },
+  {
+    "id": "g6-gram-punct",
+    "grade": "6",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "End Punctuation",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which sentence ends correctly?",
+          "choices": [
+            "Where are you?",
+            "Where are you.",
+            "Where are you,"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Questions need a question mark."
+  },
+  {
+    "id": "g6-gram-noun",
+    "grade": "6",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Common Nouns",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which word is a person, place, or thing?",
+          "choices": [
+            "school",
+            "quickly",
+            "happy"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Nouns name people, places, or things."
+  },
+  {
+    "id": "g6-gram-adj",
+    "grade": "6",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Adjectives",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which word describes the noun?",
+          "choices": [
+            "The tall tree.",
+            "The run tree.",
+            "The quickly tree."
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Adjectives tell what kind or how many."
+  },
+  {
+    "id": "g6-gram-pronoun",
+    "grade": "6",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Pronouns",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Choose the best pronoun: ___ went to the store.",
+          "choices": [
+            "She",
+            "Her",
+            "Hers"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Use a subject pronoun."
+  },
+  {
+    "id": "g6-gram-conj",
+    "grade": "6",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Conjunctions",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "I wanted to play, ___ it was raining.",
+          "choices": [
+            "but",
+            "so",
+            "the"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "But shows contrast."
+  },
+  {
+    "id": "g6-gram-article",
+    "grade": "6",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Articles a/an",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Choose the correct article: ___ umbrella.",
+          "choices": [
+            "an",
+            "a",
+            "the the"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Use an before vowel sounds."
+  },
+  {
+    "id": "g6-gram-comma",
+    "grade": "6",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Commas in a List",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which list uses commas correctly?",
+          "choices": [
+            "red, blue, and green",
+            "red blue and green",
+            "red, blue and, green"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Separate items in a list with commas."
+  },
+  {
+    "id": "g6-gram-past",
+    "grade": "6",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Past Tense",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Yesterday we ___ to the lake.",
+          "choices": [
+            "walked",
+            "walk",
+            "walking"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Past tense often ends in -ed."
+  },
+  {
+    "id": "g6-vocab-syn-1",
+    "grade": "6",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Synonyms: big",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which word means almost the same as big?",
+          "choices": [
+            "large",
+            "tiny",
+            "slow"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Synonyms have similar meanings."
+  },
+  {
+    "id": "g6-vocab-syn-2",
+    "grade": "6",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Synonyms: fast",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which word is like fast?",
+          "choices": [
+            "quick",
+            "heavy",
+            "quiet"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Quick and fast are synonyms."
+  },
+  {
+    "id": "g6-vocab-ant-1",
+    "grade": "6",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Antonyms: happy",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Sad is the opposite of ___.",
+          "choices": [
+            "happy",
+            "glad",
+            "joyful"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Antonyms mean the opposite."
+  },
+  {
+    "id": "g6-vocab-ctx-3",
+    "grade": "6",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Context Clues",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "The puppy was very ___. It wagged its tail and licked my hand.",
+          "choices": [
+            "friendly",
+            "angry",
+            "sleepy"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Use clues in the sentence."
+  },
+  {
+    "id": "g6-vocab-ctx-4",
+    "grade": "6",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Shades of Meaning",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which word is stronger than said?",
+          "choices": [
+            "shouted",
+            "whispered",
+            "mumbled"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Shouted is louder than said."
+  },
+  {
+    "id": "g6-vocab-root",
+    "grade": "6",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Word Parts",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Unhappy means not happy. Unpack means ___.",
+          "choices": [
+            "not packed",
+            "very packed",
+            "packed again"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Un- often means not."
+  },
+  {
+    "id": "g6-vocab-homo",
+    "grade": "6",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Multiple Meanings",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Bat can mean an animal or a sports tool. In \"The bat flew at night,\" bat means ___.",
+          "choices": [
+            "animal",
+            "sports tool",
+            "building"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read the whole sentence."
+  },
+  {
+    "id": "g6-vocab-prefix",
+    "grade": "6",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Prefixes re-",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Rewrite means to write again. Reread means ___.",
+          "choices": [
+            "read again",
+            "read once",
+            "not read"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Re- means again."
+  },
+  {
+    "id": "g6-write-prompt-2",
+    "grade": "6",
+    "type": "writing_prompt",
+    "difficulty": "intermediate",
+    "title": "Write About a Friend",
+    "skills": [
+      "writing"
+    ],
+    "content": {
+      "prompt": "Describe a friend and what you like to do together.",
+      "minWords": 25,
+      "checklist": [
+        "Complete sentences",
+        "Clear ideas"
+      ]
+    },
+    "hint": "Write in full sentences."
+  },
+  {
+    "id": "g6-write-prompt-3",
+    "grade": "6",
+    "type": "writing_prompt",
+    "difficulty": "intermediate",
+    "title": "Write a How-To",
+    "skills": [
+      "writing"
+    ],
+    "content": {
+      "prompt": "Explain how to make a simple snack step by step.",
+      "minWords": 30,
+      "checklist": [
+        "Complete sentences",
+        "Clear ideas"
+      ]
+    },
+    "hint": "Write in full sentences."
+  },
+  {
+    "id": "g6-write-prompt-4",
+    "grade": "6",
+    "type": "writing_prompt",
+    "difficulty": "advanced",
+    "title": "Write an Opinion",
+    "skills": [
+      "writing"
+    ],
+    "content": {
+      "prompt": "What is the best season? Give reasons for your choice.",
+      "minWords": 35,
+      "checklist": [
+        "Complete sentences",
+        "Clear ideas"
+      ]
+    },
+    "hint": "Write in full sentences."
+  },
+  {
+    "id": "g6-write-prompt-5",
+    "grade": "6",
+    "type": "writing_prompt",
+    "difficulty": "advanced",
+    "title": "Write a Letter",
+    "skills": [
+      "writing"
+    ],
+    "content": {
+      "prompt": "Write a short letter thanking someone who helped you.",
+      "minWords": 40,
+      "checklist": [
+        "Complete sentences",
+        "Clear ideas"
+      ]
+    },
+    "hint": "Write in full sentences."
+  },
+  {
+    "id": "g6-comp-p800-1",
+    "grade": "6",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Rhetorical Appeals",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Speakers use ethos (credibility), pathos (emotion), and logos (logic) to persuade audiences. Strong arguments often combine all three thoughtfully.",
+      "questions": [
+        {
+          "question": "Which appeal uses logic?",
+          "choices": [
+            "logos",
+            "pathos",
+            "ethos only"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "question": "What does ethos refer to?",
+          "choices": [
+            "credibility",
+            "weather",
+            "grammar"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read the passage carefully."
+  },
+  {
+    "id": "g6-comp-p800-2",
+    "grade": "6",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Climate Change",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Greenhouse gases trap heat in the atmosphere. Human activities have increased these gases, contributing to global temperature rise and shifting weather patterns.",
+      "questions": [
+        {
+          "question": "What do greenhouse gases trap?",
+          "choices": [
+            "heat",
+            "sound",
+            "light only"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "question": "What has contributed to temperature rise?",
+          "choices": [
+            "human activities",
+            "only volcanoes",
+            "the moon"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read the passage carefully."
+  },
+  {
+    "id": "g6-comp-p800-3",
+    "grade": "6",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Theme in Literature",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Theme is the central message or insight about life that a story conveys. It is not the same as the topic; theme requires inference from events and characters.",
+      "questions": [
+        {
+          "question": "Theme is the story's ___.",
+          "choices": [
+            "central message",
+            "setting",
+            "title"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "question": "How do readers find theme?",
+          "choices": [
+            "by inference",
+            "by counting pages",
+            "from the cover only"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read the passage carefully."
+  },
+  {
+    "id": "g6-comp-p800-4",
+    "grade": "6",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Democracy and Voting",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "In a representative democracy, citizens elect officials to make laws. Voting is both a right and a responsibility that shapes community decisions.",
+      "questions": [
+        {
+          "question": "How are officials chosen?",
+          "choices": [
+            "citizens elect them",
+            "they inherit power",
+            "random lottery only"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "question": "Voting is a right and a ___.",
+          "choices": [
+            "responsibility",
+            "punishment",
+            "game"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read the passage carefully."
+  },
+  {
+    "id": "g6-comp-p800-5",
+    "grade": "6",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Reliable Sources",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Evaluate online sources by checking the author, publication date, and evidence cited. Sites that sensationalize claims without proof are less trustworthy.",
+      "questions": [
+        {
+          "question": "What should you check?",
+          "choices": [
+            "author and date",
+            "font color only",
+            "number of ads"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "question": "Sites without proof are ___.",
+          "choices": [
+            "less trustworthy",
+            "always best",
+            "illegal always"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read the passage carefully."
+  },
+  {
+    "id": "g6-speak-p800-1",
+    "grade": "6",
+    "type": "speak_sentence",
+    "difficulty": "beginner",
+    "title": "Say: Democracy depends on informed citizens.",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "sentences": [
+        "Democracy depends on informed citizens."
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say the full sentence clearly."
+  },
+  {
+    "id": "g6-speak-p800-2",
+    "grade": "6",
+    "type": "speak_sentence",
+    "difficulty": "beginner",
+    "title": "Say: I analyze the author's purpose.",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "sentences": [
+        "I analyze the author's purpose."
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say the full sentence clearly."
+  },
+  {
+    "id": "g6-speak-p800-3",
+    "grade": "6",
+    "type": "speak_sentence",
+    "difficulty": "beginner",
+    "title": "Say: Strong arguments use credible sources.",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "sentences": [
+        "Strong arguments use credible sources."
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say the full sentence clearly."
+  },
+  {
+    "id": "g6-speak-pass-p800-1",
+    "grade": "6",
+    "type": "speak_passage",
+    "difficulty": "intermediate",
+    "title": "Read Aloud: Civil Rights",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "expectedText": "The civil rights movement used peaceful protest and legal action to challenge unfair laws and expand voting rights.",
+      "text": "The civil rights movement used peaceful protest and legal action to challenge unfair laws and expand voting rights.",
+      "maxAttempts": 2
+    },
+    "hint": "Read the passage aloud with expression."
+  },
+  {
+    "id": "g6-speak-pass-p800-2",
+    "grade": "6",
+    "type": "speak_passage",
+    "difficulty": "intermediate",
+    "title": "Read Aloud: Media Literacy",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "expectedText": "Critical readers ask who created a message, what evidence supports it, and what the author wants them to believe.",
+      "text": "Critical readers ask who created a message, what evidence supports it, and what the author wants them to believe.",
+      "maxAttempts": 2
+    },
+    "hint": "Read the passage aloud with expression."
+  },
+  {
+    "id": "g6-sent-p800-1",
+    "grade": "6",
+    "type": "sentence_builder",
+    "difficulty": "beginner",
+    "title": "Build: Furthermore, the data suggest a trend.",
+    "skills": [
+      "writing",
+      "grammar"
+    ],
+    "content": {
+      "sentence": "Furthermore, the data suggest a trend."
+    },
+    "hint": "Put the words in the right order."
+  },
+  {
+    "id": "g6-sent-p800-2",
+    "grade": "6",
+    "type": "sentence_builder",
+    "difficulty": "beginner",
+    "title": "Build: The author contrasts two opposing viewpoints.",
+    "skills": [
+      "writing",
+      "grammar"
+    ],
+    "content": {
+      "sentence": "The author contrasts two opposing viewpoints."
+    },
+    "hint": "Put the words in the right order."
+  },
+  {
+    "id": "g6-sent-p800-3",
+    "grade": "6",
+    "type": "sentence_builder",
+    "difficulty": "beginner",
+    "title": "Build: Informed citizens participate in local elections.",
+    "skills": [
+      "writing",
+      "grammar"
+    ],
+    "content": {
+      "sentence": "Informed citizens participate in local elections."
+    },
+    "hint": "Put the words in the right order."
+  },
+  {
+    "id": "g6-spell-p800-1",
+    "grade": "6",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Academic Vocabulary",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "analyze",
+        "evaluate",
+        "summarize",
+        "interpret",
+        "hypothesis"
+      ]
+    },
+    "hint": "Spell each word carefully."
+  },
+  {
+    "id": "g6-spell-p800-2",
+    "grade": "6",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Commonly Confused",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "accept",
+        "except",
+        "affect",
+        "effect",
+        "principal"
+      ]
+    },
+    "hint": "Spell each word carefully."
+  },
+  {
+    "id": "g6-dict-p800-1",
+    "grade": "6",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "The Essay Draft",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "The author revised her essay to strengthen the thesis. She added transitions between paragraphs for clarity."
+    },
+    "hint": "Writing process terms."
+  },
+  {
+    "id": "g6-dict-p800-2",
+    "grade": "6",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "Community Service",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Volunteers organized a food drive for families in need. Their efforts provided meals during the holiday season."
+    },
+    "hint": "Formal tone and vocabulary."
   }
 ]

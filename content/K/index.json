@@ -1730,5 +1730,736 @@
       ]
     },
     "hint": "Use context clues."
+  },
+  {
+    "id": "gK-gram-punct",
+    "grade": "K",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "End Punctuation",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which sentence ends correctly?",
+          "choices": [
+            "Where are you?",
+            "Where are you.",
+            "Where are you,"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Questions need a question mark."
+  },
+  {
+    "id": "gK-gram-noun",
+    "grade": "K",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Common Nouns",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which word is a person, place, or thing?",
+          "choices": [
+            "school",
+            "quickly",
+            "happy"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Nouns name people, places, or things."
+  },
+  {
+    "id": "gK-gram-adj",
+    "grade": "K",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Adjectives",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which word describes the noun?",
+          "choices": [
+            "The tall tree.",
+            "The run tree.",
+            "The quickly tree."
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Adjectives tell what kind or how many."
+  },
+  {
+    "id": "gK-gram-pronoun",
+    "grade": "K",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Pronouns",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Choose the best pronoun: ___ went to the store.",
+          "choices": [
+            "She",
+            "Her",
+            "Hers"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Use a subject pronoun."
+  },
+  {
+    "id": "gK-gram-conj",
+    "grade": "K",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Conjunctions",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "I wanted to play, ___ it was raining.",
+          "choices": [
+            "but",
+            "so",
+            "the"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "But shows contrast."
+  },
+  {
+    "id": "gK-gram-article",
+    "grade": "K",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Articles a/an",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Choose the correct article: ___ umbrella.",
+          "choices": [
+            "an",
+            "a",
+            "the the"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Use an before vowel sounds."
+  },
+  {
+    "id": "gK-gram-comma",
+    "grade": "K",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Commas in a List",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which list uses commas correctly?",
+          "choices": [
+            "red, blue, and green",
+            "red blue and green",
+            "red, blue and, green"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Separate items in a list with commas."
+  },
+  {
+    "id": "gK-gram-past",
+    "grade": "K",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Past Tense",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Yesterday we ___ to the lake.",
+          "choices": [
+            "walked",
+            "walk",
+            "walking"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Past tense often ends in -ed."
+  },
+  {
+    "id": "gK-vocab-syn-1",
+    "grade": "K",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Synonyms: big",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which word means almost the same as big?",
+          "choices": [
+            "large",
+            "tiny",
+            "slow"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Synonyms have similar meanings."
+  },
+  {
+    "id": "gK-vocab-syn-2",
+    "grade": "K",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Synonyms: fast",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which word is like fast?",
+          "choices": [
+            "quick",
+            "heavy",
+            "quiet"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Quick and fast are synonyms."
+  },
+  {
+    "id": "gK-vocab-ant-1",
+    "grade": "K",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Antonyms: happy",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Sad is the opposite of ___.",
+          "choices": [
+            "happy",
+            "glad",
+            "joyful"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Antonyms mean the opposite."
+  },
+  {
+    "id": "gK-vocab-ctx-3",
+    "grade": "K",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Context Clues",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "The puppy was very ___. It wagged its tail and licked my hand.",
+          "choices": [
+            "friendly",
+            "angry",
+            "sleepy"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Use clues in the sentence."
+  },
+  {
+    "id": "gK-vocab-ctx-4",
+    "grade": "K",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Shades of Meaning",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which word is stronger than said?",
+          "choices": [
+            "shouted",
+            "whispered",
+            "mumbled"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Shouted is louder than said."
+  },
+  {
+    "id": "gK-vocab-root",
+    "grade": "K",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Word Parts",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Unhappy means not happy. Unpack means ___.",
+          "choices": [
+            "not packed",
+            "very packed",
+            "packed again"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Un- often means not."
+  },
+  {
+    "id": "gK-vocab-homo",
+    "grade": "K",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Multiple Meanings",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Bat can mean an animal or a sports tool. In \"The bat flew at night,\" bat means ___.",
+          "choices": [
+            "animal",
+            "sports tool",
+            "building"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read the whole sentence."
+  },
+  {
+    "id": "gK-vocab-prefix",
+    "grade": "K",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Prefixes re-",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Rewrite means to write again. Reread means ___.",
+          "choices": [
+            "read again",
+            "read once",
+            "not read"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Re- means again."
+  },
+  {
+    "id": "gK-comp-p800-1",
+    "grade": "K",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "The Yellow Bus",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "The yellow bus stops at our corner. Kids line up with their backpacks. The driver smiles and says good morning.",
+      "questions": [
+        {
+          "question": "What color is the bus?",
+          "choices": [
+            "yellow",
+            "red",
+            "blue"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "question": "What do kids carry?",
+          "choices": [
+            "backpacks",
+            "kites",
+            "boats"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read the passage carefully."
+  },
+  {
+    "id": "gK-comp-p800-2",
+    "grade": "K",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Pet Fish",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "We have a gold fish in a bowl. We feed it flakes twice a day. The fish swims in circles.",
+      "questions": [
+        {
+          "question": "What kind of pet?",
+          "choices": [
+            "fish",
+            "dog",
+            "cat"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "question": "What do they feed it?",
+          "choices": [
+            "flakes",
+            "bread",
+            "candy"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read the passage carefully."
+  },
+  {
+    "id": "gK-comp-p800-3",
+    "grade": "K",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Counting Blocks",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "We count red and blue blocks at math time. There are ten blocks in all. We stack them into a tower.",
+      "questions": [
+        {
+          "question": "How many blocks in all?",
+          "choices": [
+            "ten",
+            "two",
+            "one hundred"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "question": "What colors are the blocks?",
+          "choices": [
+            "red and blue",
+            "only green",
+            "black"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read the passage carefully."
+  },
+  {
+    "id": "gK-comp-p800-4",
+    "grade": "K",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Art Time",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "In art we use crayons and paper. Maya draws a house with a red door. She shares her picture with the class.",
+      "questions": [
+        {
+          "question": "What does Maya draw?",
+          "choices": [
+            "a house",
+            "a car",
+            "a fish"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "question": "What color is the door?",
+          "choices": [
+            "red",
+            "purple",
+            "gray"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read the passage carefully."
+  },
+  {
+    "id": "gK-comp-p800-5",
+    "grade": "K",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Recess Games",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "At recess we play tag and hopscotch. When the bell rings, we line up quietly. Then we walk back to class.",
+      "questions": [
+        {
+          "question": "What games do they play?",
+          "choices": [
+            "tag and hopscotch",
+            "chess only",
+            "video games"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "question": "What do they do when the bell rings?",
+          "choices": [
+            "line up",
+            "run away",
+            "sleep"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read the passage carefully."
+  },
+  {
+    "id": "gK-phonics-p800-1",
+    "grade": "K",
+    "type": "phonics_blend",
+    "difficulty": "beginner",
+    "title": "Blend: stop",
+    "skills": [
+      "phonics"
+    ],
+    "content": {
+      "targetWord": "stop",
+      "tiles": [
+        "s",
+        "t",
+        "o",
+        "p"
+      ],
+      "prompt": "Build the word stop"
+    },
+    "hint": "Blend the sounds together."
+  },
+  {
+    "id": "gK-phonics-p800-2",
+    "grade": "K",
+    "type": "phonics_blend",
+    "difficulty": "beginner",
+    "title": "Blend: frog",
+    "skills": [
+      "phonics"
+    ],
+    "content": {
+      "targetWord": "frog",
+      "tiles": [
+        "f",
+        "r",
+        "o",
+        "g"
+      ],
+      "prompt": "Build the word frog"
+    },
+    "hint": "Blend the sounds together."
+  },
+  {
+    "id": "gK-phonics-p800-3",
+    "grade": "K",
+    "type": "phonics_blend",
+    "difficulty": "beginner",
+    "title": "Blend: clap",
+    "skills": [
+      "phonics"
+    ],
+    "content": {
+      "targetWord": "clap",
+      "tiles": [
+        "c",
+        "l",
+        "a",
+        "p"
+      ],
+      "prompt": "Build the word clap"
+    },
+    "hint": "Blend the sounds together."
+  },
+  {
+    "id": "gK-sight-p800-1",
+    "grade": "K",
+    "type": "sight_word",
+    "difficulty": "beginner",
+    "title": "Sight Word: because",
+    "skills": [
+      "reading"
+    ],
+    "content": {
+      "word": "because",
+      "sentence": "I smiled because it was fun."
+    },
+    "hint": "Read the sight word."
+  },
+  {
+    "id": "gK-sight-p800-2",
+    "grade": "K",
+    "type": "sight_word",
+    "difficulty": "beginner",
+    "title": "Sight Word: before",
+    "skills": [
+      "reading"
+    ],
+    "content": {
+      "word": "before",
+      "sentence": "Wash your hands before lunch."
+    },
+    "hint": "Read the sight word."
+  },
+  {
+    "id": "gK-sight-p800-3",
+    "grade": "K",
+    "type": "sight_word",
+    "difficulty": "beginner",
+    "title": "Sight Word: different",
+    "skills": [
+      "reading"
+    ],
+    "content": {
+      "word": "different",
+      "sentence": "Each book tells a different story."
+    },
+    "hint": "Read the sight word."
+  },
+  {
+    "id": "gK-sight-p800-4",
+    "grade": "K",
+    "type": "sight_word",
+    "difficulty": "beginner",
+    "title": "Sight Word: thought",
+    "skills": [
+      "reading"
+    ],
+    "content": {
+      "word": "thought",
+      "sentence": "I thought about the answer."
+    },
+    "hint": "Read the sight word."
+  },
+  {
+    "id": "gK-speak-p800-1",
+    "grade": "K",
+    "type": "speak_sentence",
+    "difficulty": "beginner",
+    "title": "Say: I see a cat.",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "sentences": [
+        "I see a cat."
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say the full sentence clearly."
+  },
+  {
+    "id": "gK-speak-p800-2",
+    "grade": "K",
+    "type": "speak_sentence",
+    "difficulty": "beginner",
+    "title": "Say: We go to school.",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "sentences": [
+        "We go to school."
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say the full sentence clearly."
+  },
+  {
+    "id": "gK-speak-p800-3",
+    "grade": "K",
+    "type": "speak_sentence",
+    "difficulty": "beginner",
+    "title": "Say: The sun is hot.",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "sentences": [
+        "The sun is hot."
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say the full sentence clearly."
   }
 ]
