@@ -11,19 +11,46 @@ Built with **Vite + vanilla JavaScript modules**, it runs as a static PWA with o
 - **Speaking training**: Web Speech API recognition with word-level correctness feedback
 - **Adaptive learning**: placement mini-test, skill mastery tracking, lesson recommendations
 - **Progress journal**: stats, streaks, badges (localStorage + IndexedDB)
-- **Teacher portal**: class creation and progress reports (`teacher.html` + API)
-- **541+ curriculum lessons** in validated JSON format
+- **Teacher portal**: class creation, enrollments, assignments, CSV reports (`teacher.html` + API)
+- **Student assignments**: signed-in learners see teacher-assigned lessons in the sidebar
+- **English / Spanish UI** toggle (i18n for shell labels)
+- **COPPA-lite cloud sync**: optional sign-in with parent/guardian consent checkbox
+- **Progress export**: download stats and analytics events as JSON
+- **PreK playful mode**: colorful theme, picture choice cards, mascot, confetti, and sound effects
+- **889 curriculum lessons** in validated JSON format (expand with `npm run expand:content`)
 
 ## Quick Start
 
+### Local laptop (recommended)
+
 ```bash
 npm install
-npm run dev        # Development server at http://localhost:5173
+npm run local        # Dev app :5173 + API :3001 (one command)
+npm run local:full   # Above + local Whisper STT :3002 (best speaking)
+```
+
+Open **http://localhost:5173** in **Chrome** for the full experience including speaking.
+
+See **[docs/LOCAL.md](docs/LOCAL.md)** for troubleshooting, teacher portal, and offline vs API features.
+
+```bash
+npm run dev        # Development server only (http://localhost:5173)
 npm run build      # Production build to dist/
 npm start          # Preview production build
 npm test           # Run unit tests
 npm run validate:content  # Validate curriculum JSON
-npm run backend    # Start API server on port 3001
+npm run backend    # API server only (port 3001)
+npm run start:prod # Build + single server on :3001 (after npm run build)
+npm run generate:prek-images  # Regenerate PreK SVG illustration pack
+```
+
+## Deployment
+
+See [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md) for GitHub Pages, Netlify, and combined production server setup.
+
+```bash
+GITHUB_PAGES=true npm run build   # For https://<user>.github.io/dictater/
+npm run build && npm run start:prod  # Self-hosted full stack
 ```
 
 ## Project Structure

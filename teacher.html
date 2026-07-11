@@ -9,40 +9,120 @@
 <body>
   <main class="auth-panel">
     <h1 class="section-title">Teacher Portal</h1>
-    <p class="settings-note">Create classes, assign lessons, and view student progress.</p>
-    <div class="settings-row">
-      <input type="email" id="teacher-email" class="settings-select" placeholder="Teacher email">
-      <input type="text" id="class-name" class="settings-select" placeholder="Class name">
-      <button type="button" id="create-class" class="btn-primary">Create Class</button>
-    </div>
-    <div id="class-result" class="result-card feedback hidden"></div>
-    <div class="settings-row mt-sm">
-      <input type="text" id="class-id" class="settings-select" placeholder="Class ID">
-      <button type="button" id="view-report" class="btn-secondary">View Report</button>
-    </div>
-    <pre id="report-output" class="original-peek"></pre>
+    <p class="settings-note">Create classes, enroll students, assign lessons, and export progress reports.</p>
+
+    <section class="stack-md">
+      <h2 class="input-label">Teacher sign-in</h2>
+      <div class="auth-row">
+        <input type="email" id="teacher-email" class="settings-select" placeholder="teacher@school.edu">
+        <button type="button" id="teacher-login" class="btn-primary btn-compact">Sign In</button>
+      </div>
+    </section>
+
+    <section class="stack-md divider-top">
+      <h2 class="input-label">Create class</h2>
+      <div class="auth-row">
+        <input type="text" id="class-name" class="settings-select" placeholder="Class name (e.g. Grade 3A)">
+        <button type="button" id="create-class" class="btn-primary btn-compact">Create</button>
+      </div>
+      <div id="class-result" class="result-card feedback hidden"></div>
+    </section>
+
+    <section class="stack-md divider-top">
+      <h2 class="input-label">Enroll student</h2>
+      <div class="auth-row">
+        <input type="text" id="class-id" class="settings-select" placeholder="Class ID">
+        <input type="email" id="student-email" class="settings-select" placeholder="student@school.edu">
+        <button type="button" id="enroll-student" class="btn-secondary btn-compact">Enroll</button>
+      </div>
+    </section>
+
+    <section class="stack-md divider-top">
+      <h2 class="input-label">Assign lesson</h2>
+      <div class="auth-row">
+        <input type="text" id="assign-class-id" class="settings-select" placeholder="Class ID">
+        <input type="text" id="assign-lesson-id" class="settings-select" placeholder="Lesson ID (e.g. preK-rhyme-01)">
+        <input type="text" id="assign-title" class="settings-select" placeholder="Assignment title">
+        <input type="date" id="assign-due" class="settings-select">
+        <button type="button" id="create-assignment" class="btn-accent btn-compact">Assign</button>
+      </div>
+      <div id="assign-result" class="settings-note"></div>
+    </section>
+
+    <section class="stack-md divider-top">
+      <h2 class="input-label">Class report</h2>
+      <div class="auth-row">
+        <input type="text" id="report-class-id" class="settings-select" placeholder="Class ID">
+        <button type="button" id="view-report" class="btn-secondary btn-compact">View JSON</button>
+        <a id="csv-link" class="btn-primary btn-compact" href="#" download>Export CSV</a>
+      </div>
+      <pre id="report-output" class="original-peek activity-log-scroll"></pre>
+    </section>
   </main>
   <script type="module">
     const api = '/api';
+    let teacherEmail = '';
+
+    document.getElementById('teacher-login').addEventListener('click', async () => {
+      teacherEmail = document.getElementById('teacher-email').value.trim();
+      await fetch(`${api}/auth/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: teacherEmail, role: 'teacher' })
+      });
+      alert('Signed in as ' + teacherEmail);
+    });
+
     document.getElementById('create-class').addEventListener('click', async () => {
-      const teacherEmail = document.getElementById('teacher-email').value.trim();
       const name = document.getElementById('class-name').value.trim();
       const res = await fetch(`${api}/teacher/classes`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ teacherEmail, name })
+        body: JSON.stringify({ name, teacherEmail })
       });
       const data = await res.json();
       const el = document.getElementById('class-result');
-      el.textContent = `Class created. ID: ${data.id} — share with students to enroll.`;
+      el.textContent = `Class "${data.name}" created. ID: ${data.id}`;
       el.classList.remove('hidden');
       document.getElementById('class-id').value = data.id;
+      document.getElementById('assign-class-id').value = data.id;
+      document.getElementById('report-class-id').value = data.id;
     });
-    document.getElementById('view-report').addEventListener('click', async () => {
+
+    document.getElementById('enroll-student').addEventListener('click', async () => {
       const id = document.getElementById('class-id').value.trim();
+      const studentEmail = document.getElementById('student-email').value.trim();
+      const res = await fetch(`${api}/teacher/classes/${id}/enroll`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ studentEmail })
+      });
+      const data = await res.json();
+      alert(`Enrolled. Class now has ${data.students.length} student(s).`);
+    });
+
+    document.getElementById('create-assignment').addEventListener('click', async () => {
+      const body = {
+        classId: document.getElementById('assign-class-id').value.trim(),
+        lessonId: document.getElementById('assign-lesson-id').value.trim(),
+        title: document.getElementById('assign-title').value.trim(),
+        dueDate: document.getElementById('assign-due').value || null
+      };
+      const res = await fetch(`${api}/teacher/assignments`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(body)
+      });
+      const data = await res.json();
+      document.getElementById('assign-result').textContent = `Assigned "${data.title}" (id: ${data.id})`;
+    });
+
+    document.getElementById('view-report').addEventListener('click', async () => {
+      const id = document.getElementById('report-class-id').value.trim();
       const res = await fetch(`${api}/teacher/classes/${id}/report`);
       const data = await res.json();
       document.getElementById('report-output').textContent = JSON.stringify(data, null, 2);
+      document.getElementById('csv-link').href = `${api}/teacher/classes/${id}/report.csv`;
     });
   </script>
 </body>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="fish">
+  <defs>
+    <linearGradient id="bg-fish" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B2EBF2"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-fish)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <ellipse cx="55" cy="62" rx="26" ry="18" fill="#4ECDC4"/><polygon points="82,62 98,48 98,76" fill="#4ECDC4"/><circle cx="44" cy="58" r="4" fill="#2D3748"/><path d="M38 68 Q55 74 72 68" stroke="#26A69A" stroke-width="2" fill="none"/>
+</svg>

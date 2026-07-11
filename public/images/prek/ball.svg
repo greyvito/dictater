@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="ball">
+  <defs>
+    <linearGradient id="bg-ball" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B3E5FC"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-ball)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <circle cx="60" cy="62" r="28" fill="#4D96FF"/><path d="M32 62 Q60 34 88 62" stroke="#fff" stroke-width="3" fill="none"/><path d="M32 62 Q60 90 88 62" stroke="#fff" stroke-width="3" fill="none"/>
+</svg>

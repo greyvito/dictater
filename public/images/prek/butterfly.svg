@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="butterfly">
+  <defs>
+    <linearGradient id="bg-butterfly" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F48FB1"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-butterfly)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <ellipse cx="44" cy="58" rx="18" ry="22" fill="#F48FB1"/><ellipse cx="76" cy="58" rx="18" ry="22" fill="#CE93D8"/><ellipse cx="60" cy="62" rx="6" ry="20" fill="#2D3748"/><path d="M60 42 Q55 28 48 32" stroke="#2D3748" stroke-width="2" fill="none"/><path d="M60 42 Q65 28 72 32" stroke="#2D3748" stroke-width="2" fill="none"/>
+</svg>

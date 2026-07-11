@@ -10,17 +10,28 @@
     "start": "vite preview --host",
     "test": "vitest run",
     "test:watch": "vitest",
+    "test:e2e": "playwright test",
+    "test:e2e:install": "playwright install chromium",
     "validate:content": "node scripts/validate-content.mjs",
+    "qa:content": "node scripts/qa-content.mjs",
     "migrate:curriculum": "node scripts/migrate-curriculum.mjs",
-    "backend": "node backend/server.js"
+    "expand:content": "node scripts/expand-content.mjs",
+    "generate:prek-images": "node scripts/generate-prek-svgs.mjs",
+    "local": "node scripts/local.mjs",
+    "whisper": "node scripts/whisper.mjs",
+    "local:full": "node scripts/local-full.mjs",
+    "backend": "node backend/server.js",
+    "start:prod": "node backend/server.js"
   },
   "dependencies": {
     "dexie": "^4.0.11",
     "express": "^4.21.2",
     "cors": "^2.8.5",
+    "multer": "^1.4.5-lts.2",
     "uuid": "^11.1.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.51.0",
     "vite": "^6.2.0",
     "vitest": "^3.0.8"
   }

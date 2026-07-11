@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="bee">
+  <defs>
+    <linearGradient id="bg-bee" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF176"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-bee)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <ellipse cx="60" cy="62" rx="22" ry="18" fill="#FFD93D"/><rect x="38" y="54" width="44" height="6" fill="#2D3748"/><rect x="38" y="66" width="44" height="6" fill="#2D3748"/><ellipse cx="38" cy="48" rx="10" ry="8" fill="#FFF9C4" opacity="0.8"/><ellipse cx="82" cy="48" rx="10" ry="8" fill="#FFF9C4" opacity="0.8"/>
+</svg>

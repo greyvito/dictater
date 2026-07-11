@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Letter N">
+  <defs>
+    <linearGradient id="lg-n" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6BCB77"/>
+      <stop offset="100%" stop-color="#fff" stop-opacity="0.5"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#lg-n)" stroke="rgba(0,0,0,0.08)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="44" fill="rgba(255,255,255,0.5)"/>
+  <text x="60" y="78" font-size="64" font-weight="bold" font-family="Fredoka,Arial,sans-serif" fill="#2D3748" text-anchor="middle">N</text>
+</svg>

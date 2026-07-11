@@ -1,10 +1,10 @@
 const API_BASE = '/api';
 
-export async function loginUser(email) {
+export async function loginUser(email, options = {}) {
   const res = await fetch(`${API_BASE}/auth/login`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ email })
+    body: JSON.stringify({ email, parentConsent: options.parentConsent || false })
   });
   if (!res.ok) throw new Error('Login failed');
   return res.json();

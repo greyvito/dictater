@@ -28,6 +28,14 @@ describe('wordDiff', () => {
     expect(wordsMatch('cat', 'ca', { fuzzy: true })).toBe(true);
   });
 
+  it('fuzzy matches with childMode for longer words', () => {
+    expect(wordsMatch('elephant', 'elefant', { childMode: true })).toBe(true);
+  });
+
+  it('matches phonetic alias', () => {
+    expect(wordsMatch('the', 'duh', { childMode: true })).toBe(true);
+  });
+
   it('computes levenshtein distance', () => {
     expect(levenshtein('cat', 'bat')).toBe(1);
   });

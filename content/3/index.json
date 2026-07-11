@@ -1813,5 +1813,977 @@
       "maxAttempts": 3
     },
     "hint": "Say each word after you hear it."
+  },
+  {
+    "id": "g3-gram-cap",
+    "grade": "3",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Capital Letters",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which sentence is correct?",
+          "choices": [
+            "I like cats.",
+            "i like cats.",
+            "I Like cats."
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Pick the best answer."
+  },
+  {
+    "id": "g3-gram-plural",
+    "grade": "3",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Plurals",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Choose the correct plural.",
+          "choices": [
+            "dogs",
+            "doges",
+            "dog"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Pick the best answer."
+  },
+  {
+    "id": "g3-gram-verb",
+    "grade": "3",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Verb Tense",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "She ___ to school every day.",
+          "choices": [
+            "go",
+            "goes",
+            "going"
+          ],
+          "correctIndex": 1
+        }
+      ]
+    },
+    "hint": "Pick the best answer."
+  },
+  {
+    "id": "g3-vocab-ctx-1",
+    "grade": "3",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Word in Context",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "We felt ___ when we won the game.",
+          "choices": [
+            "happy",
+            "slowly",
+            "because"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Use context clues."
+  },
+  {
+    "id": "g3-vocab-ctx-2",
+    "grade": "3",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Opposite Words",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Hot is the opposite of ___.",
+          "choices": [
+            "cold",
+            "warm",
+            "fire"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Use context clues."
+  },
+  {
+    "id": "g3-write-prompt-1",
+    "grade": "3",
+    "type": "writing_prompt",
+    "difficulty": "intermediate",
+    "title": "Write About Your Favorite Place",
+    "skills": [
+      "writing"
+    ],
+    "content": {
+      "prompt": "Describe your favorite place and why you like it.",
+      "minWords": 20,
+      "checklist": [
+        "Complete sentences",
+        "Clear ideas"
+      ]
+    },
+    "hint": "Write in full sentences."
+  },
+  {
+    "id": "g3-gram-punct",
+    "grade": "3",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "End Punctuation",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which sentence ends correctly?",
+          "choices": [
+            "Where are you?",
+            "Where are you.",
+            "Where are you,"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Questions need a question mark."
+  },
+  {
+    "id": "g3-gram-noun",
+    "grade": "3",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Common Nouns",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which word is a person, place, or thing?",
+          "choices": [
+            "school",
+            "quickly",
+            "happy"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Nouns name people, places, or things."
+  },
+  {
+    "id": "g3-gram-adj",
+    "grade": "3",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Adjectives",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which word describes the noun?",
+          "choices": [
+            "The tall tree.",
+            "The run tree.",
+            "The quickly tree."
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Adjectives tell what kind or how many."
+  },
+  {
+    "id": "g3-gram-pronoun",
+    "grade": "3",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Pronouns",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Choose the best pronoun: ___ went to the store.",
+          "choices": [
+            "She",
+            "Her",
+            "Hers"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Use a subject pronoun."
+  },
+  {
+    "id": "g3-gram-conj",
+    "grade": "3",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Conjunctions",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "I wanted to play, ___ it was raining.",
+          "choices": [
+            "but",
+            "so",
+            "the"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "But shows contrast."
+  },
+  {
+    "id": "g3-gram-article",
+    "grade": "3",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Articles a/an",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Choose the correct article: ___ umbrella.",
+          "choices": [
+            "an",
+            "a",
+            "the the"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Use an before vowel sounds."
+  },
+  {
+    "id": "g3-gram-comma",
+    "grade": "3",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Commas in a List",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which list uses commas correctly?",
+          "choices": [
+            "red, blue, and green",
+            "red blue and green",
+            "red, blue and, green"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Separate items in a list with commas."
+  },
+  {
+    "id": "g3-gram-past",
+    "grade": "3",
+    "type": "grammar_fix",
+    "difficulty": "beginner",
+    "title": "Past Tense",
+    "skills": [
+      "grammar"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Yesterday we ___ to the lake.",
+          "choices": [
+            "walked",
+            "walk",
+            "walking"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Past tense often ends in -ed."
+  },
+  {
+    "id": "g3-vocab-syn-1",
+    "grade": "3",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Synonyms: big",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which word means almost the same as big?",
+          "choices": [
+            "large",
+            "tiny",
+            "slow"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Synonyms have similar meanings."
+  },
+  {
+    "id": "g3-vocab-syn-2",
+    "grade": "3",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Synonyms: fast",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which word is like fast?",
+          "choices": [
+            "quick",
+            "heavy",
+            "quiet"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Quick and fast are synonyms."
+  },
+  {
+    "id": "g3-vocab-ant-1",
+    "grade": "3",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Antonyms: happy",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Sad is the opposite of ___.",
+          "choices": [
+            "happy",
+            "glad",
+            "joyful"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Antonyms mean the opposite."
+  },
+  {
+    "id": "g3-vocab-ctx-3",
+    "grade": "3",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Context Clues",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "The puppy was very ___. It wagged its tail and licked my hand.",
+          "choices": [
+            "friendly",
+            "angry",
+            "sleepy"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Use clues in the sentence."
+  },
+  {
+    "id": "g3-vocab-ctx-4",
+    "grade": "3",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Shades of Meaning",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Which word is stronger than said?",
+          "choices": [
+            "shouted",
+            "whispered",
+            "mumbled"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Shouted is louder than said."
+  },
+  {
+    "id": "g3-vocab-root",
+    "grade": "3",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Word Parts",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Unhappy means not happy. Unpack means ___.",
+          "choices": [
+            "not packed",
+            "very packed",
+            "packed again"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Un- often means not."
+  },
+  {
+    "id": "g3-vocab-homo",
+    "grade": "3",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Multiple Meanings",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Bat can mean an animal or a sports tool. In \"The bat flew at night,\" bat means ___.",
+          "choices": [
+            "animal",
+            "sports tool",
+            "building"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read the whole sentence."
+  },
+  {
+    "id": "g3-vocab-prefix",
+    "grade": "3",
+    "type": "vocabulary_context",
+    "difficulty": "beginner",
+    "title": "Prefixes re-",
+    "skills": [
+      "vocabulary"
+    ],
+    "content": {
+      "questions": [
+        {
+          "question": "Rewrite means to write again. Reread means ___.",
+          "choices": [
+            "read again",
+            "read once",
+            "not read"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Re- means again."
+  },
+  {
+    "id": "g3-write-prompt-2",
+    "grade": "3",
+    "type": "writing_prompt",
+    "difficulty": "intermediate",
+    "title": "Write About a Friend",
+    "skills": [
+      "writing"
+    ],
+    "content": {
+      "prompt": "Describe a friend and what you like to do together.",
+      "minWords": 25,
+      "checklist": [
+        "Complete sentences",
+        "Clear ideas"
+      ]
+    },
+    "hint": "Write in full sentences."
+  },
+  {
+    "id": "g3-write-prompt-3",
+    "grade": "3",
+    "type": "writing_prompt",
+    "difficulty": "intermediate",
+    "title": "Write a How-To",
+    "skills": [
+      "writing"
+    ],
+    "content": {
+      "prompt": "Explain how to make a simple snack step by step.",
+      "minWords": 30,
+      "checklist": [
+        "Complete sentences",
+        "Clear ideas"
+      ]
+    },
+    "hint": "Write in full sentences."
+  },
+  {
+    "id": "g3-write-prompt-4",
+    "grade": "3",
+    "type": "writing_prompt",
+    "difficulty": "advanced",
+    "title": "Write an Opinion",
+    "skills": [
+      "writing"
+    ],
+    "content": {
+      "prompt": "What is the best season? Give reasons for your choice.",
+      "minWords": 35,
+      "checklist": [
+        "Complete sentences",
+        "Clear ideas"
+      ]
+    },
+    "hint": "Write in full sentences."
+  },
+  {
+    "id": "g3-write-prompt-5",
+    "grade": "3",
+    "type": "writing_prompt",
+    "difficulty": "advanced",
+    "title": "Write a Letter",
+    "skills": [
+      "writing"
+    ],
+    "content": {
+      "prompt": "Write a short letter thanking someone who helped you.",
+      "minWords": 40,
+      "checklist": [
+        "Complete sentences",
+        "Clear ideas"
+      ]
+    },
+    "hint": "Write in full sentences."
+  },
+  {
+    "id": "g3-comp-p800-1",
+    "grade": "3",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "The Science Fair",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Marcus built a volcano model for the science fair. He mixed baking soda and vinegar to make it erupt. The judges gave him a blue ribbon for clear explanation.",
+      "questions": [
+        {
+          "question": "What did Marcus build?",
+          "choices": [
+            "a volcano model",
+            "a robot",
+            "a bridge"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "question": "What award did he win?",
+          "choices": [
+            "a blue ribbon",
+            "a gold medal",
+            "nothing"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read the passage carefully."
+  },
+  {
+    "id": "g3-comp-p800-2",
+    "grade": "3",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Migrating Geese",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Every autumn, geese fly south in a V shape. They travel hundreds of miles to find warmer weather. In spring they return north to nest.",
+      "questions": [
+        {
+          "question": "When do geese fly south?",
+          "choices": [
+            "autumn",
+            "summer",
+            "winter only"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "question": "Why do they migrate?",
+          "choices": [
+            "for warmer weather",
+            "to sleep",
+            "to hide"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read the passage carefully."
+  },
+  {
+    "id": "g3-comp-p800-3",
+    "grade": "3",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "The Community Garden",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Neighbors worked together on a community garden. They shared tools and took turns watering. By summer, tomatoes and peppers were ready to harvest.",
+      "questions": [
+        {
+          "question": "Who worked on the garden?",
+          "choices": [
+            "neighbors",
+            "only one person",
+            "robots"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "question": "What vegetables grew?",
+          "choices": [
+            "tomatoes and peppers",
+            "only grass",
+            "apples"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read the passage carefully."
+  },
+  {
+    "id": "g3-comp-p800-4",
+    "grade": "3",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "Learning to Swim",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "At first Ava was afraid of the deep end. Her coach taught her to float and kick slowly. By the end of the month she swam across the pool.",
+      "questions": [
+        {
+          "question": "What was Ava afraid of?",
+          "choices": [
+            "the deep end",
+            "the snack bar",
+            "homework"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "question": "What could she do by the end of the month?",
+          "choices": [
+            "swim across the pool",
+            "dive only",
+            "nothing"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read the passage carefully."
+  },
+  {
+    "id": "g3-comp-p800-5",
+    "grade": "3",
+    "type": "comprehension",
+    "difficulty": "beginner",
+    "title": "The Time Capsule",
+    "skills": [
+      "reading_comprehension"
+    ],
+    "content": {
+      "passage": "Our class buried a time capsule behind the school. We put in drawings, a class photo, and a letter to future students. We will open it in ten years.",
+      "questions": [
+        {
+          "question": "Where did they bury the capsule?",
+          "choices": [
+            "behind the school",
+            "in the ocean",
+            "at home"
+          ],
+          "correctIndex": 0
+        },
+        {
+          "question": "When will they open it?",
+          "choices": [
+            "in ten years",
+            "tomorrow",
+            "never"
+          ],
+          "correctIndex": 0
+        }
+      ]
+    },
+    "hint": "Read the passage carefully."
+  },
+  {
+    "id": "g3-speak-p800-1",
+    "grade": "3",
+    "type": "speak_sentence",
+    "difficulty": "beginner",
+    "title": "Say: Science helps us learn.",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "sentences": [
+        "Science helps us learn."
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say the full sentence clearly."
+  },
+  {
+    "id": "g3-speak-p800-2",
+    "grade": "3",
+    "type": "speak_sentence",
+    "difficulty": "beginner",
+    "title": "Say: We respect our classmates.",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "sentences": [
+        "We respect our classmates."
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say the full sentence clearly."
+  },
+  {
+    "id": "g3-speak-p800-3",
+    "grade": "3",
+    "type": "speak_sentence",
+    "difficulty": "beginner",
+    "title": "Say: The library is quiet.",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "sentences": [
+        "The library is quiet."
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say the full sentence clearly."
+  },
+  {
+    "id": "g3-speak-pass-p800-1",
+    "grade": "3",
+    "type": "speak_passage",
+    "difficulty": "intermediate",
+    "title": "Read Aloud: Morning Routine",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "expectedText": "Every morning I brush my teeth, eat breakfast, and pack my backpack. Then I walk to the bus stop with my neighbor.",
+      "text": "Every morning I brush my teeth, eat breakfast, and pack my backpack. Then I walk to the bus stop with my neighbor.",
+      "maxAttempts": 2
+    },
+    "hint": "Read the passage aloud with expression."
+  },
+  {
+    "id": "g3-speak-pass-p800-2",
+    "grade": "3",
+    "type": "speak_passage",
+    "difficulty": "intermediate",
+    "title": "Read Aloud: The Garden",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "expectedText": "Our garden has tomatoes, beans, and herbs. We water the plants in the evening when the sun is not too hot.",
+      "text": "Our garden has tomatoes, beans, and herbs. We water the plants in the evening when the sun is not too hot.",
+      "maxAttempts": 2
+    },
+    "hint": "Read the passage aloud with expression."
+  },
+  {
+    "id": "g3-sent-p800-1",
+    "grade": "3",
+    "type": "sentence_builder",
+    "difficulty": "beginner",
+    "title": "Build: The brave firefighter saved the kitten.",
+    "skills": [
+      "writing",
+      "grammar"
+    ],
+    "content": {
+      "sentence": "The brave firefighter saved the kitten."
+    },
+    "hint": "Put the words in the right order."
+  },
+  {
+    "id": "g3-sent-p800-2",
+    "grade": "3",
+    "type": "sentence_builder",
+    "difficulty": "beginner",
+    "title": "Build: Students studied for the spelling test.",
+    "skills": [
+      "writing",
+      "grammar"
+    ],
+    "content": {
+      "sentence": "Students studied for the spelling test."
+    },
+    "hint": "Put the words in the right order."
+  },
+  {
+    "id": "g3-sent-p800-3",
+    "grade": "3",
+    "type": "sentence_builder",
+    "difficulty": "beginner",
+    "title": "Build: Rain fell on the playground.",
+    "skills": [
+      "writing",
+      "grammar"
+    ],
+    "content": {
+      "sentence": "Rain fell on the playground."
+    },
+    "hint": "Put the words in the right order."
+  },
+  {
+    "id": "g3-spell-p800-1",
+    "grade": "3",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Prefixes un- re-",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "undo",
+        "replay",
+        "unsafe",
+        "rewrite",
+        "unpack"
+      ]
+    },
+    "hint": "Spell each word carefully."
+  },
+  {
+    "id": "g3-spell-p800-2",
+    "grade": "3",
+    "type": "spelling",
+    "difficulty": "intermediate",
+    "title": "Suffixes -ful -less",
+    "skills": [
+      "spelling"
+    ],
+    "content": {
+      "words": [
+        "helpful",
+        "careless",
+        "thankful",
+        "hopeless",
+        "painful"
+      ]
+    },
+    "hint": "Spell each word carefully."
+  },
+  {
+    "id": "g3-dict-p800-1",
+    "grade": "3",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "The Museum Trip",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Our class visited the history museum. We saw dinosaur bones and old tools."
+    },
+    "hint": "Two sentences about a trip."
+  },
+  {
+    "id": "g3-dict-p800-2",
+    "grade": "3",
+    "type": "dictation",
+    "difficulty": "intermediate",
+    "title": "After the Storm",
+    "skills": [
+      "listening",
+      "writing"
+    ],
+    "content": {
+      "text": "Lightning flashed during the storm. Afterwards, a rainbow appeared in the sky."
+    },
+    "hint": "Watch spelling of afterwards."
   }
 ]
