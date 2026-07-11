@@ -41,6 +41,7 @@ import {
   t,
   exportAnalyticsBlob
 } from './i18n/strings.js';
+import { applyPrekTheme } from './prek/theme.js';
 
 export class DictaterApp {
   constructor() {
@@ -84,7 +85,12 @@ export class DictaterApp {
     this.renderSetup();
     this.renderAssignments();
     this.renderRecommendations();
+    this.updatePrekTheme();
     console.log('[Dictater] ELA platform initialized');
+  }
+
+  updatePrekTheme() {
+    applyPrekTheme(this.grade === 'preK');
   }
 
   saveSessionState() {
@@ -230,6 +236,7 @@ export class DictaterApp {
         this.currentLesson = null;
         this.pendingLessonId = null;
         this.saveSessionState();
+        this.updatePrekTheme();
         this.renderSetup();
       });
       gradeEl.appendChild(btn);
@@ -249,6 +256,7 @@ export class DictaterApp {
         this.currentLesson = null;
         this.pendingLessonId = null;
         this.saveSessionState();
+        this.updatePrekTheme();
         this.renderSetup();
       });
       skillEl.appendChild(btn);
@@ -336,6 +344,7 @@ export class DictaterApp {
     if (lesson.grade && lesson.grade !== 'Custom') this.grade = lesson.grade;
     this.skillArea = skillAreaForType(lesson.type);
     if (!opts.skipSave) this.saveSessionState();
+    this.updatePrekTheme();
 
     document.querySelector('#current-title').textContent = lesson.title;
     document.querySelector('#current-meta').textContent = `${gradeLabel(lesson.grade)} • ${this.skillArea} • ${lesson.type.replace(/_/g, ' ')}`;
