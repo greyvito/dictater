@@ -19,6 +19,7 @@
     "generate:prek-images": "node scripts/generate-prek-svgs.mjs",
     "local": "node scripts/local.mjs",
     "whisper": "node scripts/whisper.mjs",
+    "tts": "node scripts/tts.mjs",
     "local:full": "node scripts/local-full.mjs",
     "backend": "node backend/server.js",
     "start:prod": "node backend/server.js"

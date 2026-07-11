@@ -6,11 +6,16 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const speechDir = path.join(__dirname, '..', 'speech-server');
-const venvPython =
+const root = path.join(__dirname, '..');
+const speechDir = path.join(root, 'speech-server');
+const whisperPython =
   process.platform === 'win32'
     ? path.join(speechDir, '.venv', 'Scripts', 'python.exe')
     : path.join(speechDir, '.venv', 'bin', 'python');
+const ttsPython =
+  process.platform === 'win32'
+    ? path.join(root, 'venv', 'Scripts', 'python.exe')
+    : path.join(root, 'venv', 'bin', 'python');
 
 const npmCmd = process.platform === 'win32' ? 'npm.cmd' : 'npm';
 const children = [];
@@ -27,16 +32,25 @@ console.log('  ─────────────────────�
 console.log('  Student app:  http://localhost:5173');
 console.log('  API:          http://localhost:3001');
 console.log('  Whisper:      http://localhost:3002');
+console.log('  TTS:          http://localhost:5002');
 console.log('');
 
 run('backend', npmCmd, ['run', 'backend']);
 run('dev', npmCmd, ['run', 'dev']);
 
-if (fs.existsSync(venvPython)) {
+if (fs.existsSync(whisperPython)) {
   run('whisper', npmCmd, ['run', 'whisper']);
 } else {
   console.log('  ⚠ Whisper venv not found — speaking uses browser STT only.');
   console.log('    Setup: cd speech-server && python3 -m venv .venv && .venv/bin/pip install -r requirements.txt');
+  console.log('');
+}
+
+if (fs.existsSync(ttsPython)) {
+  run('tts', npmCmd, ['run', 'tts']);
+} else {
+  console.log('  ⚠ TTS venv not found — local Kokoro/Piper unavailable in settings.');
+  console.log('    Setup: python3 -m venv venv && source venv/bin/activate && pip install kokoro-mlx soundfile mlx piper-tts');
   console.log('');
 }
 

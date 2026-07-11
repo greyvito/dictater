@@ -264,7 +264,7 @@ async function speakLocalServer(text, eng) {
       localAudio.play().catch(reject);
     });
   } catch (e) {
-    toast('Local TTS server unavailable — using Web Speech.', 'warning');
+    toast('Local TTS server unavailable. Start it with: npm run tts', 'warning');
     engine = 'webspeech';
     document.querySelector('#voice-engine').value = 'webspeech';
     populateVoiceDropdowns();
