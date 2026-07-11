@@ -21,15 +21,25 @@ Built with **Vite + vanilla JavaScript modules**, it runs as a static PWA with o
 
 ## Quick Start
 
+### Local laptop (recommended)
+
 ```bash
 npm install
-npm run dev        # Development server at http://localhost:5173
+npm run local        # Dev app :5173 + API :3001 (one command)
+```
+
+Open **http://localhost:5173** in **Chrome** for the full experience including speaking.
+
+See **[docs/LOCAL.md](docs/LOCAL.md)** for troubleshooting, teacher portal, and offline vs API features.
+
+```bash
+npm run dev        # Development server only (http://localhost:5173)
 npm run build      # Production build to dist/
 npm start          # Preview production build
 npm test           # Run unit tests
 npm run validate:content  # Validate curriculum JSON
-npm run backend    # Start API server on port 3001
-npm run start:prod # Build + serve dist/ and API together (after npm run build)
+npm run backend    # API server only (port 3001)
+npm run start:prod # Build + single server on :3001 (after npm run build)
 npm run generate:prek-images  # Regenerate PreK SVG illustration pack
 ```
 
