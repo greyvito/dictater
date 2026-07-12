@@ -8,5 +8,5 @@
   </defs>
   <rect width="120" height="120" rx="28" fill="url(#bg-goat)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
   <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
-  <text x="60" y="78" font-size="48" font-weight="bold" font-family="Fredoka,Arial,sans-serif" fill="#2D3748" text-anchor="middle">G</text>
+  <ellipse cx="60" cy="64" rx="20" ry="22" fill="#ECEFF1"/><path d="M48 46 Q40 34 46 30" stroke="#BCAAA4" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M72 46 Q80 34 74 30" stroke="#BCAAA4" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="52" cy="60" r="2.5" fill="#2D3748"/><circle cx="68" cy="60" r="2.5" fill="#2D3748"/><ellipse cx="60" cy="70" rx="6" ry="4" fill="#B0BEC5"/><path d="M56 82 L60 92 L64 82" fill="#E0E0E0"/>
 </svg>

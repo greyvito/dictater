@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="ch">
+  <defs>
+    <linearGradient id="bg-ch" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE082"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-ch)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <ellipse cx="60" cy="66" rx="22" ry="20" fill="#FFD54F"/><circle cx="60" cy="46" r="15" fill="#FFE082"/><polygon points="60,46 47,50 60,54" fill="#FF9800"/><circle cx="55" cy="44" r="2.5" fill="#2D3748"/><circle cx="65" cy="44" r="2.5" fill="#2D3748"/><path d="M50 86 L54 90 M60 88 L60 92 M70 86 L66 90" stroke="#FF9800" stroke-width="2" stroke-linecap="round"/>
+</svg>

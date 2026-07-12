@@ -8,5 +8,5 @@
   </defs>
   <rect width="120" height="120" rx="28" fill="url(#bg-sock)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
   <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
-  <text x="60" y="78" font-size="48" font-weight="bold" font-family="Fredoka,Arial,sans-serif" fill="#2D3748" text-anchor="middle">S</text>
+  <rect x="50" y="30" width="16" height="8" fill="#BA68C8"/><path d="M50 30 H66 V60 Q66 66 72 68 L84 74 Q90 78 86 84 L80 88 Q76 90 72 86 L54 72 Q50 68 50 60 Z" fill="#CE93D8" stroke="#AB47BC" stroke-width="2"/><line x1="52" y1="44" x2="64" y2="44" stroke="#fff" stroke-width="2" opacity="0.6"/>
 </svg>

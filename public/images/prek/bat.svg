@@ -8,5 +8,5 @@
   </defs>
   <rect width="120" height="120" rx="28" fill="url(#bg-bat)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
   <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
-  <text x="60" y="78" font-size="48" font-weight="bold" font-family="Fredoka,Arial,sans-serif" fill="#2D3748" text-anchor="middle">B</text>
+  <ellipse cx="60" cy="62" rx="12" ry="15" fill="#4A148C"/><path d="M48 58 Q28 44 22 62 Q34 60 40 70 Q44 60 48 64 Z" fill="#4A148C"/><path d="M72 58 Q92 44 98 62 Q86 60 80 70 Q76 60 72 64 Z" fill="#4A148C"/><polygon points="52,50 50,40 57,48" fill="#4A148C"/><polygon points="68,50 70,40 63,48" fill="#4A148C"/><circle cx="55" cy="60" r="2.5" fill="#FFD93D"/><circle cx="65" cy="60" r="2.5" fill="#FFD93D"/>
 </svg>

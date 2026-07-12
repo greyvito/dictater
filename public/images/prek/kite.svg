@@ -8,5 +8,5 @@
   </defs>
   <rect width="120" height="120" rx="28" fill="url(#bg-kite)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
   <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
-  <text x="60" y="78" font-size="48" font-weight="bold" font-family="Fredoka,Arial,sans-serif" fill="#2D3748" text-anchor="middle">K</text>
+  <polygon points="60,26 84,56 60,84 36,56" fill="#4FC3F7" stroke="#0288D1" stroke-width="2"/><line x1="60" y1="26" x2="60" y2="84" stroke="#0288D1" stroke-width="1.5"/><line x1="36" y1="56" x2="84" y2="56" stroke="#0288D1" stroke-width="1.5"/><path d="M60 84 Q54 90 60 94 Q66 98 60 100" stroke="#FF8A65" stroke-width="2" fill="none"/><polygon points="56,88 64,88 60,94" fill="#FFD54F"/>
 </svg>

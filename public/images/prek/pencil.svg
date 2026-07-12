@@ -8,5 +8,5 @@
   </defs>
   <rect width="120" height="120" rx="28" fill="url(#bg-pencil)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
   <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
-  <text x="60" y="78" font-size="48" font-weight="bold" font-family="Fredoka,Arial,sans-serif" fill="#2D3748" text-anchor="middle">P</text>
+  <g transform="rotate(45 60 60)"><rect x="52" y="26" width="16" height="8" fill="#F48FB1"/><rect x="52" y="34" width="16" height="42" fill="#FFD54F"/><line x1="60" y1="34" x2="60" y2="76" stroke="#F9A825" stroke-width="1.5"/><polygon points="52,76 68,76 60,88" fill="#F5D6A0"/><polygon points="56,82 64,82 60,88" fill="#2D3748"/></g>
 </svg>
