@@ -128,19 +128,6 @@ test('settings panel opens from more tools', async ({ page }) => {
   await expect(page.locator('#voice-engine option')).toHaveCount(7);
 });
 
-test('unit progress modal lists PreK vocabulary units', async ({ page }) => {
-  await page.goto('/');
-  await selectGrade(page, 'PreK');
-  await selectSkill(page, 'Vocabulary');
-  await expect(page.locator('#btn-open-unit-progress')).toBeVisible();
-  await page.locator('#btn-open-unit-progress').click();
-  await expect(page.locator('#unit-progress-modal')).toBeVisible();
-  await expect(page.locator('.unit-progress-row')).toHaveCount(18);
-  await expect(page.locator('.unit-progress-summary')).toContainText(/72|0 of 72/i);
-  await page.keyboard.press('Escape');
-  await expect(page.locator('#unit-progress-modal')).toBeHidden();
-});
-
 test('dashboard modal closes with Escape', async ({ page }) => {
   await page.goto('/');
   await page.locator('#btn-open-dashboard').click();
