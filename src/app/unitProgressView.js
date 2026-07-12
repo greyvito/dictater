@@ -1,5 +1,5 @@
-import { buildUnitProgressRows, summarizeUnitProgress } from '../curriculum/unitProgress.js';
-import { getLessonsBySkill } from '../curriculum/loader.js';
+import { buildUnitProgressRows, summarizeUnitProgress, UNIT_VOCAB_TYPES } from '../curriculum/unitProgress.js';
+import { getLessonsForGrade } from '../curriculum/loader.js';
 import { gradeLabel } from '../curriculum/schema.js';
 import { t } from '../i18n/strings.js';
 
@@ -10,7 +10,9 @@ import { t } from '../i18n/strings.js';
 export function renderUnitProgressPanel(container, { grade, completedIds, locale = 'en' }) {
   container.replaceChildren();
 
-  const lessons = getLessonsBySkill(grade, 'vocabulary');
+  const lessons = getLessonsForGrade(grade).filter(
+    (lesson) => lesson.topic && UNIT_VOCAB_TYPES.has(lesson.type)
+  );
   const rows = buildUnitProgressRows(lessons, completedIds);
   const summary = summarizeUnitProgress(rows);
 
