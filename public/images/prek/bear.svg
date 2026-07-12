@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="bear">
+  <defs>
+    <linearGradient id="bg-bear" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8D6E63"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-bear)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <ellipse cx="60" cy="68" rx="26" ry="22" fill="#8D6E63"/><circle cx="60" cy="48" r="20" fill="#A1887F"/><circle cx="42" cy="36" r="10" fill="#A1887F"/><circle cx="78" cy="36" r="10" fill="#A1887F"/><circle cx="54" cy="46" r="2" fill="#2D3748"/><circle cx="66" cy="46" r="2" fill="#2D3748"/><ellipse cx="60" cy="54" rx="8" ry="6" fill="#6D4C41"/>
+</svg>

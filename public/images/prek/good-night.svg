@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="good-night">
+  <defs>
+    <linearGradient id="bg-goodnight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7986CB"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-goodnight)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <path d="M70 32 A20 20 0 1 0 70 72 A14 14 0 1 1 70 32" fill="#FFE082"/><circle cx="44" cy="44" r="2" fill="#fff"/><circle cx="36" cy="56" r="1.5" fill="#fff"/><text x="72" y="88" font-size="18" font-family="Fredoka,Arial,sans-serif" fill="#3949AB" text-anchor="middle">PM</text>
+</svg>

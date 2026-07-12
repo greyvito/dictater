@@ -14,7 +14,23 @@ export const WORD_EMOJI = {
   ring: '💍', light: '💡', night: '🌃', day: '🌤️', happy: '😊', sad: '😢',
   angry: '😠', hot: '🔥', blue: '🔵', green: '🟢', red: '🔴', big: '🐘',
   small: '🐭', tiny: '🐜', hello: '👋', friend: '🤝', 'thank you': '🙏', one: '1️⃣', two: '2️⃣',
-  three: '3️⃣', ch: '🐔', sh: '🐚', hippopotamus: '🦛'
+  three: '3️⃣', ch: '🐔', sh: '🐚', hippopotamus: '🦛',
+  goodbye: '👋', please: '🙏', sorry: '😔', yes: '✅', no: '❌',
+  'good morning': '🌅', 'good night': '🌙',
+  yellow: '🟡', orange: '🟠', purple: '🟣', pink: '💗', black: '⬛', white: '⬜', brown: '🟤',
+  four: '4️⃣', five: '5️⃣', six: '6️⃣', seven: '7️⃣', eight: '8️⃣', nine: '9️⃣', ten: '🔟',
+  circle: '⭕', square: '⬜', triangle: '🔺', rectangle: '▭',
+  head: '🙂', foot: '🦶', arm: '💪', leg: '🦵', eye: '👁️', ear: '👂', nose: '👃', mouth: '👄', finger: '☝️',
+  mom: '👩', dad: '👨', sister: '👧', brother: '👦', baby: '👶', grandma: '👵', grandpa: '👴', family: '👨‍👩‍👧',
+  scared: '😨', tired: '😴', hungry: '🍽️', excited: '🤩', fine: '🙂',
+  rabbit: '🐰', hamster: '🐹', turtle: '🐢', pet: '🐾',
+  cow: '🐄', duck: '🦆', sheep: '🐑', horse: '🐴', barn: '🏚️',
+  bear: '🐻', frog: '🐸', lion: '🦁',
+  milk: '🥛', bread: '🍞', rice: '🍚', water: '💧', juice: '🧃', cake: '🎂', soup: '🍲',
+  chair: '🪑', table: '🪑', door: '🚪', backpack: '🎒', crayon: '🖍️',
+  shirt: '👕', pants: '👖', coat: '🧥',
+  rain: '🌧️', cloud: '☁️', snow: '❄️', cold: '🥶',
+  jump: '⬆️', sit: '🪑', eat: '🍴', sleep: '😴', play: '🎮'
 };
 
 /** Words with generated SVG files (see scripts/generate-prek-svgs.mjs) */

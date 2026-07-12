@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="sheep">
+  <defs>
+    <linearGradient id="bg-sheep" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAFAFA"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-sheep)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <ellipse cx="60" cy="68" rx="26" ry="18" fill="#FAFAFA"/><circle cx="60" cy="48" r="20" fill="#F5F5F5"/><circle cx="48" cy="44" r="8" fill="#FAFAFA"/><circle cx="72" cy="44" r="8" fill="#FAFAFA"/><circle cx="54" cy="46" r="2" fill="#2D3748"/><circle cx="66" cy="46" r="2" fill="#2D3748"/>
+</svg>

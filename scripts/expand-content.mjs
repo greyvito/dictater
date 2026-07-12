@@ -138,8 +138,10 @@ function comprehensionLesson(gradeKey, t) {
 function buildLessonsForGrade(gradeKey) {
   const out = [];
 
-  [...LEGACY_GRAMMAR, ...EXTRA_GRAMMAR].forEach((t) => out.push(grammarLesson(gradeKey, t)));
-  [...LEGACY_VOCAB, ...EXTRA_VOCAB].forEach((t) => out.push(vocabLesson(gradeKey, t)));
+  if (!['preK', 'K'].includes(gradeKey)) {
+    [...LEGACY_GRAMMAR, ...EXTRA_GRAMMAR].forEach((t) => out.push(grammarLesson(gradeKey, t)));
+    [...LEGACY_VOCAB, ...EXTRA_VOCAB].forEach((t) => out.push(vocabLesson(gradeKey, t)));
+  }
 
   if (gradeKey !== 'preK' && gradeKey !== 'K') {
     [...LEGACY_WRITING, ...EXTRA_WRITING].forEach((t) => out.push(writingLesson(gradeKey, t)));

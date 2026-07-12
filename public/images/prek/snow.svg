@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="snow">
+  <defs>
+    <linearGradient id="bg-snow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E3F2FD"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-snow)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <circle cx="48" cy="48" r="6" fill="#E3F2FD"/><circle cx="72" cy="44" r="5" fill="#E3F2FD"/><circle cx="60" cy="64" r="7" fill="#fff"/><circle cx="44" cy="72" r="4" fill="#BBDEFB"/><circle cx="76" cy="68" r="5" fill="#BBDEFB"/>
+</svg>

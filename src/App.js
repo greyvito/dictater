@@ -41,7 +41,14 @@ import {
   t,
   exportAnalyticsBlob
 } from './i18n/strings.js';
-import { applyPrekTheme } from './prek/theme.js';
+const PREK_VISUAL_TYPES = new Set(['word_intro', 'picture_vocab', 'phonological_rhyme', 'phonological_syllable', 'phonological_initial', 'letter_sound', 'speak_repeat']);
+
+function usesPlayfulVisuals(grade, lesson, skillArea) {
+  if (grade === 'preK') return true;
+  if (grade === 'K' && skillArea === 'vocabulary') return true;
+  if (grade === 'K' && lesson && PREK_VISUAL_TYPES.has(lesson.type)) return true;
+  return false;
+}
 import { openModal, closeModal, toggleModal } from './app/modal.js';
 
 const HERO_COLLAPSED_KEY = 'DICTATER_HERO_COLLAPSED';
@@ -167,7 +174,7 @@ export class DictaterApp {
   }
 
   updatePrekLayout() {
-    const immersive = this.grade === 'preK' && !!this.currentLesson;
+    const immersive = usesPlayfulVisuals(this.grade, this.currentLesson, this.skillArea) && !!this.currentLesson;
     document.body.classList.toggle('prek-immersive', immersive);
     document.querySelector('#btn-prek-menu')?.classList.toggle('hidden', !immersive);
   }
@@ -198,7 +205,7 @@ export class DictaterApp {
   }
 
   updatePrekTheme() {
-    applyPrekTheme(this.grade === 'preK');
+    applyPrekTheme(usesPlayfulVisuals(this.grade, this.currentLesson, this.skillArea));
   }
 
   saveSessionState() {
@@ -398,7 +405,11 @@ export class DictaterApp {
     }
 
     const completed = this.getCompletedIds();
-    lessons.forEach((lesson) => {
+    const useTopicGroups = (this.grade === 'preK' || this.grade === 'K')
+      && this.skillArea === 'vocabulary'
+      && lessons.some((l) => l.topic);
+
+    const appendLessonItem = (lesson) => {
       const div = document.createElement('div');
       div.setAttribute('role', 'listitem');
       const done = completed.has(lesson.id);
@@ -436,7 +447,32 @@ export class DictaterApp {
         this.loadLesson(lesson);
       });
       lessonEl.appendChild(div);
-    });
+    };
+
+    if (useTopicGroups) {
+      const byTopic = new Map();
+      lessons.forEach((lesson) => {
+        const key = lesson.topic || 'other';
+        if (!byTopic.has(key)) byTopic.set(key, []);
+        byTopic.get(key).push(lesson);
+      });
+      const sortedTopics = [...byTopic.entries()].sort((a, b) => {
+        const ao = a[1][0]?.topicOrder ?? 999;
+        const bo = b[1][0]?.topicOrder ?? 999;
+        return ao - bo;
+      });
+      sortedTopics.forEach(([, topicLessons]) => {
+        const header = document.createElement('div');
+        header.className = 'lesson-topic-header';
+        header.textContent = topicLessons[0]?.topicLabel
+          ? `Unit ${topicLessons[0].topicOrder ?? ''} — ${topicLessons[0].topicLabel}`.replace('Unit  — ', '')
+          : 'More lessons';
+        lessonEl.appendChild(header);
+        topicLessons.forEach((lesson) => appendLessonItem(lesson));
+      });
+    } else {
+      lessons.forEach((lesson) => appendLessonItem(lesson));
+    }
 
     this.pendingLessonId = null;
   }
@@ -592,7 +628,14 @@ export class DictaterApp {
       showToast: (msg, type) => this.showToast(msg, type),
       onComplete: (result) => this.handleComplete(lesson, result),
       retryLesson: () => this.loadLesson(lesson, { skipSave: true }),
-      loadNextLesson: () => this.loadNextLesson()
+      loadNextLesson: () => this.loadNextLesson(),
+      loadPracticeLesson: () => {
+        const practiceId = lesson.content?.practiceLessonId;
+        if (!practiceId) return;
+        const practice = getLessonById(String(practiceId));
+        if (practice) this.loadLesson(practice);
+        else this.showToast('Practice lesson not found', 'warning');
+      }
     });
     this.closeMobileSidebar();
     this.updateMobileLessonBar();
