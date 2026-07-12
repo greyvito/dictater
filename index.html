@@ -79,6 +79,7 @@
         <div id="assignments-list" class="exercise-list exercise-list--short"></div>
       </div>
       <div class="sidebar-footer divider-top stack-sm">
+        <button type="button" id="btn-open-unit-progress" class="btn-secondary btn-block hidden" data-i18n="unitProgress">Unit Progress</button>
         <button type="button" id="btn-open-dashboard" class="btn-secondary btn-block" data-i18n="dashboard">Student Dashboard</button>
         <button type="button" id="btn-placement" class="btn-secondary btn-block" data-i18n="placement">Take Placement Mini-Test</button>
         <details class="sidebar-disclosure">
@@ -186,6 +187,14 @@
       <input type="text" id="creator-hint" class="settings-select">
     </div>
     <button type="button" id="btn-creator-save" class="btn-primary btn-block">Save</button>
+  </div>
+
+  <div id="unit-progress-modal" class="settings-dropdown modal-lg hidden" role="dialog" aria-labelledby="unit-progress-dialog-title">
+    <div class="result-header modal-header">
+      <h3 id="unit-progress-dialog-title" class="section-title section-title--plain" data-i18n="unitProgressTitle">Vocabulary Units</h3>
+      <button type="button" id="btn-unit-progress-close" class="modal-close">&times;</button>
+    </div>
+    <div id="unit-progress-panel"></div>
   </div>
 
   <div id="dashboard-modal" class="settings-dropdown modal-lg hidden" role="dialog" aria-labelledby="dashboard-dialog-title">

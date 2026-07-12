@@ -949,6 +949,7 @@ footer {
 #settings-dropdown.hidden,
 #lesson-creator-modal.hidden,
 #dashboard-modal.hidden,
+#unit-progress-modal.hidden,
 #original-text-peek.hidden,
 .modal-open-mask.hidden {
   display: none;
@@ -1746,6 +1747,45 @@ body.prek-mode .exercise-item {
   margin-top: 0;
   padding-top: 0;
   border-top: none;
+}
+
+.unit-progress-summary {
+  margin-bottom: var(--space-3);
+}
+.unit-progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+.unit-progress-row__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-2);
+  margin-bottom: var(--space-1);
+}
+.unit-progress-row__title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.unit-progress-row__fraction {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+.unit-progress-bar {
+  height: 8px;
+  border-radius: 999px;
+  background: var(--surface-2, rgba(31, 41, 51, 0.08));
+  overflow: hidden;
+}
+.unit-progress-bar__fill {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--color-accent, #3d7a5c);
+  transition: width 0.25s ease;
 }
 
 /* Mascot (D) */

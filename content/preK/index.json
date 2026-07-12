@@ -1693,8 +1693,8 @@
       "prompt": "red",
       "choices": [
         "red",
-        "dog",
-        "five"
+        "hello",
+        "circle"
       ],
       "correctIndex": 0
     },
@@ -1713,11 +1713,11 @@
       "oral_vocabulary"
     ],
     "content": {
-      "prompt": "apple",
+      "prompt": "mom",
       "choices": [
         "cat",
-        "apple",
-        "run"
+        "mom",
+        "happy"
       ],
       "correctIndex": 1
     },
@@ -1736,13 +1736,36 @@
       "oral_vocabulary"
     ],
     "content": {
-      "prompt": "mom",
+      "prompt": "cow",
+      "choices": [
+        "cow",
+        "apple",
+        "book"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-review-4",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Review Mix (4)",
+    "topic": "review",
+    "topicOrder": 99,
+    "topicLabel": "Review Mix",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "bus",
       "choices": [
         "sun",
-        "bed",
-        "mom"
+        "bus",
+        "teacher"
       ],
-      "correctIndex": 2
+      "correctIndex": 1
     },
     "hint": "Tap the picture you hear."
   },

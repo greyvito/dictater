@@ -94,7 +94,9 @@
     ],
     "content": {
       "sentences": [
-        "Hello, friend!"
+        "Hello, friend!",
+        "Good morning!",
+        "Thank you, friend."
       ],
       "maxAttempts": 3
     },
@@ -195,7 +197,9 @@
     ],
     "content": {
       "sentences": [
-        "It is red."
+        "It is red.",
+        "I see blue.",
+        "The ball is yellow."
       ],
       "maxAttempts": 3
     },
@@ -296,7 +300,9 @@
     ],
     "content": {
       "sentences": [
-        "I see five."
+        "I see five.",
+        "I have three.",
+        "Count to ten."
       ],
       "maxAttempts": 3
     },
@@ -393,7 +399,9 @@
     ],
     "content": {
       "sentences": [
-        "It is a circle."
+        "It is a circle.",
+        "I see a star.",
+        "Draw a square."
       ],
       "maxAttempts": 3
     },
@@ -494,7 +502,9 @@
     ],
     "content": {
       "sentences": [
-        "Touch your nose."
+        "Touch your nose.",
+        "Wave your hand.",
+        "I have two eyes."
       ],
       "maxAttempts": 3
     },
@@ -593,7 +603,9 @@
     ],
     "content": {
       "sentences": [
-        "This is my mom."
+        "This is my mom.",
+        "I love my family.",
+        "My baby is small."
       ],
       "maxAttempts": 3
     },
@@ -692,7 +704,9 @@
     ],
     "content": {
       "sentences": [
-        "I am happy."
+        "I am happy.",
+        "I feel tired.",
+        "Are you hungry?"
       ],
       "maxAttempts": 3
     },
@@ -791,7 +805,9 @@
     ],
     "content": {
       "sentences": [
-        "I have a cat."
+        "I have a cat.",
+        "The dog is big.",
+        "My fish swims."
       ],
       "maxAttempts": 3
     },
@@ -890,7 +906,9 @@
     ],
     "content": {
       "sentences": [
-        "The cow is big."
+        "The cow is big.",
+        "I see a duck.",
+        "The horse runs fast."
       ],
       "maxAttempts": 3
     },
@@ -989,7 +1007,9 @@
     ],
     "content": {
       "sentences": [
-        "I see a frog."
+        "I see a frog.",
+        "The lion is loud.",
+        "A bee can fly."
       ],
       "maxAttempts": 3
     },
@@ -1090,7 +1110,9 @@
     ],
     "content": {
       "sentences": [
-        "I like apple."
+        "I like apple.",
+        "I drink milk.",
+        "The cake is sweet."
       ],
       "maxAttempts": 3
     },
@@ -1191,7 +1213,9 @@
     ],
     "content": {
       "sentences": [
-        "My book is red."
+        "My book is red.",
+        "I sit on a chair.",
+        "Open the door."
       ],
       "maxAttempts": 3
     },
@@ -1292,7 +1316,9 @@
     ],
     "content": {
       "sentences": [
-        "The sun is hot."
+        "The sun is hot.",
+        "I wear a coat.",
+        "It is raining."
       ],
       "maxAttempts": 3
     },
@@ -1393,7 +1419,9 @@
     ],
     "content": {
       "sentences": [
-        "I can run."
+        "I can run.",
+        "Sit down, please.",
+        "The dog is small."
       ],
       "maxAttempts": 3
     },
@@ -1492,7 +1520,9 @@
     ],
     "content": {
       "sentences": [
-        "I go by bus."
+        "I go by bus.",
+        "The train is fast.",
+        "We walk to school."
       ],
       "maxAttempts": 3
     },
@@ -1591,7 +1621,9 @@
     ],
     "content": {
       "sentences": [
-        "We go to the park."
+        "We go to the park.",
+        "I go to school.",
+        "The beach is fun."
       ],
       "maxAttempts": 3
     },
@@ -1690,7 +1722,9 @@
     ],
     "content": {
       "sentences": [
-        "I have paper and glue."
+        "I have paper and glue.",
+        "The teacher helps me.",
+        "I use my ruler."
       ],
       "maxAttempts": 3
     },
@@ -1709,11 +1743,11 @@
       "oral_vocabulary"
     ],
     "content": {
-      "prompt": "school",
+      "prompt": "good morning",
       "choices": [
-        "school",
-        "bike",
-        "happy"
+        "good morning",
+        "purple",
+        "triangle"
       ],
       "correctIndex": 0
     },
@@ -1732,13 +1766,13 @@
       "oral_vocabulary"
     ],
     "content": {
-      "prompt": "bus",
+      "prompt": "family",
       "choices": [
-        "bus",
-        "fish",
-        "three"
+        "dog",
+        "family",
+        "tired"
       ],
-      "correctIndex": 0
+      "correctIndex": 1
     },
     "hint": "Tap the picture you hear."
   },
@@ -1755,11 +1789,34 @@
       "oral_vocabulary"
     ],
     "content": {
-      "prompt": "paper",
+      "prompt": "banana",
       "choices": [
-        "glue",
-        "paper",
-        "star"
+        "banana",
+        "frog",
+        "pencil"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "gK-review-4",
+    "grade": "K",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Review Mix (4)",
+    "topic": "review",
+    "topicOrder": 99,
+    "topicLabel": "Review Mix",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "train",
+      "choices": [
+        "coat",
+        "train",
+        "paper"
       ],
       "correctIndex": 1
     },
