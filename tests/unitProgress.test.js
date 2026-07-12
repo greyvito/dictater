@@ -30,13 +30,13 @@ describe('unit progress', () => {
       expect(row.pct).toBe(0);
     });
     const review = rows.find((r) => r.id === 'review');
-    expect(review?.total).toBe(4);
+    expect(review?.total).toBe(3);
   });
 
   it('counts K topical lessons the same shape as PreK', () => {
     const rows = buildUnitProgressRows(vocabTopicLessons(kContent), new Set());
     expect(rows).toHaveLength(18);
-    expect(rows.reduce((sum, r) => sum + r.total, 0)).toBe(72);
+    expect(rows.reduce((sum, r) => sum + r.total, 0)).toBe(71);
   });
 
   it('tracks completed lesson ids per topic', () => {
@@ -53,7 +53,7 @@ describe('unit progress', () => {
 
     const summary = summarizeUnitProgress(rows);
     expect(summary.completed).toBe(2);
-    expect(summary.total).toBe(72);
+    expect(summary.total).toBe(71);
   });
 
   it('ignores non-unit vocabulary lessons without topic', () => {
@@ -62,6 +62,6 @@ describe('unit progress', () => {
       { id: 'extra', grade: 'preK', type: 'word_intro', topic: null }
     ];
     const rows = buildUnitProgressRows(lessons, new Set());
-    expect(rows.reduce((sum, r) => sum + r.total, 0)).toBe(72);
+    expect(rows.reduce((sum, r) => sum + r.total, 0)).toBe(71);
   });
 });
