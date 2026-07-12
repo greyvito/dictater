@@ -2,6 +2,7 @@ import { resolveWordVisual } from '../prek/images.js';
 import { celebrateCorrect, mountMascot } from '../prek/delight.js';
 import { appendPostCheckActions } from './postCheck.js';
 import { getLocale, t } from '../i18n/strings.js';
+import { playWordAudio } from '../speech/wordAudio.js';
 
 /**
  * @param {HTMLElement} parent
@@ -100,10 +101,11 @@ export function renderWordIntro(ctx) {
 
   mountMascot(mascotSlot);
 
-  const speakWord = () => {
+  const speakWord = async () => {
     const word = words[index];
     if (!word) return;
-    speak(word).catch(() => showToast('Audio unavailable', 'warning'));
+    const played = await playWordAudio(word);
+    if (!played) speak(word).catch(() => showToast('Audio unavailable', 'warning'));
   };
 
   const renderCard = () => {

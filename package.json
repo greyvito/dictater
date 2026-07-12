@@ -18,6 +18,7 @@
     "expand:content": "node scripts/expand-content.mjs",
     "generate:prek-images": "node scripts/generate-prek-svgs.mjs",
     "generate:topic-lessons": "node scripts/generate-topic-lessons.mjs --write",
+    "generate:word-audio": "node scripts/generate-word-audio.mjs",
     "local": "node scripts/local.mjs",
     "whisper": "node scripts/whisper.mjs",
     "tts": "node scripts/tts.mjs",

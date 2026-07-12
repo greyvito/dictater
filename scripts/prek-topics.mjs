@@ -7,7 +7,7 @@
  * @property {string} label
  * @property {string[]} prekWords
  * @property {string[]} [kExtraWords]
- * @property {string} [kSentence]
+ * @property {string[]} [kSentences] — K speak_sentence variants (2–3 per unit)
  * @property {string} [speakWord] — representative word for speak_repeat
  */
 
@@ -19,7 +19,7 @@ export const TOPIC_UNITS = [
     label: 'Hello & Manners',
     prekWords: ['hello', 'goodbye', 'please', 'thank you', 'sorry', 'yes', 'no', 'friend'],
     kExtraWords: ['good morning', 'good night'],
-    kSentence: 'Hello, friend!',
+    kSentences: ['Hello, friend!', 'Good morning!', 'Thank you, friend.'],
     speakWord: 'hello'
   },
   {
@@ -27,7 +27,7 @@ export const TOPIC_UNITS = [
     order: 2,
     label: 'Colors',
     prekWords: ['red', 'blue', 'green', 'yellow', 'orange', 'purple', 'pink', 'black', 'white', 'brown'],
-    kSentence: 'It is red.',
+    kSentences: ['It is red.', 'I see blue.', 'The ball is yellow.'],
     speakWord: 'red'
   },
   {
@@ -35,7 +35,7 @@ export const TOPIC_UNITS = [
     order: 3,
     label: 'Numbers 1–10',
     prekWords: ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'],
-    kSentence: 'I see five.',
+    kSentences: ['I see five.', 'I have three.', 'Count to ten.'],
     speakWord: 'five'
   },
   {
@@ -43,7 +43,7 @@ export const TOPIC_UNITS = [
     order: 4,
     label: 'Shapes',
     prekWords: ['circle', 'square', 'triangle', 'star', 'heart', 'rectangle'],
-    kSentence: 'It is a circle.',
+    kSentences: ['It is a circle.', 'I see a star.', 'Draw a square.'],
     speakWord: 'circle'
   },
   {
@@ -51,7 +51,7 @@ export const TOPIC_UNITS = [
     order: 5,
     label: 'My Body',
     prekWords: ['head', 'hand', 'foot', 'arm', 'leg', 'eye', 'ear', 'nose', 'mouth', 'finger'],
-    kSentence: 'Touch your nose.',
+    kSentences: ['Touch your nose.', 'Wave your hand.', 'I have two eyes.'],
     speakWord: 'nose'
   },
   {
@@ -59,7 +59,7 @@ export const TOPIC_UNITS = [
     order: 6,
     label: 'My Family',
     prekWords: ['mom', 'dad', 'sister', 'brother', 'baby', 'grandma', 'grandpa', 'family'],
-    kSentence: 'This is my mom.',
+    kSentences: ['This is my mom.', 'I love my family.', 'My baby is small.'],
     speakWord: 'mom'
   },
   {
@@ -67,7 +67,7 @@ export const TOPIC_UNITS = [
     order: 7,
     label: 'Feelings',
     prekWords: ['happy', 'sad', 'angry', 'scared', 'tired', 'hungry', 'excited', 'fine'],
-    kSentence: 'I am happy.',
+    kSentences: ['I am happy.', 'I feel tired.', 'Are you hungry?'],
     speakWord: 'happy'
   },
   {
@@ -75,7 +75,7 @@ export const TOPIC_UNITS = [
     order: 8,
     label: 'Pets',
     prekWords: ['cat', 'dog', 'bird', 'fish', 'rabbit', 'hamster', 'turtle', 'pet'],
-    kSentence: 'I have a cat.',
+    kSentences: ['I have a cat.', 'The dog is big.', 'My fish swims.'],
     speakWord: 'cat'
   },
   {
@@ -83,7 +83,7 @@ export const TOPIC_UNITS = [
     order: 9,
     label: 'Farm Animals',
     prekWords: ['pig', 'cow', 'duck', 'goat', 'sheep', 'hen', 'horse', 'barn'],
-    kSentence: 'The cow is big.',
+    kSentences: ['The cow is big.', 'I see a duck.', 'The horse runs fast.'],
     speakWord: 'cow'
   },
   {
@@ -91,7 +91,7 @@ export const TOPIC_UNITS = [
     order: 10,
     label: 'Wild Animals',
     prekWords: ['elephant', 'tiger', 'snake', 'bear', 'butterfly', 'bee', 'frog', 'lion'],
-    kSentence: 'I see a frog.',
+    kSentences: ['I see a frog.', 'The lion is loud.', 'A bee can fly.'],
     speakWord: 'frog'
   },
   {
@@ -99,7 +99,7 @@ export const TOPIC_UNITS = [
     order: 11,
     label: 'Food & Drink',
     prekWords: ['apple', 'banana', 'egg', 'milk', 'bread', 'rice', 'water', 'juice', 'cake', 'soup'],
-    kSentence: 'I like apple.',
+    kSentences: ['I like apple.', 'I drink milk.', 'The cake is sweet.'],
     speakWord: 'apple'
   },
   {
@@ -107,7 +107,7 @@ export const TOPIC_UNITS = [
     order: 12,
     label: 'Home & School',
     prekWords: ['house', 'bed', 'book', 'pencil', 'cup', 'chair', 'table', 'door', 'backpack', 'crayon'],
-    kSentence: 'My book is red.',
+    kSentences: ['My book is red.', 'I sit on a chair.', 'Open the door.'],
     speakWord: 'book'
   },
   {
@@ -115,7 +115,7 @@ export const TOPIC_UNITS = [
     order: 13,
     label: 'Clothes & Weather',
     prekWords: ['hat', 'shoe', 'sock', 'shirt', 'pants', 'coat', 'sun', 'rain', 'cloud', 'snow'],
-    kSentence: 'The sun is hot.',
+    kSentences: ['The sun is hot.', 'I wear a coat.', 'It is raining.'],
     speakWord: 'sun'
   },
   {
@@ -123,7 +123,7 @@ export const TOPIC_UNITS = [
     order: 14,
     label: 'Actions & Opposites',
     prekWords: ['run', 'jump', 'sit', 'eat', 'sleep', 'play', 'big', 'small', 'hot', 'cold'],
-    kSentence: 'I can run.',
+    kSentences: ['I can run.', 'Sit down, please.', 'The dog is small.'],
     speakWord: 'run'
   },
   {
@@ -131,7 +131,7 @@ export const TOPIC_UNITS = [
     order: 15,
     label: 'Getting Around',
     prekWords: ['bus', 'bike', 'boat', 'plane', 'train', 'truck', 'car', 'walk'],
-    kSentence: 'I go by bus.',
+    kSentences: ['I go by bus.', 'The train is fast.', 'We walk to school.'],
     speakWord: 'bus'
   },
   {
@@ -139,7 +139,7 @@ export const TOPIC_UNITS = [
     order: 16,
     label: 'Places in Town',
     prekWords: ['park', 'school', 'shop', 'zoo', 'farm', 'beach', 'road', 'home'],
-    kSentence: 'We go to the park.',
+    kSentences: ['We go to the park.', 'I go to school.', 'The beach is fun.'],
     speakWord: 'park'
   },
   {
@@ -147,22 +147,27 @@ export const TOPIC_UNITS = [
     order: 17,
     label: 'In the Classroom',
     prekWords: ['teacher', 'student', 'desk', 'paper', 'glue', 'scissors', 'paint', 'ruler'],
-    kSentence: 'I have paper and glue.',
+    kSentences: ['I have paper and glue.', 'The teacher helps me.', 'I use my ruler.'],
     speakWord: 'paper'
   }
 ];
 
-/** Review picture_vocab quizzes mixing words from different units (per grade). */
+/**
+ * Review picture_vocab quizzes — one mix per completed topic band (units 1–4, 5–8, 9–12, 13–17).
+ * Each quiz blends words from different units within that band.
+ */
 export const REVIEW_SETS = {
   preK: [
-    { prompt: 'red', choices: ['red', 'dog', 'five'], correctIndex: 0 },
-    { prompt: 'apple', choices: ['cat', 'apple', 'run'], correctIndex: 1 },
-    { prompt: 'mom', choices: ['sun', 'bed', 'mom'], correctIndex: 2 }
+    { prompt: 'red', choices: ['red', 'hello', 'circle'], correctIndex: 0 },
+    { prompt: 'mom', choices: ['cat', 'mom', 'happy'], correctIndex: 1 },
+    { prompt: 'cow', choices: ['cow', 'apple', 'book'], correctIndex: 0 },
+    { prompt: 'bus', choices: ['sun', 'bus', 'teacher'], correctIndex: 1 }
   ],
   K: [
-    { prompt: 'school', choices: ['school', 'bike', 'happy'], correctIndex: 0 },
-    { prompt: 'bus', choices: ['bus', 'fish', 'three'], correctIndex: 0 },
-    { prompt: 'paper', choices: ['glue', 'paper', 'star'], correctIndex: 1 }
+    { prompt: 'good morning', choices: ['good morning', 'purple', 'triangle'], correctIndex: 0 },
+    { prompt: 'family', choices: ['dog', 'family', 'tired'], correctIndex: 1 },
+    { prompt: 'banana', choices: ['banana', 'frog', 'pencil'], correctIndex: 0 },
+    { prompt: 'train', choices: ['coat', 'train', 'paper'], correctIndex: 1 }
   ]
 };
 
@@ -172,6 +177,12 @@ export function wordsForGrade(grade, topic) {
     return [...topic.prekWords, ...(topic.kExtraWords || [])];
   }
   return topic.prekWords;
+}
+
+/** K speak_sentence variants for a topic. */
+export function sentencesForTopic(topic) {
+  if (topic.kSentences?.length) return topic.kSentences;
+  return [`I see a ${topic.prekWords[0]}.`];
 }
 
 /**

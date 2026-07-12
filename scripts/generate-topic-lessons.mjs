@@ -6,7 +6,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { TOPIC_UNITS, wordsForGrade, buildPictureQuizzes, REVIEW_SETS } from './prek-topics.mjs';
+import { TOPIC_UNITS, wordsForGrade, buildPictureQuizzes, REVIEW_SETS, sentencesForTopic } from './prek-topics.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const write = process.argv.includes('--write');
@@ -91,7 +91,7 @@ function lessonsForTopic(grade, topic) {
       topicLabel: topic.label,
       skills: ['speaking', 'oral_fluency'],
       content: {
-        sentences: [topic.kSentence || `I see a ${words[0]}.`],
+        sentences: sentencesForTopic(topic),
         maxAttempts: 3
       },
       hint: 'Say the full sentence clearly.'

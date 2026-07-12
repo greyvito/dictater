@@ -136,7 +136,7 @@ test('unit progress modal lists PreK vocabulary units', async ({ page }) => {
   await page.locator('#btn-open-unit-progress').click();
   await expect(page.locator('#unit-progress-modal')).toBeVisible();
   await expect(page.locator('.unit-progress-row')).toHaveCount(18);
-  await expect(page.locator('.unit-progress-summary')).toContainText(/71|0 of 71/i);
+  await expect(page.locator('.unit-progress-summary')).toContainText(/72|0 of 72/i);
   await page.keyboard.press('Escape');
   await expect(page.locator('#unit-progress-modal')).toBeHidden();
 });
