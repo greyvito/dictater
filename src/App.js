@@ -41,6 +41,9 @@ import {
   t,
   exportAnalyticsBlob
 } from './i18n/strings.js';
+import { applyPrekTheme } from './prek/theme.js';
+import { openModal, closeModal, toggleModal } from './app/modal.js';
+
 const PREK_VISUAL_TYPES = new Set(['word_intro', 'picture_vocab', 'phonological_rhyme', 'phonological_syllable', 'phonological_initial', 'letter_sound', 'speak_repeat']);
 
 function usesPlayfulVisuals(grade, lesson, skillArea) {
@@ -49,7 +52,6 @@ function usesPlayfulVisuals(grade, lesson, skillArea) {
   if (grade === 'K' && lesson && PREK_VISUAL_TYPES.has(lesson.type)) return true;
   return false;
 }
-import { openModal, closeModal, toggleModal } from './app/modal.js';
 
 const HERO_COLLAPSED_KEY = 'DICTATER_HERO_COLLAPSED';
 const PREK_SKILLS = ['sounds', 'phonics', 'vocabulary', 'speaking'];
