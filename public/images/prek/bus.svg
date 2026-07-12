@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="bus">
+  <defs>
+    <linearGradient id="bg-bus" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD54F"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-bus)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <rect x="24" y="44" width="72" height="32" rx="8" fill="#FFD54F"/><rect x="32" y="52" width="16" height="12" rx="2" fill="#81D4FA"/><rect x="52" y="52" width="16" height="12" rx="2" fill="#81D4FA"/><rect x="72" y="52" width="16" height="12" rx="2" fill="#81D4FA"/><circle cx="36" cy="80" r="8" fill="#424242"/><circle cx="84" cy="80" r="8" fill="#424242"/>
+</svg>

@@ -3,6 +3,7 @@ import {
   resolvePromptVisual,
   CHOICE_CARD_COLORS
 } from '../prek/images.js';
+import { shuffleWithCorrectIndex } from '../prek/shuffle.js';
 import { celebrateCorrect, encourageTryAgain, mountMascot } from '../prek/delight.js';
 import { appendPostCheckActions } from './postCheck.js';
 
@@ -49,7 +50,9 @@ function renderChoices(ctx, config) {
   let answered = false;
 
   const promptVis = overridePrompt || resolvePromptVisual({ prompt });
-  const normalized = normalizeChoices(choices, correctIndex);
+  const shuffled = shuffleWithCorrectIndex(choices, correctIndex);
+  const normalized = normalizeChoices(shuffled.choices, shuffled.correctIndex);
+  const displayCorrectIndex = shuffled.correctIndex;
 
   container.innerHTML = `
     <div class="prek-activity">
@@ -78,16 +81,16 @@ function renderChoices(ctx, config) {
       if (answered) return;
       answered = true;
       const i = Number(btn.getAttribute('data-index'));
-      const correct = i === correctIndex;
+      const correct = i === displayCorrectIndex;
       btn.classList.add(correct ? 'choice-correct' : 'choice-wrong');
       if (!correct) {
-        choicesEl.querySelectorAll('.prek-choice-card')[correctIndex]?.classList.add('choice-correct');
+        choicesEl.querySelectorAll('.prek-choice-card')[displayCorrectIndex]?.classList.add('choice-correct');
       }
       const fb = container.querySelector('#prek-feedback');
       fb.classList.remove('hidden');
       fb.classList.add(correct ? 'prek-feedback--yes' : 'prek-feedback--oops');
       const msg = document.createElement('p');
-      msg.textContent = correct ? '🌟 Yes! You got it!' : `Nice try! The answer is "${normalized[correctIndex].label}".`;
+      msg.textContent = correct ? '🌟 Yes! You got it!' : `Nice try! The answer is "${normalized[displayCorrectIndex].label}".`;
       fb.replaceChildren(msg);
       appendPostCheckActions(fb, ctx, correct);
 

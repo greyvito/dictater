@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="hungry">
+  <defs>
+    <linearGradient id="bg-hungry" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFCC80"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-hungry)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <circle cx="60" cy="52" r="24" fill="#FFCC80"/><path d="M48 68 L56 76 L72 60" stroke="#2D3748" stroke-width="3" fill="none"/><ellipse cx="78" cy="78" rx="10" ry="8" fill="#FFAB91"/>
+</svg>

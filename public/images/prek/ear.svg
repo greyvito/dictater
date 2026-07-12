@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="ear">
+  <defs>
+    <linearGradient id="bg-ear" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFCCBC"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-ear)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <path d="M44 48 Q36 60 44 76 Q56 72 56 52 Q52 40 44 48" fill="#FFCCBC"/><path d="M76 48 Q84 60 76 76 Q64 72 64 52 Q68 40 76 48" fill="#FFCCBC"/>
+</svg>

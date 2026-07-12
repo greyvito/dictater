@@ -13,6 +13,7 @@ import {
   letterSoundActivity,
   pictureVocabActivity
 } from './prek.js';
+import { wordIntroActivity } from './wordIntro.js';
 import {
   comprehensionActivity,
   grammarActivity,
@@ -35,6 +36,7 @@ import {
   initialSoundActivity,
   letterSoundActivity,
   pictureVocabActivity,
+  wordIntroActivity,
   comprehensionActivity,
   grammarActivity,
   vocabularyActivity,

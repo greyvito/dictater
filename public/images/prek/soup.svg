@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="soup">
+  <defs>
+    <linearGradient id="bg-soup" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFAB91"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-soup)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <ellipse cx="60" cy="72" rx="28" ry="12" fill="#FFAB91"/><ellipse cx="60" cy="64" rx="24" ry="8" fill="#FF8A65"/><path d="M48 56 Q52 48 56 56" stroke="#6D4C41" stroke-width="2" fill="none"/>
+</svg>

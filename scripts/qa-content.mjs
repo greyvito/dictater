@@ -21,12 +21,18 @@ function bump(map, key) {
 }
 
 function walkPrekWords(lesson) {
-  if (lesson.grade !== 'preK') return;
+  if (lesson.grade !== 'preK' && lesson.grade !== 'K') return;
   const c = lesson.content || {};
-  [c.prompt, c.expectedText, ...(c.choices || []), c.letter].filter(Boolean).forEach((w) => {
+  const words = [];
+  if (c.prompt) words.push(c.prompt);
+  if (c.expectedText) words.push(c.expectedText);
+  if (c.letter) words.push(c.letter);
+  if (Array.isArray(c.words)) words.push(...c.words);
+  if (Array.isArray(c.choices)) words.push(...c.choices);
+  words.filter(Boolean).forEach((w) => {
     const s = String(w).replace(/^\/([a-z]+)\/$/, '$1').toLowerCase();
     if (s.length > 1 && !imagePathForWord(s)) {
-      stats.warnings.push(`PreK lesson ${lesson.id}: no illustration for "${s}"`);
+      stats.warnings.push(`${lesson.grade} lesson ${lesson.id}: no illustration for "${s}"`);
     }
   });
 }
@@ -61,6 +67,9 @@ function qaFile(filePath) {
         lesson.content?.expectedText ||
         lesson.content?.prompt;
       if (!hasTarget) stats.errors.push(`${lesson.id}: speaking lesson missing target text`);
+    }
+    if (lesson.type === 'word_intro' && !lesson.content?.words?.length) {
+      stats.errors.push(`${lesson.id}: word_intro missing words array`);
     }
 
     walkPrekWords(lesson);

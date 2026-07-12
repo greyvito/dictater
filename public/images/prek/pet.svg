@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="pet">
+  <defs>
+    <linearGradient id="bg-pet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8BBD0"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-pet)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <ellipse cx="48" cy="68" rx="14" ry="12" fill="#FFAB91"/><ellipse cx="74" cy="72" rx="12" ry="10" fill="#FFCC80"/><circle cx="44" cy="58" r="8" fill="#FFAB91"/><path d="M68 58 L76 52 L76 62 Z" fill="#FFB74D"/>
+</svg>

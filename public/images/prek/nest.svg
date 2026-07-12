@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="nest">
+  <defs>
+    <linearGradient id="bg-nest" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFCC80"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-nest)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <ellipse cx="60" cy="72" rx="28" ry="12" fill="#FFCC80"/><path d="M32 72 Q60 40 88 72" fill="none" stroke="#8D6E63" stroke-width="4"/><ellipse cx="60" cy="64" rx="12" ry="8" fill="#FFF9C4"/><circle cx="56" cy="64" r="3" fill="#FFEB3B"/><circle cx="64" cy="64" r="3" fill="#FFEB3B"/>
+</svg>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="duck">
+  <defs>
+    <linearGradient id="bg-duck" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE082"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-duck)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <ellipse cx="60" cy="68" rx="22" ry="16" fill="#FFE082"/><circle cx="72" cy="48" r="12" fill="#FFD54F"/><path d="M82 48 L92 46 L82 52 Z" fill="#FF9800"/><circle cx="76" cy="46" r="2" fill="#2D3748"/>
+</svg>

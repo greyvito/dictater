@@ -1,5 +1,7 @@
 /** Custom child-friendly vector art for PreK word cards (no emoji). */
 
+import { EXT_WORD_BG, EXT_WORD_ART } from './prek-art-ext.mjs';
+
 /** @type {Record<string, string>} */
 export const WORD_BG = {
   cat: '#FFE082', dog: '#FFCCBC', sun: '#FFF59D', ball: '#B3E5FC', hat: '#E1BEE7',
@@ -15,7 +17,8 @@ export const WORD_BG = {
   green: '#A5D6A7', red: '#EF9A9A', big: '#B0BEC5', small: '#E1BEE7', run: '#80DEEA',
   tall: '#FFE082', king: '#FFD54F', ring: '#F8BBD0', light: '#FFF176', night: '#7986CB',
   day: '#81D4FA', hello: '#FFCC80', 'thank-you': '#C5E1A5', one: '#FFAB91', two: '#CE93D8',
-  three: '#80CBC4', hippopotamus: '#B0BEC5', tiny: '#E1BEE7'
+  three: '#80CBC4', hippopotamus: '#B0BEC5', tiny: '#E1BEE7',
+  ...EXT_WORD_BG
 };
 
 /** @type {Record<string, string>} SVG group content, viewBox inner 20-100 */
@@ -59,7 +62,8 @@ export const WORD_ART = {
   banana: `<path d="M42 88 Q38 48 68 38 Q58 58 72 78 Q52 72 42 88" fill="#FFD93D" stroke="#FFB347" stroke-width="2"/>`,
   robot: `<rect x="38" y="40" width="44" height="40" rx="8" fill="#90A4AE"/><rect x="48" y="52" width="10" height="10" rx="2" fill="#4FC3F7"/><rect x="62" y="52" width="10" height="10" rx="2" fill="#4FC3F7"/><rect x="52" y="68" width="16" height="4" rx="2" fill="#546E7A"/><line x1="48" y1="32" x2="48" y2="40" stroke="#78909C" stroke-width="3"/><circle cx="48" cy="28" r="4" fill="#FF6B6B"/>`,
   three: `<text x="60" y="78" font-size="56" font-weight="bold" font-family="Fredoka,Arial,sans-serif" fill="#26A69A" text-anchor="middle">3</text>`,
-  tiny: `<ellipse cx="60" cy="72" rx="8" ry="6" fill="#9E9E9E"/><circle cx="60" cy="58" r="10" fill="#9E9E9E"/><line x1="52" y1="52" x2="44" y2="44" stroke="#9E9E9E" stroke-width="2"/><line x1="68" y1="52" x2="76" y2="44" stroke="#9E9E9E" stroke-width="2"/><line x1="52" y1="78" x2="44" y2="88" stroke="#9E9E9E" stroke-width="2"/><line x1="68" y1="78" x2="76" y2="88" stroke="#9E9E9E" stroke-width="2"/><line x1="56" y1="84" x2="52" y2="94" stroke="#9E9E9E" stroke-width="2"/><line x1="64" y1="84" x2="68" y2="94" stroke="#9E9E9E" stroke-width="2"/><circle cx="56" cy="56" r="2" fill="#2D3748"/><circle cx="64" cy="56" r="2" fill="#2D3748"/>`
+  tiny: `<ellipse cx="60" cy="72" rx="8" ry="6" fill="#9E9E9E"/><circle cx="60" cy="58" r="10" fill="#9E9E9E"/><line x1="52" y1="52" x2="44" y2="44" stroke="#9E9E9E" stroke-width="2"/><line x1="68" y1="52" x2="76" y2="44" stroke="#9E9E9E" stroke-width="2"/><line x1="52" y1="78" x2="44" y2="88" stroke="#9E9E9E" stroke-width="2"/><line x1="68" y1="78" x2="76" y2="88" stroke="#9E9E9E" stroke-width="2"/><line x1="56" y1="84" x2="52" y2="94" stroke="#9E9E9E" stroke-width="2"/><line x1="64" y1="84" x2="68" y2="94" stroke="#9E9E9E" stroke-width="2"/><circle cx="56" cy="56" r="2" fill="#2D3748"/><circle cx="64" cy="56" r="2" fill="#2D3748"/>`,
+  ...EXT_WORD_ART
 };
 
 /** @param {string} word @param {string} bg @param {string} [label] */

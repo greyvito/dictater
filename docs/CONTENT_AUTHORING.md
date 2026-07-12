@@ -26,3 +26,9 @@ Curriculum lessons live in `content/<grade>/index.json`.
 ```
 
 Supported activity types are listed in `src/curriculum/schema.js`.
+
+Topical PreK/K vocabulary (14 units) can be regenerated with:
+
+```bash
+npm run generate:topic-lessons
+```

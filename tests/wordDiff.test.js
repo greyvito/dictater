@@ -1,4 +1,4 @@
-import { describe, it, expect } from 'vitest';
+import { describe, it, expect, beforeAll } from 'vitest';
 import {
   alignWords,
   scoreAlignment,
@@ -9,6 +9,7 @@ import {
 import { scoreSpeech } from '../src/speech/stt.js';
 import { validateLesson } from '../src/curriculum/schema.js';
 import { recordSkillResult, recommendNextLesson } from '../src/adaptive/engine.js';
+import { buildCurriculumIndex } from '../src/curriculum/loader.js';
 
 describe('wordDiff', () => {
   it('aligns identical sentences', () => {
@@ -74,9 +75,25 @@ describe('curriculum schema', () => {
 });
 
 describe('adaptive engine', () => {
+  beforeAll(async () => {
+    await buildCurriculumIndex();
+  });
+
   it('records skill mastery', () => {
     const lesson = { skills: ['speaking'], type: 'speak_word' };
     const mastery = recordSkillResult({}, lesson, 80);
     expect(mastery.speaking.avg).toBe(80);
+  });
+
+  it('prefers word_intro in lowest incomplete topic', () => {
+    const pick = recommendNextLesson('preK', {}, new Set());
+    expect(pick?.topic).toBe('hello-manners');
+    expect(pick?.type).toBe('word_intro');
+  });
+
+  it('recommends picture_vocab after intro in same topic', () => {
+    const pick = recommendNextLesson('preK', {}, new Set(['preK-intro-hello-manners']));
+    expect(pick?.topic).toBe('hello-manners');
+    expect(pick?.type).toBe('picture_vocab');
   });
 });

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="hamster">
+  <defs>
+    <linearGradient id="bg-hamster" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFCC80"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-hamster)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <ellipse cx="60" cy="68" rx="24" ry="20" fill="#FFCC80"/><circle cx="60" cy="50" r="18" fill="#FFB74D"/><circle cx="54" cy="48" r="2" fill="#2D3748"/><circle cx="66" cy="48" r="2" fill="#2D3748"/><ellipse cx="60" cy="56" rx="6" ry="4" fill="#FFAB91"/>
+</svg>

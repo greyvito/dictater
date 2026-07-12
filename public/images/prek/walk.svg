@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="walk">
+  <defs>
+    <linearGradient id="bg-walk" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A5D6A7"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-walk)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <circle cx="56" cy="36" r="10" fill="#A5D6A7"/><line x1="56" y1="46" x2="56" y2="68" stroke="#66BB6A" stroke-width="4"/><line x1="56" y1="54" x2="40" y2="62" stroke="#66BB6A" stroke-width="3"/><line x1="56" y1="54" x2="72" y2="50" stroke="#66BB6A" stroke-width="3"/><line x1="56" y1="68" x2="44" y2="88" stroke="#66BB6A" stroke-width="3"/><line x1="56" y1="68" x2="68" y2="86" stroke="#66BB6A" stroke-width="3"/>
+</svg>

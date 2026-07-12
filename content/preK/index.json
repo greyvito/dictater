@@ -1,5 +1,1901 @@
 [
   {
+    "id": "preK-intro-hello-manners",
+    "grade": "preK",
+    "type": "word_intro",
+    "difficulty": "beginner",
+    "title": "Learn: Hello & Manners",
+    "topic": "hello-manners",
+    "topicOrder": 1,
+    "topicLabel": "Hello & Manners",
+    "skills": [
+      "oral_vocabulary",
+      "listening"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.1"
+    ],
+    "content": {
+      "topic": "Hello & Manners",
+      "words": [
+        "hello",
+        "goodbye",
+        "please",
+        "thank you",
+        "sorry",
+        "yes",
+        "no",
+        "friend"
+      ],
+      "practiceLessonId": "preK-pic-hello-manners-1"
+    },
+    "hint": "Tap Next to see and hear each new word."
+  },
+  {
+    "id": "preK-pic-hello-manners-1",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Hello & Manners (1)",
+    "topic": "hello-manners",
+    "topicOrder": 1,
+    "topicLabel": "Hello & Manners",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "hello",
+      "choices": [
+        "hello",
+        "goodbye",
+        "please"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-pic-hello-manners-2",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Hello & Manners (2)",
+    "topic": "hello-manners",
+    "topicOrder": 1,
+    "topicLabel": "Hello & Manners",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "goodbye",
+      "choices": [
+        "hello",
+        "goodbye",
+        "please"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-speak-hello-manners",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: hello",
+    "topic": "hello-manners",
+    "topicOrder": 1,
+    "topicLabel": "Hello & Manners",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "hello",
+      "expectedText": "hello",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word after you hear it."
+  },
+  {
+    "id": "preK-intro-colors",
+    "grade": "preK",
+    "type": "word_intro",
+    "difficulty": "beginner",
+    "title": "Learn: Colors",
+    "topic": "colors",
+    "topicOrder": 2,
+    "topicLabel": "Colors",
+    "skills": [
+      "oral_vocabulary",
+      "listening"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.1"
+    ],
+    "content": {
+      "topic": "Colors",
+      "words": [
+        "red",
+        "blue",
+        "green",
+        "yellow",
+        "orange",
+        "purple",
+        "pink",
+        "black",
+        "white",
+        "brown"
+      ],
+      "practiceLessonId": "preK-pic-colors-1"
+    },
+    "hint": "Tap Next to see and hear each new word."
+  },
+  {
+    "id": "preK-pic-colors-1",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Colors (1)",
+    "topic": "colors",
+    "topicOrder": 2,
+    "topicLabel": "Colors",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "red",
+      "choices": [
+        "red",
+        "blue",
+        "green"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-pic-colors-2",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Colors (2)",
+    "topic": "colors",
+    "topicOrder": 2,
+    "topicLabel": "Colors",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "blue",
+      "choices": [
+        "red",
+        "blue",
+        "green"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-speak-colors",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: red",
+    "topic": "colors",
+    "topicOrder": 2,
+    "topicLabel": "Colors",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "red",
+      "expectedText": "red",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word after you hear it."
+  },
+  {
+    "id": "preK-intro-numbers",
+    "grade": "preK",
+    "type": "word_intro",
+    "difficulty": "beginner",
+    "title": "Learn: Numbers 1–10",
+    "topic": "numbers",
+    "topicOrder": 3,
+    "topicLabel": "Numbers 1–10",
+    "skills": [
+      "oral_vocabulary",
+      "listening"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.1"
+    ],
+    "content": {
+      "topic": "Numbers 1–10",
+      "words": [
+        "one",
+        "two",
+        "three",
+        "four",
+        "five",
+        "six",
+        "seven",
+        "eight",
+        "nine",
+        "ten"
+      ],
+      "practiceLessonId": "preK-pic-numbers-1"
+    },
+    "hint": "Tap Next to see and hear each new word."
+  },
+  {
+    "id": "preK-pic-numbers-1",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Numbers 1–10 (1)",
+    "topic": "numbers",
+    "topicOrder": 3,
+    "topicLabel": "Numbers 1–10",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "one",
+      "choices": [
+        "one",
+        "two",
+        "three"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-pic-numbers-2",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Numbers 1–10 (2)",
+    "topic": "numbers",
+    "topicOrder": 3,
+    "topicLabel": "Numbers 1–10",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "two",
+      "choices": [
+        "one",
+        "two",
+        "three"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-speak-numbers",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: five",
+    "topic": "numbers",
+    "topicOrder": 3,
+    "topicLabel": "Numbers 1–10",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "five",
+      "expectedText": "five",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word after you hear it."
+  },
+  {
+    "id": "preK-intro-shapes",
+    "grade": "preK",
+    "type": "word_intro",
+    "difficulty": "beginner",
+    "title": "Learn: Shapes",
+    "topic": "shapes",
+    "topicOrder": 4,
+    "topicLabel": "Shapes",
+    "skills": [
+      "oral_vocabulary",
+      "listening"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.1"
+    ],
+    "content": {
+      "topic": "Shapes",
+      "words": [
+        "circle",
+        "square",
+        "triangle",
+        "star",
+        "heart",
+        "rectangle"
+      ],
+      "practiceLessonId": "preK-pic-shapes-1"
+    },
+    "hint": "Tap Next to see and hear each new word."
+  },
+  {
+    "id": "preK-pic-shapes-1",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Shapes (1)",
+    "topic": "shapes",
+    "topicOrder": 4,
+    "topicLabel": "Shapes",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "circle",
+      "choices": [
+        "circle",
+        "square",
+        "triangle"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-pic-shapes-2",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Shapes (2)",
+    "topic": "shapes",
+    "topicOrder": 4,
+    "topicLabel": "Shapes",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "square",
+      "choices": [
+        "circle",
+        "square",
+        "triangle"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-speak-shapes",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: circle",
+    "topic": "shapes",
+    "topicOrder": 4,
+    "topicLabel": "Shapes",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "circle",
+      "expectedText": "circle",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word after you hear it."
+  },
+  {
+    "id": "preK-intro-body",
+    "grade": "preK",
+    "type": "word_intro",
+    "difficulty": "beginner",
+    "title": "Learn: My Body",
+    "topic": "body",
+    "topicOrder": 5,
+    "topicLabel": "My Body",
+    "skills": [
+      "oral_vocabulary",
+      "listening"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.1"
+    ],
+    "content": {
+      "topic": "My Body",
+      "words": [
+        "head",
+        "hand",
+        "foot",
+        "arm",
+        "leg",
+        "eye",
+        "ear",
+        "nose",
+        "mouth",
+        "finger"
+      ],
+      "practiceLessonId": "preK-pic-body-1"
+    },
+    "hint": "Tap Next to see and hear each new word."
+  },
+  {
+    "id": "preK-pic-body-1",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: My Body (1)",
+    "topic": "body",
+    "topicOrder": 5,
+    "topicLabel": "My Body",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "head",
+      "choices": [
+        "head",
+        "hand",
+        "foot"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-pic-body-2",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: My Body (2)",
+    "topic": "body",
+    "topicOrder": 5,
+    "topicLabel": "My Body",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "hand",
+      "choices": [
+        "head",
+        "hand",
+        "foot"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-speak-body",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: nose",
+    "topic": "body",
+    "topicOrder": 5,
+    "topicLabel": "My Body",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "nose",
+      "expectedText": "nose",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word after you hear it."
+  },
+  {
+    "id": "preK-intro-family",
+    "grade": "preK",
+    "type": "word_intro",
+    "difficulty": "beginner",
+    "title": "Learn: My Family",
+    "topic": "family",
+    "topicOrder": 6,
+    "topicLabel": "My Family",
+    "skills": [
+      "oral_vocabulary",
+      "listening"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.1"
+    ],
+    "content": {
+      "topic": "My Family",
+      "words": [
+        "mom",
+        "dad",
+        "sister",
+        "brother",
+        "baby",
+        "grandma",
+        "grandpa",
+        "family"
+      ],
+      "practiceLessonId": "preK-pic-family-1"
+    },
+    "hint": "Tap Next to see and hear each new word."
+  },
+  {
+    "id": "preK-pic-family-1",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: My Family (1)",
+    "topic": "family",
+    "topicOrder": 6,
+    "topicLabel": "My Family",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "mom",
+      "choices": [
+        "mom",
+        "dad",
+        "sister"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-pic-family-2",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: My Family (2)",
+    "topic": "family",
+    "topicOrder": 6,
+    "topicLabel": "My Family",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "dad",
+      "choices": [
+        "mom",
+        "dad",
+        "sister"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-speak-family",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: mom",
+    "topic": "family",
+    "topicOrder": 6,
+    "topicLabel": "My Family",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "mom",
+      "expectedText": "mom",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word after you hear it."
+  },
+  {
+    "id": "preK-intro-feelings",
+    "grade": "preK",
+    "type": "word_intro",
+    "difficulty": "beginner",
+    "title": "Learn: Feelings",
+    "topic": "feelings",
+    "topicOrder": 7,
+    "topicLabel": "Feelings",
+    "skills": [
+      "oral_vocabulary",
+      "listening"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.1"
+    ],
+    "content": {
+      "topic": "Feelings",
+      "words": [
+        "happy",
+        "sad",
+        "angry",
+        "scared",
+        "tired",
+        "hungry",
+        "excited",
+        "fine"
+      ],
+      "practiceLessonId": "preK-pic-feelings-1"
+    },
+    "hint": "Tap Next to see and hear each new word."
+  },
+  {
+    "id": "preK-pic-feelings-1",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Feelings (1)",
+    "topic": "feelings",
+    "topicOrder": 7,
+    "topicLabel": "Feelings",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "happy",
+      "choices": [
+        "happy",
+        "sad",
+        "angry"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-pic-feelings-2",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Feelings (2)",
+    "topic": "feelings",
+    "topicOrder": 7,
+    "topicLabel": "Feelings",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "sad",
+      "choices": [
+        "happy",
+        "sad",
+        "angry"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-speak-feelings",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: happy",
+    "topic": "feelings",
+    "topicOrder": 7,
+    "topicLabel": "Feelings",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "happy",
+      "expectedText": "happy",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word after you hear it."
+  },
+  {
+    "id": "preK-intro-animals-pets",
+    "grade": "preK",
+    "type": "word_intro",
+    "difficulty": "beginner",
+    "title": "Learn: Pets",
+    "topic": "animals-pets",
+    "topicOrder": 8,
+    "topicLabel": "Pets",
+    "skills": [
+      "oral_vocabulary",
+      "listening"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.1"
+    ],
+    "content": {
+      "topic": "Pets",
+      "words": [
+        "cat",
+        "dog",
+        "bird",
+        "fish",
+        "rabbit",
+        "hamster",
+        "turtle",
+        "pet"
+      ],
+      "practiceLessonId": "preK-pic-animals-pets-1"
+    },
+    "hint": "Tap Next to see and hear each new word."
+  },
+  {
+    "id": "preK-pic-animals-pets-1",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Pets (1)",
+    "topic": "animals-pets",
+    "topicOrder": 8,
+    "topicLabel": "Pets",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "cat",
+      "choices": [
+        "cat",
+        "dog",
+        "bird"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-pic-animals-pets-2",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Pets (2)",
+    "topic": "animals-pets",
+    "topicOrder": 8,
+    "topicLabel": "Pets",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "dog",
+      "choices": [
+        "cat",
+        "dog",
+        "bird"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-speak-animals-pets",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: cat",
+    "topic": "animals-pets",
+    "topicOrder": 8,
+    "topicLabel": "Pets",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "cat",
+      "expectedText": "cat",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word after you hear it."
+  },
+  {
+    "id": "preK-intro-animals-farm",
+    "grade": "preK",
+    "type": "word_intro",
+    "difficulty": "beginner",
+    "title": "Learn: Farm Animals",
+    "topic": "animals-farm",
+    "topicOrder": 9,
+    "topicLabel": "Farm Animals",
+    "skills": [
+      "oral_vocabulary",
+      "listening"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.1"
+    ],
+    "content": {
+      "topic": "Farm Animals",
+      "words": [
+        "pig",
+        "cow",
+        "duck",
+        "goat",
+        "sheep",
+        "hen",
+        "horse",
+        "barn"
+      ],
+      "practiceLessonId": "preK-pic-animals-farm-1"
+    },
+    "hint": "Tap Next to see and hear each new word."
+  },
+  {
+    "id": "preK-pic-animals-farm-1",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Farm Animals (1)",
+    "topic": "animals-farm",
+    "topicOrder": 9,
+    "topicLabel": "Farm Animals",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "pig",
+      "choices": [
+        "pig",
+        "cow",
+        "duck"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-pic-animals-farm-2",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Farm Animals (2)",
+    "topic": "animals-farm",
+    "topicOrder": 9,
+    "topicLabel": "Farm Animals",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "cow",
+      "choices": [
+        "pig",
+        "cow",
+        "duck"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-speak-animals-farm",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: cow",
+    "topic": "animals-farm",
+    "topicOrder": 9,
+    "topicLabel": "Farm Animals",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "cow",
+      "expectedText": "cow",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word after you hear it."
+  },
+  {
+    "id": "preK-intro-animals-wild",
+    "grade": "preK",
+    "type": "word_intro",
+    "difficulty": "beginner",
+    "title": "Learn: Wild Animals",
+    "topic": "animals-wild",
+    "topicOrder": 10,
+    "topicLabel": "Wild Animals",
+    "skills": [
+      "oral_vocabulary",
+      "listening"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.1"
+    ],
+    "content": {
+      "topic": "Wild Animals",
+      "words": [
+        "elephant",
+        "tiger",
+        "snake",
+        "bear",
+        "butterfly",
+        "bee",
+        "frog",
+        "lion"
+      ],
+      "practiceLessonId": "preK-pic-animals-wild-1"
+    },
+    "hint": "Tap Next to see and hear each new word."
+  },
+  {
+    "id": "preK-pic-animals-wild-1",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Wild Animals (1)",
+    "topic": "animals-wild",
+    "topicOrder": 10,
+    "topicLabel": "Wild Animals",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "elephant",
+      "choices": [
+        "elephant",
+        "tiger",
+        "snake"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-pic-animals-wild-2",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Wild Animals (2)",
+    "topic": "animals-wild",
+    "topicOrder": 10,
+    "topicLabel": "Wild Animals",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "tiger",
+      "choices": [
+        "elephant",
+        "tiger",
+        "snake"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-speak-animals-wild",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: frog",
+    "topic": "animals-wild",
+    "topicOrder": 10,
+    "topicLabel": "Wild Animals",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "frog",
+      "expectedText": "frog",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word after you hear it."
+  },
+  {
+    "id": "preK-intro-food",
+    "grade": "preK",
+    "type": "word_intro",
+    "difficulty": "beginner",
+    "title": "Learn: Food & Drink",
+    "topic": "food",
+    "topicOrder": 11,
+    "topicLabel": "Food & Drink",
+    "skills": [
+      "oral_vocabulary",
+      "listening"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.1"
+    ],
+    "content": {
+      "topic": "Food & Drink",
+      "words": [
+        "apple",
+        "banana",
+        "egg",
+        "milk",
+        "bread",
+        "rice",
+        "water",
+        "juice",
+        "cake",
+        "soup"
+      ],
+      "practiceLessonId": "preK-pic-food-1"
+    },
+    "hint": "Tap Next to see and hear each new word."
+  },
+  {
+    "id": "preK-pic-food-1",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Food & Drink (1)",
+    "topic": "food",
+    "topicOrder": 11,
+    "topicLabel": "Food & Drink",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "apple",
+      "choices": [
+        "apple",
+        "banana",
+        "egg"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-pic-food-2",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Food & Drink (2)",
+    "topic": "food",
+    "topicOrder": 11,
+    "topicLabel": "Food & Drink",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "banana",
+      "choices": [
+        "apple",
+        "banana",
+        "egg"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-speak-food",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: apple",
+    "topic": "food",
+    "topicOrder": 11,
+    "topicLabel": "Food & Drink",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "apple",
+      "expectedText": "apple",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word after you hear it."
+  },
+  {
+    "id": "preK-intro-home-school",
+    "grade": "preK",
+    "type": "word_intro",
+    "difficulty": "beginner",
+    "title": "Learn: Home & School",
+    "topic": "home-school",
+    "topicOrder": 12,
+    "topicLabel": "Home & School",
+    "skills": [
+      "oral_vocabulary",
+      "listening"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.1"
+    ],
+    "content": {
+      "topic": "Home & School",
+      "words": [
+        "house",
+        "bed",
+        "book",
+        "pencil",
+        "cup",
+        "chair",
+        "table",
+        "door",
+        "backpack",
+        "crayon"
+      ],
+      "practiceLessonId": "preK-pic-home-school-1"
+    },
+    "hint": "Tap Next to see and hear each new word."
+  },
+  {
+    "id": "preK-pic-home-school-1",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Home & School (1)",
+    "topic": "home-school",
+    "topicOrder": 12,
+    "topicLabel": "Home & School",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "house",
+      "choices": [
+        "house",
+        "bed",
+        "book"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-pic-home-school-2",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Home & School (2)",
+    "topic": "home-school",
+    "topicOrder": 12,
+    "topicLabel": "Home & School",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "bed",
+      "choices": [
+        "house",
+        "bed",
+        "book"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-speak-home-school",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: book",
+    "topic": "home-school",
+    "topicOrder": 12,
+    "topicLabel": "Home & School",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "book",
+      "expectedText": "book",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word after you hear it."
+  },
+  {
+    "id": "preK-intro-clothes-weather",
+    "grade": "preK",
+    "type": "word_intro",
+    "difficulty": "beginner",
+    "title": "Learn: Clothes & Weather",
+    "topic": "clothes-weather",
+    "topicOrder": 13,
+    "topicLabel": "Clothes & Weather",
+    "skills": [
+      "oral_vocabulary",
+      "listening"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.1"
+    ],
+    "content": {
+      "topic": "Clothes & Weather",
+      "words": [
+        "hat",
+        "shoe",
+        "sock",
+        "shirt",
+        "pants",
+        "coat",
+        "sun",
+        "rain",
+        "cloud",
+        "snow"
+      ],
+      "practiceLessonId": "preK-pic-clothes-weather-1"
+    },
+    "hint": "Tap Next to see and hear each new word."
+  },
+  {
+    "id": "preK-pic-clothes-weather-1",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Clothes & Weather (1)",
+    "topic": "clothes-weather",
+    "topicOrder": 13,
+    "topicLabel": "Clothes & Weather",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "hat",
+      "choices": [
+        "hat",
+        "shoe",
+        "sock"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-pic-clothes-weather-2",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Clothes & Weather (2)",
+    "topic": "clothes-weather",
+    "topicOrder": 13,
+    "topicLabel": "Clothes & Weather",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "shoe",
+      "choices": [
+        "hat",
+        "shoe",
+        "sock"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-speak-clothes-weather",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: sun",
+    "topic": "clothes-weather",
+    "topicOrder": 13,
+    "topicLabel": "Clothes & Weather",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "sun",
+      "expectedText": "sun",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word after you hear it."
+  },
+  {
+    "id": "preK-intro-actions-opposites",
+    "grade": "preK",
+    "type": "word_intro",
+    "difficulty": "beginner",
+    "title": "Learn: Actions & Opposites",
+    "topic": "actions-opposites",
+    "topicOrder": 14,
+    "topicLabel": "Actions & Opposites",
+    "skills": [
+      "oral_vocabulary",
+      "listening"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.1"
+    ],
+    "content": {
+      "topic": "Actions & Opposites",
+      "words": [
+        "run",
+        "jump",
+        "sit",
+        "eat",
+        "sleep",
+        "play",
+        "big",
+        "small",
+        "hot",
+        "cold"
+      ],
+      "practiceLessonId": "preK-pic-actions-opposites-1"
+    },
+    "hint": "Tap Next to see and hear each new word."
+  },
+  {
+    "id": "preK-pic-actions-opposites-1",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Actions & Opposites (1)",
+    "topic": "actions-opposites",
+    "topicOrder": 14,
+    "topicLabel": "Actions & Opposites",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "run",
+      "choices": [
+        "run",
+        "jump",
+        "sit"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-pic-actions-opposites-2",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Actions & Opposites (2)",
+    "topic": "actions-opposites",
+    "topicOrder": 14,
+    "topicLabel": "Actions & Opposites",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "jump",
+      "choices": [
+        "run",
+        "jump",
+        "sit"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-speak-actions-opposites",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: run",
+    "topic": "actions-opposites",
+    "topicOrder": 14,
+    "topicLabel": "Actions & Opposites",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "run",
+      "expectedText": "run",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word after you hear it."
+  },
+  {
+    "id": "preK-intro-transport",
+    "grade": "preK",
+    "type": "word_intro",
+    "difficulty": "beginner",
+    "title": "Learn: Getting Around",
+    "topic": "transport",
+    "topicOrder": 15,
+    "topicLabel": "Getting Around",
+    "skills": [
+      "oral_vocabulary",
+      "listening"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.1"
+    ],
+    "content": {
+      "topic": "Getting Around",
+      "words": [
+        "bus",
+        "bike",
+        "boat",
+        "plane",
+        "train",
+        "truck",
+        "car",
+        "walk"
+      ],
+      "practiceLessonId": "preK-pic-transport-1"
+    },
+    "hint": "Tap Next to see and hear each new word."
+  },
+  {
+    "id": "preK-pic-transport-1",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Getting Around (1)",
+    "topic": "transport",
+    "topicOrder": 15,
+    "topicLabel": "Getting Around",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "bus",
+      "choices": [
+        "bus",
+        "bike",
+        "boat"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-pic-transport-2",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Getting Around (2)",
+    "topic": "transport",
+    "topicOrder": 15,
+    "topicLabel": "Getting Around",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "bike",
+      "choices": [
+        "bus",
+        "bike",
+        "boat"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-speak-transport",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: bus",
+    "topic": "transport",
+    "topicOrder": 15,
+    "topicLabel": "Getting Around",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "bus",
+      "expectedText": "bus",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word after you hear it."
+  },
+  {
+    "id": "preK-intro-places",
+    "grade": "preK",
+    "type": "word_intro",
+    "difficulty": "beginner",
+    "title": "Learn: Places in Town",
+    "topic": "places",
+    "topicOrder": 16,
+    "topicLabel": "Places in Town",
+    "skills": [
+      "oral_vocabulary",
+      "listening"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.1"
+    ],
+    "content": {
+      "topic": "Places in Town",
+      "words": [
+        "park",
+        "school",
+        "shop",
+        "zoo",
+        "farm",
+        "beach",
+        "road",
+        "home"
+      ],
+      "practiceLessonId": "preK-pic-places-1"
+    },
+    "hint": "Tap Next to see and hear each new word."
+  },
+  {
+    "id": "preK-pic-places-1",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Places in Town (1)",
+    "topic": "places",
+    "topicOrder": 16,
+    "topicLabel": "Places in Town",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "park",
+      "choices": [
+        "park",
+        "school",
+        "shop"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-pic-places-2",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Places in Town (2)",
+    "topic": "places",
+    "topicOrder": 16,
+    "topicLabel": "Places in Town",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "school",
+      "choices": [
+        "park",
+        "school",
+        "shop"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-speak-places",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: park",
+    "topic": "places",
+    "topicOrder": 16,
+    "topicLabel": "Places in Town",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "park",
+      "expectedText": "park",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word after you hear it."
+  },
+  {
+    "id": "preK-intro-classroom",
+    "grade": "preK",
+    "type": "word_intro",
+    "difficulty": "beginner",
+    "title": "Learn: In the Classroom",
+    "topic": "classroom",
+    "topicOrder": 17,
+    "topicLabel": "In the Classroom",
+    "skills": [
+      "oral_vocabulary",
+      "listening"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.1"
+    ],
+    "content": {
+      "topic": "In the Classroom",
+      "words": [
+        "teacher",
+        "student",
+        "desk",
+        "paper",
+        "glue",
+        "scissors",
+        "paint",
+        "ruler"
+      ],
+      "practiceLessonId": "preK-pic-classroom-1"
+    },
+    "hint": "Tap Next to see and hear each new word."
+  },
+  {
+    "id": "preK-pic-classroom-1",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: In the Classroom (1)",
+    "topic": "classroom",
+    "topicOrder": 17,
+    "topicLabel": "In the Classroom",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "teacher",
+      "choices": [
+        "teacher",
+        "student",
+        "desk"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-pic-classroom-2",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: In the Classroom (2)",
+    "topic": "classroom",
+    "topicOrder": 17,
+    "topicLabel": "In the Classroom",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "student",
+      "choices": [
+        "teacher",
+        "student",
+        "desk"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-speak-classroom",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: paper",
+    "topic": "classroom",
+    "topicOrder": 17,
+    "topicLabel": "In the Classroom",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "paper",
+      "expectedText": "paper",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word after you hear it."
+  },
+  {
+    "id": "preK-review-1",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Review Mix (1)",
+    "topic": "review",
+    "topicOrder": 99,
+    "topicLabel": "Review Mix",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "red",
+      "choices": [
+        "red",
+        "dog",
+        "five"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-review-2",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Review Mix (2)",
+    "topic": "review",
+    "topicOrder": 99,
+    "topicLabel": "Review Mix",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "apple",
+      "choices": [
+        "cat",
+        "apple",
+        "run"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-review-3",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Review Mix (3)",
+    "topic": "review",
+    "topicOrder": 99,
+    "topicLabel": "Review Mix",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "mom",
+      "choices": [
+        "sun",
+        "bed",
+        "mom"
+      ],
+      "correctIndex": 2
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-speak-01",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: cat",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "cat",
+      "expectedText": "cat",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word after you hear it."
+  },
+  {
+    "id": "preK-speak-02",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: dog",
+    "skills": [
+      "speaking"
+    ],
+    "content": {
+      "prompt": "dog",
+      "expectedText": "dog",
+      "maxAttempts": 2
+    },
+    "hint": "Say dog clearly."
+  },
+  {
+    "id": "preK-speak-03",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: sun",
+    "skills": [
+      "speaking"
+    ],
+    "content": {
+      "prompt": "sun",
+      "expectedText": "sun",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat sun."
+  },
+  {
+    "id": "preK-speak-04",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "intermediate",
+    "title": "Say: apple",
+    "skills": [
+      "speaking"
+    ],
+    "content": {
+      "prompt": "apple",
+      "expectedText": "apple",
+      "maxAttempts": 3
+    },
+    "hint": "Two syllables: ap-ple."
+  },
+  {
+    "id": "preK-speak-05",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "intermediate",
+    "title": "Say: hello",
+    "skills": [
+      "speaking"
+    ],
+    "content": {
+      "prompt": "hello",
+      "expectedText": "hello",
+      "maxAttempts": 3
+    },
+    "hint": "Say hello!"
+  },
+  {
+    "id": "preK-speak-p800-6",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: book",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "book",
+      "expectedText": "book",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word clearly."
+  },
+  {
+    "id": "preK-speak-p800-7",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: friend",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "friend",
+      "expectedText": "friend",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word clearly."
+  },
+  {
+    "id": "preK-speak-p800-8",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: thank you",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "thank you",
+      "expectedText": "thank you",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word clearly."
+  },
+  {
+    "id": "preK-speak-p800-9",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: butterfly",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "butterfly",
+      "expectedText": "butterfly",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word clearly."
+  },
+  {
     "id": "preK-rhyme-01",
     "grade": "preK",
     "type": "phonological_rhyme",
@@ -403,691 +2299,6 @@
     "hint": "Map starts with m."
   },
   {
-    "id": "preK-vocab-01",
-    "grade": "preK",
-    "type": "picture_vocab",
-    "difficulty": "beginner",
-    "title": "Word: red",
-    "skills": [
-      "oral_vocabulary"
-    ],
-    "content": {
-      "prompt": "red",
-      "choices": [
-        "red",
-        "blue",
-        "green"
-      ],
-      "correctIndex": 0
-    },
-    "hint": "Tap the color red."
-  },
-  {
-    "id": "preK-vocab-02",
-    "grade": "preK",
-    "type": "picture_vocab",
-    "difficulty": "beginner",
-    "title": "Word: dog",
-    "skills": [
-      "oral_vocabulary"
-    ],
-    "content": {
-      "prompt": "dog",
-      "choices": [
-        "dog",
-        "cat",
-        "bird"
-      ],
-      "correctIndex": 0
-    },
-    "hint": "Which word is dog?"
-  },
-  {
-    "id": "preK-vocab-03",
-    "grade": "preK",
-    "type": "picture_vocab",
-    "difficulty": "beginner",
-    "title": "Word: one",
-    "skills": [
-      "oral_vocabulary"
-    ],
-    "content": {
-      "prompt": "one",
-      "choices": [
-        "one",
-        "two",
-        "three"
-      ],
-      "correctIndex": 0
-    },
-    "hint": "Tap the number one."
-  },
-  {
-    "id": "preK-vocab-04",
-    "grade": "preK",
-    "type": "picture_vocab",
-    "difficulty": "intermediate",
-    "title": "Word: happy",
-    "skills": [
-      "oral_vocabulary"
-    ],
-    "content": {
-      "prompt": "happy",
-      "choices": [
-        "happy",
-        "sad",
-        "angry"
-      ],
-      "correctIndex": 0
-    },
-    "hint": "Which word means happy?"
-  },
-  {
-    "id": "preK-vocab-05",
-    "grade": "preK",
-    "type": "picture_vocab",
-    "difficulty": "intermediate",
-    "title": "Word: big",
-    "skills": [
-      "oral_vocabulary"
-    ],
-    "content": {
-      "prompt": "big",
-      "choices": [
-        "big",
-        "small",
-        "tiny"
-      ],
-      "correctIndex": 0
-    },
-    "hint": "Big is the opposite of small."
-  },
-  {
-    "id": "preK-speak-01",
-    "grade": "preK",
-    "type": "speak_repeat",
-    "difficulty": "beginner",
-    "title": "Say: cat",
-    "skills": [
-      "speaking",
-      "oral_fluency"
-    ],
-    "content": {
-      "prompt": "cat",
-      "expectedText": "cat",
-      "maxAttempts": 2
-    },
-    "hint": "Repeat the word after you hear it."
-  },
-  {
-    "id": "preK-speak-02",
-    "grade": "preK",
-    "type": "speak_repeat",
-    "difficulty": "beginner",
-    "title": "Say: dog",
-    "skills": [
-      "speaking"
-    ],
-    "content": {
-      "prompt": "dog",
-      "expectedText": "dog",
-      "maxAttempts": 2
-    },
-    "hint": "Say dog clearly."
-  },
-  {
-    "id": "preK-speak-03",
-    "grade": "preK",
-    "type": "speak_repeat",
-    "difficulty": "beginner",
-    "title": "Say: sun",
-    "skills": [
-      "speaking"
-    ],
-    "content": {
-      "prompt": "sun",
-      "expectedText": "sun",
-      "maxAttempts": 2
-    },
-    "hint": "Repeat sun."
-  },
-  {
-    "id": "preK-speak-04",
-    "grade": "preK",
-    "type": "speak_repeat",
-    "difficulty": "intermediate",
-    "title": "Say: apple",
-    "skills": [
-      "speaking"
-    ],
-    "content": {
-      "prompt": "apple",
-      "expectedText": "apple",
-      "maxAttempts": 3
-    },
-    "hint": "Two syllables: ap-ple."
-  },
-  {
-    "id": "preK-speak-05",
-    "grade": "preK",
-    "type": "speak_repeat",
-    "difficulty": "intermediate",
-    "title": "Say: hello",
-    "skills": [
-      "speaking"
-    ],
-    "content": {
-      "prompt": "hello",
-      "expectedText": "hello",
-      "maxAttempts": 3
-    },
-    "hint": "Say hello!"
-  },
-  {
-    "id": "gpreK-gram-cap",
-    "grade": "preK",
-    "type": "grammar_fix",
-    "difficulty": "beginner",
-    "title": "Capital Letters",
-    "skills": [
-      "grammar"
-    ],
-    "content": {
-      "questions": [
-        {
-          "question": "Which sentence is correct?",
-          "choices": [
-            "I like cats.",
-            "i like cats.",
-            "I Like cats."
-          ],
-          "correctIndex": 0
-        }
-      ]
-    },
-    "hint": "Pick the best answer."
-  },
-  {
-    "id": "gpreK-gram-plural",
-    "grade": "preK",
-    "type": "grammar_fix",
-    "difficulty": "beginner",
-    "title": "Plurals",
-    "skills": [
-      "grammar"
-    ],
-    "content": {
-      "questions": [
-        {
-          "question": "Choose the correct plural.",
-          "choices": [
-            "dogs",
-            "doges",
-            "dog"
-          ],
-          "correctIndex": 0
-        }
-      ]
-    },
-    "hint": "Pick the best answer."
-  },
-  {
-    "id": "gpreK-gram-verb",
-    "grade": "preK",
-    "type": "grammar_fix",
-    "difficulty": "beginner",
-    "title": "Verb Tense",
-    "skills": [
-      "grammar"
-    ],
-    "content": {
-      "questions": [
-        {
-          "question": "She ___ to school every day.",
-          "choices": [
-            "go",
-            "goes",
-            "going"
-          ],
-          "correctIndex": 1
-        }
-      ]
-    },
-    "hint": "Pick the best answer."
-  },
-  {
-    "id": "gpreK-vocab-ctx-1",
-    "grade": "preK",
-    "type": "vocabulary_context",
-    "difficulty": "beginner",
-    "title": "Word in Context",
-    "skills": [
-      "vocabulary"
-    ],
-    "content": {
-      "questions": [
-        {
-          "question": "We felt ___ when we won the game.",
-          "choices": [
-            "happy",
-            "slowly",
-            "because"
-          ],
-          "correctIndex": 0
-        }
-      ]
-    },
-    "hint": "Use context clues."
-  },
-  {
-    "id": "gpreK-vocab-ctx-2",
-    "grade": "preK",
-    "type": "vocabulary_context",
-    "difficulty": "beginner",
-    "title": "Opposite Words",
-    "skills": [
-      "vocabulary"
-    ],
-    "content": {
-      "questions": [
-        {
-          "question": "Hot is the opposite of ___.",
-          "choices": [
-            "cold",
-            "warm",
-            "fire"
-          ],
-          "correctIndex": 0
-        }
-      ]
-    },
-    "hint": "Use context clues."
-  },
-  {
-    "id": "gpreK-gram-punct",
-    "grade": "preK",
-    "type": "grammar_fix",
-    "difficulty": "beginner",
-    "title": "End Punctuation",
-    "skills": [
-      "grammar"
-    ],
-    "content": {
-      "questions": [
-        {
-          "question": "Which sentence ends correctly?",
-          "choices": [
-            "Where are you?",
-            "Where are you.",
-            "Where are you,"
-          ],
-          "correctIndex": 0
-        }
-      ]
-    },
-    "hint": "Questions need a question mark."
-  },
-  {
-    "id": "gpreK-gram-noun",
-    "grade": "preK",
-    "type": "grammar_fix",
-    "difficulty": "beginner",
-    "title": "Common Nouns",
-    "skills": [
-      "grammar"
-    ],
-    "content": {
-      "questions": [
-        {
-          "question": "Which word is a person, place, or thing?",
-          "choices": [
-            "school",
-            "quickly",
-            "happy"
-          ],
-          "correctIndex": 0
-        }
-      ]
-    },
-    "hint": "Nouns name people, places, or things."
-  },
-  {
-    "id": "gpreK-gram-adj",
-    "grade": "preK",
-    "type": "grammar_fix",
-    "difficulty": "beginner",
-    "title": "Adjectives",
-    "skills": [
-      "grammar"
-    ],
-    "content": {
-      "questions": [
-        {
-          "question": "Which word describes the noun?",
-          "choices": [
-            "The tall tree.",
-            "The run tree.",
-            "The quickly tree."
-          ],
-          "correctIndex": 0
-        }
-      ]
-    },
-    "hint": "Adjectives tell what kind or how many."
-  },
-  {
-    "id": "gpreK-gram-pronoun",
-    "grade": "preK",
-    "type": "grammar_fix",
-    "difficulty": "beginner",
-    "title": "Pronouns",
-    "skills": [
-      "grammar"
-    ],
-    "content": {
-      "questions": [
-        {
-          "question": "Choose the best pronoun: ___ went to the store.",
-          "choices": [
-            "She",
-            "Her",
-            "Hers"
-          ],
-          "correctIndex": 0
-        }
-      ]
-    },
-    "hint": "Use a subject pronoun."
-  },
-  {
-    "id": "gpreK-gram-conj",
-    "grade": "preK",
-    "type": "grammar_fix",
-    "difficulty": "beginner",
-    "title": "Conjunctions",
-    "skills": [
-      "grammar"
-    ],
-    "content": {
-      "questions": [
-        {
-          "question": "I wanted to play, ___ it was raining.",
-          "choices": [
-            "but",
-            "so",
-            "the"
-          ],
-          "correctIndex": 0
-        }
-      ]
-    },
-    "hint": "But shows contrast."
-  },
-  {
-    "id": "gpreK-gram-article",
-    "grade": "preK",
-    "type": "grammar_fix",
-    "difficulty": "beginner",
-    "title": "Articles a/an",
-    "skills": [
-      "grammar"
-    ],
-    "content": {
-      "questions": [
-        {
-          "question": "Choose the correct article: ___ umbrella.",
-          "choices": [
-            "an",
-            "a",
-            "the the"
-          ],
-          "correctIndex": 0
-        }
-      ]
-    },
-    "hint": "Use an before vowel sounds."
-  },
-  {
-    "id": "gpreK-gram-comma",
-    "grade": "preK",
-    "type": "grammar_fix",
-    "difficulty": "beginner",
-    "title": "Commas in a List",
-    "skills": [
-      "grammar"
-    ],
-    "content": {
-      "questions": [
-        {
-          "question": "Which list uses commas correctly?",
-          "choices": [
-            "red, blue, and green",
-            "red blue and green",
-            "red, blue and, green"
-          ],
-          "correctIndex": 0
-        }
-      ]
-    },
-    "hint": "Separate items in a list with commas."
-  },
-  {
-    "id": "gpreK-gram-past",
-    "grade": "preK",
-    "type": "grammar_fix",
-    "difficulty": "beginner",
-    "title": "Past Tense",
-    "skills": [
-      "grammar"
-    ],
-    "content": {
-      "questions": [
-        {
-          "question": "Yesterday we ___ to the lake.",
-          "choices": [
-            "walked",
-            "walk",
-            "walking"
-          ],
-          "correctIndex": 0
-        }
-      ]
-    },
-    "hint": "Past tense often ends in -ed."
-  },
-  {
-    "id": "gpreK-vocab-syn-1",
-    "grade": "preK",
-    "type": "vocabulary_context",
-    "difficulty": "beginner",
-    "title": "Synonyms: big",
-    "skills": [
-      "vocabulary"
-    ],
-    "content": {
-      "questions": [
-        {
-          "question": "Which word means almost the same as big?",
-          "choices": [
-            "large",
-            "tiny",
-            "slow"
-          ],
-          "correctIndex": 0
-        }
-      ]
-    },
-    "hint": "Synonyms have similar meanings."
-  },
-  {
-    "id": "gpreK-vocab-syn-2",
-    "grade": "preK",
-    "type": "vocabulary_context",
-    "difficulty": "beginner",
-    "title": "Synonyms: fast",
-    "skills": [
-      "vocabulary"
-    ],
-    "content": {
-      "questions": [
-        {
-          "question": "Which word is like fast?",
-          "choices": [
-            "quick",
-            "heavy",
-            "quiet"
-          ],
-          "correctIndex": 0
-        }
-      ]
-    },
-    "hint": "Quick and fast are synonyms."
-  },
-  {
-    "id": "gpreK-vocab-ant-1",
-    "grade": "preK",
-    "type": "vocabulary_context",
-    "difficulty": "beginner",
-    "title": "Antonyms: happy",
-    "skills": [
-      "vocabulary"
-    ],
-    "content": {
-      "questions": [
-        {
-          "question": "Sad is the opposite of ___.",
-          "choices": [
-            "happy",
-            "glad",
-            "joyful"
-          ],
-          "correctIndex": 0
-        }
-      ]
-    },
-    "hint": "Antonyms mean the opposite."
-  },
-  {
-    "id": "gpreK-vocab-ctx-3",
-    "grade": "preK",
-    "type": "vocabulary_context",
-    "difficulty": "beginner",
-    "title": "Context Clues",
-    "skills": [
-      "vocabulary"
-    ],
-    "content": {
-      "questions": [
-        {
-          "question": "The puppy was very ___. It wagged its tail and licked my hand.",
-          "choices": [
-            "friendly",
-            "angry",
-            "sleepy"
-          ],
-          "correctIndex": 0
-        }
-      ]
-    },
-    "hint": "Use clues in the sentence."
-  },
-  {
-    "id": "gpreK-vocab-ctx-4",
-    "grade": "preK",
-    "type": "vocabulary_context",
-    "difficulty": "beginner",
-    "title": "Shades of Meaning",
-    "skills": [
-      "vocabulary"
-    ],
-    "content": {
-      "questions": [
-        {
-          "question": "Which word is stronger than said?",
-          "choices": [
-            "shouted",
-            "whispered",
-            "mumbled"
-          ],
-          "correctIndex": 0
-        }
-      ]
-    },
-    "hint": "Shouted is louder than said."
-  },
-  {
-    "id": "gpreK-vocab-root",
-    "grade": "preK",
-    "type": "vocabulary_context",
-    "difficulty": "beginner",
-    "title": "Word Parts",
-    "skills": [
-      "vocabulary"
-    ],
-    "content": {
-      "questions": [
-        {
-          "question": "Unhappy means not happy. Unpack means ___.",
-          "choices": [
-            "not packed",
-            "very packed",
-            "packed again"
-          ],
-          "correctIndex": 0
-        }
-      ]
-    },
-    "hint": "Un- often means not."
-  },
-  {
-    "id": "gpreK-vocab-homo",
-    "grade": "preK",
-    "type": "vocabulary_context",
-    "difficulty": "beginner",
-    "title": "Multiple Meanings",
-    "skills": [
-      "vocabulary"
-    ],
-    "content": {
-      "questions": [
-        {
-          "question": "Bat can mean an animal or a sports tool. In \"The bat flew at night,\" bat means ___.",
-          "choices": [
-            "animal",
-            "sports tool",
-            "building"
-          ],
-          "correctIndex": 0
-        }
-      ]
-    },
-    "hint": "Read the whole sentence."
-  },
-  {
-    "id": "gpreK-vocab-prefix",
-    "grade": "preK",
-    "type": "vocabulary_context",
-    "difficulty": "beginner",
-    "title": "Prefixes re-",
-    "skills": [
-      "vocabulary"
-    ],
-    "content": {
-      "questions": [
-        {
-          "question": "Rewrite means to write again. Reread means ___.",
-          "choices": [
-            "read again",
-            "read once",
-            "not read"
-          ],
-          "correctIndex": 0
-        }
-      ]
-    },
-    "hint": "Re- means again."
-  },
-  {
     "id": "preK-rhyme-p800-6",
     "grade": "preK",
     "type": "phonological_rhyme",
@@ -1406,153 +2617,5 @@
       "correctIndex": 0
     },
     "hint": "Which word starts with this letter?"
-  },
-  {
-    "id": "preK-pic-p800-6",
-    "grade": "preK",
-    "type": "picture_vocab",
-    "difficulty": "beginner",
-    "title": "Picture Word: tree",
-    "skills": [
-      "vocabulary"
-    ],
-    "content": {
-      "prompt": "tree",
-      "choices": [
-        "tree",
-        "car",
-        "shoe"
-      ],
-      "correctIndex": 0
-    },
-    "hint": "Tap the word you hear."
-  },
-  {
-    "id": "preK-pic-p800-7",
-    "grade": "preK",
-    "type": "picture_vocab",
-    "difficulty": "beginner",
-    "title": "Picture Word: book",
-    "skills": [
-      "vocabulary"
-    ],
-    "content": {
-      "prompt": "book",
-      "choices": [
-        "book",
-        "ball",
-        "bed"
-      ],
-      "correctIndex": 0
-    },
-    "hint": "Tap the word you hear."
-  },
-  {
-    "id": "preK-pic-p800-8",
-    "grade": "preK",
-    "type": "picture_vocab",
-    "difficulty": "beginner",
-    "title": "Picture Word: star",
-    "skills": [
-      "vocabulary"
-    ],
-    "content": {
-      "prompt": "star",
-      "choices": [
-        "star",
-        "sock",
-        "spoon"
-      ],
-      "correctIndex": 0
-    },
-    "hint": "Tap the word you hear."
-  },
-  {
-    "id": "preK-pic-p800-9",
-    "grade": "preK",
-    "type": "picture_vocab",
-    "difficulty": "beginner",
-    "title": "Picture Word: house",
-    "skills": [
-      "vocabulary"
-    ],
-    "content": {
-      "prompt": "house",
-      "choices": [
-        "house",
-        "hand",
-        "heart"
-      ],
-      "correctIndex": 0
-    },
-    "hint": "Tap the word you hear."
-  },
-  {
-    "id": "preK-speak-p800-6",
-    "grade": "preK",
-    "type": "speak_repeat",
-    "difficulty": "beginner",
-    "title": "Say: book",
-    "skills": [
-      "speaking",
-      "oral_fluency"
-    ],
-    "content": {
-      "prompt": "book",
-      "expectedText": "book",
-      "maxAttempts": 2
-    },
-    "hint": "Repeat the word clearly."
-  },
-  {
-    "id": "preK-speak-p800-7",
-    "grade": "preK",
-    "type": "speak_repeat",
-    "difficulty": "beginner",
-    "title": "Say: friend",
-    "skills": [
-      "speaking",
-      "oral_fluency"
-    ],
-    "content": {
-      "prompt": "friend",
-      "expectedText": "friend",
-      "maxAttempts": 2
-    },
-    "hint": "Repeat the word clearly."
-  },
-  {
-    "id": "preK-speak-p800-8",
-    "grade": "preK",
-    "type": "speak_repeat",
-    "difficulty": "beginner",
-    "title": "Say: thank you",
-    "skills": [
-      "speaking",
-      "oral_fluency"
-    ],
-    "content": {
-      "prompt": "thank you",
-      "expectedText": "thank you",
-      "maxAttempts": 2
-    },
-    "hint": "Repeat the word clearly."
-  },
-  {
-    "id": "preK-speak-p800-9",
-    "grade": "preK",
-    "type": "speak_repeat",
-    "difficulty": "beginner",
-    "title": "Say: butterfly",
-    "skills": [
-      "speaking",
-      "oral_fluency"
-    ],
-    "content": {
-      "prompt": "butterfly",
-      "expectedText": "butterfly",
-      "maxAttempts": 2
-    },
-    "hint": "Repeat the word clearly."
   }
 ]

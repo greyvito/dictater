@@ -2,7 +2,7 @@
 
 /** @typedef {{ score: number, passed: boolean, details?: unknown }} ScoreResult */
 
-/** @typedef {{ lesson: Lesson, container: HTMLElement, speak: (text: string) => Promise<void>, onComplete: (result: ScoreResult) => void, showToast: (msg: string, type?: string) => void, retryLesson?: () => void, loadNextLesson?: () => void }} ActivityContext */
+/** @typedef {{ lesson: Lesson, container: HTMLElement, speak: (text: string) => Promise<void>, onComplete: (result: ScoreResult) => void, showToast: (msg: string, type?: string) => void, retryLesson?: () => void, loadNextLesson?: () => void, loadPracticeLesson?: () => void }} ActivityContext */
 
 /** @typedef {{ type: string, label: string, render: (ctx: ActivityContext) => void | (() => void), score?: (input: unknown, lesson: Lesson) => ScoreResult }} ActivityHandler */
 

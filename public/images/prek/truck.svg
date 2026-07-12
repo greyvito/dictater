@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="truck">
+  <defs>
+    <linearGradient id="bg-truck" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFAB91"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-truck)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <rect x="24" y="52" width="48" height="24" rx="4" fill="#FFAB91"/><rect x="72" y="56" width="24" height="20" rx="4" fill="#FFCCBC"/><circle cx="36" cy="80" r="8" fill="#424242"/><circle cx="80" cy="80" r="8" fill="#424242"/>
+</svg>

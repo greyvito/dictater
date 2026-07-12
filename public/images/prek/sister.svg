@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="sister">
+  <defs>
+    <linearGradient id="bg-sister" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F48FB1"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-sister)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <circle cx="52" cy="48" r="12" fill="#F48FB1"/><circle cx="72" cy="52" r="14" fill="#F8BBD0"/><path d="M36 90 Q52 68 68 90" fill="#F48FB1"/><path d="M56 88 Q72 70 88 90" fill="#F8BBD0"/>
+</svg>

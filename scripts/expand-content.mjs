@@ -138,8 +138,10 @@ function comprehensionLesson(gradeKey, t) {
 function buildLessonsForGrade(gradeKey) {
   const out = [];
 
-  [...LEGACY_GRAMMAR, ...EXTRA_GRAMMAR].forEach((t) => out.push(grammarLesson(gradeKey, t)));
-  [...LEGACY_VOCAB, ...EXTRA_VOCAB].forEach((t) => out.push(vocabLesson(gradeKey, t)));
+  if (!['preK', 'K'].includes(gradeKey)) {
+    [...LEGACY_GRAMMAR, ...EXTRA_GRAMMAR].forEach((t) => out.push(grammarLesson(gradeKey, t)));
+    [...LEGACY_VOCAB, ...EXTRA_VOCAB].forEach((t) => out.push(vocabLesson(gradeKey, t)));
+  }
 
   if (gradeKey !== 'preK' && gradeKey !== 'K') {
     [...LEGACY_WRITING, ...EXTRA_WRITING].forEach((t) => out.push(writingLesson(gradeKey, t)));
@@ -192,18 +194,6 @@ function buildLessonsForGrade(gradeKey) {
         skills: ['letter_sound'],
         content: { letter: t.letter, choices: t.choices, correctIndex: t.correctIndex },
         hint: 'Which word starts with this letter?'
-      })
-    );
-    PREK_PACK.pictures.forEach((t) =>
-      out.push({
-        id: `preK-${t.suffix}`,
-        grade: 'preK',
-        type: 'picture_vocab',
-        difficulty: 'beginner',
-        title: t.title,
-        skills: ['vocabulary'],
-        content: { prompt: t.prompt, choices: t.choices, correctIndex: t.correctIndex },
-        hint: 'Tap the word you hear.'
       })
     );
     PREK_PACK.speak.forEach((t) =>

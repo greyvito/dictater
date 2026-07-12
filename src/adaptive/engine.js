@@ -1,6 +1,32 @@
 import { getLessonsForGrade } from '../curriculum/loader.js';
 import { skillAreaForType } from '../curriculum/schema.js';
 
+const VOCAB_TOPIC_TYPES = new Set(['word_intro', 'picture_vocab', 'speak_repeat', 'speak_sentence']);
+const VOCAB_TYPE_ORDER = { word_intro: 0, picture_vocab: 1, speak_repeat: 2, speak_sentence: 2 };
+
+/** @param {import('../curriculum/loader.js').Lesson[]} lessons */
+function recommendVocabTopicLesson(lessons) {
+  const vocab = lessons.filter(
+    (l) => (l.grade === 'preK' || l.grade === 'K') && l.topic && VOCAB_TOPIC_TYPES.has(l.type)
+  );
+  if (!vocab.length) return null;
+
+  const byOrder = new Map();
+  vocab.forEach((l) => {
+    const order = l.topicOrder ?? 999;
+    if (!byOrder.has(order)) byOrder.set(order, []);
+    byOrder.get(order).push(l);
+  });
+
+  for (const order of [...byOrder.keys()].sort((a, b) => a - b)) {
+    const sorted = byOrder.get(order).sort(
+      (a, b) => (VOCAB_TYPE_ORDER[a.type] ?? 5) - (VOCAB_TYPE_ORDER[b.type] ?? 5)
+    );
+    if (sorted.length) return sorted[0];
+  }
+  return null;
+}
+
 export function buildPlacementTest(grade) {
   const lessons = getLessonsForGrade(grade);
   const bySkill = {};
@@ -32,6 +58,11 @@ export function recordSkillResult(skillMastery, lesson, score) {
 export function recommendNextLesson(grade, skillMastery, completedIds = new Set()) {
   const lessons = getLessonsForGrade(grade).filter((l) => !completedIds.has(l.id));
   if (!lessons.length) return null;
+
+  if (grade === 'preK' || grade === 'K') {
+    const vocabPick = recommendVocabTopicLesson(lessons);
+    if (vocabPick) return vocabPick;
+  }
 
   const skillAvgs = Object.entries(skillMastery).sort((a, b) => a[1].avg - b[1].avg);
   if (skillAvgs.length) {

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="gate">
+  <defs>
+    <linearGradient id="bg-gate" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A1887F"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-gate)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <rect x="32" y="40" width="8" height="52" fill="#A1887F"/><rect x="80" y="40" width="8" height="52" fill="#A1887F"/><line x1="40" y1="48" x2="80" y2="48" stroke="#8D6E63" stroke-width="3"/><line x1="40" y1="64" x2="80" y2="64" stroke="#8D6E63" stroke-width="3"/><line x1="40" y1="80" x2="80" y2="80" stroke="#8D6E63" stroke-width="3"/>
+</svg>
