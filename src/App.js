@@ -1,6 +1,6 @@
 import './activities/index.js';
 import { buildCurriculumIndex, getLessonsBySkill, getLessonById } from './curriculum/loader.js';
-import { GRADES, SKILL_AREAS, gradeLabel, skillAreaForType } from './curriculum/schema.js';
+import { GRADES, gradeLabel, skillAreaForType, skillAreasForGrade } from './curriculum/schema.js';
 import { renderActivity } from './activities/registry.js';
 import {
   speakText,
@@ -371,9 +371,7 @@ export class DictaterApp {
     });
 
     skillEl.innerHTML = '';
-    const areas = this.grade === 'preK'
-      ? SKILL_AREAS.filter((s) => ['sounds', 'phonics', 'vocabulary', 'speaking'].includes(s.id))
-      : SKILL_AREAS;
+    const areas = skillAreasForGrade(this.grade);
     if (!areas.some((s) => s.id === this.skillArea)) {
       this.skillArea = areas[0]?.id || 'listening';
       this.currentLesson = null;

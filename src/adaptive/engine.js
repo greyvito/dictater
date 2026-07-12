@@ -1,5 +1,5 @@
 import { getLessonsForGrade } from '../curriculum/loader.js';
-import { skillAreaForType } from '../curriculum/schema.js';
+import { skillAreaForType, isEarlyGrade } from '../curriculum/schema.js';
 
 const VOCAB_TOPIC_TYPES = new Set(['word_intro', 'picture_vocab', 'speak_repeat', 'speak_sentence']);
 const VOCAB_TYPE_ORDER = { word_intro: 0, picture_vocab: 1, speak_repeat: 2, speak_sentence: 2 };
@@ -56,10 +56,10 @@ export function recordSkillResult(skillMastery, lesson, score) {
 }
 
 export function recommendNextLesson(grade, skillMastery, completedIds = new Set()) {
-  const lessons = getLessonsForGrade(grade).filter((l) => !completedIds.has(l.id));
+  let lessons = getLessonsForGrade(grade).filter((l) => !completedIds.has(l.id));
   if (!lessons.length) return null;
 
-  if (grade === 'preK' || grade === 'K') {
+  if (isEarlyGrade(grade)) {
     const vocabPick = recommendVocabTopicLesson(lessons);
     if (vocabPick) return vocabPick;
   }
