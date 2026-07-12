@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="bike">
+  <defs>
+    <linearGradient id="bg-bike" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4FC3F7"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-bike)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <circle cx="40" cy="76" r="12" fill="#424242"/><circle cx="80" cy="76" r="12" fill="#424242"/><path d="M40 76 L60 48 L80 76" stroke="#4FC3F7" stroke-width="4" fill="none"/><line x1="60" y1="48" x2="68" y2="36" stroke="#4FC3F7" stroke-width="3"/>
+</svg>

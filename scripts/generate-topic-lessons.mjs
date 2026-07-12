@@ -6,7 +6,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { TOPIC_UNITS, wordsForGrade, buildPictureQuizzes } from './prek-topics.mjs';
+import { TOPIC_UNITS, wordsForGrade, buildPictureQuizzes, REVIEW_SETS } from './prek-topics.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const write = process.argv.includes('--write');
@@ -107,6 +107,29 @@ function generateForGrade(grade) {
   TOPIC_UNITS.forEach((topic) => {
     lessons.push(...lessonsForTopic(grade, topic));
   });
+
+  const prefix = grade === 'preK' ? 'preK' : 'gK';
+  const reviews = REVIEW_SETS[grade] || [];
+  reviews.forEach((q, i) => {
+    lessons.push({
+      id: `${prefix}-review-${i + 1}`,
+      grade,
+      type: 'picture_vocab',
+      difficulty: 'beginner',
+      title: `Review Mix (${i + 1})`,
+      topic: 'review',
+      topicOrder: 99,
+      topicLabel: 'Review Mix',
+      skills: ['oral_vocabulary'],
+      content: {
+        prompt: q.prompt,
+        choices: q.choices,
+        correctIndex: q.correctIndex
+      },
+      hint: 'Tap the picture you hear.'
+    });
+  });
+
   return lessons;
 }
 
@@ -124,6 +147,7 @@ if (!write) {
 function mergeLessons(filePath, newLessons, removePatterns) {
   const existing = JSON.parse(fs.readFileSync(filePath, 'utf8'));
   const topicIds = new Set(TOPIC_UNITS.map((t) => t.id));
+  topicIds.add('review');
   const filtered = existing.filter((lesson) => {
     if (lesson.topic && topicIds.has(lesson.topic)) return false;
     if (removePatterns?.some((re) => re.test(lesson.id))) return false;

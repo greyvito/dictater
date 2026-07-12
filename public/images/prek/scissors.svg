@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="scissors">
+  <defs>
+    <linearGradient id="bg-scissors" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B0BEC5"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-scissors)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <circle cx="44" cy="72" r="10" fill="#B0BEC5"/><circle cx="76" cy="72" r="10" fill="#B0BEC5"/><line x1="44" y1="72" x2="60" y2="36" stroke="#78909C" stroke-width="3"/><line x1="76" y1="72" x2="60" y2="36" stroke="#78909C" stroke-width="3"/><circle cx="60" cy="32" r="4" fill="#607D8B"/>
+</svg>

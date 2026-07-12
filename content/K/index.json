@@ -1400,6 +1400,372 @@
     "hint": "Say the full sentence clearly."
   },
   {
+    "id": "gK-intro-transport",
+    "grade": "K",
+    "type": "word_intro",
+    "difficulty": "beginner",
+    "title": "Learn: Getting Around",
+    "topic": "transport",
+    "topicOrder": 15,
+    "topicLabel": "Getting Around",
+    "skills": [
+      "oral_vocabulary",
+      "listening"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.3"
+    ],
+    "content": {
+      "topic": "Getting Around",
+      "words": [
+        "bus",
+        "bike",
+        "boat",
+        "plane",
+        "train",
+        "truck",
+        "car",
+        "walk"
+      ],
+      "practiceLessonId": "gK-pic-transport-1"
+    },
+    "hint": "Tap Next to see and hear each new word."
+  },
+  {
+    "id": "gK-pic-transport-1",
+    "grade": "K",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Getting Around (1)",
+    "topic": "transport",
+    "topicOrder": 15,
+    "topicLabel": "Getting Around",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "bus",
+      "choices": [
+        "bus",
+        "bike",
+        "boat"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "gK-pic-transport-2",
+    "grade": "K",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Getting Around (2)",
+    "topic": "transport",
+    "topicOrder": 15,
+    "topicLabel": "Getting Around",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "bike",
+      "choices": [
+        "bus",
+        "bike",
+        "boat"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "gK-speak-transport",
+    "grade": "K",
+    "type": "speak_sentence",
+    "difficulty": "beginner",
+    "title": "Say: Getting Around",
+    "topic": "transport",
+    "topicOrder": 15,
+    "topicLabel": "Getting Around",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "sentences": [
+        "I go by bus."
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say the full sentence clearly."
+  },
+  {
+    "id": "gK-intro-places",
+    "grade": "K",
+    "type": "word_intro",
+    "difficulty": "beginner",
+    "title": "Learn: Places in Town",
+    "topic": "places",
+    "topicOrder": 16,
+    "topicLabel": "Places in Town",
+    "skills": [
+      "oral_vocabulary",
+      "listening"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.3"
+    ],
+    "content": {
+      "topic": "Places in Town",
+      "words": [
+        "park",
+        "school",
+        "shop",
+        "zoo",
+        "farm",
+        "beach",
+        "road",
+        "home"
+      ],
+      "practiceLessonId": "gK-pic-places-1"
+    },
+    "hint": "Tap Next to see and hear each new word."
+  },
+  {
+    "id": "gK-pic-places-1",
+    "grade": "K",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Places in Town (1)",
+    "topic": "places",
+    "topicOrder": 16,
+    "topicLabel": "Places in Town",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "park",
+      "choices": [
+        "park",
+        "school",
+        "shop"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "gK-pic-places-2",
+    "grade": "K",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Places in Town (2)",
+    "topic": "places",
+    "topicOrder": 16,
+    "topicLabel": "Places in Town",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "school",
+      "choices": [
+        "park",
+        "school",
+        "shop"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "gK-speak-places",
+    "grade": "K",
+    "type": "speak_sentence",
+    "difficulty": "beginner",
+    "title": "Say: Places in Town",
+    "topic": "places",
+    "topicOrder": 16,
+    "topicLabel": "Places in Town",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "sentences": [
+        "We go to the park."
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say the full sentence clearly."
+  },
+  {
+    "id": "gK-intro-classroom",
+    "grade": "K",
+    "type": "word_intro",
+    "difficulty": "beginner",
+    "title": "Learn: In the Classroom",
+    "topic": "classroom",
+    "topicOrder": 17,
+    "topicLabel": "In the Classroom",
+    "skills": [
+      "oral_vocabulary",
+      "listening"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.3"
+    ],
+    "content": {
+      "topic": "In the Classroom",
+      "words": [
+        "teacher",
+        "student",
+        "desk",
+        "paper",
+        "glue",
+        "scissors",
+        "paint",
+        "ruler"
+      ],
+      "practiceLessonId": "gK-pic-classroom-1"
+    },
+    "hint": "Tap Next to see and hear each new word."
+  },
+  {
+    "id": "gK-pic-classroom-1",
+    "grade": "K",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: In the Classroom (1)",
+    "topic": "classroom",
+    "topicOrder": 17,
+    "topicLabel": "In the Classroom",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "teacher",
+      "choices": [
+        "teacher",
+        "student",
+        "desk"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "gK-pic-classroom-2",
+    "grade": "K",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: In the Classroom (2)",
+    "topic": "classroom",
+    "topicOrder": 17,
+    "topicLabel": "In the Classroom",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "student",
+      "choices": [
+        "teacher",
+        "student",
+        "desk"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "gK-speak-classroom",
+    "grade": "K",
+    "type": "speak_sentence",
+    "difficulty": "beginner",
+    "title": "Say: In the Classroom",
+    "topic": "classroom",
+    "topicOrder": 17,
+    "topicLabel": "In the Classroom",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "sentences": [
+        "I have paper and glue."
+      ],
+      "maxAttempts": 3
+    },
+    "hint": "Say the full sentence clearly."
+  },
+  {
+    "id": "gK-review-1",
+    "grade": "K",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Review Mix (1)",
+    "topic": "review",
+    "topicOrder": 99,
+    "topicLabel": "Review Mix",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "school",
+      "choices": [
+        "school",
+        "bike",
+        "happy"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "gK-review-2",
+    "grade": "K",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Review Mix (2)",
+    "topic": "review",
+    "topicOrder": 99,
+    "topicLabel": "Review Mix",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "bus",
+      "choices": [
+        "bus",
+        "fish",
+        "three"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "gK-review-3",
+    "grade": "K",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Review Mix (3)",
+    "topic": "review",
+    "topicOrder": 99,
+    "topicLabel": "Review Mix",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "paper",
+      "choices": [
+        "glue",
+        "paper",
+        "star"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
     "id": "gK-speak-p800-1",
     "grade": "K",
     "type": "speak_sentence",

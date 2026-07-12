@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="wig">
+  <defs>
+    <linearGradient id="bg-wig" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CE93D8"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-wig)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <ellipse cx="60" cy="56" rx="28" ry="20" fill="#CE93D8"/><path d="M32 56 Q60 24 88 56" fill="#AB47BC"/><circle cx="52" cy="60" r="3" fill="#2D3748"/><circle cx="68" cy="60" r="3" fill="#2D3748"/>
+</svg>

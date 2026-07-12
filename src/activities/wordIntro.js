@@ -1,6 +1,7 @@
 import { resolveWordVisual } from '../prek/images.js';
 import { celebrateCorrect, mountMascot } from '../prek/delight.js';
 import { appendPostCheckActions } from './postCheck.js';
+import { getLocale, t } from '../i18n/strings.js';
 
 /**
  * @param {HTMLElement} parent
@@ -60,6 +61,7 @@ export function renderWordIntro(ctx) {
 
   let index = 0;
   let finished = false;
+  const locale = getLocale();
   const topicLabel = String(c.topic || lesson.topicLabel || lesson.title);
 
   const root = el(container, 'div', 'prek-activity word-intro-activity');
@@ -67,7 +69,7 @@ export function renderWordIntro(ctx) {
   mascotSlot.id = 'prek-mascot-slot';
 
   const instruction = el(root, 'p', 'prek-instruction');
-  instruction.textContent = `📚 ${topicLabel} — tap Next to learn each word`;
+  instruction.textContent = `📚 ${t('wordIntroInstruction', locale, { topic: topicLabel })}`;
 
   const progressEl = el(root, 'div', 'word-intro-progress');
   progressEl.id = 'word-intro-progress';
@@ -80,18 +82,18 @@ export function renderWordIntro(ctx) {
   const prevBtn = el(nav, 'button', 'btn-secondary btn-compact');
   prevBtn.type = 'button';
   prevBtn.id = 'word-intro-prev';
-  prevBtn.textContent = '← Back';
+  prevBtn.textContent = t('wordIntroBack', locale);
   prevBtn.disabled = true;
 
   const listenBtn = el(nav, 'button', 'btn-secondary btn-compact prek-listen-btn');
   listenBtn.type = 'button';
   listenBtn.id = 'word-intro-listen';
-  listenBtn.textContent = '🔊 Listen';
+  listenBtn.textContent = t('wordIntroListen', locale);
 
   const nextBtn = el(nav, 'button', 'btn-primary btn-compact');
   nextBtn.type = 'button';
   nextBtn.id = 'word-intro-next';
-  nextBtn.textContent = 'Next →';
+  nextBtn.textContent = t('wordIntroNext', locale);
 
   const doneEl = el(root, 'div', 'prek-feedback result-card feedback hidden');
   doneEl.id = 'word-intro-done';
@@ -107,9 +109,9 @@ export function renderWordIntro(ctx) {
   const renderCard = () => {
     const word = words[index];
     renderWordCard(cardEl, word);
-    progressEl.textContent = `Word ${index + 1} of ${words.length}`;
+    progressEl.textContent = t('wordProgress', locale, { current: index + 1, total: words.length });
     prevBtn.disabled = index === 0;
-    nextBtn.textContent = index >= words.length - 1 ? 'Finish ✓' : 'Next →';
+    nextBtn.textContent = index >= words.length - 1 ? t('wordIntroFinish', locale) : t('wordIntroNext', locale);
     speakWord();
   };
 
@@ -119,7 +121,7 @@ export function renderWordIntro(ctx) {
     doneEl.classList.remove('hidden');
     doneEl.classList.add('prek-feedback--yes');
     const msg = document.createElement('p');
-    msg.textContent = `🌟 You learned ${words.length} new words!`;
+    msg.textContent = t('wordIntroComplete', locale, { count: words.length });
     doneEl.appendChild(msg);
     appendPostCheckActions(doneEl, ctx, true);
 
@@ -127,7 +129,7 @@ export function renderWordIntro(ctx) {
       const practice = document.createElement('button');
       practice.type = 'button';
       practice.className = 'btn-primary btn-compact';
-      practice.textContent = 'Practice quiz →';
+      practice.textContent = t('practiceQuiz', locale);
       practice.addEventListener('click', () => ctx.loadPracticeLesson?.());
       let row = doneEl.querySelector('.post-check-actions');
       if (!row) {

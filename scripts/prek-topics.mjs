@@ -125,8 +125,46 @@ export const TOPIC_UNITS = [
     prekWords: ['run', 'jump', 'sit', 'eat', 'sleep', 'play', 'big', 'small', 'hot', 'cold'],
     kSentence: 'I can run.',
     speakWord: 'run'
+  },
+  {
+    id: 'transport',
+    order: 15,
+    label: 'Getting Around',
+    prekWords: ['bus', 'bike', 'boat', 'plane', 'train', 'truck', 'car', 'walk'],
+    kSentence: 'I go by bus.',
+    speakWord: 'bus'
+  },
+  {
+    id: 'places',
+    order: 16,
+    label: 'Places in Town',
+    prekWords: ['park', 'school', 'shop', 'zoo', 'farm', 'beach', 'road', 'home'],
+    kSentence: 'We go to the park.',
+    speakWord: 'park'
+  },
+  {
+    id: 'classroom',
+    order: 17,
+    label: 'In the Classroom',
+    prekWords: ['teacher', 'student', 'desk', 'paper', 'glue', 'scissors', 'paint', 'ruler'],
+    kSentence: 'I have paper and glue.',
+    speakWord: 'paper'
   }
 ];
+
+/** Review picture_vocab quizzes mixing words from different units (per grade). */
+export const REVIEW_SETS = {
+  preK: [
+    { prompt: 'red', choices: ['red', 'dog', 'five'], correctIndex: 0 },
+    { prompt: 'apple', choices: ['cat', 'apple', 'run'], correctIndex: 1 },
+    { prompt: 'mom', choices: ['sun', 'bed', 'mom'], correctIndex: 2 }
+  ],
+  K: [
+    { prompt: 'school', choices: ['school', 'bike', 'happy'], correctIndex: 0 },
+    { prompt: 'bus', choices: ['bus', 'fish', 'three'], correctIndex: 0 },
+    { prompt: 'paper', choices: ['glue', 'paper', 'star'], correctIndex: 1 }
+  ]
+};
 
 /** @param {string} grade @param {TopicUnit} topic */
 export function wordsForGrade(grade, topic) {

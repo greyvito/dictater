@@ -196,18 +196,6 @@ function buildLessonsForGrade(gradeKey) {
         hint: 'Which word starts with this letter?'
       })
     );
-    PREK_PACK.pictures.forEach((t) =>
-      out.push({
-        id: `preK-${t.suffix}`,
-        grade: 'preK',
-        type: 'picture_vocab',
-        difficulty: 'beginner',
-        title: t.title,
-        skills: ['vocabulary'],
-        content: { prompt: t.prompt, choices: t.choices, correctIndex: t.correctIndex },
-        hint: 'Tap the word you hear.'
-      })
-    );
     PREK_PACK.speak.forEach((t) =>
       out.push({
         id: `preK-${t.suffix}`,

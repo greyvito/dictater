@@ -9,9 +9,9 @@ describe('word_intro curriculum', () => {
     expect(skillAreaForType('word_intro')).toBe('vocabulary');
   });
 
-  it('has 14 topical intro lessons in PreK', () => {
+  it('has topical intro lessons in PreK', () => {
     const intros = prekContent.filter((l) => l.type === 'word_intro');
-    expect(intros.length).toBe(14);
+    expect(intros.length).toBe(17);
     intros.forEach((lesson) => {
       expect(validateLesson(lesson)).toEqual([]);
       expect(lesson.content.words.length).toBeGreaterThan(4);

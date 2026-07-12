@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="farm">
+  <defs>
+    <linearGradient id="bg-farm" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#C5E1A5"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-farm)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <rect x="28" y="52" width="40" height="36" fill="#EF5350"/><polygon points="48,36 68,52 28,52" fill="#C62828"/><ellipse cx="78" cy="72" rx="14" ry="10" fill="#A5D6A7"/><line x1="78" y1="62" x2="78" y2="52" stroke="#66BB6A" stroke-width="3"/>
+</svg>

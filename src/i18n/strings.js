@@ -41,7 +41,15 @@ export const strings = {
     exportProgress: 'Export Progress (JSON)',
     language: 'Language',
     teacherPortal: 'Teacher portal',
-    coppaNote: 'Cloud sync stores email and lesson scores only. Users under 13 need parental consent.'
+    coppaNote: 'Cloud sync stores email and lesson scores only. Users under 13 need parental consent.',
+    wordIntroInstruction: '{topic} — tap Next to learn each word',
+    wordIntroBack: '← Back',
+    wordIntroListen: '🔊 Listen',
+    wordIntroNext: 'Next →',
+    wordIntroFinish: 'Finish ✓',
+    wordProgress: 'Word {current} of {total}',
+    wordIntroComplete: '🌟 You learned {count} new words!',
+    practiceQuiz: 'Practice quiz →'
   },
   es: {
     startLearning: 'Empezar a aprender',
@@ -85,12 +93,29 @@ export const strings = {
     exportProgress: 'Exportar progreso (JSON)',
     language: 'Idioma',
     teacherPortal: 'Portal del profesor',
-    coppaNote: 'La sincronización guarda correo y puntajes solamente.'
+    coppaNote: 'La sincronización guarda correo y puntajes solamente.',
+    wordIntroInstruction: '{topic} — toca Siguiente para aprender cada palabra',
+    wordIntroBack: '← Atrás',
+    wordIntroListen: '🔊 Escuchar',
+    wordIntroNext: 'Siguiente →',
+    wordIntroFinish: 'Terminar ✓',
+    wordProgress: 'Palabra {current} de {total}',
+    wordIntroComplete: '🌟 ¡Aprendiste {count} palabras nuevas!',
+    practiceQuiz: 'Práctica →'
   }
 };
 
-export function t(key, locale = 'en') {
-  return strings[locale]?.[key] || strings.en[key] || key;
+/**
+ * @param {string} key
+ * @param {string} [locale]
+ * @param {Record<string, string | number>} [vars]
+ */
+export function t(key, locale = 'en', vars = {}) {
+  let text = strings[locale]?.[key] || strings.en[key] || key;
+  Object.entries(vars).forEach(([k, v]) => {
+    text = text.replace(new RegExp(`\\{${k}\\}`, 'g'), String(v));
+  });
+  return text;
 }
 
 export function getLocale() {

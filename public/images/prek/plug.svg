@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="plug">
+  <defs>
+    <linearGradient id="bg-plug" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B0BEC5"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-plug)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <rect x="48" y="48" width="24" height="32" rx="4" fill="#B0BEC5"/><rect x="44" y="40" width="10" height="12" rx="2" fill="#78909C"/><rect x="66" y="40" width="10" height="12" rx="2" fill="#78909C"/><line x1="60" y1="80" x2="60" y2="92" stroke="#607D8B" stroke-width="4" stroke-linecap="round"/>
+</svg>

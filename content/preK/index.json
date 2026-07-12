@@ -1384,6 +1384,369 @@
     "hint": "Repeat the word after you hear it."
   },
   {
+    "id": "preK-intro-transport",
+    "grade": "preK",
+    "type": "word_intro",
+    "difficulty": "beginner",
+    "title": "Learn: Getting Around",
+    "topic": "transport",
+    "topicOrder": 15,
+    "topicLabel": "Getting Around",
+    "skills": [
+      "oral_vocabulary",
+      "listening"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.1"
+    ],
+    "content": {
+      "topic": "Getting Around",
+      "words": [
+        "bus",
+        "bike",
+        "boat",
+        "plane",
+        "train",
+        "truck",
+        "car",
+        "walk"
+      ],
+      "practiceLessonId": "preK-pic-transport-1"
+    },
+    "hint": "Tap Next to see and hear each new word."
+  },
+  {
+    "id": "preK-pic-transport-1",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Getting Around (1)",
+    "topic": "transport",
+    "topicOrder": 15,
+    "topicLabel": "Getting Around",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "bus",
+      "choices": [
+        "bus",
+        "bike",
+        "boat"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-pic-transport-2",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Getting Around (2)",
+    "topic": "transport",
+    "topicOrder": 15,
+    "topicLabel": "Getting Around",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "bike",
+      "choices": [
+        "bus",
+        "bike",
+        "boat"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-speak-transport",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: bus",
+    "topic": "transport",
+    "topicOrder": 15,
+    "topicLabel": "Getting Around",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "bus",
+      "expectedText": "bus",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word after you hear it."
+  },
+  {
+    "id": "preK-intro-places",
+    "grade": "preK",
+    "type": "word_intro",
+    "difficulty": "beginner",
+    "title": "Learn: Places in Town",
+    "topic": "places",
+    "topicOrder": 16,
+    "topicLabel": "Places in Town",
+    "skills": [
+      "oral_vocabulary",
+      "listening"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.1"
+    ],
+    "content": {
+      "topic": "Places in Town",
+      "words": [
+        "park",
+        "school",
+        "shop",
+        "zoo",
+        "farm",
+        "beach",
+        "road",
+        "home"
+      ],
+      "practiceLessonId": "preK-pic-places-1"
+    },
+    "hint": "Tap Next to see and hear each new word."
+  },
+  {
+    "id": "preK-pic-places-1",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Places in Town (1)",
+    "topic": "places",
+    "topicOrder": 16,
+    "topicLabel": "Places in Town",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "park",
+      "choices": [
+        "park",
+        "school",
+        "shop"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-pic-places-2",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: Places in Town (2)",
+    "topic": "places",
+    "topicOrder": 16,
+    "topicLabel": "Places in Town",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "school",
+      "choices": [
+        "park",
+        "school",
+        "shop"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-speak-places",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: park",
+    "topic": "places",
+    "topicOrder": 16,
+    "topicLabel": "Places in Town",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "park",
+      "expectedText": "park",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word after you hear it."
+  },
+  {
+    "id": "preK-intro-classroom",
+    "grade": "preK",
+    "type": "word_intro",
+    "difficulty": "beginner",
+    "title": "Learn: In the Classroom",
+    "topic": "classroom",
+    "topicOrder": 17,
+    "topicLabel": "In the Classroom",
+    "skills": [
+      "oral_vocabulary",
+      "listening"
+    ],
+    "standards": [
+      "CCSS.ELA-LITERACY.RF.K.1"
+    ],
+    "content": {
+      "topic": "In the Classroom",
+      "words": [
+        "teacher",
+        "student",
+        "desk",
+        "paper",
+        "glue",
+        "scissors",
+        "paint",
+        "ruler"
+      ],
+      "practiceLessonId": "preK-pic-classroom-1"
+    },
+    "hint": "Tap Next to see and hear each new word."
+  },
+  {
+    "id": "preK-pic-classroom-1",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: In the Classroom (1)",
+    "topic": "classroom",
+    "topicOrder": 17,
+    "topicLabel": "In the Classroom",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "teacher",
+      "choices": [
+        "teacher",
+        "student",
+        "desk"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-pic-classroom-2",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Quiz: In the Classroom (2)",
+    "topic": "classroom",
+    "topicOrder": 17,
+    "topicLabel": "In the Classroom",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "student",
+      "choices": [
+        "teacher",
+        "student",
+        "desk"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-speak-classroom",
+    "grade": "preK",
+    "type": "speak_repeat",
+    "difficulty": "beginner",
+    "title": "Say: paper",
+    "topic": "classroom",
+    "topicOrder": 17,
+    "topicLabel": "In the Classroom",
+    "skills": [
+      "speaking",
+      "oral_fluency"
+    ],
+    "content": {
+      "prompt": "paper",
+      "expectedText": "paper",
+      "maxAttempts": 2
+    },
+    "hint": "Repeat the word after you hear it."
+  },
+  {
+    "id": "preK-review-1",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Review Mix (1)",
+    "topic": "review",
+    "topicOrder": 99,
+    "topicLabel": "Review Mix",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "red",
+      "choices": [
+        "red",
+        "dog",
+        "five"
+      ],
+      "correctIndex": 0
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-review-2",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Review Mix (2)",
+    "topic": "review",
+    "topicOrder": 99,
+    "topicLabel": "Review Mix",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "apple",
+      "choices": [
+        "cat",
+        "apple",
+        "run"
+      ],
+      "correctIndex": 1
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
+    "id": "preK-review-3",
+    "grade": "preK",
+    "type": "picture_vocab",
+    "difficulty": "beginner",
+    "title": "Review Mix (3)",
+    "topic": "review",
+    "topicOrder": 99,
+    "topicLabel": "Review Mix",
+    "skills": [
+      "oral_vocabulary"
+    ],
+    "content": {
+      "prompt": "mom",
+      "choices": [
+        "sun",
+        "bed",
+        "mom"
+      ],
+      "correctIndex": 2
+    },
+    "hint": "Tap the picture you hear."
+  },
+  {
     "id": "preK-speak-01",
     "grade": "preK",
     "type": "speak_repeat",
@@ -2254,85 +2617,5 @@
       "correctIndex": 0
     },
     "hint": "Which word starts with this letter?"
-  },
-  {
-    "id": "preK-pic-p800-6",
-    "grade": "preK",
-    "type": "picture_vocab",
-    "difficulty": "beginner",
-    "title": "Picture Word: tree",
-    "skills": [
-      "vocabulary"
-    ],
-    "content": {
-      "prompt": "tree",
-      "choices": [
-        "tree",
-        "car",
-        "shoe"
-      ],
-      "correctIndex": 0
-    },
-    "hint": "Tap the word you hear."
-  },
-  {
-    "id": "preK-pic-p800-7",
-    "grade": "preK",
-    "type": "picture_vocab",
-    "difficulty": "beginner",
-    "title": "Picture Word: book",
-    "skills": [
-      "vocabulary"
-    ],
-    "content": {
-      "prompt": "book",
-      "choices": [
-        "book",
-        "ball",
-        "bed"
-      ],
-      "correctIndex": 0
-    },
-    "hint": "Tap the word you hear."
-  },
-  {
-    "id": "preK-pic-p800-8",
-    "grade": "preK",
-    "type": "picture_vocab",
-    "difficulty": "beginner",
-    "title": "Picture Word: star",
-    "skills": [
-      "vocabulary"
-    ],
-    "content": {
-      "prompt": "star",
-      "choices": [
-        "star",
-        "sock",
-        "spoon"
-      ],
-      "correctIndex": 0
-    },
-    "hint": "Tap the word you hear."
-  },
-  {
-    "id": "preK-pic-p800-9",
-    "grade": "preK",
-    "type": "picture_vocab",
-    "difficulty": "beginner",
-    "title": "Picture Word: house",
-    "skills": [
-      "vocabulary"
-    ],
-    "content": {
-      "prompt": "house",
-      "choices": [
-        "house",
-        "hand",
-        "heart"
-      ],
-      "correctIndex": 0
-    },
-    "hint": "Tap the word you hear."
   }
 ]

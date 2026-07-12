@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="spin">
+  <defs>
+    <linearGradient id="bg-spin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CE93D8"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-spin)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <circle cx="60" cy="60" r="24" fill="#CE93D8" stroke="#AB47BC" stroke-width="3"/><path d="M60 36 L60 48 M84 60 L72 60 M60 84 L60 72 M36 60 L48 60" stroke="#fff" stroke-width="3" stroke-linecap="round"/><circle cx="60" cy="60" r="6" fill="#fff"/>
+</svg>

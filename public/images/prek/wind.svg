@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="wind">
+  <defs>
+    <linearGradient id="bg-wind" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B3E5FC"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <rect width="120" height="120" rx="28" fill="url(#bg-wind)" stroke="rgba(0,0,0,0.1)" stroke-width="2"/>
+  <circle cx="60" cy="60" r="48" fill="rgba(255,255,255,0.35)"/>
+  <path d="M32 48 Q52 36 72 48" stroke="#64B5F6" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M36 64 Q56 52 76 64" stroke="#64B5F6" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M40 80 Q60 68 80 80" stroke="#64B5F6" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

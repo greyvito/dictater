@@ -30,7 +30,18 @@ export const WORD_EMOJI = {
   chair: '🪑', table: '🪑', door: '🚪', backpack: '🎒', crayon: '🖍️',
   shirt: '👕', pants: '👖', coat: '🧥',
   rain: '🌧️', cloud: '☁️', snow: '❄️', cold: '🥶',
-  jump: '⬆️', sit: '🪑', eat: '🍴', sleep: '😴', play: '🎮'
+  jump: '⬆️', sit: '🪑', eat: '🍴', sleep: '😴', play: '🎮',
+  mat: '🧺', bag: '👜', cap: '🧢', bug: '🐛', mud: '🟤', wig: '💇',
+  bin: '🗑️', pen: '🖊️', pin: '📌', tin: '🥫', van: '🚐', zip: '🤐',
+  chin: '🙂', chip: '🍟', ship: '🚢', drum: '🥁', flag: '🚩',
+  clap: '👏', stop: '🛑', swim: '🏊', spin: '🌀', plug: '🔌',
+  leaf: '🍃', fox: '🦊', deer: '🦌', owl: '🦉', gate: '🚧',
+  bike: '🚲', rope: '🪢', tube: '🧪', lake: '🏞️', home: '🏠',
+  rose: '🌹', nest: '🪺', pond: '🌊', farm: '🌾', wind: '💨', fire: '🔥',
+  bus: '🚌', boat: '⛵', plane: '✈️', train: '🚂', truck: '🚚', walk: '🚶',
+  park: '🌳', school: '🏫', shop: '🏪', zoo: '🦁', beach: '🏖️', road: '🛣️',
+  teacher: '👩‍🏫', student: '🧑‍🎓', desk: '🪑', paper: '📄', glue: '🧴',
+  scissors: '✂️', paint: '🎨', ruler: '📏'
 };
 
 /** Words with generated SVG files (see scripts/generate-prek-svgs.mjs) */
