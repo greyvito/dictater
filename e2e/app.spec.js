@@ -57,6 +57,60 @@ test('PreK picture vocab shows image choice cards', async ({ page }) => {
   await expect(page.locator('.prek-mascot')).toBeVisible();
 });
 
+test('PreK picture vocab shuffles choices and accepts correct answer', async ({ page }) => {
+  const contentOrder = ['red', 'blue', 'green'];
+  await page.addInitScript(() => {
+    let call = 0;
+    const values = [0.9, 0.1];
+    Math.random = () => values[call++ % values.length];
+  });
+  await page.goto('/');
+  await selectGrade(page, 'PreK');
+  await selectSkill(page, 'Vocabulary');
+  const lesson = page.locator('.exercise-item').filter({ hasText: 'Quiz: Colors (1)' }).first();
+  await expect(lesson).toBeVisible();
+  await lesson.click();
+  await expect(page.locator('.prek-choice-card')).toHaveCount(3, { timeout: 10000 });
+  const displayedLabels = await page.locator('.prek-choice-label').allTextContents();
+  const normalized = displayedLabels.map((label) => label.trim().toLowerCase());
+  expect(normalized).not.toEqual(contentOrder);
+  const correctIndex = normalized.indexOf('red');
+  expect(correctIndex).toBeGreaterThanOrEqual(0);
+  const correctCard = page.locator('.prek-choice-card').nth(correctIndex);
+  await correctCard.click();
+  await expect(correctCard).toHaveClass(/choice-correct/);
+  await expect(page.locator('#prek-feedback')).toHaveClass(/prek-feedback--yes/);
+});
+
+test('Spanish word intro shows localized strings', async ({ page }) => {
+  await page.goto('/');
+  await openAccountPanel(page);
+  await page.selectOption('#locale-select', 'es');
+  await selectGrade(page, 'PreK');
+  await selectSkill(page, 'Vocabulary');
+  const lesson = page.locator('.exercise-item').filter({ hasText: 'Learn: Hello & Manners' }).first();
+  await expect(lesson).toBeVisible();
+  await lesson.click();
+  await expect(page.locator('.word-intro-activity')).toBeVisible({ timeout: 10000 });
+  await expect(page.locator('#word-intro-next')).toHaveText('Siguiente →');
+  await expect(page.locator('#word-intro-listen')).toHaveText('🔊 Escuchar');
+  await expect(page.locator('#word-intro-prev')).toHaveText('← Atrás');
+  await expect(page.locator('#word-intro-progress')).toContainText(/Palabra 1 de/i);
+  await expect(page.locator('.prek-instruction')).toContainText(/toca Siguiente/i);
+});
+
+test('PreK review mix lesson shows picture choice cards', async ({ page }) => {
+  await page.goto('/');
+  await selectGrade(page, 'PreK');
+  await selectSkill(page, 'Vocabulary');
+  const lesson = page.locator('.exercise-item').filter({ hasText: 'Review Mix (1)' }).first();
+  await expect(lesson).toBeVisible();
+  await lesson.click();
+  await expect(page.locator('.prek-choice-card')).toHaveCount(3, { timeout: 10000 });
+  await expect(page.locator('.prek-choice-img').first()).toBeVisible();
+  await expect(page.locator('.prek-prompt-img, .prek-prompt-label').first()).toBeVisible();
+});
+
 test('custom lesson mode toggle', async ({ page }) => {
   await page.goto('/');
   await waitForAppReady(page);

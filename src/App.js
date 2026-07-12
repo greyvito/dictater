@@ -43,6 +43,7 @@ import {
 } from './i18n/strings.js';
 import { applyPrekTheme } from './prek/theme.js';
 import { openModal, closeModal, toggleModal } from './app/modal.js';
+import { renderUnitProgressPanel } from './app/unitProgressView.js';
 
 const PREK_VISUAL_TYPES = new Set(['word_intro', 'picture_vocab', 'phonological_rhyme', 'phonological_syllable', 'phonological_initial', 'letter_sound', 'speak_repeat']);
 
@@ -236,6 +237,11 @@ export class DictaterApp {
       openModal('#dashboard-modal');
     });
     document.querySelector('#btn-dashboard-close')?.addEventListener('click', () => closeModal('#dashboard-modal'));
+    document.querySelector('#btn-open-unit-progress')?.addEventListener('click', () => {
+      this.updateUnitProgress();
+      openModal('#unit-progress-modal');
+    });
+    document.querySelector('#btn-unit-progress-close')?.addEventListener('click', () => closeModal('#unit-progress-modal'));
     document.querySelector('#btn-settings-toggle')?.addEventListener('click', () => toggleModal('#settings-dropdown'));
     document.querySelector('#btn-settings-close')?.addEventListener('click', () => closeModal('#settings-dropdown'));
     document.querySelector('#btn-mode-curriculum')?.addEventListener('click', () => {
@@ -477,6 +483,24 @@ export class DictaterApp {
     }
 
     this.pendingLessonId = null;
+    this.updateUnitProgressButton();
+  }
+
+  updateUnitProgressButton() {
+    const btn = document.querySelector('#btn-open-unit-progress');
+    if (!btn) return;
+    const show = this.grade === 'preK' || this.grade === 'K';
+    btn.classList.toggle('hidden', !show);
+  }
+
+  updateUnitProgress() {
+    const panel = document.querySelector('#unit-progress-panel');
+    if (!panel) return;
+    renderUnitProgressPanel(panel, {
+      grade: this.grade,
+      completedIds: this.getCompletedIds(),
+      locale: this.locale
+    });
   }
 
   renderEmptyLessonState(container, areas) {

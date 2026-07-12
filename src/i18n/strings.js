@@ -49,7 +49,12 @@ export const strings = {
     wordIntroFinish: 'Finish ✓',
     wordProgress: 'Word {current} of {total}',
     wordIntroComplete: '🌟 You learned {count} new words!',
-    practiceQuiz: 'Practice quiz →'
+    practiceQuiz: 'Practice quiz →',
+    unitProgress: 'Unit Progress',
+    unitProgressTitle: 'Vocabulary Units',
+    unitProgressSummary: '{completed} of {total} lessons completed ({grade})',
+    unitProgressLabel: 'Unit {order} — {label}',
+    unitProgressFraction: '{completed}/{total}'
   },
   es: {
     startLearning: 'Empezar a aprender',
@@ -101,7 +106,12 @@ export const strings = {
     wordIntroFinish: 'Terminar ✓',
     wordProgress: 'Palabra {current} de {total}',
     wordIntroComplete: '🌟 ¡Aprendiste {count} palabras nuevas!',
-    practiceQuiz: 'Práctica →'
+    practiceQuiz: 'Práctica →',
+    unitProgress: 'Progreso por unidad',
+    unitProgressTitle: 'Unidades de vocabulario',
+    unitProgressSummary: '{completed} de {total} lecciones completadas ({grade})',
+    unitProgressLabel: 'Unidad {order} — {label}',
+    unitProgressFraction: '{completed}/{total}'
   }
 };
 
